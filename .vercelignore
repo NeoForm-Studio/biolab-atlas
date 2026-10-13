@@ -1,0 +1,6 @@
+.github
+.engine
+tools
+**/*.py
+**/__pycache__
+pipeline/markers.faa
