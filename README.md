@@ -22,7 +22,7 @@ python -m http.server 8000
 | Path | What it is |
 |------|-----------|
 | `index.html` | 3D introduction to D. radiodurans genome repair; scrolls into the workspace |
-| `ui.html` | The workspace: Gene, Cross-species, Function, Expression, Species and Workspace tabs. Every species claim lists its sources |
+| `ui.html` | The workspace: Gene, Cross-species, Function, Expression and Species tabs. Every species and gene claim lists its sources |
 | `explorer.html` | Species explorer (also the workspace's Species tab): search the library, compare genes across species |
 | `library/` | One JSON profile per species, plus `index.json` |
 | `pipeline/` | The lookup pipeline that builds the library |

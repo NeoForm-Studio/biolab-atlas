@@ -369,7 +369,6 @@
     <button class="tab" data-mode="func"><span class="k">03</span>Function</button>
     <button class="tab" data-mode="expr"><span class="k">04</span>Expression</button>
     <button class="tab" data-mode="compute"><span class="k">05</span>Species</button>
-    <button class="tab" data-mode="lab"><span class="k">06</span>Workspace</button>
   </nav>
   <div class="spacer"></div>
   <button class="hbtn" id="toggleLeft">Search</button>
@@ -1366,7 +1365,6 @@ function setMode(m){
 }
 
 document.getElementById('nav').addEventListener('click',e=>{const b=e.target.closest('.tab');if(!b)return;
-  if(b.dataset.mode==='lab'){ location.href='workspace.html'; return; } // 06 → the research cockpit (loads in this view)
   setMode(b.dataset.mode);});
 document.getElementById('intro').addEventListener('click',e=>{if(e.target.id==='intro')enterMode();});
 document.getElementById('caption').addEventListener('click',showIntro);
