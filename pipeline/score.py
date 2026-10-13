@@ -1,7 +1,10 @@
-"""Library-relative extremophile scores, and how well they agree with lab measurements (BacDive).
+"""Extremophile scores (0-100) and how well they agree with lab measurements (BacDive).
 
-Each score is a 0-100 position among all profiled species, so it means "more X-like than this share of the library",
-not a probability. Heat and cold scores are checked against BacDive temperatures with ROC AUC (0.5 = chance, 1 = perfect).
+heat: position of the estimated growth temperature among all profiled species.  cold: 100 - heat, so it separates
+cold- from heat-adapted genomes, not psychrophiles from ordinary mesophiles.  salt: position of proteome acidity,
+raised to 90 when the full ectoine pathway is present.  radiation: share of the 6 Deinococcus markers found.
+Heat and cold are checked against BacDive temperatures with ROC AUC (0.5 = chance, 1 = perfect). Most labels are
+culture temperatures, and the species were chosen by hand, so the check mostly tests extremes.
 """
 
 THERMOPHILE_C, PSYCHROPHILE_C = 50, 20  # reference-temperature cutoffs for the validation labels

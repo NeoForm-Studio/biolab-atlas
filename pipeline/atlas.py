@@ -130,7 +130,7 @@ def phenotype(name):
         [v for t in rows for v in (temperature_range(t.get("temperature")) or ())])
     salt = [v for h in listify(strain.get("Physiology and metabolism", {}).get("halophily"))
             if h.get("growth") == "positive" and h.get("salt") == "NaCl" and "%" in h.get("concentration", "")
-            for v in (temperature_range(h["concentration"].replace("%", "")) or ())]
+            for v in (temperature_range(h["concentration"].replace("%", "")) or ()) if v <= 30]  # >30% is not NaCl %
     bacdive_id = strain["General"]["BacDive-ID"]
     return {
         "bacdive_id": bacdive_id,
@@ -263,6 +263,7 @@ def rebuild_index():
         rows.append({
             "file": path.name,
             "name": e.get("taxon", {}).get("name", e["query"]),
+            "query": e["query"],
             "status": e["status"],
             "domain": e.get("taxon", {}).get("domain"),
             "gc_percent": (e.get("genome") or {}).get("gc_percent"),
