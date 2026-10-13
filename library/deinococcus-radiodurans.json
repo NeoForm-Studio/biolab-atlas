@@ -13,7 +13,7 @@
   "uniprot_proteins": 3104,
   "uniprot_reviewed": 526,
   "sequences_16s": 10,
-  "papers": 5241
+  "papers": 5242
  },
  "phenotype": {
   "bacdive_id": 3852,
@@ -156,8 +156,8 @@
    ]
   },
   "repair": {
-   "found": 11,
-   "of": 11,
+   "found": 10,
+   "of": 10,
    "genes": [
     {
      "name": "RecA",
@@ -226,13 +226,6 @@
      "name": "LexA",
      "found": true,
      "accession": "WP_027479703.1",
-     "identity": 100.0,
-     "coverage": 100
-    },
-    {
-     "name": "Tkt",
-     "found": true,
-     "accession": "WP_010888884.1",
      "identity": 100.0,
      "coverage": 100
     }

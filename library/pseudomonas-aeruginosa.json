@@ -13,7 +13,7 @@
   "uniprot_proteins": 15363,
   "uniprot_reviewed": 2711,
   "sequences_16s": 11909,
-  "papers": 246985
+  "papers": 247007
  },
  "phenotype": {
   "bacdive_id": 12800,
@@ -117,8 +117,8 @@
    ]
   },
   "repair": {
-   "found": 10,
-   "of": 11,
+   "found": 9,
+   "of": 10,
    "genes": [
     {
      "name": "RecA",
@@ -189,13 +189,6 @@
      "accession": "NP_251697.1",
      "identity": 31.401,
      "coverage": 91
-    },
-    {
-     "name": "Tkt",
-     "found": true,
-     "accession": "NP_249239.1",
-     "identity": 50.827,
-     "coverage": 98
     }
    ]
   }

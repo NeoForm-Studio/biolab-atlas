@@ -118,7 +118,7 @@
   },
   "repair": {
    "found": 1,
-   "of": 11,
+   "of": 10,
    "genes": [
     {
      "name": "RecA",
@@ -174,13 +174,6 @@
     {
      "name": "LexA",
      "found": false
-    },
-    {
-     "name": "Tkt",
-     "found": false,
-     "accession": "WP_048059593.1",
-     "identity": 34.884,
-     "coverage": 38
     }
    ]
   }
