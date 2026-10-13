@@ -35,8 +35,8 @@ def reference_temp(row):
 
 
 def upper_temp(row):
-    """Upper end of the BacDive optimum if known, otherwise of the cultured range."""
-    for key in ("measured_optimum_c", "measured_growth_c"):
+    """Upper end of the temperatures BacDive reports the strain growing at, else of its optimum."""
+    for key in ("measured_growth_c", "measured_optimum_c"):
         r = row.get(key)
         if r:
             return r[1]

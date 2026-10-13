@@ -6,9 +6,9 @@
   "label": "BacDive reference temperature >= 50 C"
  },
  "cold": {
-  "auc": 0.92,
-  "positives": 6,
-  "negatives": 95,
+  "auc": 0.87,
+  "positives": 4,
+  "negatives": 97,
   "label": "upper end of BacDive temperature range <= 20 C"
  },
  "salt": {

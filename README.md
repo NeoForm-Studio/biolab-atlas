@@ -1,8 +1,8 @@
 # BioLab Atlas
 
 Look up any bacterium or archaeon and see what public data exists for it and how much its genome resembles
-known extremophiles. It opens with a 3D scene of *Deinococcus radiodurans*, a bacterium that survives
-γ-radiation doses up to 10,000 Gy and rebuilds a genome shattered into hundreds of fragments.
+known extremophiles. It opens with a 3D scene of *Deinococcus radiodurans*, a bacterium that shows no measurable
+lethality after 5,000 Gy of radiation and rebuilds a genome shattered into hundreds of fragments.
 
 ![D. radiodurans scene](media/01-hero.png)
 
