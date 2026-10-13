@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BioLab Atlas — the genome that rebuilds itself</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23070b11'/%3E%3Ccircle cx='16' cy='16' r='8' fill='%232fe0cc'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -14,8 +15,8 @@
     --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
     --display:'Space Grotesk',system-ui,sans-serif;
     --body:'Inter',system-ui,sans-serif;
-    --A:#2fe0cc; --T:#5b8bff; --G:#b08bf0; --C:#9fb4c6;
-    --gold:#f4bd5a;
+    --A:#d6f1ff; --T:#cfe0ff; --G:#ddd2ff; --C:#dbe6f2;
+    --gold:#ffe9c8;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{height:100%}
@@ -25,7 +26,10 @@
   /* additive bokeh depth layer (plate-bokeh) */
   #bokeh{position:fixed;inset:-8%;z-index:1;pointer-events:none;
     background:url("assets/plate-bokeh.png") center/cover no-repeat;
-    mix-blend-mode:screen;opacity:.42;will-change:transform;transition:opacity 1.4s ease}
+    mix-blend-mode:screen;opacity:.28;filter:saturate(0) brightness(1.16);
+    will-change:transform;transition:opacity 1.4s ease}
+  /* cool wash so the warm plate reads as ice-blue depth bokeh, not muddy orange */
+  #bokeh::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 60% at 50% 45%,rgba(188,212,255,.10),transparent 70%);mix-blend-mode:screen}
   /* grain + vignette */
   #grain{position:fixed;inset:0;z-index:2;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
@@ -39,7 +43,6 @@
   .brand .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold);
     margin:0 9px 2px;box-shadow:0 0 12px var(--gold);vertical-align:middle;animation:beat 2.6s ease-in-out infinite}
   @keyframes beat{0%,100%{opacity:.55;transform:scale(.82)}50%{opacity:1;transform:scale(1.1)}}
-  @media (max-width:520px){ header{flex-wrap:wrap;padding:16px} }
   .tagchip{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#7f8c99;
     border:1px solid rgba(150,170,190,.18);border-radius:30px;padding:6px 13px;backdrop-filter:blur(6px)}
   .spacer{flex:1}
@@ -48,7 +51,7 @@
 
   /* lower-left title block */
   .titleblock{position:fixed;left:34px;bottom:40px;z-index:12;max-width:min(560px,82vw);
-    opacity:0;transform:translateY(18px);transition:opacity 1.3s ease .2s,transform 1.3s cubic-bezier(.2,.8,.2,1) .2s}
+    opacity:0;transform:translateY(20px);transition:opacity 1.7s ease 1.3s,transform 1.7s cubic-bezier(.2,.8,.2,1) 1.3s}
   .titleblock.in{opacity:1;transform:none}
   .titleblock .ey{font-family:var(--mono);font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--A);margin-bottom:16px}
   .titleblock h1{font-family:var(--display);font-weight:500;font-size:clamp(30px,5.4vw,58px);line-height:.98;
@@ -63,41 +66,17 @@
 
   /* base-pair legend, lower-right */
   .legend{position:fixed;right:34px;bottom:40px;z-index:12;display:flex;flex-direction:column;gap:9px;
-    opacity:0;transform:translateY(14px);transition:opacity 1.2s ease .5s,transform 1.2s ease .5s}
+    opacity:0;transform:translateY(14px);transition:opacity 1.2s ease 1.5s,transform 1.2s ease 1.5s}
   .legend.in{opacity:1;transform:none}
   .legend .lh{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:#5f6b78;margin-bottom:3px;text-align:right}
   .legend .row{display:flex;align-items:center;justify-content:flex-end;gap:9px;font-family:var(--mono);font-size:11px;color:#9aa6b2}
   .legend .sw{width:9px;height:9px;border-radius:2px;box-shadow:0 0 9px currentColor}
 
-  /* ---- Stage 3R: waypoint composition panel (opposite the strand's swing) ---- */
-  .waypoint{position:fixed;top:13%;z-index:12;width:min(400px,38vw);
-    opacity:0;transition:opacity .5s ease;pointer-events:none}
-  .waypoint.left{left:42px} .waypoint.right{right:42px;text-align:right}
-  .waypoint .ey{font-family:var(--mono);font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--A);margin-bottom:13px}
-  .waypoint h2{font-family:var(--display);font-weight:500;font-size:clamp(26px,4.2vw,46px);line-height:1.0;letter-spacing:-.02em;color:#f3f7fb}
-  .waypoint .sub{font-size:14px;line-height:1.5;color:#aeb9c4;font-weight:300;margin-top:13px}
-  /* the framed slot the real station visual drops into next stage (the corner the strand vacated) */
-  .waypoint .frame{margin-top:20px;height:168px;border:1px solid rgba(120,150,170,.22);border-radius:10px;
-    background:linear-gradient(180deg,rgba(47,224,204,.04),rgba(10,16,22,.18));backdrop-filter:blur(3px);
-    display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-  .waypoint .frame::after{content:attr(data-ph);font-family:var(--mono);font-size:10px;letter-spacing:.18em;
-    text-transform:uppercase;color:#5a6b78}
-  /* reserved honesty rows (Function caveat / Expression significance) — designed in, per the non-negotiables */
-  .waypoint .note{margin-top:13px;font-family:var(--mono);font-size:10.5px;line-height:1.5;letter-spacing:.04em;color:#7f8c99}
-  .waypoint .note b{color:var(--gold);font-weight:500}
-  /* station progress rail */
-  .wprail{position:fixed;left:50%;bottom:34px;transform:translateX(-50%);z-index:12;display:flex;gap:14px;
-    opacity:0;transition:opacity .6s ease}
-  .wprail.in{opacity:1}
-  .wprail .wp{display:flex;flex-direction:column;align-items:center;gap:7px;font-family:var(--mono);font-size:9px;
-    letter-spacing:.14em;text-transform:uppercase;color:#4d5763;transition:color .4s}
-  .wprail .wp .d{width:7px;height:7px;border-radius:50%;background:#33414d;transition:all .4s}
-  .wprail .wp.on{color:#cdd6df} .wprail .wp.on .d{background:var(--A);box-shadow:0 0 9px var(--A);transform:scale(1.25)}
-  @media (max-width:720px){ .waypoint{width:78vw} .waypoint.right{right:11vw} .waypoint.left{left:11vw} .wprail .wp span{display:none} }
-
   .status{position:fixed;bottom:13px;left:50%;transform:translateX(-50%);z-index:12;font-family:var(--mono);
     font-size:10px;letter-spacing:.08em;color:#56616d;text-align:center;pointer-events:none}
   .status b{color:#8b97a3}
+
+  /* loader */
   #loader{position:fixed;inset:0;z-index:30;display:flex;align-items:center;justify-content:center;
     background:#03060a;transition:opacity .8s ease}
   #loader.gone{opacity:0;pointer-events:none}
@@ -113,8 +92,38 @@
     .legend{display:none}
   }
 </style>
+<style id="scroll-merge">
+/* ===== scroll-merge layer: hero (screen 1) -> GSAP snap -> Atlas UI (screen 2) ===== */
+html{height:auto}
+body{overflow-x:hidden!important;overflow-y:auto!important;height:auto!important}
+.screen{position:relative;width:100%;height:100vh}
+@media(max-width:640px){.screen{height:100svh}}
+/* confine the hero (was full-screen fixed) to its own section */
+#hero{overflow:hidden;background:#03060a;transform:translateZ(0)}
+#hero #scene,#hero #bokeh,#hero #grain,#hero .vignette,#hero #loader,
+#hero header,#hero .titleblock,#hero .legend,#hero .status,#hero #enter{position:absolute}
+/* the UI screen holds the real Atlas in an isolated frame */
+#uiscreen{background:#03060a}
+#uiframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;background:#03060a}
+/* scroll-to-enter cue */
+#enter{left:50%;bottom:24px;transform:translateX(-50%);z-index:14;display:flex;flex-direction:column;
+  align-items:center;gap:8px;cursor:pointer;font-family:var(--mono);font-size:10px;letter-spacing:.2em;
+  text-transform:uppercase;color:#9fb4c6;background:none;border:0;transition:opacity .4s ease}
+#enter:hover{color:#d6e2ec}
+#enter .chev{width:17px;height:17px;border-right:1.5px solid #6f8597;border-bottom:1.5px solid #6f8597;
+  transform:rotate(45deg);animation:mbob 1.9s ease-in-out infinite}
+@keyframes mbob{0%,100%{transform:translateY(0) rotate(45deg)}50%{transform:translateY(5px) rotate(45deg)}}
+/* return-to-hero control, only while the UI screen is active */
+#homeBtn{position:fixed;top:16px;left:20px;z-index:40;font-family:var(--mono);font-size:11px;letter-spacing:.04em;
+  color:#cdd9e3;background:rgba(8,14,20,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border:1px solid rgba(150,180,200,.22);border-radius:8px;padding:7px 12px;cursor:pointer;
+  opacity:0;pointer-events:none;transition:opacity .45s ease}
+#homeBtn:hover{color:#fff;border-color:rgba(150,180,200,.4)}
+body.at-ui #homeBtn{opacity:1;pointer-events:auto}
+</style>
 </head>
 <body>
+<section id="hero" class="screen">
 <div id="scene"></div>
 <div id="bokeh"></div>
 <div id="grain"></div>
@@ -123,7 +132,6 @@
 <header>
   <div class="brand">BioLab <b>Atlas</b><span class="dot"></span></div>
   <div class="tagchip">Radiation-Repair Study</div>
-  <a class="tagchip" href="explorer.html" style="pointer-events:auto;text-decoration:none">Species explorer →</a>
   <div class="spacer"></div>
   <div class="credit"><b>Deinococcus radiodurans</b> R1<br>the genome that rebuilds itself</div>
 </header>
@@ -131,10 +139,11 @@
 <div class="titleblock" id="title">
   <div class="ey">Part I · The Repair Engine</div>
   <h1>A genome caught<br>in the act of <em>healing</em>.</h1>
-  <p>Ionizing radiation shatters this genome into hundreds of short fragments, and the cell reassembles them into a <i>working genome</i> again. Here, mid-break: severed strands, drifting shards, and the <i>RecA</i> filament threading them back together.</p>
+  <p>Ionizing radiation shatters this chromosome into hundreds of fragments. Within hours, it is <i>whole again</i> — reassembled, base for base. Here, mid-break: severed strands, drifting shards, and the <i>RecA</i> filament threading them back together.</p>
   <div class="meta">
-    <div class="m"><div class="k">Survives γ-radiation up to</div><div class="v"><b>10,000</b> Gy</div></div>
-    <div class="m"><div class="k">Genome reassembled from</div><div class="v">hundreds of fragments</div></div>
+    <div class="m"><div class="k">Survivable dose</div><div class="v"><b>15,000</b> Gy</div></div>
+    <div class="m"><div class="k">Lethal to humans</div><div class="v">5 Gy</div></div>
+    <div class="m"><div class="k">Genome restored in</div><div class="v">~3 h</div></div>
   </div>
 </div>
 
@@ -146,12 +155,16 @@
   <div class="row"><span>Cytosine</span><span class="sw" style="background:var(--C);color:var(--C)"></span></div>
 </div>
 
-<div class="waypoint" id="waypoint"></div>
-<div class="wprail" id="wprail"></div>
+<div class="status" id="status">drag to orbit · <b>D. radiodurans recA</b> · DR_RS12030</div>
 
-<div class="status" id="status"><b>D. radiodurans</b> · crossing the cell membrane · recA DR_RS12030</div>
+<div id="loader"><div class="ld"><div class="ring"></div><div class="t">assembling helix…</div></div></div>
 
-<div id="loader"><div class="ld"><div class="ring"></div><div class="t">entering the cell…</div></div></div>
+  <div id="enter">explore the atlas<span class="chev"></span></div>
+</section>
+<section id="uiscreen" class="screen">
+  <iframe id="uiframe" src="ui.html" title="BioLab Atlas — interactive tools" loading="eager"></iframe>
+</section>
+<button id="homeBtn" type="button" aria-label="Back to the intro">↑ BioLab Atlas</button>
 
 <script type="importmap">
 { "imports": {
@@ -169,10 +182,12 @@ import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { GPUComputationRenderer } from 'three/addons/misc/GPUComputationRenderer.js';
 
 /* ---------------------------------------------------------------- palette */
+// igloo palette: clean whites -> ice-blue, only the faintest hue per base so the
+// helix reads as woven from white motes (not a colour-coded diagram).
 const COL = {
-  A:new THREE.Color('#2fe0cc'), T:new THREE.Color('#5b8bff'),
-  G:new THREE.Color('#b08bf0'), C:new THREE.Color('#9fb4c6'),
-  back:new THREE.Color('#bfe9ff'), gold:new THREE.Color('#f4bd5a'),
+  A:new THREE.Color('#d6f1ff'), T:new THREE.Color('#cfe0ff'),
+  G:new THREE.Color('#ddd2ff'), C:new THREE.Color('#dbe6f2'),
+  back:new THREE.Color('#eaf3ff'), gold:new THREE.Color('#ffe9c8'),
 };
 const baseCol = b => b==='A'?COL.A : b==='T'?COL.T : b==='G'?COL.G : COL.C;
 // real D. radiodurans recA coding sequence (first 120 nt) — colours the rungs
@@ -204,278 +219,150 @@ texLoader.load('assets/plate-env.png', tex => {
   // distant parallax backdrop
   const bg = new THREE.Mesh(
     new THREE.SphereGeometry(120, 40, 24),
-    new THREE.MeshBasicMaterial({ map:tex, side:THREE.BackSide, color:0x42596b, depthWrite:false })
+    new THREE.MeshBasicMaterial({ map:tex, side:THREE.BackSide, color:0x2a3a47, depthWrite:false })
   );
   bg.userData.spin = true;
   scene.add(bg);
 });
 
-/* ---------------------------------------------------------------- capability tier (the §7.2 ladder, for real) */
-// MODE ∈ HIGH | MEDIUM | LOW | SAFE. SAFE = no WebGL2 (GPGPU needs it) → 2.5D still fallback.
-// ?tier=HIGH|MEDIUM|LOW|SAFE forces a tier (used to verify each degrades). A load-time FPS
-// probe (see tick) can downgrade DPR/bloom/transmission at runtime if the chosen tier is too heavy.
-const FORCE = (new URLSearchParams(location.search).get('tier')||'').toUpperCase();
-const MODE = (()=>{
-  if(['HIGH','MEDIUM','LOW','SAFE'].includes(FORCE)) return FORCE;
-  try{
-    if(!renderer.capabilities.isWebGL2) return 'SAFE';
-    const mob=/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
-    if(mob && devicePixelRatio>2.5) return 'LOW';
-    if(mob) return 'MEDIUM';
-    return 'HIGH';
-  }catch(e){ return 'SAFE'; }
-})();
-const TIER = MODE==='SAFE' ? 'LOW' : MODE;        // build params (SAFE computes but never renders 3D)
-const P = ({
-  HIGH:   { width:160, ext:5200, lip:5600, rungs:252, dpr:2,   tubeRad:9, transmission:true,  bloom:true },
-  MEDIUM: { width:112, ext:2400, lip:2800, rungs:150, dpr:1.5, tubeRad:7, transmission:false, bloom:true },
-  LOW:    { width:72,  ext:0,    lip:1300, rungs:84,  dpr:1,   tubeRad:6, transmission:false, bloom:false },
-})[TIER];
-renderer.setPixelRatio(Math.min(devicePixelRatio, P.dpr));   // DPR is the cheapest lever (§7.1)
+/* ---------------------------------------------------------------- helix */
+const TURNS = 5.2, RISE = 26, RADIUS = 3.05, N = SEQ.length;
+const BREAK_A = 0.40, BREAK_B = 0.55;          // shattered band (fraction along helix)
+const twist = TURNS * Math.PI * 2;
+const helix = new THREE.Group();
+scene.add(helix);
 
-if(MODE!=='SAFE'){   /* ===================== 3D path (SAFE → 2.5D still fallback, see end) ===================== */
-
-/* ---------------------------------------------------------------- the cell membrane (phospholipid bilayer) */
-/* A READABLE lipid bilayer: two beaded head layers (heads OUT, tails IN) on a faint
-   translucent sheet — a real barrier, not a vignette. The genome is HIDDEN outside; crossing
-   this wall is the reveal beat (see crossing logic in the loop). Generic label only ("cell
-   membrane") — we do not assert D. radiodurans' exact multilayered envelope. Instanced per the
-   recipe (§7): thousands of lipids in ~2 draw calls; fades by camera distance, no transmission. */
-const MEM_R = 92, BILAYER = 4.2;
-const R_OUT = MEM_R, R_IN = MEM_R - BILAYER, R_MID = MEM_R - BILAYER*0.5;
-const NLIP = P.lip;
-const membraneGroup = new THREE.Group(); scene.add(membraneGroup);
-let memBand = 0;                                   // 0..1 visibility, driven by camera distance
-
-// continuous translucent sheet → the bilayer reads as a present surface, not floating dots
-const sheetMat = new THREE.ShaderMaterial({
-  transparent:true, side:THREE.DoubleSide, depthWrite:false, blending:THREE.AdditiveBlending,
-  uniforms:{ uColor:{value:new THREE.Color('#4fd6c4')}, uTime:{value:0}, uBand:{value:0} },
-  vertexShader:`varying vec3 vN; varying vec3 vV; varying vec3 vP;
-    void main(){ vN=normalize(normalMatrix*normal); vec4 mv=modelViewMatrix*vec4(position,1.);
-      vV=normalize(-mv.xyz); vP=position; gl_Position=projectionMatrix*mv; }`,
-  fragmentShader:`varying vec3 vN; varying vec3 vV; varying vec3 vP; uniform vec3 uColor; uniform float uTime,uBand;
-    void main(){ float f=pow(1.-max(dot(vN,vV),0.),2.0);
-      float a=uBand*(0.03+0.30*f); if(a<0.002) discard;
-      gl_FragColor=vec4(uColor*(0.08+1.0*f)*(0.9+0.1*sin(uTime*0.5+vP.y*0.05)), a); }`
-});
-const sheet = new THREE.Mesh(new THREE.SphereGeometry(R_MID, 72, 52), sheetMat);
-membraneGroup.add(sheet);
-
-// lipid HEADS — InstancedMesh, an outer + an inner layer (heads out, tails in)
-const headGeo = new THREE.SphereGeometry(1, 8, 8);
-const headMat = new THREE.MeshStandardMaterial({ color:0xbfeede, emissive:0x1f7d72, emissiveIntensity:.55,
-  roughness:.5, metalness:0, transparent:true, opacity:.92 });
-const heads = new THREE.InstancedMesh(headGeo, headMat, NLIP*2);
-const tailPos = new Float32Array(NLIP*2*3);        // one hydrophobic-tail segment per lipid (outer↔inner)
-{ const _m=new THREE.Matrix4(), _q=new THREE.Quaternion(), _s=new THREE.Vector3();
-  const GA=Math.PI*(3-Math.sqrt(5));               // golden-angle Fibonacci sphere → even lipid spread
-  for(let i=0;i<NLIP;i++){
-    const y=1-(i/(NLIP-1))*2, rad=Math.sqrt(Math.max(0,1-y*y)), th=GA*i;
-    const d=new THREE.Vector3(Math.cos(th)*rad, y, Math.sin(th)*rad);
-    d.x+=(Math.random()-.5)*0.02; d.y+=(Math.random()-.5)*0.02; d.z+=(Math.random()-.5)*0.02; d.normalize();
-    const hs=0.85+Math.random()*0.5;
-    const oPos=d.clone().multiplyScalar(R_OUT+(Math.random()-.5)*0.3);
-    const iPos=d.clone().multiplyScalar(R_IN -(Math.random()-.5)*0.3);
-    _s.setScalar(hs);
-    _m.compose(oPos,_q,_s); heads.setMatrixAt(i*2,_m);
-    _m.compose(iPos,_q,_s); heads.setMatrixAt(i*2+1,_m);
-    tailPos.set([oPos.x,oPos.y,oPos.z, iPos.x,iPos.y,iPos.z], i*6);
-  }
-  heads.instanceMatrix.needsUpdate=true;
+// strand point at fraction t (0..1) for strand s (0|1)
+function strandPt(t, s){
+  const a = t*twist + (s? 2.35 : 0);           // groove offset on strand 2
+  const flare = breakFlare(t) * (s? -1 : 1);   // strands pull apart across the break
+  const r = RADIUS + flare*1.7;
+  return new THREE.Vector3(Math.cos(a)*r, (t-0.5)*RISE, Math.sin(a)*r + flare*1.1);
 }
-membraneGroup.add(heads);
+// 0 away from break, rising to 1 inside it
+function breakFlare(t){
+  const c=(BREAK_A+BREAK_B)/2, w=(BREAK_B-BREAK_A)*1.7;
+  return Math.exp(-Math.pow((t-c)/w,2));
+}
+const inBreak = t => t>BREAK_A && t<BREAK_B;
 
-// lipid TAILS — faint hydrophobic-core lines bridging the two head layers
-const tailGeo=new THREE.BufferGeometry();
-tailGeo.setAttribute('position', new THREE.BufferAttribute(tailPos,3));
-const tailMat=new THREE.LineBasicMaterial({ color:0x2f8f86, transparent:true, opacity:0, blending:THREE.AdditiveBlending, depthWrite:false });
-membraneGroup.add(new THREE.LineSegments(tailGeo, tailMat));
-
-// crossing state — the genome stays hidden until the camera passes through the wall
-let crossed=false, crossT=0;
-
-/* ---------------------------------------------------------------- the spine (macro-spiral double helix) */
-/* The micro double-helix runs along a path that is itself a large 3D spiral. As you SCROLL, the
-   strand swings LEFT→RIGHT→LEFT across the viewport (the macro swing) — this oscillation is what
-   Stage 3R composes against. The geometry is periodic and TREADMILLED for near-infinite scroll;
-   the genome EVOLVES with depth (fragmentation met by RecA-repair glow, ramping downward) via uDepth. */
-const RISE = 26;                                  // (kept: the GPGPU dust references it for vertical sizing)
-const PERIODS = 3;                                // macro L–R swings in one periodic span
-const PERIOD_H = 46;                              // world height of one macro period (the treadmill unit)
-const SPINE_H = PERIODS*PERIOD_H;                 // built height (periodic → seamless wrap)
-const MAC_X = 11.0, MAC_Z = 5.5;                  // macro swing amplitude (X across viewport, Z depth)
-const MICRO_PER = 7;                              // micro turns per macro period (integer → seamless)
-const RAD = 3.0, TAU = 6.2831853;
-const spine = new THREE.Group();
-spine.visible = false;                            // revealed when the membrane is crossed (Stage 1R)
-scene.add(spine);
-
-function macroCenter(v){ const ma=v*PERIODS*TAU;
-  return new THREE.Vector3(Math.sin(ma)*MAC_X, (0.5-v)*SPINE_H, Math.cos(ma)*MAC_Z); }
-function spinePt(v,s){ const a=v*PERIODS*MICRO_PER*TAU + (s?2.35:0), c=macroCenter(v);
-  return new THREE.Vector3(c.x+Math.cos(a)*RAD, c.y, c.z+Math.sin(a)*RAD); }
-
-// shared GLSL: deeper → more fragmentation (strand dims) met by more RecA repair (gold glow)
-const BRK = `float breakRep(float y,float depth){ float d=y*0.09+depth*0.05;
-  float brk=smoothstep(0.55,0.95, 0.5+0.5*sin(d*1.6)+0.28*sin(d*0.71+1.3));
-  return brk*clamp(depth*0.012,0.0,1.0); }`;
-
-// backbone tubes — fresnel ribbon + depth break/repair
-const spineMat=new THREE.ShaderMaterial({ transparent:true,
-  uniforms:{ uColor:{value:COL.back}, uGold:{value:COL.gold}, uTime:{value:0}, uDepth:{value:0} },
+// backbone tubes (emissive fresnel ribbon)
+const backboneMat = new THREE.ShaderMaterial({
+  uniforms:{ uColor:{value:COL.back}, uTime:{value:0} },
+  transparent:true,
   vertexShader:`varying vec3 vN; varying vec3 vV; varying float vY;
     void main(){ vN=normalize(normalMatrix*normal); vec4 mv=modelViewMatrix*vec4(position,1.);
-      vV=normalize(-mv.xyz); vY=position.y; gl_Position=projectionMatrix*mv; }`,
-  fragmentShader:`varying vec3 vN; varying vec3 vV; varying float vY; uniform vec3 uColor,uGold; uniform float uTime,uDepth;
-    ${BRK}
-    void main(){ float f=pow(1.-max(dot(vN,vV),0.),2.2); float rep=breakRep(vY,uDepth);
-      vec3 base=uColor*(.10+1.7*f)*(.7+.3*sin(uTime*1.4+vY*.4));
-      vec3 col=mix(base, uGold*(0.4+1.6*f)*(0.6+0.8*sin(uTime*5.-vY)), rep);
-      gl_FragColor=vec4(col, (.34+.6*f)*(1.0-rep*0.35)); }`
+    vV=normalize(-mv.xyz); vY=position.y; gl_Position=projectionMatrix*mv; }`,
+  fragmentShader:`varying vec3 vN; varying vec3 vV; varying float vY; uniform vec3 uColor; uniform float uTime;
+    void main(){ float f=pow(1.-max(dot(vN,vV),0.),2.2);
+      float pulse=.7+.3*sin(uTime*1.4+vY*.4);
+      vec3 c=uColor*(.10+1.7*f)*pulse;
+      gl_FragColor=vec4(c,.34+.6*f); }`
 });
-{ const SEG=PERIODS*MICRO_PER*16;
-  for(let s=0;s<2;s++){ const pts=[];
-    for(let i=0;i<=SEG;i++) pts.push(spinePt(i/SEG,s));
-    spine.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), SEG, 0.12, P.tubeRad, false), spineMat));
-  }
+for(let s=0;s<2;s++){
+  const pts=[];
+  for(let i=0;i<=160;i++){ const t=i/160; pts.push(strandPt(t,s)); }
+  const curve=new THREE.CatmullRomCurve3(pts);
+  const tube=new THREE.Mesh(new THREE.TubeGeometry(curve,420,0.12,12,false), backboneMat);
+  helix.add(tube);
 }
 
-// base-pair rungs — InstancedMesh (tier-scaled), coloured by the real recA sequence, depth break/repair
-const rungMat=new THREE.ShaderMaterial({ transparent:true,
-  uniforms:{ uTime:{value:0}, uDepth:{value:0}, uGold:{value:COL.gold} },
-  vertexShader:`attribute vec3 aCol; varying vec3 vC; varying vec3 vN; varying vec3 vV; varying float vY;
-    void main(){ vC=aCol; vN=normalize(normalMatrix*mat3(instanceMatrix)*normal);
-      vec4 wp=instanceMatrix*vec4(position,1.); vY=wp.y; vec4 mv=modelViewMatrix*wp;
-      vV=normalize(-mv.xyz); gl_Position=projectionMatrix*mv; }`,
-  fragmentShader:`varying vec3 vC; varying vec3 vN; varying vec3 vV; varying float vY; uniform float uTime,uDepth; uniform vec3 uGold;
-    ${BRK}
-    void main(){ float f=pow(1.-max(dot(vN,vV),0.),1.5); float rep=breakRep(vY,uDepth);
-      vec3 col=mix(vC*(0.85+1.1*f), uGold*1.5*(0.6+0.8*sin(uTime*5.-vY)), rep);
-      gl_FragColor=vec4(col, 0.95*(1.0-rep*0.45)); }`
-});
-const rungGeo=new THREE.CylinderGeometry(0.075,0.075,1,8,1,true);
-const rungs=new THREE.InstancedMesh(rungGeo, rungMat, P.rungs);
-{ const aCol=new Float32Array(P.rungs*3), _m=new THREE.Matrix4(), _q=new THREE.Quaternion(), _s=new THREE.Vector3(), up=new THREE.Vector3(0,1,0);
-  for(let i=0;i<P.rungs;i++){ const v=(i+0.5)/P.rungs, p0=spinePt(v,0), p1=spinePt(v,1);
-    const mid=p0.clone().add(p1).multiplyScalar(.5), dir=p1.clone().sub(p0), len=dir.length();
-    _q.setFromUnitVectors(up, dir.clone().normalize()); _s.set(1,len,1); _m.compose(mid,_q,_s); rungs.setMatrixAt(i,_m);
-    const c=baseCol(SEQ[i%SEQ.length]); aCol[i*3]=c.r; aCol[i*3+1]=c.g; aCol[i*3+2]=c.b;
-  }
-  rungGeo.setAttribute('aCol', new THREE.InstancedBufferAttribute(aCol,3));
+// backbone nodes + base-pair rungs
+const nodeGeo=new THREE.SphereGeometry(0.165,16,16);
+const rungs=[];                 // {mesh, t} for intro stagger + break logic
+const phosMat=new THREE.MeshStandardMaterial({ color:0xdff2ff, emissive:0x183642, emissiveIntensity:.7, roughness:.25, metalness:.1 });
+for(let i=0;i<N;i++){
+  const t=i/(N-1);
+  const p0=strandPt(t,0), p1=strandPt(t,1);
+  const broken=inBreak(t);
+  // phosphate nodes
+  for(const p of [p0,p1]){ const m=new THREE.Mesh(nodeGeo,phosMat); m.position.copy(p); m.scale.setScalar(0.01); helix.add(m); rungs.push({mesh:m,t,kind:'node',broken}); }
+  if(broken) continue;          // rungs absent across the shattered band
+  // base-pair rung = glowing capsule between strands, coloured by the base
+  const col=baseCol(SEQ[i]);
+  const mid=p0.clone().add(p1).multiplyScalar(.5);
+  const dir=p1.clone().sub(p0); const len=dir.length();
+  const rung=new THREE.Mesh(
+    new THREE.CylinderGeometry(0.075,0.075,len,10,1,true),
+    new THREE.MeshStandardMaterial({ color:col, emissive:col, emissiveIntensity:0.95, roughness:.4, metalness:0,
+      transparent:true, opacity:.95 })
+  );
+  rung.position.copy(mid);
+  rung.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0), dir.clone().normalize());
+  rung.scale.set(0.01,1,0.01);
+  helix.add(rung);
+  rungs.push({mesh:rung,t,kind:'rung',broken:false});
 }
-rungs.instanceMatrix.needsUpdate=true; spine.add(rungs);
 
-// RecA repair filament — gold additive thread along the spine, intensifying with depth
-const recaMat=new THREE.ShaderMaterial({ transparent:true, blending:THREE.AdditiveBlending, depthWrite:false,
-  uniforms:{ uTime:{value:0}, uDepth:{value:0}, uColor:{value:COL.gold} },
-  vertexShader:`varying vec2 vUv; varying float vY; void main(){ vUv=uv; vY=position.y;
+/* ---- floating shards in the break (dramatised radiation damage) ---- */
+const shardGroup=new THREE.Group(); helix.add(shardGroup);
+const shardMat=new THREE.MeshStandardMaterial({ color:0xdcecfb, emissive:0x46627a, emissiveIntensity:.75, roughness:.5, metalness:.2, transparent:true, opacity:.82 });
+const shards=[];
+for(let i=0;i<26;i++){
+  const t=BREAK_A + Math.random()*(BREAK_B-BREAK_A);
+  const base=strandPt(t, Math.random()<.5?0:1);
+  const g=new THREE.IcosahedronGeometry(0.12+Math.random()*0.16,0);
+  const m=new THREE.Mesh(g,shardMat.clone());
+  m.position.copy(base).add(new THREE.Vector3((Math.random()-.5)*3.4,(Math.random()-.5)*2.2,(Math.random()-.5)*3.4));
+  m.userData={ rot:new THREE.Vector3(Math.random(),Math.random(),Math.random()).multiplyScalar(.01),
+    home:m.position.clone(), drift:Math.random()*6.28 };
+  shardGroup.add(m); shards.push(m);
+}
+
+/* ---- RecA repair filament: bright helical thread bridging the break ---- */
+const recaPts=[];
+for(let i=0;i<=120;i++){
+  const t=BREAK_A-0.03 + (i/120)*((BREAK_B-BREAK_A)+0.06);
+  const a=t*twist*1.9 + 1.2;
+  const r=1.15;
+  recaPts.push(new THREE.Vector3(Math.cos(a)*r, (t-0.5)*RISE, Math.sin(a)*r));
+}
+const recaCurve=new THREE.CatmullRomCurve3(recaPts);
+const recaMat=new THREE.ShaderMaterial({
+  transparent:true, blending:THREE.AdditiveBlending, depthWrite:false,
+  uniforms:{ uTime:{value:0}, uColor:{value:COL.gold} },
+  vertexShader:`varying float vY; varying vec2 vUv; void main(){ vY=position.y; vUv=uv;
     gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
-  fragmentShader:`varying vec2 vUv; varying float vY; uniform float uTime,uDepth; uniform vec3 uColor;
-    ${BRK}
-    void main(){ float wave=sin(vUv.x*120.-uTime*4.)*.5+.5; float rep=breakRep(vY,uDepth);
-      float glow=(.15+.7*rep)*(.4+.6*wave); gl_FragColor=vec4(uColor*glow*1.8, glow*.9);}`
+  fragmentShader:`varying float vY; varying vec2 vUv; uniform float uTime; uniform vec3 uColor;
+    void main(){ float wave=sin(vUv.x*60.-uTime*4.)*.5+.5;
+      float glow=.45+.55*wave; gl_FragColor=vec4(uColor*glow*1.15, glow*.62);}`
 });
-{ const SEG=PERIODS*MICRO_PER*16, pts=[];
-  for(let i=0;i<=SEG;i++){ const v=i/SEG, a=v*PERIODS*MICRO_PER*TAU+1.2, c=macroCenter(v);
-    pts.push(new THREE.Vector3(c.x+Math.cos(a)*1.15, c.y, c.z+Math.sin(a)*1.15)); }
-  spine.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), SEG, 0.06, 8, false), recaMat));
-}
+const recaTube=new THREE.Mesh(new THREE.TubeGeometry(recaCurve,200,0.07,10,false), recaMat);
+recaTube.visible=false; helix.add(recaTube);
+// bright motes travelling the filament
+const recaMotes=new THREE.Group(); helix.add(recaMotes);
+const moteGeo=new THREE.SphereGeometry(0.06,8,8);
+const moteMat=new THREE.MeshBasicMaterial({ color:0xffe9cf });
+const motes=[];
+for(let i=0;i<34;i++){ const m=new THREE.Mesh(moteGeo,moteMat); m.userData.u=Math.random(); recaMotes.add(m); motes.push(m); }
+recaMotes.visible=false;
 
-// crystalline repair machinery — refractive RecA rings. TRANSMISSION is the tier-ladder lever:
-// HIGH refracts (an extra scene render each); MEDIUM/LOW swap to an emissive standard material.
+/* ---- crystalline repair machinery: refractive RecA rings ---- */
 const crystals=[];
-function makeCrystal(rad,pos){
-  const mat = P.transmission
-    ? new THREE.MeshPhysicalMaterial({ color:0xbfeede, metalness:0, roughness:0.06, transmission:1, thickness:1.4,
-        ior:1.7, iridescence:1, iridescenceIOR:1.9, iridescenceThicknessRange:[120,480], clearcoat:1, clearcoatRoughness:.1,
-        envMapIntensity:1.6, attenuationColor:new THREE.Color(0xbfeede), attenuationDistance:3 })
-    : new THREE.MeshStandardMaterial({ color:0x9fd8e0, emissive:0x2a6f7a, emissiveIntensity:0.75, roughness:0.18, metalness:0,
-        envMapIntensity:1.0, transparent:true, opacity:0.9 });
-  const m=new THREE.Mesh(new THREE.TorusKnotGeometry(rad,rad*0.32,110,16,2,3), mat);
-  m.position.copy(pos); m.userData={ spin:new THREE.Vector3((Math.random()-.5)*.005,(Math.random()-.5)*.006+.003,(Math.random()-.5)*.005) };
-  m.visible=false; spine.add(m); crystals.push(m);
+function makeCrystal(rad,tube,pos,tint){
+  const m=new THREE.Mesh(
+    new THREE.TorusKnotGeometry(rad,tube,140,18,2,3),
+    new THREE.MeshPhysicalMaterial({ color:tint, metalness:0, roughness:0.06, transmission:1, thickness:1.4,
+      ior:1.7, iridescence:1, iridescenceIOR:1.9, iridescenceThicknessRange:[120,480],
+      clearcoat:1, clearcoatRoughness:.1, envMapIntensity:1.6, attenuationColor:tint, attenuationDistance:3 })
+  );
+  m.position.copy(pos);
+  m.userData={ spin:new THREE.Vector3((Math.random()-.5)*.004,(Math.random()-.5)*.006+.003,(Math.random()-.5)*.004), bob:Math.random()*6.28, home:pos.clone() };
+  scene.add(m); crystals.push(m);
 }
-if(TIER!=='LOW'){ makeCrystal(0.95, new THREE.Vector3(9,16,2)); makeCrystal(0.7, new THREE.Vector3(-10,-18,3)); }
-
-/* ---------------------------------------------------------------- the station visuals (slot into the 3R frames) */
-/* Each station's real visual lives on the CONTENT side of its waypoint (opposite the strand's swing),
-   fading in by scroll proximity. Real data + verified facts only — staging only where it clearly isn't data. */
-const stationsGroup=new THREE.Group(); scene.add(stationsGroup);
-const SIDE_X={ right:10, left:-10 };   // content-side third of the frame (on-screen at z=14, FOV 42)
-const stationObjs={};
-function fadeMats(group){ const ms=[]; group.traverse(o=>{ if(o.material){ o.material.transparent=true; ms.push(o.material); } }); group.visible=false; return ms; }
-function regStation(id, side, g){ g.position.set(SIDE_X[side], -2.0, 14); g.userData.baseY=-2.0; stationsGroup.add(g); stationObjs[id]={group:g, mats:fadeMats(g)}; }
-
-// 1) GENE — a clean, intact recA double-helix specimen, base pairs coloured by the REAL recA sequence
-{ const g=new THREE.Group(); const TW=2.0*Math.PI*2, R=2.2, H=15, NB=24;
-  const sp=(t,s)=>new THREE.Vector3(Math.cos(t*TW+(s?2.35:0))*R,(t-0.5)*H,Math.sin(t*TW+(s?2.35:0))*R);
-  for(let s=0;s<2;s++){ const pts=[]; for(let i=0;i<=90;i++) pts.push(sp(i/90,s));
-    g.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts),140,0.10,8,false),
-      new THREE.MeshStandardMaterial({color:0xcfeaff,emissive:0x2a5a6e,emissiveIntensity:.7,roughness:.4,metalness:0}))); }
-  for(let i=0;i<NB;i++){ const t=i/(NB-1),p0=sp(t,0),p1=sp(t,1),mid=p0.clone().add(p1).multiplyScalar(.5),dir=p1.clone().sub(p0),c=baseCol(SEQ[i%SEQ.length]);
-    const r=new THREE.Mesh(new THREE.CylinderGeometry(0.07,0.07,dir.length(),6,1,true),new THREE.MeshStandardMaterial({color:c,emissive:c,emissiveIntensity:.95,roughness:.4,metalness:0}));
-    r.position.copy(mid); r.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),dir.clone().normalize()); g.add(r); }
-  g.userData.spin=0.25; regStation('gene','right',g); }
-
-// 2) CROSS-SPECIES — four bacteria in VERIFIED real morphology, translucent membranes, faint inner genome.
-//    DR1 = cocci tetrad · D. gobiensis = coccus (pair) · D. deserti = rods (pairs) · E. coli = single rod.
-{ const g=new THREE.Group();
-  const mem=()=>new THREE.MeshPhysicalMaterial({color:0x9fe0d4,metalness:0,roughness:0.25,transmission:P.transmission?0.85:0,
-    thickness:0.6,ior:1.35,transparent:true,opacity:P.transmission?0.55:0.4,emissive:0x2a8074,emissiveIntensity:0.85,envMapIntensity:0.8});
-  const dnaMat=new THREE.MeshBasicMaterial({color:0xffd98a,transparent:true,opacity:0.85});
-  function dna(scale){ const pts=[]; for(let i=0;i<=36;i++){ const t=i/36; pts.push(new THREE.Vector3(Math.cos(t*11)*0.32*scale,(t-0.5)*1.05*scale,Math.sin(t*11)*0.32*scale)); }
-    return new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts),44,0.035*scale,5,false),dnaMat); }
-  function coccus(x,y,r){ const m=new THREE.Mesh(new THREE.SphereGeometry(r,18,14),mem()); m.position.set(x,y,0); const d=dna(r*1.4); d.position.copy(m.position); g.add(m,d); }
-  function rod(x,y,len,r){ const m=new THREE.Mesh(new THREE.CapsuleGeometry(r,len,6,14),mem()); m.position.set(x,y,0); m.rotation.z=Math.PI/2; const d=dna(r*1.6); d.position.copy(m.position); g.add(m,d); }
-  coccus(-2.1,2.6,0.62); coccus(-1.15,2.6,0.62); coccus(-2.1,1.7,0.62); coccus(-1.15,1.7,0.62);  // DR1 tetrad
-  coccus(2.0,2.5,0.75); coccus(2.0,1.2,0.75);                                                     // D. gobiensis pair
-  rod(-1.5,-1.4,1.3,0.5); rod(-1.5,-2.9,1.3,0.5);                                                 // D. deserti rod pair
-  rod(1.9,-2.1,2.1,0.58);                                                                          // E. coli rod
-  g.userData.spin=0.12; g.scale.setScalar(1.4); regStation('species','left',g); }
-
-// 3) FUNCTION — the DNA-repair departments, real anchor genes grouped by pathway (atlas_meta)
-{ const g=new THREE.Group();
-  const DEPTS=[
-    { name:'Recombination',          col:0x2fe0cc, genes:['recA','recF','recQ','ruvB'] },
-    { name:'Excision & synthesis',   col:0x5b8bff, genes:['uvrA','uvrB','polA'] },
-    { name:'Deinococcus-specific',   col:0xf4bd5a, genes:['ddrA','ddrB','ddrC','ddrD','pprA'] },
-    { name:'Regulation',             col:0xb08bf0, genes:['irrE','lexA'] },
-    { name:'Topology & metabolism',  col:0x9fb4c6, genes:['gyrA','mutS','tkt'] },
-  ];
-  DEPTS.forEach((d,di)=>{ const cx=(di-2)*2.4*0; const ang=di/DEPTS.length*Math.PI*2, cx2=Math.cos(ang)*4.2, cy2=Math.sin(ang)*4.2;
-    d.genes.forEach((gn,gi)=>{ const a=gi/d.genes.length*Math.PI*2, r=1.1;
-      const node=new THREE.Mesh(new THREE.SphereGeometry(0.26,12,10),new THREE.MeshStandardMaterial({color:d.col,emissive:d.col,emissiveIntensity:.7,roughness:.4}));
-      node.position.set(cx2+Math.cos(a)*r, cy2+Math.sin(a)*r, (gi%2)*0.6-0.3); g.add(node); }); });
-  g.userData.spin=0.18; regStation('function','right',g);
-  stationObjs.function.depts=DEPTS; }
-
-// 4) EXPRESSION — DR1 ionizing-radiation DESeq2 signal for the RDR anchors. REAL log2FC + padj.
-//    HONEST: none clears padj<0.05 → bars rendered hollow/desaturated; significance is shown, never dramatized.
-const EXPR=[ {g:'recA',fc:2.13,padj:0.36}, {g:'ddrA',fc:3.08,padj:0.087}, {g:'ddrB',fc:2.61,padj:0.20},
-  {g:'pprA',fc:2.86,padj:0.23}, {g:'uvrA',fc:1.84,padj:0.39}, {g:'uvrB',fc:2.43,padj:0.16} ];
-{ const g=new THREE.Group(); const BW=0.7, GAP=1.15, x0=-(EXPR.length-1)*GAP/2;
-  EXPR.forEach((e,i)=>{ const h=e.fc*1.5, sig=e.padj<0.05;            // sig=false for all here — and that is the point
-    const m=new THREE.MeshStandardMaterial({ color:0x2fe0cc, emissive:0x2fe0cc, emissiveIntensity:sig?0.9:0.18,
-      roughness:.5, transparent:true, opacity:sig?0.95:0.5, wireframe:!sig });   // non-significant → hollow + dim
-    const bar=new THREE.Mesh(new THREE.BoxGeometry(BW,h,BW), m); bar.position.set(x0+i*GAP, h/2-3, 0); g.add(bar); });
-  // baseline
-  const base=new THREE.Mesh(new THREE.BoxGeometry(EXPR.length*GAP,0.05,BW*1.2),new THREE.MeshBasicMaterial({color:0x3a4a55,transparent:true,opacity:0.6}));
-  base.position.set(0,-3,0); g.add(base);
-  g.userData.spin=0.0; regStation('expression','left',g);
-  stationObjs.expression.data=EXPR; }
-window.__stations=()=>Object.fromEntries(Object.entries(stationObjs).map(([k,v])=>[k,{vis:v.group.visible,
-  pos:v.group.position.toArray().map(n=>+n.toFixed(1)), op:+(v.mats[0]?v.mats[0].opacity:0).toFixed(2), kids:v.group.children.length}]));
+makeCrystal(0.95,0.30,new THREE.Vector3(5.4,1.2,1.5), new THREE.Color('#bfeede'));
+makeCrystal(0.55,0.20,new THREE.Vector3(-5.2,-2.4,2.0), new THREE.Color('#cfe0ff'));
 
 /* ---------------------------------------------------------------- GPGPU dust */
-const WIDTH = P.width;                              // tier-scaled GPGPU particle field (width²)
-const PCOUNT = WIDTH*WIDTH;
+// FBO field: ~83k motes desktop, scaled down on mobile to hold framerate
+const WIDTH = (innerWidth < 760 || /Mobi|Android/i.test(navigator.userAgent)) ? 150 : 288;
+const PCOUNT = WIDTH*WIDTH;                          // 288^2 ≈ 82,944
 const gpu = new GPUComputationRenderer(WIDTH, WIDTH, renderer);
 const dt0 = gpu.createTexture();
 (function seed(){
   const a=dt0.image.data;
   for(let i=0;i<a.length;i+=4){
-    const r=6+Math.random()*36, th=Math.random()*6.283, ph=Math.acos(2*Math.random()-1);  // dense interior hero dust (proven)
+    const r=6+Math.random()*36, th=Math.random()*6.283, ph=Math.acos(2*Math.random()-1);
     a[i]=r*Math.sin(ph)*Math.cos(th); a[i+1]=(Math.random()-.5)*RISE*1.5; a[i+2]=r*Math.sin(ph)*Math.sin(th);
     a[i+3]=Math.random();                          // life seed
   }
@@ -536,8 +423,8 @@ pGeo.setAttribute('ref',new THREE.BufferAttribute(refs,2));
 pGeo.setAttribute('rnd',new THREE.BufferAttribute(rnd,1));
 const pMat=new THREE.ShaderMaterial({
   transparent:true, depthWrite:false, blending:THREE.AdditiveBlending,
-  uniforms:{ texturePosition:{value:null}, uTime:{value:0}, uSize:{value:innerHeight*0.05},
-    cA:{value:COL.A}, cT:{value:COL.G} },
+  uniforms:{ texturePosition:{value:null}, uTime:{value:0}, uSize:{value:innerHeight*0.058},
+    cA:{value:new THREE.Color('#eaf3ff')}, cT:{value:new THREE.Color('#bcd4ff')} },
   vertexShader:`uniform sampler2D texturePosition; uniform float uSize; uniform float uTime;
     attribute vec2 ref; attribute float rnd; varying float vL; varying float vH;
     void main(){ vec4 s=texture2D(texturePosition,ref); vec3 p=s.xyz; vL=s.w; vH=rnd;
@@ -547,61 +434,26 @@ const pMat=new THREE.ShaderMaterial({
       gl_Position=projectionMatrix*mv; }`,
   fragmentShader:`varying float vL; varying float vH; uniform vec3 cA; uniform vec3 cT;
     void main(){ vec2 c=gl_PointCoord-.5; float d=length(c); if(d>.5) discard;
-      float a=smoothstep(.5,0.,d); a*=a;
-      vec3 col=mix(cA,cT,vH); col+=vec3(.25)*pow(a,3.);
+      float a=smoothstep(.5,0.,d); a*=a;                 // soft round mote
+      vec3 col=mix(cA,cT,vH); col+=vec3(.45)*pow(a,4.);  // hot white core -> ethereal glow
       float fade=smoothstep(0.,.25,vL)*smoothstep(1.,.7,vL)+0.25;
-      gl_FragColor=vec4(col, a*fade*.9); }`
+      gl_FragColor=vec4(col, a*fade*1.02); }`
 });
 const points=new THREE.Points(pGeo,pMat);
 points.frustumCulled=false; scene.add(points);
-
-/* ---------------------------------------------------------------- exterior approach dust */
-/* A separate, cheap particle field OUTSIDE the membrane — fills the exterior as you zoom in,
-   then fades once you're through the wall. Kept off the interior GPGPU field so the hero's
-   dust stays dense. Bounded sinusoidal drift (no GPGPU); fades by camera distance. */
-const EXT_N = P.ext;
-const extGeo=new THREE.BufferGeometry();
-{ const ep=new Float32Array(EXT_N*3), er=new Float32Array(EXT_N);
-  for(let i=0;i<EXT_N;i++){
-    const rr=48+Math.random()*60, th=Math.random()*6.283, ph=Math.acos(2*Math.random()-1);
-    ep[i*3]=rr*Math.sin(ph)*Math.cos(th); ep[i*3+1]=rr*Math.cos(ph)*0.8; ep[i*3+2]=rr*Math.sin(ph)*Math.sin(th); er[i]=Math.random();
-  }
-  extGeo.setAttribute('position',new THREE.BufferAttribute(ep,3));
-  extGeo.setAttribute('rnd',new THREE.BufferAttribute(er,1));
-}
-const extMat=new THREE.ShaderMaterial({ transparent:true, depthWrite:false, blending:THREE.AdditiveBlending,
-  uniforms:{ uTime:{value:0}, uSize:{value:innerHeight*0.05}, uFade:{value:0}, uCol:{value:COL.A} },
-  vertexShader:`uniform float uTime,uSize; attribute float rnd; varying float vH;
-    void main(){ vH=rnd; vec3 p=position;
-      p.x+=sin(uTime*0.18+rnd*30.)*2.6; p.y+=cos(uTime*0.13+rnd*22.)*2.6; p.z+=sin(uTime*0.16+rnd*41.)*2.6;
-      vec4 mv=modelViewMatrix*vec4(p,1.); gl_PointSize=uSize*(.08+.34*rnd)/(-mv.z); gl_Position=projectionMatrix*mv; }`,
-  fragmentShader:`uniform float uFade; uniform vec3 uCol; varying float vH;
-    void main(){ vec2 c=gl_PointCoord-.5; float d=length(c); if(d>.5) discard; float a=smoothstep(.5,0.,d);
-      gl_FragColor=vec4(uCol+vec3(.18)*vH, a*a*uFade*.85); }`
-});
-const extPoints=new THREE.Points(extGeo,extMat); extPoints.frustumCulled=false; scene.add(extPoints);
-
-// faint interior cytoplasm glow — lifts the deep background around the hero (depth, not a wall)
-const glow=new THREE.Mesh(new THREE.SphereGeometry(50, 32, 24),
-  new THREE.ShaderMaterial({ side:THREE.BackSide, transparent:true, depthWrite:false, blending:THREE.AdditiveBlending,
-    uniforms:{ uColor:{value:new THREE.Color('#16414a')} },
-    vertexShader:`varying vec3 vP; void main(){ vP=position; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
-    fragmentShader:`varying vec3 vP; uniform vec3 uColor;
-      void main(){ float v=0.5+0.5*vP.y/50.; gl_FragColor=vec4(uColor*(0.7+0.6*v), 0.6); }` }));
-scene.add(glow);
 
 /* ---------------------------------------------------------------- lights */
 scene.add(new THREE.AmbientLight(0x35506a, 0.7));
 const key=new THREE.DirectionalLight(0xcfeaff,1.5); key.position.set(6,10,8); scene.add(key);
 const rim=new THREE.DirectionalLight(0x4f6c86,1.1); rim.position.set(-8,-4,-6); scene.add(rim);
-const pTeal=new THREE.PointLight(0x2fe0cc,11,30,2); scene.add(pTeal);
-const pGold=new THREE.PointLight(0xf4bd5a,9,26,2); scene.add(pGold);
+const pTeal=new THREE.PointLight(0xbfe9ff,10,30,2); scene.add(pTeal);   // cool ice fill
+const pGold=new THREE.PointLight(0xffe9c8,4.5,26,2); scene.add(pGold);  // faint warm whisper
 
 /* ---------------------------------------------------------------- post */
 const composer=new EffectComposer(renderer);
 composer.addPass(new RenderPass(scene,camera));
-const bloom=new UnrealBloomPass(new THREE.Vector2(innerWidth,innerHeight), 0.66, 0.55, 0.55);
-if(P.bloom) composer.addPass(bloom);                 // LOW tier drops bloom entirely (§7.2)
+const bloom=new UnrealBloomPass(new THREE.Vector2(innerWidth,innerHeight), 0.56, 0.5, 0.6);
+composer.addPass(bloom);
 // final grade: vignette + chromatic aberration + breathing contrast
 const gradePass=new ShaderPass({
   uniforms:{ tDiffuse:{value:null}, uTime:{value:0}, uAberr:{value:0.0016} },
@@ -630,148 +482,88 @@ dom.addEventListener('pointermove',e=>{
   bk.style.transform=`translate(${-tgtRY*26}px,${-tgtRX*22}px)`;
 });
 
-/* The Stage-2 camera-nav rail + floating anchors are removed — superseded by the scroll
-   spine (Stage 2R). Stage 1R keeps the camera descent: approach the bilayer, cross it (the
-   reveal), settle at the Repair Engine until the scroll model lands next stage. */
-
 /* ---------------------------------------------------------------- intro timeline */
-let t0=performance.now()/1000, started=false, titled=false;
-// loader clears as soon as the descent is on screen; the title block lands on ARRIVAL.
-function reveal(){ document.getElementById('loader').classList.add('gone'); }
-function revealTitle(){
+let t0=performance.now()/1000, started=false;
+function reveal(){
+  document.getElementById('loader').classList.add('gone');
   document.getElementById('title').classList.add('in');
   document.getElementById('legend').classList.add('in');
 }
-// The genome assembles only AFTER the membrane is crossed (the reveal beat): rungs held at
-// 0.01 until `crossed`, then stagger in over ~2.4s; RecA filament reveals after (tt>2.0).
-/* ---------------------------------------------------------------- scroll (the only navigation) */
-// Virtual scroll: wheel/touch accumulate an unbounded depth (no page reload, no scrollbar).
-// Active only after the membrane is crossed, so the intro plays uninterrupted.
-let scrollTarget=0, scrollEased=0, _touchY=null;
-addEventListener('wheel', e=>{ if(crossed) scrollTarget=Math.max(0, scrollTarget + e.deltaY*0.06); }, {passive:true});
-addEventListener('touchstart', e=>{ _touchY=e.touches[0].clientY; }, {passive:true});
-addEventListener('touchmove', e=>{ if(crossed && _touchY!=null){ const dy=_touchY-e.touches[0].clientY;
-  scrollTarget=Math.max(0, scrollTarget + dy*0.16); _touchY=e.touches[0].clientY; } }, {passive:true});
-window.__scroll = d => { scrollTarget = Math.max(0,d); };       // QA hook: jump to a scroll depth
-window.__tier  = () => ({ MODE, TIER, P, downgraded: probe.downgraded });
-
-/* ---------------------------------------------------------------- Stage 3R: waypoint composition */
-/* Four stations → four scroll depths chosen at the spiral's swing EXTREMES. At each, the strand is
-   on one side and the panel + framed tool-slot land on the OPPOSITE side (the corner it vacated).
-   Navigation (scroll) and content layout are one thing. Visuals are placeholders; the two integrity
-   non-negotiables are designed into the frames now (Function caveat / Expression padj rows). */
-const WP=[
-  { id:'gene',       depth:12, side:'right', ey:'Station 01', title:'Gene',          sub:'recA — the real coding sequence, base by base.', ph:'gene visual' },
-  { id:'species',    depth:35, side:'left',  ey:'Station 02', title:'Cross-species', sub:'Four genomes, each in its true cell shape.',      ph:'4 bacteria' },
-  { id:'function',   depth:58, side:'right', ey:'Station 03', title:'Function',       sub:'The DNA-repair departments at work.',             ph:'pathway map',
-    note:'Resistance is multi-factorial — never &ldquo;more RecA than <i>E. coli</i>&rdquo;.' },
-  { id:'expression', depth:81, side:'left',  ey:'Station 04', title:'Expression',     sub:'What ionizing radiation switches on in DR1.',     ph:'DESeq2 signal',
-    note:'Significance shown as <b>padj</b> — never a dramatized non-significant fold-change.' },
-];
-const WP_BAND=13;
-const wpEl=document.getElementById('waypoint'), railEl=document.getElementById('wprail');
-WP.forEach((w,i)=>{ const b=document.createElement('div'); b.className='wp'; b.dataset.i=i;
-  b.innerHTML=`<span class="d"></span><span>${w.title}</span>`; railEl.appendChild(b); });
-let wpActive=-2;
-function updateWaypoints(s){
-  let best=-1, bestProx=0;
-  WP.forEach((w,i)=>{ const prox=Math.max(0, 1-Math.abs(s-w.depth)/WP_BAND); if(prox>bestProx){ bestProx=prox; best=i; } });
-  if(best!==wpActive){ wpActive=best;
-    if(best<0){ wpEl.className='waypoint'; wpEl.innerHTML=''; }
-    else{ const w=WP[best]; wpEl.className='waypoint '+w.side;
-      wpEl.innerHTML=`<div class="ey">${w.ey}</div><h2>${w.title}</h2><div class="sub">${w.sub}</div>`+
-        (w.note?`<div class="note">${w.note}</div>`:''); }
-    [...railEl.children].forEach((b,j)=>b.classList.toggle('on', j===best));
-  }
-  wpEl.style.opacity = best>=0 ? bestProx.toFixed(3) : 0;
+// stagger-in rungs/nodes over the first ~2.4s
+function introScale(now){
+  const tt=now-t0;
+  rungs.forEach((r,i)=>{
+    const delay=0.25 + (r.t)*1.7 + (r.kind==='node'?0:0.05);
+    const k=Math.max(0,Math.min(1,(tt-delay)/0.6));
+    const e=k<1? (1-Math.pow(1-k,3)) : 1;
+    if(r.kind==='node') r.mesh.scale.setScalar(0.01+e*0.99*0.165/0.165);
+    else r.mesh.scale.set(0.01+e*0.99,1,0.01+e*0.99);
+  });
+  if(tt>2.0 && !recaTube.visible){ recaTube.visible=true; recaMotes.visible=true; }
 }
 
 /* ---------------------------------------------------------------- animate */
 const clock=new THREE.Clock();
-const camTarget=new THREE.Vector3();
-const probe={ active:true, t0:performance.now()/1000, frames:0, fps:null, downgraded:null };
-let _pin=null;                                     // QA: freeze the clock at a chosen descent time
-window.__seekFreeze = s => {                        // dev/QA hook: freeze at descent time s (no-op unless called)
-  _pin = t0 + s; started = true;
-  if(s < 3.0){ crossed=false; crossT=0; titled=false; spine.visible=false; crystals.forEach(c=>c.visible=false);
-    document.getElementById('title').classList.remove('in'); document.getElementById('legend').classList.remove('in'); }
-};
 function tick(){
   requestAnimationFrame(tick);
   const dt=Math.min(clock.getDelta(),0.05);
-  const now=_pin!=null ? _pin : performance.now()/1000, T=now-t0;
+  const now=performance.now()/1000, T=now-t0;
 
   // gpgpu step
-  posVar.material.uniforms.uTime.value=now; posVar.material.uniforms.uDelta.value=dt;
+  posVar.material.uniforms.uTime.value=now;
+  posVar.material.uniforms.uDelta.value=dt;
   gpu.compute();
-  pMat.uniforms.texturePosition.value=gpu.getCurrentRenderTarget(posVar).texture; pMat.uniforms.uTime.value=now;
+  pMat.uniforms.texturePosition.value=gpu.getCurrentRenderTarget(posVar).texture;
+  pMat.uniforms.uTime.value=now;
+
+  // shader times
+  backboneMat.uniforms.uTime.value=now;
+  recaMat.uniforms.uTime.value=now;
   gradePass.uniforms.uTime.value=now;
 
-  // ---- the spine: scroll treadmills it (near-infinite); uDepth makes the genome EVOLVE downward ----
-  scrollEased += (scrollTarget-scrollEased)*0.08;
-  spine.position.y = scrollEased % PERIOD_H;                   // periodic geometry → seamless wrap
-  const uD = scrollEased;                                      // absolute depth → fragmentation + repair ramp
-  if(crossed){                                                 // Stage 3R waypoints + station visuals — after the intro
-    updateWaypoints(scrollEased); railEl.classList.add('in');
-    WP.forEach(w=>{ const so=stationObjs[w.id]; if(!so) return;
-      const prox=Math.max(0, 1-Math.abs(scrollEased-w.depth)/WP_BAND);
-      so.group.visible = prox>0.01;
-      so.mats.forEach(m=>{ if(m.userData.b0===undefined) m.userData.b0=m.opacity; m.opacity=m.userData.b0*prox; });
-      if(prox>0.01){ so.group.rotation.y += (so.group.userData.spin||0)*dt;
-        so.group.position.y = so.group.userData.baseY + Math.sin(now*0.5+w.depth)*0.4; }
-    });
-    if(titled) document.getElementById('title').style.opacity = Math.max(0, 1-scrollEased/12).toFixed(3);
-  }
-  spineMat.uniforms.uTime.value=now; spineMat.uniforms.uDepth.value=uD;
-  rungMat.uniforms.uTime.value=now;  rungMat.uniforms.uDepth.value=uD;
-  recaMat.uniforms.uTime.value=now;  recaMat.uniforms.uDepth.value=uD;
-  crystals.forEach(c=>{ c.rotation.x+=c.userData.spin.x; c.rotation.y+=c.userData.spin.y; c.rotation.z+=c.userData.spin.z; });
+  // helix slow spin
+  helix.rotation.y += dt*0.10;
 
-  // accent lights + backdrop spin
+  introScale(now);
+
+  // shards drift
+  shards.forEach(s=>{ s.rotation.x+=s.userData.rot.x; s.rotation.y+=s.userData.rot.y;
+    const f=Math.sin(now*0.6+s.userData.drift)*0.18;
+    s.position.y=s.userData.home.y+f;
+    s.position.x=s.userData.home.x+Math.cos(now*0.4+s.userData.drift)*0.12;
+    s.position.z=s.userData.home.z+Math.sin(now*0.35+s.userData.drift)*0.12; });
+
+  // reca motes travel filament
+  motes.forEach((m,i)=>{ let u=(m.userData.u + now*0.12)%1; const p=recaCurve.getPoint(u); m.position.copy(p);
+    const sc=0.6+0.6*Math.sin(u*Math.PI); m.scale.setScalar(sc); });
+
+  // crystals
+  crystals.forEach(c=>{ c.rotation.x+=c.userData.spin.x; c.rotation.y+=c.userData.spin.y; c.rotation.z+=c.userData.spin.z;
+    c.position.y=c.userData.home.y+Math.sin(now*0.5+c.userData.bob)*0.5; });
+
+  // moving accent lights near the break
   pTeal.position.set(Math.cos(now*0.7)*4, Math.sin(now*0.5)*3+1, Math.sin(now*0.7)*4);
   pGold.position.set(Math.cos(now*0.5+2)*3, Math.sin(now*0.8)*2-1, Math.sin(now*0.5+2)*3+2);
+
+  // backdrop slow spin
   scene.traverse(o=>{ if(o.userData && o.userData.spin) o.rotation.y+=dt*0.006; });
 
-  // ---- the cell membrane: a present wall during approach, fades once we're inside ----
-  const camR = camera.position.length();
-  memBand = Math.max(0, Math.min(1, 1 - Math.abs(camR-MEM_R)/58));
-  sheetMat.uniforms.uTime.value = now; sheetMat.uniforms.uBand.value = memBand;
-  headMat.opacity = 0.92*memBand; tailMat.opacity = 0.5*memBand;
-  membraneGroup.rotation.y += dt*0.008;
-  extMat.uniforms.uTime.value = now;
-  extMat.uniforms.uFade.value = Math.max(0, Math.min(1, (camR-46)/50));
-
-  // ---- THE CROSSING = the reveal: the spine appears only on the interior side of the wall ----
-  if(!crossed && camR < R_IN){ crossed = true; crossT = now; spine.visible = true; crystals.forEach(c=>c.visible=true); }
-
-  // ---- camera: descend + cross (Stage 1R), then settle to the spine framing; SCROLL drives the spine ----
+  // camera: auto-orbit + breathe + user drag + parallax, with intro dolly
   curRX+=(tgtRX-curRX)*0.05; curRY+=(tgtRY-curRY)*0.05;
-  const DESC = 8.0, dp = Math.min(T/DESC, 1);
-  if(dp<1){
-    const ease = dp*dp*dp*(dp*(dp*6.-15.)+10.);
-    const descR = 114 - ease*(114-21.5);
-    const yaw = now*0.06 + userYaw + curRY*0.5;
-    const pitch = userPitch + curRX*0.35 + 0.05 + (1-ease)*0.45;
-    camera.position.set(Math.sin(yaw)*descR, 0.6+Math.sin(pitch)*9, Math.cos(yaw)*descR);
-    camera.lookAt(0,0,0);
-  } else {
-    const px=curRY*4 + userYaw*6, py=-curRX*4 - userPitch*6;   // gentle pointer/drag parallax around a fixed frontal frame
-    camTarget.set(px, py, 38);
-    camera.position.lerp(camTarget, 0.05);
-    camera.lookAt(0, py*0.25, 0);
-  }
+  const introDolly = T<3 ? (1-Math.pow(1-Math.min(T/3,1),3)) : 1;     // 0..1
+  const baseR = 30 - introDolly*8.5;                                   // 30 -> 21.5
+  const auto = now*0.06;
+  const yaw = auto + userYaw + curRY*0.5;
+  const pitch = userPitch + curRX*0.35 + 0.05;
+  const breathe = Math.sin(now*0.4)*0.6;
+  camera.position.x=Math.sin(yaw)*(baseR+breathe);
+  camera.position.z=Math.cos(yaw)*(baseR+breathe);
+  camera.position.y=0.6 + Math.sin(pitch)*9 + Math.sin(now*0.3)*0.4;
+  camera.lookAt(0,0,0);
 
-  composer.render();
+  if(!window.__heroOff) composer.render();
 
-  // ---- load-time FPS probe → runtime downgrade if the chosen tier is too heavy (uses REAL time) ----
-  if(probe.active){ probe.frames++; const rt=performance.now()/1000 - probe.t0;
-    if(rt>1.2){ probe.active=false; probe.fps=probe.frames/rt;
-      if(probe.fps<42 && TIER!=='LOW'){ renderer.setPixelRatio(Math.min(devicePixelRatio,1));
-        if(P.bloom){ try{ composer.removePass(bloom); }catch(e){} } extPoints.visible=false;
-        probe.downgraded = probe.fps.toFixed(0); } } }
-
-  if(!started && T>0.3){ started=true; reveal(); }
-  if(!titled && crossed && now-crossT>1.0){ titled=true; revealTitle(); }
+  if(!started && T>0.35){ started=true; reveal(); }
 }
 tick();
 
@@ -782,28 +574,42 @@ addEventListener('resize',()=>{
   composer.setSize(innerWidth,innerHeight);
   bloom.setSize(innerWidth,innerHeight);
   pMat.uniforms.uSize.value=innerHeight*0.05;
-  extMat.uniforms.uSize.value=innerHeight*0.05;
 });
+</script>
 
-}   /* ===================== end 3D path ===================== */
-else { safeMode(); }   // no WebGL2 (or ?tier=SAFE): render the pre-baked still + composited depth, no shaders
-
-/* 2.5D-safe floor (§7.2): a static hero still as a CSS background, keep the #bokeh/#grain/.vignette
-   layers + pointer parallax — the composited-depth trick (§4.3) reads as volumetric with zero GPU. */
-function safeMode(){
-  document.getElementById('loader').classList.add('gone');
-  document.getElementById('title').classList.add('in');
-  document.getElementById('legend').classList.add('in');
-  const s=document.getElementById('scene');
-  s.style.background="#03060a url('assets/still-2p5d.jpg') center/cover no-repeat";
-  s.style.willChange='transform';
-  document.getElementById('status').innerHTML='2.5D safe mode · static still (WebGL2 unavailable)';
-  addEventListener('pointermove', e=>{
-    const mx=(e.clientX/innerWidth-.5), my=(e.clientY/innerHeight-.5);
-    s.style.transform=`scale(1.06) translate(${-mx*14}px,${-my*12}px)`;
-    document.getElementById('bokeh').style.transform=`translate(${-mx*26}px,${-my*22}px)`;
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+<script>
+addEventListener('load', function () {
+  if (!window.gsap || !window.ScrollTrigger) return;
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+  var screens = gsap.utils.toArray('.screen');
+  // full-screen snap between hero and UI
+  ScrollTrigger.create({
+    trigger: 'body', start: 'top top', end: 'bottom bottom',
+    snap: { snapTo: 1 / (screens.length - 1), duration: { min: 0.25, max: 0.7 }, ease: 'power2.inOut' }
   });
-}
+  // hero dissolves as the UI rises into view
+  gsap.to('#hero', { opacity: 0, ease: 'none',
+    scrollTrigger: { trigger: '#uiscreen', start: 'top 92%', end: 'top 14%', scrub: true } });
+  // pause/resume the tool iframe's WebGL so only one heavy scene renders at a time (same-origin)
+  function setUiPaused(p){ try{ var f=document.getElementById('uiframe'); if(f&&f.contentWindow) f.contentWindow.__uiPause=p; }catch(e){} }
+  var uif = document.getElementById('uiframe');
+  if (uif){ uif.addEventListener('load', function(){ setUiPaused(!document.body.classList.contains('at-ui')); }); setUiPaused(true); }
+  // when the UI is the active screen: stop the hero's WebGL loop + reveal the home button
+  ScrollTrigger.create({ trigger: '#uiscreen', start: 'top 55%',
+    onEnter: function () { window.__heroOff = true; document.body.classList.add('at-ui'); setUiPaused(false); },
+    onLeaveBack: function () { window.__heroOff = false; document.body.classList.remove('at-ui'); setUiPaused(true); } });
+  // affordances
+  var enter = document.getElementById('enter');
+  if (enter) enter.addEventListener('click', function () {
+    gsap.to(window, { duration: 0.85, ease: 'power2.inOut', scrollTo: '#uiscreen' }); });
+  var home = document.getElementById('homeBtn');
+  if (home) home.addEventListener('click', function () {
+    gsap.to(window, { duration: 0.85, ease: 'power2.inOut', scrollTo: 0 }); });
+  addEventListener('resize', function () { ScrollTrigger.refresh(); });
+});
 </script>
 </body>
 </html>
