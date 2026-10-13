@@ -15,7 +15,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "8/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 62,
+   "UvrA": 57,
+   "UvrB": 56,
+   "RecN": 35,
+   "RecF": null,
+   "RecQ": 56,
+   "RuvB": 60,
+   "GyrA": 46,
+   "PolA": null,
+   "LexA": null,
+   "Tkt": 51
   }
  },
  {
@@ -31,7 +55,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "5/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 43,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 58,
+   "UvrA": 55,
+   "UvrB": 52,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": 39,
+   "PolA": null,
+   "LexA": null,
+   "Tkt": 47
   }
  },
  {
@@ -53,7 +101,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "9/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 60,
+   "UvrA": 57,
+   "UvrB": 58,
+   "RecN": 30,
+   "RecF": 32,
+   "RecQ": 39,
+   "RuvB": 59,
+   "GyrA": 48,
+   "PolA": null,
+   "LexA": null,
+   "Tkt": 53
   }
  },
  {
@@ -72,7 +144,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
-   "salt": "3/3"
+   "salt": "3/3",
+   "repair": "8/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": 84,
+   "EctB": 84,
+   "EctC": 77,
+   "RecA": 58,
+   "UvrA": 55,
+   "UvrB": 55,
+   "RecN": 34,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": 58,
+   "GyrA": 45,
+   "PolA": null,
+   "LexA": 30,
+   "Tkt": 48
   }
  },
  {
@@ -88,7 +184,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "11/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 56,
+   "UvrA": 52,
+   "UvrB": 55,
+   "RecN": 33,
+   "RecF": 33,
+   "RecQ": 44,
+   "RuvB": 54,
+   "GyrA": 41,
+   "PolA": 36,
+   "LexA": 31,
+   "Tkt": 51
   }
  },
  {
@@ -107,7 +227,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "9/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 62,
+   "UvrA": 55,
+   "UvrB": 54,
+   "RecN": 31,
+   "RecF": null,
+   "RecQ": 44,
+   "RuvB": 58,
+   "GyrA": 44,
+   "PolA": null,
+   "LexA": 33,
+   "Tkt": 47
   }
  },
  {
@@ -129,7 +273,31 @@
   "markers": {
    "radiation": "6/6",
    "heat": "0/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "10/11"
+  },
+  "genes": {
+   "PprA": 59,
+   "DdrA": 82,
+   "DdrB": 76,
+   "DdrC": 72,
+   "DdrD": 65,
+   "IrrE": 64,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 93,
+   "UvrA": 87,
+   "UvrB": 89,
+   "RecN": 70,
+   "RecF": 81,
+   "RecQ": 70,
+   "RuvB": 93,
+   "GyrA": 85,
+   "PolA": 73,
+   "LexA": null,
+   "Tkt": 81
   }
  },
  {
@@ -151,7 +319,31 @@
   "markers": {
    "radiation": "5/6",
    "heat": "0/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "11/11"
+  },
+  "genes": {
+   "PprA": 54,
+   "DdrA": 79,
+   "DdrB": 80,
+   "DdrC": 70,
+   "DdrD": null,
+   "IrrE": 65,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 92,
+   "UvrA": 88,
+   "UvrB": 90,
+   "RecN": 69,
+   "RecF": 82,
+   "RecQ": 71,
+   "RuvB": 93,
+   "GyrA": 86,
+   "PolA": 73,
+   "LexA": 50,
+   "Tkt": 82
   }
  },
  {
@@ -173,7 +365,31 @@
   "markers": {
    "radiation": "6/6",
    "heat": "0/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "9/11"
+  },
+  "genes": {
+   "PprA": 55,
+   "DdrA": 85,
+   "DdrB": 73,
+   "DdrC": 68,
+   "DdrD": 57,
+   "IrrE": 65,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 89,
+   "UvrA": 85,
+   "UvrB": 87,
+   "RecN": 73,
+   "RecF": 85,
+   "RecQ": null,
+   "RuvB": 91,
+   "GyrA": 88,
+   "PolA": 72,
+   "LexA": null,
+   "Tkt": 82
   }
  },
  {
@@ -192,7 +408,31 @@
   "markers": {
    "radiation": "6/6",
    "heat": "0/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "11/11"
+  },
+  "genes": {
+   "PprA": 100,
+   "DdrA": 100,
+   "DdrB": 100,
+   "DdrC": 100,
+   "DdrD": 100,
+   "IrrE": 100,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 100,
+   "UvrA": 100,
+   "UvrB": 100,
+   "RecN": 100,
+   "RecF": 100,
+   "RecQ": 100,
+   "RuvB": 100,
+   "GyrA": 100,
+   "PolA": 100,
+   "LexA": 100,
+   "Tkt": 100
   }
  },
  {
@@ -208,7 +448,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "8/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 61,
+   "UvrA": 55,
+   "UvrB": 56,
+   "RecN": 32,
+   "RecF": null,
+   "RecQ": 47,
+   "RuvB": 57,
+   "GyrA": 48,
+   "PolA": null,
+   "LexA": null,
+   "Tkt": 48
   }
  },
  {
@@ -230,7 +494,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "7/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": 58,
+   "UvrB": 59,
+   "RecN": 32,
+   "RecF": 34,
+   "RecQ": null,
+   "RuvB": 59,
+   "GyrA": 50,
+   "PolA": null,
+   "LexA": null,
+   "Tkt": 55
   }
  },
  {
@@ -249,7 +537,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "3/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": 53,
+   "UvrB": 56,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": 45,
+   "PolA": null,
+   "LexA": null,
+   "Tkt": null
   }
  },
  {
@@ -268,7 +580,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "3/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": 54,
+   "UvrB": 55,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": 43,
+   "PolA": null,
+   "LexA": null,
+   "Tkt": null
   }
  },
  {
@@ -287,7 +623,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "3/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": 52,
+   "UvrB": 54,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": 44,
+   "PolA": null,
+   "LexA": null,
+   "Tkt": null
   }
  },
  {
@@ -306,7 +666,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
-   "salt": "3/3"
+   "salt": "3/3",
+   "repair": "7/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": 100,
+   "EctB": 100,
+   "EctC": 100,
+   "RecA": 57,
+   "UvrA": 54,
+   "UvrB": 56,
+   "RecN": 35,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": 59,
+   "GyrA": 44,
+   "PolA": null,
+   "LexA": null,
+   "Tkt": 49
   }
  },
  {
@@ -325,7 +709,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "9/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 58,
+   "UvrA": 58,
+   "UvrB": 56,
+   "RecN": 35,
+   "RecF": 36,
+   "RecQ": null,
+   "RuvB": 54,
+   "GyrA": 46,
+   "PolA": null,
+   "LexA": 36,
+   "Tkt": 45
   }
  },
  {
@@ -344,7 +752,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
-   "salt": "3/3"
+   "salt": "3/3",
+   "repair": "9/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": 42,
+   "EctB": 50,
+   "EctC": 51,
+   "RecA": 60,
+   "UvrA": 55,
+   "UvrB": 56,
+   "RecN": 32,
+   "RecF": 33,
+   "RecQ": null,
+   "RuvB": 58,
+   "GyrA": 45,
+   "PolA": 39,
+   "LexA": null,
+   "Tkt": 51
   }
  },
  {
@@ -363,7 +795,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "0/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 43,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": null,
+   "UvrB": null,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": null,
+   "PolA": null,
+   "LexA": null,
+   "Tkt": null
   }
  },
  {
@@ -382,7 +838,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "1/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": null,
+   "UvrB": null,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": 41,
+   "PolA": null,
+   "LexA": null,
+   "Tkt": null
   }
  },
  {
@@ -401,7 +881,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "10/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 62,
+   "UvrA": 55,
+   "UvrB": 56,
+   "RecN": 32,
+   "RecF": null,
+   "RecQ": 46,
+   "RuvB": 58,
+   "GyrA": 46,
+   "PolA": 35,
+   "LexA": 35,
+   "Tkt": 50
   }
  },
  {
@@ -420,7 +924,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "10/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 56,
+   "UvrA": 56,
+   "UvrB": 54,
+   "RecN": 34,
+   "RecF": 30,
+   "RecQ": 57,
+   "RuvB": 60,
+   "GyrA": 44,
+   "PolA": null,
+   "LexA": 31,
+   "Tkt": 51
   }
  },
  {
@@ -442,7 +970,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "8/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 62,
+   "UvrA": 53,
+   "UvrB": 54,
+   "RecN": 30,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": 60,
+   "GyrA": 42,
+   "PolA": 35,
+   "LexA": null,
+   "Tkt": 49
   }
  },
  {
@@ -461,7 +1013,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "0/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 100,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": null,
+   "UvrB": null,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": null,
+   "PolA": null,
+   "LexA": null,
+   "Tkt": null
   }
  },
  {
@@ -483,7 +1059,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "8/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 62,
+   "UvrA": 56,
+   "UvrB": 60,
+   "RecN": 35,
+   "RecF": 35,
+   "RecQ": null,
+   "RuvB": 58,
+   "GyrA": 48,
+   "PolA": null,
+   "LexA": 35,
+   "Tkt": null
   }
  },
  {
@@ -502,7 +1102,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "9/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 59,
+   "UvrA": 47,
+   "UvrB": 53,
+   "RecN": 32,
+   "RecF": 31,
+   "RecQ": 51,
+   "RuvB": 57,
+   "GyrA": 45,
+   "PolA": null,
+   "LexA": null,
+   "Tkt": 52
   }
  },
  {
@@ -524,7 +1148,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "8/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 61,
+   "UvrA": 55,
+   "UvrB": null,
+   "RecN": 31,
+   "RecF": 30,
+   "RecQ": 38,
+   "RuvB": 55,
+   "GyrA": 49,
+   "PolA": null,
+   "LexA": null,
+   "Tkt": 50
   }
  },
  {
@@ -546,7 +1194,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
-   "salt": "3/3"
+   "salt": "3/3",
+   "repair": "10/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": 41,
+   "EctB": 54,
+   "EctC": 43,
+   "RecA": 57,
+   "UvrA": 57,
+   "UvrB": 55,
+   "RecN": 39,
+   "RecF": 37,
+   "RecQ": 56,
+   "RuvB": 55,
+   "GyrA": 47,
+   "PolA": 36,
+   "LexA": null,
+   "Tkt": 49
   }
  },
  {
@@ -565,7 +1237,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "0/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 36,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": null,
+   "UvrB": null,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": null,
+   "PolA": null,
+   "LexA": null,
+   "Tkt": null
   }
  },
  {
@@ -584,7 +1280,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "0/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 72,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": null,
+   "UvrB": null,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": null,
+   "PolA": null,
+   "LexA": null,
+   "Tkt": null
   }
  },
  {
@@ -603,7 +1323,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "0/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 73,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": null,
+   "UvrB": null,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": null,
+   "PolA": null,
+   "LexA": null,
+   "Tkt": null
   }
  },
  {
@@ -622,7 +1366,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "5/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 39,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 56,
+   "UvrA": 52,
+   "UvrB": 53,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": 55,
+   "GyrA": 45,
+   "PolA": null,
+   "LexA": null,
+   "Tkt": null
   }
  },
  {
@@ -641,7 +1409,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
-   "salt": "0/3"
+   "salt": "0/3",
+   "repair": "9/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 36,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 69,
+   "UvrA": 69,
+   "UvrB": 65,
+   "RecN": 45,
+   "RecF": 42,
+   "RecQ": null,
+   "RuvB": 75,
+   "GyrA": 57,
+   "PolA": 47,
+   "LexA": null,
+   "Tkt": 51
   }
  },
  {
@@ -663,7 +1455,31 @@
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
-   "salt": "3/3"
+   "salt": "3/3",
+   "repair": "9/11"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": 37,
+   "EctB": 50,
+   "EctC": 45,
+   "RecA": 60,
+   "UvrA": 55,
+   "UvrB": 58,
+   "RecN": 31,
+   "RecF": 32,
+   "RecQ": 37,
+   "RuvB": 58,
+   "GyrA": 49,
+   "PolA": null,
+   "LexA": null,
+   "Tkt": 54
   }
  }
 ]

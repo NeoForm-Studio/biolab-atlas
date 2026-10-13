@@ -57,5 +57,55 @@
         "ref": "WP_013332346.1"
       }
     ]
+  },
+  "repair": {
+    "label": "Core DNA-repair genes (D. radiodurans references)",
+    "note": "Widely conserved genes; most bacteria carry them, so the useful signal is identity to the D. radiodurans protein, which shows how far each species has diverged. Archaea use different machinery for several of these.",
+    "genes": [
+      {
+        "name": "RecA",
+        "ref": "WP_010888966.1"
+      },
+      {
+        "name": "UvrA",
+        "ref": "WP_010888406.1"
+      },
+      {
+        "name": "UvrB",
+        "ref": "WP_027480336.1"
+      },
+      {
+        "name": "RecN",
+        "ref": "WP_010888116.1"
+      },
+      {
+        "name": "RecF",
+        "ref": "WP_010887732.1"
+      },
+      {
+        "name": "RecQ",
+        "ref": "WP_010887932.1"
+      },
+      {
+        "name": "RuvB",
+        "ref": "WP_010887241.1"
+      },
+      {
+        "name": "GyrA",
+        "ref": "WP_010888548.1"
+      },
+      {
+        "name": "PolA",
+        "ref": "WP_034351289.1"
+      },
+      {
+        "name": "LexA",
+        "ref": "WP_027479703.1"
+      },
+      {
+        "name": "Tkt",
+        "ref": "WP_010888884.1"
+      }
+    ]
   }
 }

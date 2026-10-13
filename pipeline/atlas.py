@@ -260,6 +260,8 @@ def rebuild_index():
             "measured_optimum_c": (e.get("phenotype") or {}).get("optimum_temp_c"),
             "measured_growth_c": (e.get("phenotype") or {}).get("growth_temp_c"),
             "markers": {k: f"{v['found']}/{v['of']}" for k, v in e.get("markers", {}).items()},
+            "genes": {g["name"]: (round(g["identity"]) if g["found"] else None)
+                      for v in e.get("markers", {}).values() for g in v["genes"]},
         })
     write_json(LIBRARY / "index.json", rows)
 

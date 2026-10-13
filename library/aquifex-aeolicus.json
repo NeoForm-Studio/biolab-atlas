@@ -13,7 +13,7 @@
   "uniprot_proteins": 1559,
   "uniprot_reviewed": 788,
   "sequences_16s": 2,
-  "papers": 3944
+  "papers": 3945
  },
  "phenotype": null,
  "genome": {
@@ -110,6 +110,77 @@
     {
      "name": "EctC",
      "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 5,
+   "of": 11,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_010881410.1",
+     "identity": 58.485,
+     "coverage": 91
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_010880409.1",
+     "identity": 55.169,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_010881212.1",
+     "identity": 51.932,
+     "coverage": 96
+    },
+    {
+     "name": "RecN",
+     "found": false,
+     "accession": "WP_010880332.1",
+     "identity": 27.407,
+     "coverage": 94
+    },
+    {
+     "name": "RecF",
+     "found": false
+    },
+    {
+     "name": "RecQ",
+     "found": false
+    },
+    {
+     "name": "RuvB",
+     "found": false
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_010880609.1",
+     "identity": 39.484,
+     "coverage": 94
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "WP_010881053.1",
+     "identity": 39.427,
+     "coverage": 30
+    },
+    {
+     "name": "LexA",
+     "found": false
+    },
+    {
+     "name": "Tkt",
+     "found": true,
+     "accession": "WP_165438795.1",
+     "identity": 47.068,
+     "coverage": 99
     }
    ]
   }
