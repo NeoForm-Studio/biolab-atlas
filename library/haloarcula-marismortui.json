@@ -15,6 +15,17 @@
   "sequences_16s": 55,
   "papers": 1661
  },
+ "phenotype": {
+  "bacdive_id": 5904,
+  "url": "https://bacdive.dsmz.de/strain/5904",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   37.0,
+   37.0
+  ],
+  "max_nacl_percent": null
+ },
  "genome": {
   "accession": "GCF_000011085.1",
   "organism": "Haloarcula marismortui ATCC 43049",

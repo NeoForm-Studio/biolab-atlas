@@ -7,6 +7,11 @@
   "gc_percent": 59,
   "predicted_ogt_c": 39,
   "acidic_excess": 0.0051,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   25.0,
+   25.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -21,6 +26,8 @@
   "gc_percent": 43.5,
   "predicted_ogt_c": 92,
   "acidic_excess": -0.0034,
+  "measured_optimum_c": null,
+  "measured_growth_c": null,
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
@@ -35,6 +42,14 @@
   "gc_percent": 43.5,
   "predicted_ogt_c": 37,
   "acidic_excess": 0.0128,
+  "measured_optimum_c": [
+   30.0,
+   30.0
+  ],
+  "measured_growth_c": [
+   22.0,
+   55.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -49,6 +64,11 @@
   "gc_percent": 64,
   "predicted_ogt_c": 46,
   "acidic_excess": 0.0238,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   15.0,
+   41.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -63,6 +83,8 @@
   "gc_percent": 44.5,
   "predicted_ogt_c": 44,
   "acidic_excess": 0.0081,
+  "measured_optimum_c": null,
+  "measured_growth_c": null,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -77,6 +99,11 @@
   "gc_percent": 38,
   "predicted_ogt_c": 21,
   "acidic_excess": 0.0177,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   10.0,
+   10.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -91,6 +118,14 @@
   "gc_percent": 68,
   "predicted_ogt_c": 38,
   "acidic_excess": 0.0084,
+  "measured_optimum_c": [
+   30.0,
+   30.0
+  ],
+  "measured_growth_c": [
+   5.0,
+   45.0
+  ],
   "markers": {
    "radiation": "6/6",
    "heat": "0/1",
@@ -105,6 +140,14 @@
   "gc_percent": 63,
   "predicted_ogt_c": 38,
   "acidic_excess": 0.0088,
+  "measured_optimum_c": [
+   30.0,
+   30.0
+  ],
+  "measured_growth_c": [
+   23.0,
+   37.0
+  ],
   "markers": {
    "radiation": "5/6",
    "heat": "0/1",
@@ -119,6 +162,14 @@
   "gc_percent": 66.5,
   "predicted_ogt_c": 47,
   "acidic_excess": 0.0044,
+  "measured_optimum_c": [
+   47.0,
+   47.0
+  ],
+  "measured_growth_c": [
+   30.0,
+   55.0
+  ],
   "markers": {
    "radiation": "6/6",
    "heat": "0/1",
@@ -133,6 +184,11 @@
   "gc_percent": 66.5,
   "predicted_ogt_c": 36,
   "acidic_excess": 0.0104,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   15.0,
+   30.0
+  ],
   "markers": {
    "radiation": "6/6",
    "heat": "0/1",
@@ -147,6 +203,8 @@
   "gc_percent": 51,
   "predicted_ogt_c": 35,
   "acidic_excess": 0.0097,
+  "measured_optimum_c": null,
+  "measured_growth_c": null,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -161,6 +219,14 @@
   "gc_percent": 52.5,
   "predicted_ogt_c": 61,
   "acidic_excess": 0.0075,
+  "measured_optimum_c": [
+   55.0,
+   65.0
+  ],
+  "measured_growth_c": [
+   37.0,
+   75.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -175,6 +241,11 @@
   "gc_percent": 61,
   "predicted_ogt_c": 40,
   "acidic_excess": 0.085,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   37.0,
+   37.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -189,6 +260,11 @@
   "gc_percent": 66.5,
   "predicted_ogt_c": 28,
   "acidic_excess": 0.0785,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   37.0,
+   37.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -203,6 +279,11 @@
   "gc_percent": 65.5,
   "predicted_ogt_c": 45,
   "acidic_excess": 0.0793,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   37.0,
+   37.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -217,6 +298,11 @@
   "gc_percent": 63.5,
   "predicted_ogt_c": 51,
   "acidic_excess": 0.028,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   10.0,
+   37.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -231,6 +317,11 @@
   "gc_percent": 74,
   "predicted_ogt_c": 42,
   "acidic_excess": 0.0178,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   22.0,
+   37.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -245,6 +336,11 @@
   "gc_percent": 47,
   "predicted_ogt_c": 45,
   "acidic_excess": 0.0329,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   22.0,
+   41.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -259,6 +355,11 @@
   "gc_percent": 31.5,
   "predicted_ogt_c": 81,
   "acidic_excess": -0.0003,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   80.0,
+   80.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
@@ -273,6 +374,11 @@
   "gc_percent": 36,
   "predicted_ogt_c": 56,
   "acidic_excess": 0.0018,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   55.0,
+   55.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -287,6 +393,11 @@
   "gc_percent": 40,
   "predicted_ogt_c": 21,
   "acidic_excess": 0.0157,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   22.0,
+   25.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -301,6 +412,11 @@
   "gc_percent": 66.5,
   "predicted_ogt_c": 52,
   "acidic_excess": 0.0092,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   7.0,
+   45.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -315,6 +431,14 @@
   "gc_percent": 43,
   "predicted_ogt_c": 16,
   "acidic_excess": 0.0207,
+  "measured_optimum_c": [
+   22.0,
+   22.0
+  ],
+  "measured_growth_c": [
+   20.0,
+   22.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -329,6 +453,11 @@
   "gc_percent": 41,
   "predicted_ogt_c": 98,
   "acidic_excess": 0.0,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   95.0,
+   97.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
@@ -343,6 +472,14 @@
   "gc_percent": 68.5,
   "predicted_ogt_c": 88,
   "acidic_excess": 0.0142,
+  "measured_optimum_c": [
+   60.0,
+   60.0
+  ],
+  "measured_growth_c": [
+   40.0,
+   70.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -357,6 +494,11 @@
   "gc_percent": 65.5,
   "predicted_ogt_c": 42,
   "acidic_excess": 0.0454,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   37.0,
+   41.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -371,6 +513,14 @@
   "gc_percent": 33,
   "predicted_ogt_c": 32,
   "acidic_excess": 0.0134,
+  "measured_optimum_c": [
+   37.0,
+   37.0
+  ],
+  "measured_growth_c": [
+   22.0,
+   45.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -385,6 +535,14 @@
   "gc_percent": 72,
   "predicted_ogt_c": 34,
   "acidic_excess": 0.0153,
+  "measured_optimum_c": [
+   30.0,
+   30.0
+  ],
+  "measured_growth_c": [
+   28.0,
+   30.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -399,6 +557,11 @@
   "gc_percent": 36.5,
   "predicted_ogt_c": 79,
   "acidic_excess": -0.0039,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   70.0,
+   70.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
@@ -413,6 +576,11 @@
   "gc_percent": 53.5,
   "predicted_ogt_c": 96,
   "acidic_excess": 0.0055,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   85.0,
+   88.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
@@ -427,6 +595,11 @@
   "gc_percent": 52,
   "predicted_ogt_c": 92,
   "acidic_excess": 0.0087,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   85.0,
+   85.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
@@ -441,6 +614,11 @@
   "gc_percent": 46,
   "predicted_ogt_c": 87,
   "acidic_excess": 0.0079,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   80.0,
+   80.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
@@ -455,6 +633,11 @@
   "gc_percent": 69.5,
   "predicted_ogt_c": 103,
   "acidic_excess": 0.0018,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   60.0,
+   75.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
@@ -469,6 +652,14 @@
   "gc_percent": 37.5,
   "predicted_ogt_c": 44,
   "acidic_excess": 0.0149,
+  "measured_optimum_c": [
+   37.0,
+   37.0
+  ],
+  "measured_growth_c": [
+   15.0,
+   50.0
+  ],
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",

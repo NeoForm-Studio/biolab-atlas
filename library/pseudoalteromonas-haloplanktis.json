@@ -15,6 +15,17 @@
   "sequences_16s": 60,
   "papers": 784
  },
+ "phenotype": {
+  "bacdive_id": 12679,
+  "url": "https://bacdive.dsmz.de/strain/12679",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   22.0,
+   25.0
+  ],
+  "max_nacl_percent": null
+ },
  "genome": {
   "accession": "GCF_945859885.1",
   "organism": "Pseudoalteromonas haloplanktis",

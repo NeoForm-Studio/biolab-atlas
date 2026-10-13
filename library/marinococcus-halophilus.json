@@ -15,6 +15,17 @@
   "sequences_16s": 58,
   "papers": 80
  },
+ "phenotype": {
+  "bacdive_id": 1369,
+  "url": "https://bacdive.dsmz.de/strain/1369",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   22.0,
+   41.0
+  ],
+  "max_nacl_percent": 10.0
+ },
  "genome": {
   "accession": "GCF_900166605.1",
   "organism": "Marinococcus halophilus",

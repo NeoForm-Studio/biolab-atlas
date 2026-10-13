@@ -1,0 +1,15 @@
+name: Add a species
+description: Ask for a bacterium or archaeon to be looked up and added to the BioLab Atlas library.
+title: "Add species: "
+body:
+  - type: input
+    id: species
+    attributes:
+      label: Species name
+      description: Scientific name, for example Thermus aquaticus. A strain name also works.
+      placeholder: Genus species
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: A maintainer reviews each request. Once approved, the pipeline checks NCBI, UniProt, BacDive and the literature, adds what it finds, and replies here, including when no public data exists.

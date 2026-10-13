@@ -15,6 +15,20 @@
   "sequences_16s": 170,
   "papers": 10711
  },
+ "phenotype": {
+  "bacdive_id": 14904,
+  "url": "https://bacdive.dsmz.de/strain/14904",
+  "type_strain": true,
+  "optimum_temp_c": [
+   30.0,
+   30.0
+  ],
+  "growth_temp_c": [
+   28.0,
+   30.0
+  ],
+  "max_nacl_percent": 7.5
+ },
  "genome": {
   "accession": "GCF_031192905.1",
   "organism": "Streptomyces coelicolor",

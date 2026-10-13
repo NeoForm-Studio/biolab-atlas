@@ -15,6 +15,17 @@
   "sequences_16s": 4,
   "papers": 197
  },
+ "phenotype": {
+  "bacdive_id": 16885,
+  "url": "https://bacdive.dsmz.de/strain/16885",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   85.0,
+   88.0
+  ],
+  "max_nacl_percent": null
+ },
  "genome": {
   "accession": "GCF_000022365.1",
   "organism": "Thermococcus gammatolerans EJ3",

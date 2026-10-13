@@ -15,6 +15,17 @@
   "sequences_16s": 3,
   "papers": 6211
  },
+ "phenotype": {
+  "bacdive_id": 16854,
+  "url": "https://bacdive.dsmz.de/strain/16854",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   95.0,
+   97.0
+  ],
+  "max_nacl_percent": null
+ },
  "genome": {
   "accession": "GCF_008245085.1",
   "organism": "Pyrococcus furiosus DSM 3638",

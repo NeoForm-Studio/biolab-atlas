@@ -15,6 +15,17 @@
   "sequences_16s": 10,
   "papers": 5238
  },
+ "phenotype": {
+  "bacdive_id": 3852,
+  "url": "https://bacdive.dsmz.de/strain/3852",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   15.0,
+   30.0
+  ],
+  "max_nacl_percent": 0.0
+ },
  "genome": {
   "accession": "GCF_020546685.1",
   "organism": "Deinococcus radiodurans R1 = ATCC 13939 = DSM 20539",

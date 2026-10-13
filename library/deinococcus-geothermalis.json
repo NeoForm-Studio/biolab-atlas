@@ -15,6 +15,20 @@
   "sequences_16s": 7,
   "papers": 440
  },
+ "phenotype": {
+  "bacdive_id": 3855,
+  "url": "https://bacdive.dsmz.de/strain/3855",
+  "type_strain": true,
+  "optimum_temp_c": [
+   47.0,
+   47.0
+  ],
+  "growth_temp_c": [
+   30.0,
+   55.0
+  ],
+  "max_nacl_percent": 2.0
+ },
  "genome": {
   "accession": "GCF_000196275.1",
   "organism": "Deinococcus geothermalis DSM 11300",

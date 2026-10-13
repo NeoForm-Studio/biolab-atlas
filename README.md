@@ -1,51 +1,30 @@
-# BioLab Atlas — the genome that rebuilds itself
+# BioLab Atlas
 
-An interactive, cinematic web explorer for the DNA-repair machinery of
-*Deinococcus radiodurans*, the bacterium that survives radiation doses lethal to
-almost all other life. Scroll through a volumetric 3D cell and explore the genes
-behind its self-repairing genome — with cross-species comparison, expression
-data, and plain-language explanations of what each repair factor does.
+Look up any bacterium or archaeon and see what public data exists for it and how much its genome resembles
+known extremophiles. It opens with a 3D scene of *Deinococcus radiodurans*, a bacterium that survives
+γ-radiation doses up to 10,000 Gy and rebuilds a genome shattered into hundreds of fragments.
 
-## Live site
-
-<https://biolab-atlas-deploy.vercel.app/>
-
-## Screenshots
-
-The cinematic hero — a *D. radiodurans* chromosome caught mid-repair:
-
-![Hero — the repair engine](media/01-hero.png)
-
-The BioLab Workspace — genes, conservation, expression, and literature side by side:
-
-![Workspace dashboard](media/02-workspace.png)
-
-The cross-species tool — comparing a repair gene between two organisms' real sequences:
-
-![Cross-species comparison](media/03-cross-species.png)
+![D. radiodurans scene](media/01-hero.png)
 
 ## Running locally
 
-It's a fully static site — no build step, no dependencies. Serve the folder with
-any static server, for example:
+A static site with no build step. Serve the folder and open it:
 
 ```bash
 python -m http.server 8000
-# then open http://localhost:8000
+# http://localhost:8000              the 3D D. radiodurans scene
+# http://localhost:8000/explorer.html  the species explorer
 ```
-
-Opening `index.html` directly also works, though a local server is recommended so
-`data.json` loads over HTTP.
 
 ## What's in here
 
 | Path | What it is |
 |------|-----------|
-| `index.html` | The full experience (scene, scroll spine, gene stations) |
-| `data.json` | Gene atlas — sequences, loci, cross-species identity, expression |
-| `assets/` | Rendered background plates and stills |
-| `tools/genplate.mjs` | Helper that generated the background plates (needs your own `OPENAI_API_KEY`) |
-| `RECIPE-cinematic-volumetric-3d-scene.md` | Build notes for the 3D scene |
+| `index.html` | 3D introduction: D. radiodurans genome repair |
+| `explorer.html` | Species explorer: search the library, compare species |
+| `library/` | One JSON profile per species, plus `index.json` |
+| `pipeline/` | The lookup pipeline that builds the library |
+| `assets/` | Background plates for the 3D scene, AI-generated with `tools/genplate.mjs` (needs your own `OPENAI_API_KEY`) |
 
 ## Species lookup pipeline
 
@@ -64,7 +43,8 @@ For each name it:
 1. **Resolves** the name in NCBI Taxonomy. Unknown names, non-prokaryotes and ranks above species are reported and
    not stored. A genus lists member species that have reference genomes.
 2. **Inventories** public data: NCBI genome assemblies, UniProt proteins (all and reviewed), 16S rRNA records in
-   NCBI Nucleotide, and Europe PMC papers mentioning the name.
+   NCBI Nucleotide, Europe PMC papers mentioning the name, and measured growth data from
+   [BacDive](https://bacdive.dsmz.de/) (type strain preferred: growth temperatures, optimum, NaCl tolerance).
 3. **Picks a genome**: NCBI's reference genome if there is one, otherwise the most complete annotated assembly.
    Name a strain (for example `"Escherichia coli K-12"`) to get that strain.
 4. **Profiles it**: replicons, size, GC, and from the annotated proteome:
@@ -87,8 +67,13 @@ For each name it:
 
 These are signals that a genome resembles known extremophiles, not a determination that an organism is one.
 
-## Credits
+## Sources and credits
 
-Gene and sequence references link out to [PubMed](https://pubmed.ncbi.nlm.nih.gov/)
-and [NCBI Gene](https://www.ncbi.nlm.nih.gov/gene/). Rendering uses
-[Three.js](https://threejs.org/) and [GSAP](https://greensock.com/gsap/).
+- Data: [NCBI](https://www.ncbi.nlm.nih.gov/) Taxonomy, Datasets and Nucleotide; [UniProt](https://www.uniprot.org/);
+  [Europe PMC](https://europepmc.org/); [BacDive](https://bacdive.dsmz.de/) (DSMZ). Marker search: NCBI BLAST+.
+- Growth-temperature estimate: Zeldovich, Berezovsky & Shakhnovich 2007, PLoS Comput Biol 3:e5.
+- Reverse gyrase in hyperthermophiles: Forterre 2002, Trends Genet 18:236.
+- D. radiodurans claims on the 3D page: genome reassembly from hundreds of fragments, Zahradka et al. 2006,
+  Nature 443:569 (doi:10.1038/nature05160); γ-radiation resistance up to 10 kGy, Xie et al. 2026, Appl Environ
+  Microbiol (doi:10.1128/aem.02107-25).
+- Rendering: [Three.js](https://threejs.org/).

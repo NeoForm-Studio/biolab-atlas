@@ -13,7 +13,21 @@
   "uniprot_proteins": 18631,
   "uniprot_reviewed": 10269,
   "sequences_16s": 5387,
-  "papers": 410167
+  "papers": 410199
+ },
+ "phenotype": {
+  "bacdive_id": 14487,
+  "url": "https://bacdive.dsmz.de/strain/14487",
+  "type_strain": true,
+  "optimum_temp_c": [
+   37.0,
+   37.0
+  ],
+  "growth_temp_c": [
+   22.0,
+   45.0
+  ],
+  "max_nacl_percent": null
  },
  "genome": {
   "accession": "GCF_000013425.1",
