@@ -115,6 +115,89 @@
      "found": false
     }
    ]
+  },
+  "repair": {
+   "found": 8,
+   "of": 11,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "NP_417179.1",
+     "identity": 61.059,
+     "coverage": 88
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "NP_418482.1",
+     "identity": 55.374,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "NP_415300.1",
+     "identity": 55.825,
+     "coverage": 96
+    },
+    {
+     "name": "RecN",
+     "found": true,
+     "accession": "YP_026172.1",
+     "identity": 32.007,
+     "coverage": 94
+    },
+    {
+     "name": "RecF",
+     "found": false,
+     "accession": "NP_418155.1",
+     "identity": 29.042,
+     "coverage": 90
+    },
+    {
+     "name": "RecQ",
+     "found": true,
+     "accession": "YP_026263.3",
+     "identity": 46.535,
+     "coverage": 73
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "NP_416374.1",
+     "identity": 56.698,
+     "coverage": 96
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "NP_416734.1",
+     "identity": 47.698,
+     "coverage": 99
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "NP_418300.1",
+     "identity": 48.628,
+     "coverage": 43
+    },
+    {
+     "name": "LexA",
+     "found": false,
+     "accession": "NP_418467.1",
+     "identity": 43.564,
+     "coverage": 48
+    },
+    {
+     "name": "Tkt",
+     "found": true,
+     "accession": "YP_026188.1",
+     "identity": 48.26,
+     "coverage": 98
+    }
+   ]
   }
  },
  "status": "ok",

@@ -13,7 +13,7 @@
   "uniprot_proteins": 3104,
   "uniprot_reviewed": 526,
   "sequences_16s": 10,
-  "papers": 5238
+  "papers": 5241
  },
  "phenotype": {
   "bacdive_id": 3852,
@@ -152,6 +152,89 @@
     {
      "name": "EctC",
      "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 11,
+   "of": 11,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_010888966.1",
+     "identity": 100.0,
+     "coverage": 100
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_010888406.1",
+     "identity": 100.0,
+     "coverage": 100
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_027480336.1",
+     "identity": 100.0,
+     "coverage": 100
+    },
+    {
+     "name": "RecN",
+     "found": true,
+     "accession": "WP_010888116.1",
+     "identity": 100.0,
+     "coverage": 100
+    },
+    {
+     "name": "RecF",
+     "found": true,
+     "accession": "WP_010887732.1",
+     "identity": 100.0,
+     "coverage": 100
+    },
+    {
+     "name": "RecQ",
+     "found": true,
+     "accession": "WP_010887932.1",
+     "identity": 100.0,
+     "coverage": 100
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_010887241.1",
+     "identity": 100.0,
+     "coverage": 100
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_010888548.1",
+     "identity": 100.0,
+     "coverage": 100
+    },
+    {
+     "name": "PolA",
+     "found": true,
+     "accession": "WP_034351289.1",
+     "identity": 100.0,
+     "coverage": 100
+    },
+    {
+     "name": "LexA",
+     "found": true,
+     "accession": "WP_027479703.1",
+     "identity": 100.0,
+     "coverage": 100
+    },
+    {
+     "name": "Tkt",
+     "found": true,
+     "accession": "WP_010888884.1",
+     "identity": 100.0,
+     "coverage": 100
     }
    ]
   }

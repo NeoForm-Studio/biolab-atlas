@@ -115,6 +115,74 @@
      "found": false
     }
    ]
+  },
+  "repair": {
+   "found": 0,
+   "of": 11,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": false,
+     "accession": "WP_011251181.1",
+     "identity": 35.673,
+     "coverage": 44
+    },
+    {
+     "name": "UvrA",
+     "found": false,
+     "accession": "WP_011249982.1",
+     "identity": 28.796,
+     "coverage": 17
+    },
+    {
+     "name": "UvrB",
+     "found": false,
+     "accession": "WP_011249879.1",
+     "identity": 26.408,
+     "coverage": 38
+    },
+    {
+     "name": "RecN",
+     "found": false
+    },
+    {
+     "name": "RecF",
+     "found": false
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_011249261.1",
+     "identity": 23.669,
+     "coverage": 39
+    },
+    {
+     "name": "RuvB",
+     "found": false
+    },
+    {
+     "name": "GyrA",
+     "found": false
+    },
+    {
+     "name": "PolA",
+     "found": false
+    },
+    {
+     "name": "LexA",
+     "found": false,
+     "accession": "WP_011250905.1",
+     "identity": 36.538,
+     "coverage": 25
+    },
+    {
+     "name": "Tkt",
+     "found": false,
+     "accession": "WP_011249224.1",
+     "identity": 27.329,
+     "coverage": 46
+    }
+   ]
   }
  },
  "status": "ok",
