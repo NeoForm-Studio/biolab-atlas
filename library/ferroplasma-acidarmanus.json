@@ -1,0 +1,170 @@
+{
+ "query": "Ferroplasma acidarmanus",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 97393,
+  "name": "Ferroplasma acidarmanus",
+  "rank": "SPECIES",
+  "domain": "Archaea"
+ },
+ "inventory": {
+  "assemblies": 4,
+  "uniprot_proteins": 1927,
+  "uniprot_reviewed": 0,
+  "sequences_16s": 4,
+  "papers": 558
+ },
+ "phenotype": null,
+ "genome": {
+  "accession": "GCF_000152265.2",
+  "organism": "Ferroplasma acidarmanus Fer1",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 1935211,
+  "gc_percent": 36.5,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "Chromosome",
+    "type": "Chromosome",
+    "accession": "NC_021592.1",
+    "length": 1935211,
+    "gc_percent": 36.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 1877,
+  "ivywrel": 0.405,
+  "predicted_ogt_c": 45,
+  "acidic_excess": 0.0023
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_084593828.1",
+     "identity": 27.083,
+     "coverage": 40
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_009886616.1",
+     "identity": 32.407,
+     "coverage": 98
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 1,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": false,
+     "accession": "WP_019841717.1",
+     "identity": 27.751,
+     "coverage": 53
+    },
+    {
+     "name": "UvrA",
+     "found": false,
+     "accession": "WP_009887989.1",
+     "identity": 31.579,
+     "coverage": 11
+    },
+    {
+     "name": "UvrB",
+     "found": false
+    },
+    {
+     "name": "RecN",
+     "found": false
+    },
+    {
+     "name": "RecF",
+     "found": false
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_148285753.1",
+     "identity": 22.995,
+     "coverage": 42
+    },
+    {
+     "name": "RuvB",
+     "found": false
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_009887394.1",
+     "identity": 40.75,
+     "coverage": 98
+    },
+    {
+     "name": "PolA",
+     "found": false
+    },
+    {
+     "name": "LexA",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

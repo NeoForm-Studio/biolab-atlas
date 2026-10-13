@@ -1,0 +1,197 @@
+{
+ "query": "Halococcus morrhuae",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 2250,
+  "name": "Halococcus morrhuae",
+  "rank": "SPECIES",
+  "domain": "Archaea"
+ },
+ "inventory": {
+  "assemblies": 2,
+  "uniprot_proteins": 3045,
+  "uniprot_reviewed": 5,
+  "sequences_16s": 9,
+  "papers": 212
+ },
+ "phenotype": {
+  "bacdive_id": 5916,
+  "url": "https://bacdive.dsmz.de/strain/5916",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   37.0,
+   37.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_052043925.1",
+  "organism": "Halococcus morrhuae DSM 1307",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 3048131,
+  "gc_percent": 64,
+  "contigs": 3,
+  "replicons": [
+   {
+    "name": "Chromosome",
+    "type": "Chromosome",
+    "accession": "NZ_CM125063.1",
+    "length": 2889744,
+    "gc_percent": 64.5
+   },
+   {
+    "name": "pHMOR-1",
+    "type": "Plasmid",
+    "accession": "NZ_JBQEQQ010000002.1",
+    "length": 94990,
+    "gc_percent": 55
+   },
+   {
+    "name": "pHMOR-2",
+    "type": "Plasmid",
+    "accession": "NZ_JBQEQQ010000003.1",
+    "length": 63397,
+    "gc_percent": 55.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2983,
+  "ivywrel": 0.4079,
+  "predicted_ogt_c": 47,
+  "acidic_excess": 0.0813
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_004051361.1",
+     "identity": 25.195,
+     "coverage": 38
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_004053970.1",
+     "identity": 29.63,
+     "coverage": 94
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 3,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": false,
+     "accession": "WP_004053101.1",
+     "identity": 29.412,
+     "coverage": 48
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_004051431.1",
+     "identity": 53.181,
+     "coverage": 97
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_004053925.1",
+     "identity": 54.476,
+     "coverage": 97
+    },
+    {
+     "name": "RecN",
+     "found": false
+    },
+    {
+     "name": "RecF",
+     "found": false
+    },
+    {
+     "name": "RecQ",
+     "found": false
+    },
+    {
+     "name": "RuvB",
+     "found": false,
+     "accession": "WP_004055963.1",
+     "identity": 37.5,
+     "coverage": 17
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_004055550.1",
+     "identity": 44.095,
+     "coverage": 98
+    },
+    {
+     "name": "PolA",
+     "found": false
+    },
+    {
+     "name": "LexA",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

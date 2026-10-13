@@ -1,0 +1,183 @@
+{
+ "query": "Methanosarcina mazei",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 2209,
+  "name": "Methanosarcina mazei",
+  "rank": "SPECIES",
+  "domain": "Archaea"
+ },
+ "inventory": {
+  "assemblies": 85,
+  "uniprot_proteins": 6804,
+  "uniprot_reviewed": 508,
+  "sequences_16s": 97,
+  "papers": 2017
+ },
+ "phenotype": {
+  "bacdive_id": 7096,
+  "url": "https://bacdive.dsmz.de/strain/7096",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   37.0,
+   37.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000970205.1",
+  "organism": "Methanosarcina mazei S-6",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 4142816,
+  "gc_percent": 41.5,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "Chromosome",
+    "type": "Chromosome",
+    "accession": "NZ_CP009512.1",
+    "length": 4142816,
+    "gc_percent": 41.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 3407,
+  "ivywrel": 0.4126,
+  "predicted_ogt_c": 52,
+  "acidic_excess": 0.0203
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_048046442.1",
+     "identity": 25.44,
+     "coverage": 38
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_230633351.1",
+     "identity": 30.622,
+     "coverage": 96
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 4,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": false,
+     "accession": "WP_264357985.1",
+     "identity": 25.941,
+     "coverage": 62
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_011035180.1",
+     "identity": 55.657,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_011035178.1",
+     "identity": 53.303,
+     "coverage": 97
+    },
+    {
+     "name": "RecN",
+     "found": false
+    },
+    {
+     "name": "RecF",
+     "found": false
+    },
+    {
+     "name": "RecQ",
+     "found": true,
+     "accession": "WP_052716894.1",
+     "identity": 42.567,
+     "coverage": 73
+    },
+    {
+     "name": "RuvB",
+     "found": false
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_011034344.1",
+     "identity": 46.806,
+     "coverage": 99
+    },
+    {
+     "name": "PolA",
+     "found": false
+    },
+    {
+     "name": "LexA",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

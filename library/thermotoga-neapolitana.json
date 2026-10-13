@@ -1,0 +1,186 @@
+{
+ "query": "Thermotoga neapolitana",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 2337,
+  "name": "Thermotoga neapolitana",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 6,
+  "uniprot_proteins": 2031,
+  "uniprot_reviewed": 206,
+  "sequences_16s": 13,
+  "papers": 624
+ },
+ "phenotype": {
+  "bacdive_id": 17061,
+  "url": "https://bacdive.dsmz.de/strain/17061",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   85.0,
+   85.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000018945.1",
+  "organism": "Thermotoga neapolitana DSM 4359",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 1884562,
+  "gc_percent": 47,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_011978.1",
+    "length": 1884562,
+    "gc_percent": 47
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 1879,
+  "ivywrel": 0.452,
+  "predicted_ogt_c": 89,
+  "acidic_excess": 0.0073
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 1,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": true,
+     "accession": "WP_244857411.1",
+     "identity": 39.073,
+     "coverage": 99
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 5,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_015919287.1",
+     "identity": 55.927,
+     "coverage": 89
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_012645077.1",
+     "identity": 52.899,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_015919444.1",
+     "identity": 53.323,
+     "coverage": 97
+    },
+    {
+     "name": "RecN",
+     "found": false
+    },
+    {
+     "name": "RecF",
+     "found": false
+    },
+    {
+     "name": "RecQ",
+     "found": false
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_038067307.1",
+     "identity": 56.678,
+     "coverage": 92
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_015919950.1",
+     "identity": 45.718,
+     "coverage": 97
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "WP_015919332.1",
+     "identity": 41.6,
+     "coverage": 51
+    },
+    {
+     "name": "LexA",
+     "found": false,
+     "accession": "WP_015919952.1",
+     "identity": 27.551,
+     "coverage": 91
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

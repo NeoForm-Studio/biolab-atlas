@@ -1,0 +1,205 @@
+{
+ "query": "Clostridioides difficile",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 1496,
+  "name": "Clostridioides difficile",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 32626,
+  "uniprot_proteins": 11833,
+  "uniprot_reviewed": 342,
+  "sequences_16s": 518,
+  "papers": 28470
+ },
+ "phenotype": {
+  "bacdive_id": 2582,
+  "url": "https://bacdive.dsmz.de/strain/2582",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   37.0,
+   37.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_018885085.1",
+  "organism": "Clostridioides difficile",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 4095894,
+  "gc_percent": 28.5,
+  "contigs": 2,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NZ_CP076401.1",
+    "length": 4089134,
+    "gc_percent": 28.5
+   },
+   {
+    "name": "plasmid",
+    "type": "Plasmid",
+    "accession": "NZ_CP076402.1",
+    "length": 6760,
+    "gc_percent": 24.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 3577,
+  "ivywrel": 0.4102,
+  "predicted_ogt_c": 49,
+  "acidic_excess": 0.008
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_021373390.1",
+     "identity": 29.564,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_021373521.1",
+     "identity": 32.216,
+     "coverage": 90
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 8,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_003428218.1",
+     "identity": 60.681,
+     "coverage": 89
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_003436266.1",
+     "identity": 56.895,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_009891935.1",
+     "identity": 56.355,
+     "coverage": 97
+    },
+    {
+     "name": "RecN",
+     "found": true,
+     "accession": "WP_009902304.1",
+     "identity": 32.609,
+     "coverage": 93
+    },
+    {
+     "name": "RecF",
+     "found": false,
+     "accession": "WP_003429303.1",
+     "identity": 27.089,
+     "coverage": 91
+    },
+    {
+     "name": "RecQ",
+     "found": true,
+     "accession": "WP_004454459.1",
+     "identity": 33.242,
+     "coverage": 87
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_003426579.1",
+     "identity": 60.317,
+     "coverage": 95
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_003429305.1",
+     "identity": 49.383,
+     "coverage": 99
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "WP_009896068.1",
+     "identity": 43.527,
+     "coverage": 48
+    },
+    {
+     "name": "LexA",
+     "found": true,
+     "accession": "WP_009897067.1",
+     "identity": 32.203,
+     "coverage": 80
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

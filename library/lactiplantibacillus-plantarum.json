@@ -1,0 +1,198 @@
+{
+ "query": "Lactiplantibacillus plantarum",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 1590,
+  "name": "Lactiplantibacillus plantarum",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 2017,
+  "uniprot_proteins": 3589,
+  "uniprot_reviewed": 503,
+  "sequences_16s": 17067,
+  "papers": 12326
+ },
+ "phenotype": {
+  "bacdive_id": 6629,
+  "url": "https://bacdive.dsmz.de/strain/6629",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   15.0,
+   37.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_009913655.1",
+  "organism": "Lactiplantibacillus plantarum",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 3223643,
+  "gc_percent": 44.5,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NZ_CP028221.1",
+    "length": 3223643,
+    "gc_percent": 44.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2920,
+  "ivywrel": 0.3742,
+  "predicted_ogt_c": 16,
+  "acidic_excess": 0.0075
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_003645027.1",
+     "identity": 30.274,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_080466456.1",
+     "identity": 29.412,
+     "coverage": 96
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 8,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_047673645.1",
+     "identity": 61.261,
+     "coverage": 92
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_003643969.1",
+     "identity": 54.555,
+     "coverage": 98
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_003641029.1",
+     "identity": 55.13,
+     "coverage": 96
+    },
+    {
+     "name": "RecN",
+     "found": true,
+     "accession": "WP_003645158.1",
+     "identity": 33.935,
+     "coverage": 94
+    },
+    {
+     "name": "RecF",
+     "found": true,
+     "accession": "WP_003641631.1",
+     "identity": 31.322,
+     "coverage": 91
+    },
+    {
+     "name": "RecQ",
+     "found": true,
+     "accession": "WP_015379962.1",
+     "identity": 40.336,
+     "coverage": 72
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_003641514.1",
+     "identity": 54.921,
+     "coverage": 95
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_003641633.1",
+     "identity": 46.764,
+     "coverage": 99
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "WP_021356459.1",
+     "identity": 42.418,
+     "coverage": 50
+    },
+    {
+     "name": "LexA",
+     "found": false,
+     "accession": "WP_003640747.1",
+     "identity": 29.688,
+     "coverage": 89
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

@@ -1,0 +1,186 @@
+{
+ "query": "Thermoproteus tenax",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 2271,
+  "name": "Thermoproteus tenax",
+  "rank": "SPECIES",
+  "domain": "Archaea"
+ },
+ "inventory": {
+  "assemblies": 1,
+  "uniprot_proteins": 2140,
+  "uniprot_reviewed": 21,
+  "sequences_16s": 2,
+  "papers": 492
+ },
+ "phenotype": {
+  "bacdive_id": 17031,
+  "url": "https://bacdive.dsmz.de/strain/17031",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   85.0,
+   85.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000253055.1",
+  "organism": "Thermoproteus tenax Kra 1",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 1841542,
+  "gc_percent": 55,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "Chromosome",
+    "type": "Chromosome",
+    "accession": "NC_016070.1",
+    "length": 1841542,
+    "gc_percent": 55
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2049,
+  "ivywrel": 0.453,
+  "predicted_ogt_c": 89,
+  "acidic_excess": -0.0052
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 1,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": true,
+     "accession": "WP_014127851.1",
+     "identity": 42.231,
+     "coverage": 99
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_014126540.1",
+     "identity": 31.436,
+     "coverage": 93
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 0,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": false,
+     "accession": "WP_052883204.1",
+     "identity": 28.44,
+     "coverage": 55
+    },
+    {
+     "name": "UvrA",
+     "found": false,
+     "accession": "WP_014125998.1",
+     "identity": 27.5,
+     "coverage": 17
+    },
+    {
+     "name": "UvrB",
+     "found": false,
+     "accession": "WP_014126739.1",
+     "identity": 36.207,
+     "coverage": 17
+    },
+    {
+     "name": "RecN",
+     "found": false
+    },
+    {
+     "name": "RecF",
+     "found": false,
+     "accession": "WP_014127104.1",
+     "identity": 38.028,
+     "coverage": 19
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_014126837.1",
+     "identity": 23.656,
+     "coverage": 41
+    },
+    {
+     "name": "RuvB",
+     "found": false,
+     "accession": "WP_014127723.1",
+     "identity": 41.071,
+     "coverage": 17
+    },
+    {
+     "name": "GyrA",
+     "found": false
+    },
+    {
+     "name": "PolA",
+     "found": false
+    },
+    {
+     "name": "LexA",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

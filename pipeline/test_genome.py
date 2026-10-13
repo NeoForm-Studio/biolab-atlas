@@ -69,6 +69,24 @@ class TemperatureRangeTest(unittest.TestCase):
         self.assertIsNone(temperature_range("mesophilic"))
 
 
+class ScoreTest(unittest.TestCase):
+    def test_percentile_and_auc(self):
+        from score import auc, percentile
+        self.assertEqual(percentile([10, 20, 30, 40], 30), 62)
+        self.assertEqual(auc([3, 4], [1, 2]), 1.0)
+        self.assertEqual(auc([1], [1]), 0.5)
+        self.assertIsNone(auc([], [1]))
+
+    def test_score_library_validates_heat_against_measured_temperatures(self):
+        from score import score_library
+        rows = [{"predicted_ogt_c": t, "acidic_excess": 0.01, "markers": {"salt": "0/3", "radiation": "0/6"},
+                 "measured_growth_c": [m, m]} for t, m in [(95, 90), (80, 75), (35, 37), (30, 30), (15, 10)]]
+        v = score_library(rows)
+        self.assertEqual(v["heat"]["auc"], 1.0)
+        self.assertEqual((v["heat"]["positives"], v["cold"]["positives"]), (2, 1))
+        self.assertEqual(rows[0]["scores"]["heat"], 90)
+
+
 class NoGenomeTest(unittest.TestCase):
     def test_species_without_assembly_reports_relatives(self):
         from unittest import mock

@@ -1,0 +1,202 @@
+{
+ "query": "Hymenobacter yonginensis",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 748197,
+  "name": "Hymenobacter yonginensis",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 1,
+  "uniprot_proteins": 4131,
+  "uniprot_reviewed": 0,
+  "sequences_16s": 6,
+  "papers": 3
+ },
+ "phenotype": {
+  "bacdive_id": 168769,
+  "url": "https://bacdive.dsmz.de/strain/168769",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": null,
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_027625995.1",
+  "organism": "Hymenobacter yonginensis",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 4926765,
+  "gc_percent": 62,
+  "contigs": 2,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NZ_CP115396.1",
+    "length": 4681363,
+    "gc_percent": 62
+   },
+   {
+    "name": "unnamed2",
+    "type": "Plasmid",
+    "accession": "NZ_CP115397.1",
+    "length": 245402,
+    "gc_percent": 61.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 4146,
+  "ivywrel": 0.3884,
+  "predicted_ogt_c": 29,
+  "acidic_excess": 0.0004
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_044017930.1",
+     "identity": 28.482,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_270127761.1",
+     "identity": 31.156,
+     "coverage": 94
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 7,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_270125816.1",
+     "identity": 56.765,
+     "coverage": 93
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_270126814.1",
+     "identity": 50.877,
+     "coverage": 95
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_270125944.1",
+     "identity": 52.155,
+     "coverage": 97
+    },
+    {
+     "name": "RecN",
+     "found": true,
+     "accession": "WP_270127584.1",
+     "identity": 31.33,
+     "coverage": 93
+    },
+    {
+     "name": "RecF",
+     "found": false,
+     "accession": "WP_270126629.1",
+     "identity": 29.863,
+     "coverage": 95
+    },
+    {
+     "name": "RecQ",
+     "found": true,
+     "accession": "WP_270129012.1",
+     "identity": 44.61,
+     "coverage": 73
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_270125786.1",
+     "identity": 55.732,
+     "coverage": 94
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_270128645.1",
+     "identity": 49.751,
+     "coverage": 98
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "WP_270126899.1",
+     "identity": 42.032,
+     "coverage": 51
+    },
+    {
+     "name": "LexA",
+     "found": false,
+     "accession": "WP_270129500.1",
+     "identity": 32.039,
+     "coverage": 49
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

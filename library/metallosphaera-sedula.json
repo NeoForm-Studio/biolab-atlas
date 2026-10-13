@@ -1,0 +1,180 @@
+{
+ "query": "Metallosphaera sedula",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 43687,
+  "name": "Metallosphaera sedula",
+  "rank": "SPECIES",
+  "domain": "Archaea"
+ },
+ "inventory": {
+  "assemblies": 15,
+  "uniprot_proteins": 4578,
+  "uniprot_reviewed": 170,
+  "sequences_16s": 11,
+  "papers": 428
+ },
+ "phenotype": {
+  "bacdive_id": 16647,
+  "url": "https://bacdive.dsmz.de/strain/16647",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   75.0,
+   75.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_005222525.1",
+  "organism": "Metallosphaera sedula",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 2202576,
+  "gc_percent": 46,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "Chromosome",
+    "type": "Chromosome",
+    "accession": "NZ_CP031156.1",
+    "length": 2202576,
+    "gc_percent": 46
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2348,
+  "ivywrel": 0.4399,
+  "predicted_ogt_c": 77,
+  "acidic_excess": -0.0004
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 1,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": true,
+     "accession": "WP_012022161.1",
+     "identity": 39.399,
+     "coverage": 99
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_011921420.1",
+     "identity": 29.684,
+     "coverage": 95
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 0,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": false,
+     "accession": "WP_011921155.1",
+     "identity": 28.037,
+     "coverage": 54
+    },
+    {
+     "name": "UvrA",
+     "found": false,
+     "accession": "WP_012020985.1",
+     "identity": 27.041,
+     "coverage": 18
+    },
+    {
+     "name": "UvrB",
+     "found": false
+    },
+    {
+     "name": "RecN",
+     "found": false
+    },
+    {
+     "name": "RecF",
+     "found": false
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_012021323.1",
+     "identity": 26.48,
+     "coverage": 35
+    },
+    {
+     "name": "RuvB",
+     "found": false,
+     "accession": "WP_048060201.1",
+     "identity": 26.519,
+     "coverage": 46
+    },
+    {
+     "name": "GyrA",
+     "found": false
+    },
+    {
+     "name": "PolA",
+     "found": false
+    },
+    {
+     "name": "LexA",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

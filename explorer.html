@@ -122,12 +122,13 @@ const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'
 const fmt = (n) => (n ?? 0).toLocaleString('en-US');
 const MIN_COVERAGE = 70, NEAR_IDENTITY = 50; // coverage rule mirrors pipeline/genome.py
 
-let INDEX = [], PANELS = {};
+let INDEX = [], PANELS = {}, VALID = {};
 
 async function load() {
-  [INDEX, PANELS] = await Promise.all([
+  [INDEX, PANELS, VALID] = await Promise.all([
     fetch('library/index.json').then((r) => r.json()),
     fetch('pipeline/markers.json').then((r) => r.json()),
+    fetch('library/_validation.json').then((r) => r.ok ? r.json() : {}).catch(() => ({})),
   ]);
   $('#names').innerHTML = INDEX.map((e) => `<option value="${esc(e.name)}">`).join('');
   $('#hint').textContent = `${INDEX.length} species profiled so far. Search for one that is missing to request it.`;
@@ -214,6 +215,22 @@ async function showSpecies(slug) {
         · ${esc(g.organism)} · ${esc(g.level)}${g.reference ? ' · NCBI reference genome' : ''}</p>
       <div class="stats" style="margin:12px 0">${stat(g.size_bp, 'base pairs')}${stat(g.gc_percent + '%', 'GC content')}
         ${p ? stat(p.proteins, 'proteins') : ''}</div>${reps}</div>`;
+  }
+
+  const sc = INDEX.find((r) => r.file === `${slug}.json`)?.scores;
+  if (sc) {
+    const bar = (k, label) => {
+      const v = VALID[k] || {};
+      const check = v.auc != null ? `Checked against lab data for ${v.positives + v.negatives} species: AUC ${v.auc} (0.5 = chance, 1 = perfect).`
+        : esc(v.note || 'Not validated.');
+      return `<div class="metric"><h3>${label}<b>${sc[k]}</b></h3>
+        <div class="rep"><div class="bar" style="width:${Math.max(2, sc[k])}%"></div></div><p>${check}</p></div>`;
+    };
+    html += `<div class="card"><h2>Extremophile profile</h2>
+      <p class="meta" style="margin-bottom:14px">Each score is this species' position among all ${INDEX.length} profiled
+      species (0–100): how heat-, cold-, salt- or radiation-adapted its genome looks <i>relative to the library</i>.
+      It is a signal from the genome, not a measurement.</p>
+      ${bar('heat', 'Heat')}${bar('cold', 'Cold')}${bar('salt', 'Salt')}${bar('radiation', 'Radiation (Deinococcus-type)')}</div>`;
   }
 
   if (p) {

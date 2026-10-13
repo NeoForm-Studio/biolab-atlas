@@ -1,0 +1,190 @@
+{
+ "query": "Salinicoccus roseus",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 45670,
+  "name": "Salinicoccus roseus",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 20,
+  "uniprot_proteins": 2597,
+  "uniprot_reviewed": 0,
+  "sequences_16s": 129,
+  "papers": 52
+ },
+ "phenotype": {
+  "bacdive_id": 14427,
+  "url": "https://bacdive.dsmz.de/strain/14427",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   10.0,
+   41.0
+  ],
+  "max_nacl_percent": 10.0
+ },
+ "genome": {
+  "accession": "GCF_000819905.1",
+  "organism": "Salinicoccus roseus",
+  "level": "Contig",
+  "reference": true,
+  "size_bp": 2557957,
+  "gc_percent": 50,
+  "contigs": 14,
+  "replicons": [],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2556,
+  "ivywrel": 0.4121,
+  "predicted_ogt_c": 51,
+  "acidic_excess": 0.0408
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_040105642.1",
+     "identity": 28.155,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_040105023.1",
+     "identity": 28.71,
+     "coverage": 95
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 8,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_040105610.1",
+     "identity": 59.939,
+     "coverage": 90
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_040105101.1",
+     "identity": 55.861,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_040105102.1",
+     "identity": 57.23,
+     "coverage": 97
+    },
+    {
+     "name": "RecN",
+     "found": false,
+     "accession": "WP_040104682.1",
+     "identity": 29.189,
+     "coverage": 94
+    },
+    {
+     "name": "RecF",
+     "found": true,
+     "accession": "WP_040106966.1",
+     "identity": 30.792,
+     "coverage": 89
+    },
+    {
+     "name": "RecQ",
+     "found": true,
+     "accession": "WP_040105130.1",
+     "identity": 36.134,
+     "coverage": 72
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_040105531.1",
+     "identity": 57.643,
+     "coverage": 94
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_040106967.1",
+     "identity": 46.486,
+     "coverage": 99
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "WP_040106752.1",
+     "identity": 45.192,
+     "coverage": 45
+    },
+    {
+     "name": "LexA",
+     "found": true,
+     "accession": "WP_040105577.1",
+     "identity": 30.719,
+     "coverage": 71
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

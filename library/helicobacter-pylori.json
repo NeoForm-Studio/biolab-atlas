@@ -1,0 +1,192 @@
+{
+ "query": "Helicobacter pylori",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 210,
+  "name": "Helicobacter pylori",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 9497,
+  "uniprot_proteins": 8200,
+  "uniprot_reviewed": 2260,
+  "sequences_16s": 827,
+  "papers": 122564
+ },
+ "phenotype": {
+  "bacdive_id": 6102,
+  "url": "https://bacdive.dsmz.de/strain/6102",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   37.0,
+   37.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_025998455.1",
+  "organism": "Helicobacter pylori",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 1696601,
+  "gc_percent": 38.5,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NZ_AP026446.1",
+    "length": 1696601,
+    "gc_percent": 38.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 1478,
+  "ivywrel": 0.3872,
+  "predicted_ogt_c": 28,
+  "acidic_excess": -0.0069
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_120858217.1",
+     "identity": 29.853,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_267285888.1",
+     "identity": 26.207,
+     "coverage": 67
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 5,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_267286062.1",
+     "identity": 54.651,
+     "coverage": 94
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_245048535.1",
+     "identity": 47.454,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_120857433.1",
+     "identity": 48.698,
+     "coverage": 96
+    },
+    {
+     "name": "RecN",
+     "found": false,
+     "accession": "WP_120856487.1",
+     "identity": 24.138,
+     "coverage": 95
+    },
+    {
+     "name": "RecF",
+     "found": false
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_120856663.1",
+     "identity": 17.884,
+     "coverage": 46
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_267286108.1",
+     "identity": 49.201,
+     "coverage": 94
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_267286180.1",
+     "identity": 46.929,
+     "coverage": 99
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "WP_267286015.1",
+     "identity": 39.206,
+     "coverage": 43
+    },
+    {
+     "name": "LexA",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

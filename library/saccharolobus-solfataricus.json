@@ -1,0 +1,180 @@
+{
+ "query": "Saccharolobus solfataricus",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 2287,
+  "name": "Saccharolobus solfataricus",
+  "rank": "SPECIES",
+  "domain": "Archaea"
+ },
+ "inventory": {
+  "assemblies": 16,
+  "uniprot_proteins": 3100,
+  "uniprot_reviewed": 518,
+  "sequences_16s": 9,
+  "papers": 403
+ },
+ "phenotype": {
+  "bacdive_id": 16650,
+  "url": "https://bacdive.dsmz.de/strain/16650",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   70.0,
+   80.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_003852155.1",
+  "organism": "Saccharolobus solfataricus",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 2658139,
+  "gc_percent": 36,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "Chromosome",
+    "type": "Chromosome",
+    "accession": "NZ_CP033238.1",
+    "length": 2658139,
+    "gc_percent": 36
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2578,
+  "ivywrel": 0.4468,
+  "predicted_ogt_c": 84,
+  "acidic_excess": -0.0064
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 1,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": true,
+     "accession": "WP_009988760.1",
+     "identity": 40.404,
+     "coverage": 99
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_009991724.1",
+     "identity": 30.476,
+     "coverage": 97
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 0,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": false,
+     "accession": "WP_009990512.1",
+     "identity": 29.439,
+     "coverage": 54
+    },
+    {
+     "name": "UvrA",
+     "found": false,
+     "accession": "WP_009992766.1",
+     "identity": 29.897,
+     "coverage": 17
+    },
+    {
+     "name": "UvrB",
+     "found": false
+    },
+    {
+     "name": "RecN",
+     "found": false
+    },
+    {
+     "name": "RecF",
+     "found": false
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_009992411.1",
+     "identity": 24.857,
+     "coverage": 39
+    },
+    {
+     "name": "RuvB",
+     "found": false,
+     "accession": "WP_009988761.1",
+     "identity": 31.148,
+     "coverage": 32
+    },
+    {
+     "name": "GyrA",
+     "found": false
+    },
+    {
+     "name": "PolA",
+     "found": false
+    },
+    {
+     "name": "LexA",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

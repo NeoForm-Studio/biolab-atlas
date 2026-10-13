@@ -1,0 +1,206 @@
+{
+ "query": "Desulfotalea psychrophila",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 84980,
+  "name": "Desulfotalea psychrophila",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 4,
+  "uniprot_proteins": 4340,
+  "uniprot_reviewed": 321,
+  "sequences_16s": 4,
+  "papers": 239
+ },
+ "phenotype": {
+  "bacdive_id": 4030,
+  "url": "https://bacdive.dsmz.de/strain/4030",
+  "type_strain": true,
+  "optimum_temp_c": [
+   10.0,
+   10.0
+  ],
+  "growth_temp_c": [
+   -1.8,
+   19.0
+  ],
+  "max_nacl_percent": 1.0
+ },
+ "genome": {
+  "accession": "GCF_000025945.1",
+  "organism": "Desulfotalea psychrophila LSv54",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 3659634,
+  "gc_percent": 46.5,
+  "contigs": 3,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_006138.1",
+    "length": 3523383,
+    "gc_percent": 47
+   },
+   {
+    "name": "large",
+    "type": "Plasmid",
+    "accession": "NC_006139.1",
+    "length": 121587,
+    "gc_percent": 43.5
+   },
+   {
+    "name": "small",
+    "type": "Plasmid",
+    "accession": "NC_006140.1",
+    "length": 14664,
+    "gc_percent": 28.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 3091,
+  "ivywrel": 0.3963,
+  "predicted_ogt_c": 36,
+  "acidic_excess": 0.0092
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_011189858.1",
+     "identity": 25.316,
+     "coverage": 38
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_011187683.1",
+     "identity": 30.843,
+     "coverage": 97
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 4,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_011190199.1",
+     "identity": 60.0,
+     "coverage": 90
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_011187361.1",
+     "identity": 52.09,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_041278830.1",
+     "identity": 52.727,
+     "coverage": 96
+    },
+    {
+     "name": "RecN",
+     "found": false
+    },
+    {
+     "name": "RecF",
+     "found": false
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_041277510.1",
+     "identity": 35.821,
+     "coverage": 39
+    },
+    {
+     "name": "RuvB",
+     "found": false,
+     "accession": "WP_011188276.1",
+     "identity": 30.201,
+     "coverage": 41
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_011187895.1",
+     "identity": 48.25,
+     "coverage": 98
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "WP_011188330.1",
+     "identity": 44.828,
+     "coverage": 44
+    },
+    {
+     "name": "LexA",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

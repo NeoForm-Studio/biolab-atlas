@@ -1,0 +1,198 @@
+{
+ "query": "Leptospirillum ferrooxidans",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 180,
+  "name": "Leptospirillum ferrooxidans",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 17,
+  "uniprot_proteins": 2481,
+  "uniprot_reviewed": 0,
+  "sequences_16s": 39,
+  "papers": 389
+ },
+ "phenotype": {
+  "bacdive_id": 10531,
+  "url": "https://bacdive.dsmz.de/strain/10531",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   30.0,
+   30.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000284315.1",
+  "organism": "Leptospirillum ferrooxidans C2-3",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 2559538,
+  "gc_percent": 50,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_017094.1",
+    "length": 2559538,
+    "gc_percent": 50
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2382,
+  "ivywrel": 0.4023,
+  "predicted_ogt_c": 42,
+  "acidic_excess": 0.0028
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false,
+     "accession": "WP_014449557.1",
+     "identity": 34.653,
+     "coverage": 30
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_014448529.1",
+     "identity": 30.078,
+     "coverage": 48
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_014450272.1",
+     "identity": 28.954,
+     "coverage": 95
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 6,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_041774228.1",
+     "identity": 57.817,
+     "coverage": 92
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_014449886.1",
+     "identity": 51.484,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_041773939.1",
+     "identity": 53.402,
+     "coverage": 99
+    },
+    {
+     "name": "RecN",
+     "found": false,
+     "accession": "WP_014449686.1",
+     "identity": 29.061,
+     "coverage": 94
+    },
+    {
+     "name": "RecF",
+     "found": false
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_014450159.1",
+     "identity": 24.011,
+     "coverage": 40
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_014448598.1",
+     "identity": 51.475,
+     "coverage": 92
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_050989540.1",
+     "identity": 45.221,
+     "coverage": 99
+    },
+    {
+     "name": "PolA",
+     "found": true,
+     "accession": "WP_014448410.1",
+     "identity": 37.109,
+     "coverage": 99
+    },
+    {
+     "name": "LexA",
+     "found": false,
+     "accession": "WP_014449851.1",
+     "identity": 27.473,
+     "coverage": 82
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

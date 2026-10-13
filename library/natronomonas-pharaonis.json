@@ -1,0 +1,203 @@
+{
+ "query": "Natronomonas pharaonis",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 2257,
+  "name": "Natronomonas pharaonis",
+  "rank": "SPECIES",
+  "domain": "Archaea"
+ },
+ "inventory": {
+  "assemblies": 1,
+  "uniprot_proteins": 2777,
+  "uniprot_reviewed": 271,
+  "sequences_16s": 16,
+  "papers": 831
+ },
+ "phenotype": {
+  "bacdive_id": 5896,
+  "url": "https://bacdive.dsmz.de/strain/5896",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   30.0,
+   37.0
+  ],
+  "max_nacl_percent": 6.0
+ },
+ "genome": {
+  "accession": "GCF_000026045.1",
+  "organism": "Natronomonas pharaonis DSM 2160",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 2749696,
+  "gc_percent": 63,
+  "contigs": 3,
+  "replicons": [
+   {
+    "name": "Chromosome",
+    "type": "Chromosome",
+    "accession": "NC_007426.1",
+    "length": 2595221,
+    "gc_percent": 63.5
+   },
+   {
+    "name": "PL23",
+    "type": "Plasmid",
+    "accession": "NC_007428.1",
+    "length": 23486,
+    "gc_percent": 60.5
+   },
+   {
+    "name": "PL131",
+    "type": "Plasmid",
+    "accession": "NC_007427.1",
+    "length": 130989,
+    "gc_percent": 57
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2770,
+  "ivywrel": 0.4078,
+  "predicted_ogt_c": 47,
+  "acidic_excess": 0.0936
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_011322338.1",
+     "identity": 23.564,
+     "coverage": 37
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_049939918.1",
+     "identity": 28.604,
+     "coverage": 98
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 3,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": false,
+     "accession": "WP_011322618.1",
+     "identity": 27.094,
+     "coverage": 52
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_011321979.1",
+     "identity": 53.755,
+     "coverage": 98
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_011322099.1",
+     "identity": 52.719,
+     "coverage": 99
+    },
+    {
+     "name": "RecN",
+     "found": false,
+     "accession": "WP_011322335.1",
+     "identity": 27.027,
+     "coverage": 36
+    },
+    {
+     "name": "RecF",
+     "found": false,
+     "accession": "WP_011322483.1",
+     "identity": 27.706,
+     "coverage": 55
+    },
+    {
+     "name": "RecQ",
+     "found": false
+    },
+    {
+     "name": "RuvB",
+     "found": false,
+     "accession": "WP_011322615.1",
+     "identity": 40.678,
+     "coverage": 18
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_011323461.1",
+     "identity": 43.939,
+     "coverage": 97
+    },
+    {
+     "name": "PolA",
+     "found": false
+    },
+    {
+     "name": "LexA",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

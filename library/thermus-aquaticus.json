@@ -1,0 +1,229 @@
+{
+ "query": "Thermus aquaticus",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 271,
+  "name": "Thermus aquaticus",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 4,
+  "uniprot_proteins": 2565,
+  "uniprot_reviewed": 48,
+  "sequences_16s": 7,
+  "papers": 4346
+ },
+ "phenotype": {
+  "bacdive_id": 16714,
+  "url": "https://bacdive.dsmz.de/strain/16714",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   70.0,
+   70.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_001399775.1",
+  "organism": "Thermus aquaticus Y51MC23",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 2338641,
+  "gc_percent": 68,
+  "contigs": 5,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NZ_CP010822.1",
+    "length": 2158963,
+    "gc_percent": 68
+   },
+   {
+    "name": "pTA14",
+    "type": "Plasmid",
+    "accession": "NZ_CP010823.1",
+    "length": 14448,
+    "gc_percent": 64
+   },
+   {
+    "name": "pTA16",
+    "type": "Plasmid",
+    "accession": "NZ_CP010824.1",
+    "length": 16597,
+    "gc_percent": 67.5
+   },
+   {
+    "name": "pTA69",
+    "type": "Plasmid",
+    "accession": "NZ_CP010825.1",
+    "length": 69906,
+    "gc_percent": 69
+   },
+   {
+    "name": "pTA78",
+    "type": "Plasmid",
+    "accession": "NZ_CP010826.1",
+    "length": 78727,
+    "gc_percent": 66.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2403,
+  "ivywrel": 0.4635,
+  "predicted_ogt_c": 99,
+  "acidic_excess": 0.0011
+ },
+ "markers": {
+  "radiation": {
+   "found": 1,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": true,
+     "accession": "WP_003046170.1",
+     "identity": 43.017,
+     "coverage": 78
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false,
+     "accession": "WP_050764280.1",
+     "identity": 33.0,
+     "coverage": 30
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_003047541.1",
+     "identity": 32.348,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_003043516.1",
+     "identity": 33.163,
+     "coverage": 91
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 8,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_003043690.1",
+     "identity": 69.688,
+     "coverage": 88
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_003045240.1",
+     "identity": 68.948,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_003046413.1",
+     "identity": 65.443,
+     "coverage": 97
+    },
+    {
+     "name": "RecN",
+     "found": true,
+     "accession": "WP_060473982.1",
+     "identity": 46.604,
+     "coverage": 94
+    },
+    {
+     "name": "RecF",
+     "found": true,
+     "accession": "WP_003046681.1",
+     "identity": 41.954,
+     "coverage": 95
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_003048856.1",
+     "identity": 37.879,
+     "coverage": 38
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_003045070.1",
+     "identity": 75.478,
+     "coverage": 94
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_003044439.1",
+     "identity": 57.707,
+     "coverage": 99
+    },
+    {
+     "name": "PolA",
+     "found": true,
+     "accession": "WP_157628163.1",
+     "identity": 47.473,
+     "coverage": 99
+    },
+    {
+     "name": "LexA",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

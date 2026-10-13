@@ -1,0 +1,190 @@
+{
+ "query": "Pyrococcus abyssi",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 29292,
+  "name": "Pyrococcus abyssi",
+  "rank": "SPECIES",
+  "domain": "Archaea"
+ },
+ "inventory": {
+  "assemblies": 1,
+  "uniprot_proteins": 1847,
+  "uniprot_reviewed": 481,
+  "sequences_16s": 10,
+  "papers": 1579
+ },
+ "phenotype": {
+  "bacdive_id": 162185,
+  "url": "https://bacdive.dsmz.de/strain/162185",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   95.0,
+   95.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000195935.2",
+  "organism": "Pyrococcus abyssi GE5",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 1768562,
+  "gc_percent": 44.5,
+  "contigs": 2,
+  "replicons": [
+   {
+    "name": "Chromosome",
+    "type": "Chromosome",
+    "accession": "NC_000868.1",
+    "length": 1765118,
+    "gc_percent": 44.5
+   },
+   {
+    "name": "pGT5",
+    "type": "Plasmid",
+    "accession": "NC_001773.1",
+    "length": 3444,
+    "gc_percent": 43.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 1903,
+  "ivywrel": 0.4653,
+  "predicted_ogt_c": 101,
+  "acidic_excess": -0.0004
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 1,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": true,
+     "accession": "WP_010868381.1",
+     "identity": 85.502,
+     "coverage": 100
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_010867786.1",
+     "identity": 31.735,
+     "coverage": 99
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 0,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": false,
+     "accession": "WP_048146514.1",
+     "identity": 29.924,
+     "coverage": 64
+    },
+    {
+     "name": "UvrA",
+     "found": false,
+     "accession": "WP_010868338.1",
+     "identity": 38.947,
+     "coverage": 9
+    },
+    {
+     "name": "UvrB",
+     "found": false,
+     "accession": "WP_010867320.1",
+     "identity": 36.283,
+     "coverage": 17
+    },
+    {
+     "name": "RecN",
+     "found": false
+    },
+    {
+     "name": "RecF",
+     "found": false
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_010867178.1",
+     "identity": 25.234,
+     "coverage": 35
+    },
+    {
+     "name": "RuvB",
+     "found": false
+    },
+    {
+     "name": "GyrA",
+     "found": false
+    },
+    {
+     "name": "PolA",
+     "found": false
+    },
+    {
+     "name": "LexA",
+     "found": false,
+     "accession": "WP_010867309.1",
+     "identity": 38.462,
+     "coverage": 25
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

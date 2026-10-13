@@ -1,0 +1,204 @@
+{
+ "query": "Halorhodospira halophila",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 1053,
+  "name": "Halorhodospira halophila",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 6,
+  "uniprot_proteins": 2425,
+  "uniprot_reviewed": 349,
+  "sequences_16s": 2,
+  "papers": 415
+ },
+ "phenotype": {
+  "bacdive_id": 4283,
+  "url": "https://bacdive.dsmz.de/strain/4283",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   25.0,
+   25.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000015585.1",
+  "organism": "Halorhodospira halophila SL1",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 2678452,
+  "gc_percent": 68,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_008789.1",
+    "length": 2678452,
+    "gc_percent": 68
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2438,
+  "ivywrel": 0.4233,
+  "predicted_ogt_c": 62,
+  "acidic_excess": 0.0313
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_011815111.1",
+     "identity": 29.43,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 3,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": true,
+     "accession": "WP_011814518.1",
+     "identity": 40.741,
+     "coverage": 84
+    },
+    {
+     "name": "EctB",
+     "found": true,
+     "accession": "WP_011814519.1",
+     "identity": 53.938,
+     "coverage": 99
+    },
+    {
+     "name": "EctC",
+     "found": true,
+     "accession": "WP_011814520.1",
+     "identity": 46.512,
+     "coverage": 94
+    }
+   ]
+  },
+  "repair": {
+   "found": 8,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_011814441.1",
+     "identity": 56.881,
+     "coverage": 88
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_011814969.1",
+     "identity": 53.115,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_011813351.1",
+     "identity": 56.515,
+     "coverage": 96
+    },
+    {
+     "name": "RecN",
+     "found": true,
+     "accession": "WP_011814269.1",
+     "identity": 34.679,
+     "coverage": 91
+    },
+    {
+     "name": "RecF",
+     "found": true,
+     "accession": "WP_011814023.1",
+     "identity": 32.312,
+     "coverage": 97
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_011813723.1",
+     "identity": 23.324,
+     "coverage": 39
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_011814999.1",
+     "identity": 60.191,
+     "coverage": 94
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_011813380.1",
+     "identity": 45.131,
+     "coverage": 99
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "WP_011815206.1",
+     "identity": 47.16,
+     "coverage": 43
+    },
+    {
+     "name": "LexA",
+     "found": true,
+     "accession": "WP_011814527.1",
+     "identity": 30.612,
+     "coverage": 86
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

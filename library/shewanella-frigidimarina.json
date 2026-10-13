@@ -1,0 +1,204 @@
+{
+ "query": "Shewanella frigidimarina",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 56812,
+  "name": "Shewanella frigidimarina",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 38,
+  "uniprot_proteins": 3998,
+  "uniprot_reviewed": 469,
+  "sequences_16s": 66,
+  "papers": 343
+ },
+ "phenotype": {
+  "bacdive_id": 133709,
+  "url": "https://bacdive.dsmz.de/strain/133709",
+  "type_strain": true,
+  "optimum_temp_c": [
+   20.0,
+   20.0
+  ],
+  "growth_temp_c": [
+   4.0,
+   28.0
+  ],
+  "max_nacl_percent": 3.5
+ },
+ "genome": {
+  "accession": "GCF_000014705.1",
+  "organism": "Shewanella frigidimarina NCIMB 400",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 4845257,
+  "gc_percent": 41.5,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_008345.1",
+    "length": 4845257,
+    "gc_percent": 41.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 3994,
+  "ivywrel": 0.3794,
+  "predicted_ogt_c": 20,
+  "acidic_excess": 0.0187
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false,
+     "accession": "WP_011637412.1",
+     "identity": 33.663,
+     "coverage": 30
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_041413613.1",
+     "identity": 29.288,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_011638449.1",
+     "identity": 31.415,
+     "coverage": 95
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 7,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_011636536.1",
+     "identity": 58.61,
+     "coverage": 91
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_011639127.1",
+     "identity": 54.008,
+     "coverage": 98
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_011637626.1",
+     "identity": 55.219,
+     "coverage": 96
+    },
+    {
+     "name": "RecN",
+     "found": true,
+     "accession": "WP_011636517.1",
+     "identity": 31.159,
+     "coverage": 94
+    },
+    {
+     "name": "RecF",
+     "found": false,
+     "accession": "WP_011635495.1",
+     "identity": 27.746,
+     "coverage": 91
+    },
+    {
+     "name": "RecQ",
+     "found": true,
+     "accession": "WP_011639232.1",
+     "identity": 48.485,
+     "coverage": 72
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_011637636.1",
+     "identity": 60.0,
+     "coverage": 95
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_011637586.1",
+     "identity": 45.965,
+     "coverage": 99
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "WP_011639352.1",
+     "identity": 45.412,
+     "coverage": 46
+    },
+    {
+     "name": "LexA",
+     "found": false,
+     "accession": "WP_011635750.1",
+     "identity": 29.756,
+     "coverage": 93
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

@@ -1,0 +1,176 @@
+{
+ "query": "Acidianus hospitalis",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 563177,
+  "name": "Acidianus hospitalis",
+  "rank": "SPECIES",
+  "domain": "Archaea"
+ },
+ "inventory": {
+  "assemblies": 4,
+  "uniprot_proteins": 2368,
+  "uniprot_reviewed": 3,
+  "sequences_16s": 0,
+  "papers": 116
+ },
+ "phenotype": null,
+ "genome": {
+  "accession": "GCF_000213215.1",
+  "organism": "Acidianus hospitalis W1",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 2137654,
+  "gc_percent": 34,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "Chromosome",
+    "type": "Chromosome",
+    "accession": "NC_015518.1",
+    "length": 2137654,
+    "gc_percent": 34
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2415,
+  "ivywrel": 0.4392,
+  "predicted_ogt_c": 76,
+  "acidic_excess": -0.0019
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 1,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": true,
+     "accession": "WP_013775510.1",
+     "identity": 40.709,
+     "coverage": 99
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_013775690.1",
+     "identity": 30.928,
+     "coverage": 91
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 0,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": false,
+     "accession": "WP_048054558.1",
+     "identity": 27.391,
+     "coverage": 58
+    },
+    {
+     "name": "UvrA",
+     "found": false,
+     "accession": "WP_013776337.1",
+     "identity": 29.858,
+     "coverage": 19
+    },
+    {
+     "name": "UvrB",
+     "found": false,
+     "accession": "WP_048054784.1",
+     "identity": 27.528,
+     "coverage": 24
+    },
+    {
+     "name": "RecN",
+     "found": false
+    },
+    {
+     "name": "RecF",
+     "found": false,
+     "accession": "WP_013777078.1",
+     "identity": 20.863,
+     "coverage": 34
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_013776213.1",
+     "identity": 23.143,
+     "coverage": 39
+    },
+    {
+     "name": "RuvB",
+     "found": false,
+     "accession": "WP_013775323.1",
+     "identity": 30.0,
+     "coverage": 28
+    },
+    {
+     "name": "GyrA",
+     "found": false
+    },
+    {
+     "name": "PolA",
+     "found": false
+    },
+    {
+     "name": "LexA",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

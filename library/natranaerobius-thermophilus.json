@@ -1,0 +1,212 @@
+{
+ "query": "Natranaerobius thermophilus",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 375929,
+  "name": "Natranaerobius thermophilus",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 2,
+  "uniprot_proteins": 2847,
+  "uniprot_reviewed": 218,
+  "sequences_16s": 5,
+  "papers": 86
+ },
+ "phenotype": {
+  "bacdive_id": 17654,
+  "url": "https://bacdive.dsmz.de/strain/17654",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   50.0,
+   50.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000020005.1",
+  "organism": "Natranaerobius thermophilus JW/NM-WN-LF",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 3191453,
+  "gc_percent": 36.5,
+  "contigs": 3,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_010718.1",
+    "length": 3165557,
+    "gc_percent": 36.5
+   },
+   {
+    "name": "pNTHE01",
+    "type": "Plasmid",
+    "accession": "NC_010715.1",
+    "length": 17207,
+    "gc_percent": 34
+   },
+   {
+    "name": "pNTHE02",
+    "type": "Plasmid",
+    "accession": "NC_010724.1",
+    "length": 8689,
+    "gc_percent": 35.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2874,
+  "ivywrel": 0.4145,
+  "predicted_ogt_c": 53,
+  "acidic_excess": 0.0361
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_012447839.1",
+     "identity": 31.537,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_012446596.1",
+     "identity": 30.791,
+     "coverage": 81
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 7,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_012447928.1",
+     "identity": 63.043,
+     "coverage": 88
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_012448460.1",
+     "identity": 55.669,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_012448461.1",
+     "identity": 57.296,
+     "coverage": 96
+    },
+    {
+     "name": "RecN",
+     "found": true,
+     "accession": "WP_012448133.1",
+     "identity": 30.551,
+     "coverage": 94
+    },
+    {
+     "name": "RecF",
+     "found": true,
+     "accession": "WP_012446494.1",
+     "identity": 30.986,
+     "coverage": 91
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_012447365.1",
+     "identity": 20.32,
+     "coverage": 48
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_012448235.1",
+     "identity": 57.962,
+     "coverage": 94
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_012446498.1",
+     "identity": 48.753,
+     "coverage": 99
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "WP_012448327.1",
+     "identity": 44.609,
+     "coverage": 50
+    },
+    {
+     "name": "LexA",
+     "found": false,
+     "accession": "WP_012447958.1",
+     "identity": 28.191,
+     "coverage": 80
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

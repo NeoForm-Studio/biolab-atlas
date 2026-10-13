@@ -1,0 +1,189 @@
+{
+ "query": "Nitrosopumilus maritimus",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 338192,
+  "name": "Nitrosopumilus maritimus",
+  "rank": "SPECIES",
+  "domain": "Archaea"
+ },
+ "inventory": {
+  "assemblies": 1,
+  "uniprot_proteins": 1801,
+  "uniprot_reviewed": 93,
+  "sequences_16s": 4,
+  "papers": 819
+ },
+ "phenotype": {
+  "bacdive_id": 141102,
+  "url": "https://bacdive.dsmz.de/strain/141102",
+  "type_strain": true,
+  "optimum_temp_c": [
+   32.0,
+   32.0
+  ],
+  "growth_temp_c": [
+   15.0,
+   35.0
+  ],
+  "max_nacl_percent": 37.0
+ },
+ "genome": {
+  "accession": "GCF_000018465.1",
+  "organism": "Nitrosopumilus maritimus SCM1",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 1645259,
+  "gc_percent": 34,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "Chromosome",
+    "type": "Chromosome",
+    "accession": "NC_010085.1",
+    "length": 1645259,
+    "gc_percent": 34
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 1926,
+  "ivywrel": 0.3822,
+  "predicted_ogt_c": 23,
+  "acidic_excess": 0.0164
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false
+    }
+   ]
+  },
+  "salt": {
+   "found": 3,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": true,
+     "accession": "WP_012215729.1",
+     "identity": 41.026,
+     "coverage": 81
+    },
+    {
+     "name": "EctB",
+     "found": true,
+     "accession": "WP_012215728.1",
+     "identity": 52.53,
+     "coverage": 99
+    },
+    {
+     "name": "EctC",
+     "found": true,
+     "accession": "WP_012215727.1",
+     "identity": 52.0,
+     "coverage": 91
+    }
+   ]
+  },
+  "repair": {
+   "found": 2,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": false,
+     "accession": "WP_012215769.1",
+     "identity": 26.923,
+     "coverage": 53
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_012215487.1",
+     "identity": 51.84,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_012215488.1",
+     "identity": 51.227,
+     "coverage": 97
+    },
+    {
+     "name": "RecN",
+     "found": false
+    },
+    {
+     "name": "RecF",
+     "found": false
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_012215565.1",
+     "identity": 25.157,
+     "coverage": 36
+    },
+    {
+     "name": "RuvB",
+     "found": false,
+     "accession": "WP_012214653.1",
+     "identity": 28.571,
+     "coverage": 28
+    },
+    {
+     "name": "GyrA",
+     "found": false
+    },
+    {
+     "name": "PolA",
+     "found": false
+    },
+    {
+     "name": "LexA",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

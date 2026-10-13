@@ -1,0 +1,186 @@
+{
+ "query": "Thermodesulfovibrio yellowstonii",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 28262,
+  "name": "Thermodesulfovibrio yellowstonii",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 16,
+  "uniprot_proteins": 1986,
+  "uniprot_reviewed": 203,
+  "sequences_16s": 11,
+  "papers": 136
+ },
+ "phenotype": {
+  "bacdive_id": 10537,
+  "url": "https://bacdive.dsmz.de/strain/10537",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   60.0,
+   60.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000020985.1",
+  "organism": "Thermodesulfovibrio yellowstonii DSM 11347",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 2003803,
+  "gc_percent": 34,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_011296.1",
+    "length": 2003803,
+    "gc_percent": 34
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 1943,
+  "ivywrel": 0.4246,
+  "predicted_ogt_c": 63,
+  "acidic_excess": -0.0072
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_012546465.1",
+     "identity": 31.566,
+     "coverage": 97
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 6,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_012546028.1",
+     "identity": 58.824,
+     "coverage": 89
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_012545482.1",
+     "identity": 37.941,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_012545956.1",
+     "identity": 50.683,
+     "coverage": 97
+    },
+    {
+     "name": "RecN",
+     "found": true,
+     "accession": "WP_012546310.1",
+     "identity": 33.456,
+     "coverage": 94
+    },
+    {
+     "name": "RecF",
+     "found": false
+    },
+    {
+     "name": "RecQ",
+     "found": false
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_012546115.1",
+     "identity": 58.36,
+     "coverage": 95
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_012545423.1",
+     "identity": 48.721,
+     "coverage": 99
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "WP_012545544.1",
+     "identity": 39.394,
+     "coverage": 49
+    },
+    {
+     "name": "LexA",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}
