@@ -15,6 +15,17 @@
   "sequences_16s": 17,
   "papers": 2872
  },
+ "phenotype": {
+  "bacdive_id": 16649,
+  "url": "https://bacdive.dsmz.de/strain/16649",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   70.0,
+   70.0
+  ],
+  "max_nacl_percent": null
+ },
  "genome": {
   "accession": "GCF_000012285.1",
   "organism": "Sulfolobus acidocaldarius DSM 639",

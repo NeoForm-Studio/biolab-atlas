@@ -15,6 +15,7 @@
   "sequences_16s": 2,
   "papers": 3944
  },
+ "phenotype": null,
  "genome": {
   "accession": "GCF_000008625.1",
   "organism": "Aquifex aeolicus VF5",

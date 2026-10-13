@@ -15,6 +15,17 @@
   "sequences_16s": 228,
   "papers": 586
  },
+ "phenotype": {
+  "bacdive_id": 6011,
+  "url": "https://bacdive.dsmz.de/strain/6011",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   10.0,
+   37.0
+  ],
+  "max_nacl_percent": 10.0
+ },
  "genome": {
   "accession": "GCF_000196875.2",
   "organism": "Halomonas elongata DSM 2581",

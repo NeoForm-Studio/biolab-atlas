@@ -15,6 +15,17 @@
   "sequences_16s": 31,
   "papers": 660
  },
+ "phenotype": {
+  "bacdive_id": 17796,
+  "url": "https://bacdive.dsmz.de/strain/17796",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   37.0,
+   41.0
+  ],
+  "max_nacl_percent": null
+ },
  "genome": {
   "accession": "GCF_003491405.1",
   "organism": "Salinibacter ruber",

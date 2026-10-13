@@ -15,6 +15,20 @@
   "sequences_16s": 5,
   "papers": 240
  },
+ "phenotype": {
+  "bacdive_id": 14036,
+  "url": "https://bacdive.dsmz.de/strain/14036",
+  "type_strain": true,
+  "optimum_temp_c": [
+   60.0,
+   60.0
+  ],
+  "growth_temp_c": [
+   40.0,
+   70.0
+  ],
+  "max_nacl_percent": 6.0
+ },
  "genome": {
   "accession": "GCF_019448335.1",
   "organism": "Rubrobacter xylanophilus DSM 9941",

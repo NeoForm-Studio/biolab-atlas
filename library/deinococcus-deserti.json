@@ -15,6 +15,20 @@
   "sequences_16s": 5,
   "papers": 157
  },
+ "phenotype": {
+  "bacdive_id": 3863,
+  "url": "https://bacdive.dsmz.de/strain/3863",
+  "type_strain": true,
+  "optimum_temp_c": [
+   30.0,
+   30.0
+  ],
+  "growth_temp_c": [
+   23.0,
+   37.0
+  ],
+  "max_nacl_percent": 0.25
+ },
  "genome": {
   "accession": "GCF_000020685.1",
   "organism": "Deinococcus deserti VCD115",

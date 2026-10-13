@@ -15,6 +15,17 @@
   "sequences_16s": 229,
   "papers": 3949
  },
+ "phenotype": {
+  "bacdive_id": 5912,
+  "url": "https://bacdive.dsmz.de/strain/5912",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   37.0,
+   37.0
+  ],
+  "max_nacl_percent": null
+ },
  "genome": {
   "accession": "GCF_004799605.1",
   "organism": "Halobacterium salinarum",

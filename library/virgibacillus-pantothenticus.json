@@ -15,6 +15,20 @@
   "sequences_16s": 77,
   "papers": 84
  },
+ "phenotype": {
+  "bacdive_id": 1474,
+  "url": "https://bacdive.dsmz.de/strain/1474",
+  "type_strain": true,
+  "optimum_temp_c": [
+   37.0,
+   37.0
+  ],
+  "growth_temp_c": [
+   15.0,
+   50.0
+  ],
+  "max_nacl_percent": 10.0
+ },
  "genome": {
   "accession": "GCF_018075365.1",
   "organism": "Virgibacillus pantothenticus",

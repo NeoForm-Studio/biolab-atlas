@@ -15,6 +15,17 @@
   "sequences_16s": 117,
   "papers": 2647
  },
+ "phenotype": {
+  "bacdive_id": 5933,
+  "url": "https://bacdive.dsmz.de/strain/5933",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   37.0,
+   37.0
+  ],
+  "max_nacl_percent": null
+ },
  "genome": {
   "accession": "GCF_000025685.1",
   "organism": "Haloferax volcanii DS2",

@@ -3,7 +3,8 @@
     python pipeline/atlas.py "Deinococcus radiodurans" "Thermus thermophilus" ...
 
 For each name it writes library/<slug>.json, then rebuilds library/index.json.
-Sources: NCBI Taxonomy + Datasets, NCBI nucleotide (16S records), UniProt, Europe PMC. Standard library only.
+Sources: NCBI Taxonomy + Datasets, NCBI nucleotide (16S records), UniProt, Europe PMC, BacDive.
+Needs NCBI BLAST+ (blastp) on PATH; otherwise standard library only.
 """
 import http.client
 import io
@@ -26,6 +27,7 @@ LIBRARY = HERE.parent / "library"
 PANELS = json.loads((HERE / "markers.json").read_text(encoding="utf-8"))
 DATASETS = "https://api.ncbi.nlm.nih.gov/datasets/v2"
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
+BACDIVE = "https://api.bacdive.dsmz.de/v2"
 DOMAINS = {2: "Bacteria", 2157: "Archaea"}
 SPECIES_OR_BELOW = {"SPECIES", "SUBSPECIES", "STRAIN", "SEROTYPE", "SEROGROUP", "BIOTYPE", "BIOVAR", "ISOLATE",
                     "PATHOGROUP", "FORMA_SPECIALIS"}
@@ -91,6 +93,41 @@ def inventory(taxon):
         "uniprot_reviewed": int(hr.get("X-Total-Results", 0)),
         "sequences_16s": int(s16["esearchresult"]["count"]),
         "papers": pmc.get("hitCount", 0),
+    }
+
+
+def temperature_range(text):
+    """'30-37' -> (30.0, 37.0), '26' -> (26.0, 26.0), anything else -> None."""
+    m = re.fullmatch(r"\s*(-?\d+(?:\.\d+)?)\s*(?:-\s*(-?\d+(?:\.\d+)?))?\s*", str(text or ""))
+    return (float(m[1]), float(m[2] or m[1])) if m else None
+
+
+def phenotype(name):
+    """Measured growth data from BacDive (DSMZ), preferring the type strain. None if BacDive has no record."""
+    words = name.split()
+    if len(words) < 2:
+        return None
+    ids = fetch(f"{BACDIVE}/taxon/{q(words[0])}/{q(words[1])}").get("results", [])
+    if not ids:
+        return None
+    strains = list(fetch(f"{BACDIVE}/fetch/{';'.join(map(str, ids[:100]))}")["results"].values())
+    strain = next((s for s in strains if s["Name and taxonomic classification"].get("type strain") == "yes"), strains[0])
+    listify = lambda x: x if isinstance(x, list) else [x] if x else []
+    temps = [t for t in listify(strain.get("Culture and growth conditions", {}).get("culture temp"))
+             if t.get("growth") == "positive"]
+    span = lambda rows: (lambda r: [min(r), max(r)] if r else None)(
+        [v for t in rows for v in (temperature_range(t.get("temperature")) or ())])
+    salt = [v for h in listify(strain.get("Physiology and metabolism", {}).get("halophily"))
+            if h.get("growth") == "positive" and h.get("salt") == "NaCl" and "%" in h.get("concentration", "")
+            for v in (temperature_range(h["concentration"].replace("%", "")) or ())]
+    bacdive_id = strain["General"]["BacDive-ID"]
+    return {
+        "bacdive_id": bacdive_id,
+        "url": f"https://bacdive.dsmz.de/strain/{bacdive_id}",
+        "type_strain": strain["Name and taxonomic classification"].get("type strain") == "yes",
+        "optimum_temp_c": span([t for t in temps if t.get("type") == "optimum"]),
+        "growth_temp_c": span(temps),
+        "max_nacl_percent": max(salt) if salt else None,
     }
 
 
@@ -167,6 +204,11 @@ def profile(query):
                 "message": f"{taxon['organism_name']} is not a single species. Pick a species."}
 
     entry["inventory"] = inventory(taxon)
+    try:  # optional source: a BacDive outage must not lose the genome profile
+        entry["phenotype"] = phenotype(taxon["organism_name"])
+    except Exception as e:
+        entry["phenotype"] = None
+        print(f"{'warning':15} BacDive lookup failed for {query}: {e}")
     best = pick_assembly(taxon["tax_id"])
     if best is None:
         parent = taxon["lineage"][-1] if taxon.get("lineage") else None
@@ -215,6 +257,8 @@ def rebuild_index():
             "gc_percent": (e.get("genome") or {}).get("gc_percent"),
             "predicted_ogt_c": (e.get("proteome") or {}).get("predicted_ogt_c"),
             "acidic_excess": (e.get("proteome") or {}).get("acidic_excess"),
+            "measured_optimum_c": (e.get("phenotype") or {}).get("optimum_temp_c"),
+            "measured_growth_c": (e.get("phenotype") or {}).get("growth_temp_c"),
             "markers": {k: f"{v['found']}/{v['of']}" for k, v in e.get("markers", {}).items()},
         })
     write_json(LIBRARY / "index.json", rows)
@@ -232,7 +276,7 @@ def main(names):
         sys.exit(__doc__)
     LIBRARY.mkdir(exist_ok=True)
     try:
-        for name in names:
+        for name in (n.strip() for n in names if n.strip()):
             try:
                 entry = profile(name)
             except Exception as e:  # one failed lookup must not stop the rest

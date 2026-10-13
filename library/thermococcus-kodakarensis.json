@@ -15,6 +15,17 @@
   "sequences_16s": 3,
   "papers": 1869
  },
+ "phenotype": {
+  "bacdive_id": 161223,
+  "url": "https://bacdive.dsmz.de/strain/161223",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   85.0,
+   85.0
+  ],
+  "max_nacl_percent": null
+ },
  "genome": {
   "accession": "GCF_000009965.1",
   "organism": "Thermococcus kodakarensis KOD1",

@@ -92,7 +92,7 @@
   </div>
 
   <footer>
-    *Estimated optimal growth temperature: a rough signal, off by up to about 30 °C for GC-rich species.
+    *Estimated optimal growth temperature from protein composition; see a species card for its measured accuracy.
     Data: NCBI Taxonomy and Datasets, NCBI Nucleotide, UniProt, Europe PMC. Markers found with NCBI BLAST+.
     These are signals that a genome resembles known extremophiles, not proof that an organism is one.
     <a href="https://github.com/NeoForm-Studio/biolab-atlas">Source and methods</a>.
@@ -113,8 +113,7 @@ async function load() {
     fetch('pipeline/markers.json').then((r) => r.json()),
   ]);
   $('#names').innerHTML = INDEX.map((e) => `<option value="${esc(e.name)}">`).join('');
-  $('#hint').innerHTML = `${INDEX.length} species profiled so far. To add one, run ` +
-    `<code>python pipeline/atlas.py "Species name"</code>.`;
+  $('#hint').textContent = `${INDEX.length} species profiled so far. Search for one that is missing to request it.`;
   renderLibrary();
   route();
 }
@@ -145,8 +144,10 @@ function route() {
 
 function showMissing(q) {
   $('#view').innerHTML = `<div class="card"><p class="title">${esc(q)}</p>
-    <div class="status warn">Not in the library yet. The pipeline checks NCBI, UniProt and the literature for any
-    bacterium or archaeon: run <code>python pipeline/atlas.py "${esc(q)}"</code>. If no public data exists, it says so.</div></div>`;
+    <div class="status warn">Not in the library yet. The pipeline checks NCBI, UniProt, BacDive and the literature for
+    any bacterium or archaeon, and says so if no public data exists.
+    <p><a href="https://github.com/NeoForm-Studio/biolab-atlas/issues/new?template=add-species.yml&title=${encodeURIComponent('Add species: ' + q)}&species=${encodeURIComponent(q)}">Request it →</a>
+    or run <code>python pipeline/atlas.py "${esc(q)}"</code> yourself.</p></div></div>`;
 }
 
 async function showSpecies(slug) {
@@ -167,6 +168,17 @@ async function showSpecies(slug) {
     ${stat(inv.sequences_16s, '16S rRNA records', `https://www.ncbi.nlm.nih.gov/nuccore/?term=txid${t.tax_id}%5BOrganism:exp%5D+AND+%2216S+ribosomal+RNA%22%5BTitle%5D`)}
     ${stat(inv.papers, 'papers mentioning it', `https://europepmc.org/search?query=%22${encodeURIComponent(t.name)}%22`)}
   </div></div>`;
+
+  const ph = e.phenotype;
+  if (ph) {
+    const range = (r) => r ? (r[0] === r[1] ? `${r[0]} °C` : `${r[0]}–${r[1]} °C`) : '–';
+    html += `<div class="card"><h2>Measured in the lab (BacDive)</h2><div class="stats">
+      ${stat(range(ph.growth_temp_c), 'grown at')}
+      ${stat(range(ph.optimum_temp_c), 'optimum temperature')}
+      ${stat(ph.max_nacl_percent != null ? `${ph.max_nacl_percent}%` : '–', 'highest NaCl with growth')}
+    </div><p class="meta" style="margin-top:10px"><a href="${esc(ph.url)}">BacDive strain ${esc(ph.bacdive_id)}</a>
+      ${ph.type_strain ? '(type strain)' : '(not the type strain)'} · culture-collection records, not a full tolerance test.</p></div>`;
+  }
 
   if (e.relatives?.length) {
     html += `<div class="card"><h2>Related taxa with genomes</h2><p class="meta">These are other taxa, not this one.</p>
@@ -189,7 +201,7 @@ async function showSpecies(slug) {
   if (p) {
     html += `<div class="card"><h2>Compared with the library</h2>
       ${metric('Estimated optimal growth temperature', p.predicted_ogt_c, '°C', 'predicted_ogt_c', e,
-        'From the IVYWREL amino-acid fraction (Zeldovich et al. 2007, r = 0.93). Rough: off by up to about 30 °C for GC-rich species.')}
+        'From the IVYWREL amino-acid fraction (Zeldovich et al. 2007, r = 0.93). ' + calibration())}
       ${metric('Proteome acidity', p.acidic_excess, '', 'acidic_excess', e,
         'Acidic minus basic residues per residue. Salt-in halophiles sit far to the right.')}
     </div>`;
@@ -207,6 +219,16 @@ async function showSpecies(slug) {
   $('#q').value = t.name;
   highlightRow(slug);
   $('#view').scrollIntoView({behavior: 'smooth', block: 'start'});
+}
+
+function calibration() {
+  // how far the genome estimate is from BacDive's measured optimum, across the whole library
+  const pairs = INDEX.filter((r) => r.measured_optimum_c && r.predicted_ogt_c != null)
+    .map((r) => Math.abs(r.predicted_ogt_c - (r.measured_optimum_c[0] + r.measured_optimum_c[1]) / 2));
+  if (!pairs.length) return 'Rough estimate.';
+  const mean = pairs.reduce((a, b) => a + b, 0) / pairs.length;
+  return `Checked against measured optima for ${pairs.length} species: off by ${mean.toFixed(0)} °C on average, ` +
+    `${Math.max(...pairs).toFixed(0)} °C at worst.`;
 }
 
 function stat(v, label, href) {

@@ -60,12 +60,21 @@ class GenomeTest(unittest.TestCase):
         self.assertEqual(sum(v["found"] for v in m.values()), 0)
 
 
+class TemperatureRangeTest(unittest.TestCase):
+    def test_parses_single_values_ranges_and_negatives(self):
+        from atlas import temperature_range
+        self.assertEqual(temperature_range("26"), (26.0, 26.0))
+        self.assertEqual(temperature_range("30-37"), (30.0, 37.0))
+        self.assertEqual(temperature_range("-5-10"), (-5.0, 10.0))
+        self.assertIsNone(temperature_range("mesophilic"))
+
+
 class NoGenomeTest(unittest.TestCase):
     def test_species_without_assembly_reports_relatives(self):
         from unittest import mock
         import atlas
         taxon = {"tax_id": 9, "organism_name": "Testus nullus", "rank": "SPECIES", "lineage": [1, 2, 8]}
-        for name, value in [("resolve", taxon), ("inventory", {"assemblies": 0}), ("pick_assembly", None)]:
+        for name, value in [("resolve", taxon), ("inventory", {"assemblies": 0}), ("pick_assembly", None), ("phenotype", None)]:
             p = mock.patch.object(atlas, name, return_value=value)
             p.start()
             self.addCleanup(p.stop)

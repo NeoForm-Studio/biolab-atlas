@@ -15,6 +15,14 @@
   "sequences_16s": 103,
   "papers": 28278
  },
+ "phenotype": {
+  "bacdive_id": 4510,
+  "url": "https://bacdive.dsmz.de/strain/4510",
+  "type_strain": false,
+  "optimum_temp_c": null,
+  "growth_temp_c": null,
+  "max_nacl_percent": null
+ },
  "genome": {
   "accession": "GCF_000005845.2",
   "organism": "Escherichia coli str. K-12 substr. MG1655",

@@ -1,0 +1,74 @@
+# Runs when a maintainer adds the "add-species" label to a request issue (only people with triage
+# access can label, so the public cannot trigger it). Issue text reaches the shell only through env vars.
+name: Add species
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: add-species
+  cancel-in-progress: false
+
+jobs:
+  add:
+    if: github.event.label.name == 'add-species'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install BLAST+
+        run: sudo apt-get update -q && sudo apt-get install -y -q ncbi-blast+
+
+      - name: Read the requested name
+        id: request
+        env:
+          BODY: ${{ github.event.issue.body }}
+        run: |
+          python - >> "$GITHUB_OUTPUT" <<'PY'
+          import os, re
+          m = re.search(r"### Species name\s+(.+)", os.environ["BODY"])
+          name = m.group(1).strip() if m else ""
+          print("species=" + (name if re.fullmatch(r"[A-Za-z][A-Za-z0-9 .()'-]{2,99}", name) else ""))
+          PY
+
+      - name: Look it up
+        if: steps.request.outputs.species != ''
+        env:
+          SPECIES: ${{ steps.request.outputs.species }}
+        run: python pipeline/atlas.py "$SPECIES" | tee result.txt
+
+      - name: Commit to the library
+        if: steps.request.outputs.species != ''
+        env:
+          SPECIES: ${{ steps.request.outputs.species }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add library
+          if ! git diff --cached --quiet; then
+            git commit -m "Add $SPECIES to the library"
+            git push
+          fi
+
+      - name: Reply and close
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE: ${{ github.event.issue.number }}
+        run: |
+          if [ -s result.txt ]; then
+            printf 'Pipeline result:\n\n```\n%s\n```\n' "$(cat result.txt)" > reply.md
+          else
+            echo "Could not read a valid species name from this request, or the lookup failed. See the workflow log." > reply.md
+          fi
+          gh issue comment "$ISSUE" --body-file reply.md
+          gh issue close "$ISSUE"

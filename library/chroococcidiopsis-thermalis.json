@@ -15,6 +15,7 @@
   "sequences_16s": 27,
   "papers": 242
  },
+ "phenotype": null,
  "genome": {
   "accession": "GCF_000317125.1",
   "organism": "Chroococcidiopsis thermalis PCC 7203",
