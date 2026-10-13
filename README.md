@@ -47,6 +47,40 @@ Opening `index.html` directly also works, though a local server is recommended s
 | `tools/genplate.mjs` | Helper that generated the background plates (needs your own `OPENAI_API_KEY`) |
 | `RECIPE-cinematic-volumetric-3d-scene.md` | Build notes for the 3D scene |
 
+## Species lookup pipeline
+
+`pipeline/` looks up any bacterium or archaeon in public databases and profiles its genome. It uses only the
+Python standard library (3.10+).
+
+```bash
+python pipeline/atlas.py "Thermus thermophilus" "Halomonas elongata"
+python -m unittest discover -s pipeline
+```
+
+For each name it:
+
+1. **Resolves** the name in NCBI Taxonomy. Unknown names, non-prokaryotes and ranks above species are reported and
+   not stored. A genus lists member species that have reference genomes.
+2. **Inventories** public data: NCBI genome assemblies, UniProt proteins (all and reviewed), 16S rRNA records in
+   NCBI Nucleotide, and Europe PMC papers mentioning the name.
+3. **Picks a genome**: NCBI's reference genome if there is one, otherwise the most complete annotated assembly.
+   Name a strain (for example `"Escherichia coli K-12"`) to get that strain.
+4. **Profiles it**: replicons, size, GC, and from the annotated proteome:
+   - `predicted_ogt_c`: optimal growth temperature estimated from the IVYWREL amino-acid fraction,
+     T = 937F − 335 (Zeldovich et al. 2007, PLoS Comput Biol 3:e5, r = 0.93 over 204 proteomes). Treat it as
+     a rough estimate: in our tests it was close for Pyrococcus furiosus (98 °C vs about 100 °C) but about 30 °C
+     too high for Thermus thermophilus (about 70 °C) and about 20 °C too high for Halomonas elongata.
+   - `acidic_excess`: (D + E − K − R) per residue. Salt-in halophiles stand out (Halobacterium 0.079 against
+     0.00–0.03 for the others tested).
+   - Trait marker panels (`pipeline/markers.json`): Deinococcus-type DNA-damage-response proteins, reverse gyrase
+     (all known hyperthermophiles and some thermophiles), ectoine synthesis (salt-out osmoprotection). Markers are matched by RefSeq product name,
+     so genomes annotated with different names can be undercounted. A missing marker is not evidence the trait is
+     absent.
+5. **Saves** `library/<species>.json` and rebuilds `library/index.json`. A species with no genome is saved as
+   `no_genome`, with relatives that do have one.
+
+These are signals that a genome resembles known extremophiles, not a determination that an organism is one.
+
 ## Credits
 
 Gene and sequence references link out to [PubMed](https://pubmed.ncbi.nlm.nih.gov/)

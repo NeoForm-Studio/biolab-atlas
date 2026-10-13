@@ -1,0 +1,120 @@
+{
+ "query": "Escherichia coli K-12",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 83333,
+  "name": "Escherichia coli K-12",
+  "rank": "STRAIN",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 133,
+  "uniprot_proteins": 6146,
+  "uniprot_reviewed": 6067,
+  "sequences_16s": 103,
+  "papers": 28273
+ },
+ "genome": {
+  "accession": "GCF_000005845.2",
+  "organism": "Escherichia coli str. K-12 substr. MG1655",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 4641652,
+  "gc_percent": 51,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_000913.3",
+    "length": 4641652,
+    "gc_percent": 51
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 4300,
+  "ivywrel": 0.3947,
+  "predicted_ogt_c": 35,
+  "acidic_excess": 0.0097
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 7,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "DdrA",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "DdrB",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "DdrC",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "DdrD",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "IrrE",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "PprM",
+     "found": false,
+     "accessions": []
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accessions": []
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "EctC",
+     "found": false,
+     "accessions": []
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

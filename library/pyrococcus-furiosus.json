@@ -1,0 +1,122 @@
+{
+ "query": "Pyrococcus furiosus",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 2261,
+  "name": "Pyrococcus furiosus",
+  "rank": "SPECIES",
+  "domain": "Archaea"
+ },
+ "inventory": {
+  "assemblies": 4,
+  "uniprot_proteins": 2149,
+  "uniprot_reviewed": 512,
+  "sequences_16s": 3,
+  "papers": 6211
+ },
+ "genome": {
+  "accession": "GCF_008245085.1",
+  "organism": "Pyrococcus furiosus DSM 3638",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 1889914,
+  "gc_percent": 41,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "Chromosome",
+    "type": "Chromosome",
+    "accession": "NZ_CP023154.1",
+    "length": 1889914,
+    "gc_percent": 41
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2002,
+  "ivywrel": 0.4625,
+  "predicted_ogt_c": 98,
+  "acidic_excess": 0.0
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 7,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "DdrA",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "DdrB",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "DdrC",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "DdrD",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "IrrE",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "PprM",
+     "found": false,
+     "accessions": []
+    }
+   ]
+  },
+  "heat": {
+   "found": 1,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": true,
+     "accessions": [
+      "WP_011011612.1"
+     ]
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "EctC",
+     "found": false,
+     "accessions": []
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}
