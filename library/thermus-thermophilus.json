@@ -1,0 +1,136 @@
+{
+ "query": "Thermus thermophilus",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 274,
+  "name": "Thermus thermophilus",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 122,
+  "uniprot_proteins": 4793,
+  "uniprot_reviewed": 895,
+  "sequences_16s": 545,
+  "papers": 14087
+ },
+ "genome": {
+  "accession": "GCF_000091545.1",
+  "organism": "Thermus thermophilus HB8",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 2116056,
+  "gc_percent": 69.5,
+  "contigs": 3,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_006461.1",
+    "length": 1849742,
+    "gc_percent": 69.5
+   },
+   {
+    "name": "pTT8",
+    "type": "Plasmid",
+    "accession": "NC_006463.1",
+    "length": 9322,
+    "gc_percent": 69
+   },
+   {
+    "name": "pTT27",
+    "type": "Plasmid",
+    "accession": "NC_006462.1",
+    "length": 256992,
+    "gc_percent": 69.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2150,
+  "ivywrel": 0.4673,
+  "predicted_ogt_c": 103,
+  "acidic_excess": 0.0018
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 7,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "DdrA",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "DdrB",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "DdrC",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "DdrD",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "IrrE",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "PprM",
+     "found": false,
+     "accessions": []
+    }
+   ]
+  },
+  "heat": {
+   "found": 1,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": true,
+     "accessions": [
+      "WP_011229132.1"
+     ]
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "EctC",
+     "found": false,
+     "accessions": []
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

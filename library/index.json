@@ -1,0 +1,114 @@
+[
+ {
+  "file": "deinococcus-aerophilus.json",
+  "name": "Deinococcus aerophilus",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 68,
+  "predicted_ogt_c": 38,
+  "acidic_excess": 0.0084,
+  "markers": {
+   "radiation": "2/7",
+   "heat": "0/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "deinococcus-radiodurans.json",
+  "name": "Deinococcus radiodurans",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 66.5,
+  "predicted_ogt_c": 36,
+  "acidic_excess": 0.0104,
+  "markers": {
+   "radiation": "7/7",
+   "heat": "0/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "escherichia-coli-k-12.json",
+  "name": "Escherichia coli K-12",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 51,
+  "predicted_ogt_c": 35,
+  "acidic_excess": 0.0097,
+  "markers": {
+   "radiation": "0/7",
+   "heat": "0/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "halobacterium-salinarum.json",
+  "name": "Halobacterium salinarum",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 66.5,
+  "predicted_ogt_c": 28,
+  "acidic_excess": 0.0785,
+  "markers": {
+   "radiation": "0/7",
+   "heat": "0/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "halomonas-elongata.json",
+  "name": "Halomonas elongata",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 63.5,
+  "predicted_ogt_c": 51,
+  "acidic_excess": 0.028,
+  "markers": {
+   "radiation": "0/7",
+   "heat": "0/1",
+   "salt": "3/3"
+  }
+ },
+ {
+  "file": "psychrobacter-arcticus.json",
+  "name": "Psychrobacter arcticus",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 43,
+  "predicted_ogt_c": 16,
+  "acidic_excess": 0.0207,
+  "markers": {
+   "radiation": "0/7",
+   "heat": "0/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "pyrococcus-furiosus.json",
+  "name": "Pyrococcus furiosus",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 41,
+  "predicted_ogt_c": 98,
+  "acidic_excess": 0.0,
+  "markers": {
+   "radiation": "0/7",
+   "heat": "1/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "thermus-thermophilus.json",
+  "name": "Thermus thermophilus",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 69.5,
+  "predicted_ogt_c": 103,
+  "acidic_excess": 0.0018,
+  "markers": {
+   "radiation": "0/7",
+   "heat": "1/1",
+   "salt": "0/3"
+  }
+ }
+]

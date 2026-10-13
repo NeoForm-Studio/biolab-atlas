@@ -1,0 +1,134 @@
+{
+ "query": "Halobacterium salinarum",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 2242,
+  "name": "Halobacterium salinarum",
+  "rank": "SPECIES",
+  "domain": "Archaea"
+ },
+ "inventory": {
+  "assemblies": 40,
+  "uniprot_proteins": 2791,
+  "uniprot_reviewed": 813,
+  "sequences_16s": 229,
+  "papers": 3949
+ },
+ "genome": {
+  "accession": "GCF_004799605.1",
+  "organism": "Halobacterium salinarum",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 2429680,
+  "gc_percent": 66.5,
+  "contigs": 3,
+  "replicons": [
+   {
+    "name": "Chromosome",
+    "type": "Chromosome",
+    "accession": "NZ_CP038631.1",
+    "length": 2178608,
+    "gc_percent": 67
+   },
+   {
+    "name": "pHSAL1",
+    "type": "Plasmid",
+    "accession": "NZ_CP038632.1",
+    "length": 148406,
+    "gc_percent": 60.5
+   },
+   {
+    "name": "pHSAL2",
+    "type": "Plasmid",
+    "accession": "NZ_CP038633.1",
+    "length": 102666,
+    "gc_percent": 56.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2427,
+  "ivywrel": 0.3875,
+  "predicted_ogt_c": 28,
+  "acidic_excess": 0.0785
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 7,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "DdrA",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "DdrB",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "DdrC",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "DdrD",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "IrrE",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "PprM",
+     "found": false,
+     "accessions": []
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accessions": []
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accessions": []
+    },
+    {
+     "name": "EctC",
+     "found": false,
+     "accessions": []
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}
