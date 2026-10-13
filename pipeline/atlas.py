@@ -192,7 +192,7 @@ def profile(query):
         return {**entry, "status": "genome_only",
                 "message": "A genome exists but has no protein annotation, so only genome size and GC are shown."}
     entry["proteome"] = composition(records)
-    entry["markers"] = find_markers(records, PANELS)
+    entry["markers"] = find_markers(records, PANELS, HERE / "markers.faa")
     return {**entry, "status": "ok", "message": "Genome and proteome profiled."}
 
 

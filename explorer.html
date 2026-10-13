@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BioLab Atlas · Species explorer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#05080d; --ink:#e8eef5; --ink-mid:#aab6c3; --ink-dim:#7c8893; --head:#f2f7fc;
+    --line:rgba(173,201,232,.16); --surf:rgba(150,182,220,.05); --surf-2:rgba(150,182,220,.09);
+    --accent:#46c6dd; --gold:#f4bd5a; --warn:#e6bd66;
+    --mono:'JetBrains Mono',ui-monospace,Menlo,monospace; --sans:'Inter',system-ui,sans-serif;
+    --display:'Space Grotesk',var(--sans);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--sans)}
+  a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+  .wrap{max-width:1040px;margin:0 auto;padding:28px 16px 64px}
+  header{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 18px;margin-bottom:22px}
+  header h1{font:700 22px var(--display);color:var(--head);margin:0}
+  header h1 span{color:var(--accent)}
+  header .back{font:12px var(--mono);color:var(--ink-dim)}
+  .search{display:flex;gap:8px;margin-bottom:8px}
+  .search input{flex:1;min-width:0;background:var(--surf);border:1px solid var(--line);border-radius:8px;
+    color:var(--ink);font:15px var(--sans);padding:11px 14px}
+  .search input:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .hint{font-size:13px;color:var(--ink-dim);margin:0 0 26px}
+  code{font:12.5px var(--mono);background:var(--surf-2);padding:1px 6px;border-radius:4px}
+  .card{background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:16px}
+  .card h2{font:700 13px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mid);margin:0 0 14px}
+  .title{font:700 28px var(--display);color:var(--head);margin:0}
+  .title em{font-style:italic}
+  .meta{color:var(--ink-mid);font-size:13.5px;margin:4px 0 0}
+  .status{margin-top:14px;padding:10px 14px;border-radius:8px;background:var(--surf-2);font-size:14px}
+  .status.warn{border-left:3px solid var(--warn)}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+  .stat{background:var(--surf-2);border-radius:8px;padding:10px 12px}
+  .stat b{display:block;font:500 20px var(--mono);color:var(--head)}
+  .stat span{font-size:12.5px;color:var(--ink-dim)}
+  .rep{margin:10px 0}
+  .rep .lab{display:flex;justify-content:space-between;font:12.5px var(--mono);color:var(--ink-mid);margin-bottom:4px;gap:8px}
+  .rep .bar{height:10px;border-radius:5px;background:linear-gradient(90deg,var(--accent),#86a9ff)}
+  .strip{position:relative;height:34px;margin:6px 0 2px;border-bottom:1px solid var(--line)}
+  .strip .dot{position:absolute;bottom:6px;width:9px;height:9px;margin-left:-4.5px;border-radius:50%;
+    background:var(--ink-dim);opacity:.45}
+  .strip .dot.me{background:var(--gold);opacity:1;width:14px;height:14px;margin-left:-7px;bottom:4px;
+    box-shadow:0 0 0 3px rgba(244,189,90,.25)}
+  .axis{display:flex;justify-content:space-between;font:11.5px var(--mono);color:var(--ink-dim)}
+  .metric{margin-bottom:22px} .metric:last-child{margin-bottom:0}
+  .metric h3{font:500 15px var(--sans);color:var(--head);margin:0}
+  .metric h3 b{font-family:var(--mono);color:var(--gold);margin-left:6px}
+  .metric p{font-size:13px;color:var(--ink-dim);margin:4px 0 0}
+  .trait{margin-bottom:18px} .trait:last-child{margin-bottom:0}
+  .trait h3{font:500 15px var(--sans);color:var(--head);margin:0 0 2px}
+  .trait p{font-size:13px;color:var(--ink-dim);margin:0 0 8px}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{font:12.5px var(--mono);padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:var(--ink-dim)}
+  .chip.yes{background:rgba(70,198,221,.16);border-color:var(--accent);color:var(--head)}
+  .chip.part{border-style:dashed;border-color:var(--warn);color:var(--warn)}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th{font:500 11.5px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--ink-dim);text-align:left;
+    padding:6px 8px;border-bottom:1px solid var(--line)}
+  td{padding:7px 8px;border-bottom:1px solid var(--line-soft,rgba(173,201,232,.08))}
+  td.n{font-family:var(--mono);text-align:right} th.n{text-align:right}
+  tr.row{cursor:pointer} tr.row:hover td{background:var(--surf-2)}
+  .scroll{overflow-x:auto}
+  .legend{font-size:12.5px;color:var(--ink-dim);margin-top:10px}
+  footer{font-size:12.5px;color:var(--ink-dim);margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>BioLab Atlas <span>· species explorer</span></h1>
+    <a class="back" href="index.html">← back to the D. radiodurans story</a>
+  </header>
+
+  <form class="search" id="searchForm" autocomplete="off">
+    <input id="q" list="names" placeholder="Search a bacterium or archaeon, e.g. Thermus thermophilus" aria-label="Species name">
+    <datalist id="names"></datalist>
+  </form>
+  <p class="hint" id="hint"></p>
+
+  <main id="view"></main>
+  <noscript><p class="hint">The explorer needs JavaScript.</p></noscript>
+
+  <div class="card">
+    <h2>Library</h2>
+    <div class="scroll"><table id="lib"></table></div>
+  </div>
+
+  <footer>
+    *Estimated optimal growth temperature: a rough signal, off by up to about 30 °C for GC-rich species.
+    Data: NCBI Taxonomy and Datasets, NCBI Nucleotide, UniProt, Europe PMC. Markers found with NCBI BLAST+.
+    These are signals that a genome resembles known extremophiles, not proof that an organism is one.
+    <a href="https://github.com/NeoForm-Studio/biolab-atlas">Source and methods</a>.
+  </footer>
+</div>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt = (n) => (n ?? 0).toLocaleString('en-US');
+const MIN_COVERAGE = 70, NEAR_IDENTITY = 50; // coverage rule mirrors pipeline/genome.py
+
+let INDEX = [], PANELS = {};
+
+async function load() {
+  [INDEX, PANELS] = await Promise.all([
+    fetch('library/index.json').then((r) => r.json()),
+    fetch('pipeline/markers.json').then((r) => r.json()),
+  ]);
+  $('#names').innerHTML = INDEX.map((e) => `<option value="${esc(e.name)}">`).join('');
+  $('#hint').innerHTML = `${INDEX.length} species profiled so far. To add one, run ` +
+    `<code>python pipeline/atlas.py "Species name"</code>.`;
+  renderLibrary();
+  route();
+}
+
+function find(text) {
+  const t = text.trim().toLowerCase();
+  return INDEX.find((e) => e.name.toLowerCase() === t) ||
+         INDEX.find((e) => e.name.toLowerCase().startsWith(t)) ||
+         INDEX.find((e) => e.name.toLowerCase().includes(t));
+}
+
+$('#searchForm').addEventListener('submit', (ev) => {
+  ev.preventDefault();
+  const q = $('#q').value;
+  if (!q.trim()) return;
+  const hit = find(q);
+  if (hit) location.hash = hit.file.replace('.json', '');
+  else showMissing(q);
+});
+$('#q').addEventListener('change', () => { const hit = find($('#q').value); if (hit) location.hash = hit.file.replace('.json', ''); });
+window.addEventListener('hashchange', route);
+
+function route() {
+  const slug = decodeURIComponent(location.hash.slice(1));
+  if (slug) showSpecies(slug);
+  else $('#view').innerHTML = '';
+}
+
+function showMissing(q) {
+  $('#view').innerHTML = `<div class="card"><p class="title">${esc(q)}</p>
+    <div class="status warn">Not in the library yet. The pipeline checks NCBI, UniProt and the literature for any
+    bacterium or archaeon: run <code>python pipeline/atlas.py "${esc(q)}"</code>. If no public data exists, it says so.</div></div>`;
+}
+
+async function showSpecies(slug) {
+  const e = await fetch(`library/${encodeURIComponent(slug)}.json`).then((r) => r.ok ? r.json() : null);
+  if (!e?.taxon) return showMissing(slug.replace(/-/g, ' '));
+  const t = e.taxon, inv = e.inventory || {}, g = e.genome, p = e.proteome;
+  let html = `<div class="card">
+    <p class="title"><em>${esc(t.name)}</em></p>
+    <p class="meta">${esc(t.domain)} · ${esc(t.rank.toLowerCase())} ·
+      <a href="https://www.ncbi.nlm.nih.gov/datasets/taxonomy/${t.tax_id}/">NCBI taxon ${t.tax_id}</a>
+      · profiled ${esc(e.generated)}</p>
+    ${e.status === 'ok' ? '' : `<div class="status warn">${esc(e.message)}</div>`}
+  </div>`;
+
+  html += `<div class="card"><h2>Public data found</h2><div class="stats">
+    ${stat(inv.assemblies, 'genome assemblies', `https://www.ncbi.nlm.nih.gov/datasets/genome/?taxon=${t.tax_id}`)}
+    ${stat(inv.uniprot_proteins, `UniProt proteins (${fmt(inv.uniprot_reviewed)} reviewed)`, `https://www.uniprot.org/uniprotkb?query=taxonomy_id:${t.tax_id}`)}
+    ${stat(inv.sequences_16s, '16S rRNA records', `https://www.ncbi.nlm.nih.gov/nuccore/?term=txid${t.tax_id}%5BOrganism:exp%5D+AND+%2216S+ribosomal+RNA%22%5BTitle%5D`)}
+    ${stat(inv.papers, 'papers mentioning it', `https://europepmc.org/search?query=%22${encodeURIComponent(t.name)}%22`)}
+  </div></div>`;
+
+  if (e.relatives?.length) {
+    html += `<div class="card"><h2>Related taxa with genomes</h2><p class="meta">These are other taxa, not this one.</p>
+      <ul>${e.relatives.map((r) => `<li><em>${esc(r.name)}</em> · ${esc(r.accession)}</li>`).join('')}</ul></div>`;
+  }
+
+  if (g) {
+    const maxLen = Math.max(...(g.replicons.length ? g.replicons : [{length: g.size_bp}]).map((r) => r.length));
+    const reps = g.replicons.length ? g.replicons.map((r) => `<div class="rep"><div class="lab">
+        <span>${esc(r.type)}${r.name && r.name.toLowerCase() !== String(r.type).toLowerCase() ? ' ' + esc(r.name) : ''} · ${esc(r.accession)}</span><span>${fmt(r.length)} bp · ${esc(r.gc_percent)}% GC</span></div>
+        <div class="bar" style="width:${Math.max(1, 100 * r.length / maxLen)}%"></div></div>`).join('')
+      : `<p class="meta">Draft assembly in ${fmt(g.contigs)} contigs, so individual chromosomes and plasmids are not resolved.</p>`;
+    html += `<div class="card"><h2>Genome</h2>
+      <p class="meta"><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/${esc(g.accession)}/">${esc(g.accession)}</a>
+        · ${esc(g.organism)} · ${esc(g.level)}${g.reference ? ' · NCBI reference genome' : ''}</p>
+      <div class="stats" style="margin:12px 0">${stat(g.size_bp, 'base pairs')}${stat(g.gc_percent + '%', 'GC content')}
+        ${p ? stat(p.proteins, 'proteins') : ''}</div>${reps}</div>`;
+  }
+
+  if (p) {
+    html += `<div class="card"><h2>Compared with the library</h2>
+      ${metric('Estimated optimal growth temperature', p.predicted_ogt_c, '°C', 'predicted_ogt_c', e,
+        'From the IVYWREL amino-acid fraction (Zeldovich et al. 2007, r = 0.93). Rough: off by up to about 30 °C for GC-rich species.')}
+      ${metric('Proteome acidity', p.acidic_excess, '', 'acidic_excess', e,
+        'Acidic minus basic residues per residue. Salt-in halophiles sit far to the right.')}
+    </div>`;
+  }
+
+  if (e.markers) {
+    html += `<div class="card"><h2>Trait marker genes</h2>${Object.entries(e.markers).map(([k, m]) => `
+      <div class="trait"><h3>${esc(PANELS[k]?.label || k)} · ${m.found}/${m.of}</h3><p>${esc(PANELS[k]?.note || '')}</p>
+      <div class="chips">${m.genes.map(chip).join('')}</div></div>`).join('')}
+      <p class="legend">Solid: found by BLAST (≥${MIN_COVERAGE}% coverage of the reference protein). Dashed: a close match (≥50% identity)
+      covering less of the protein than the cutoff. Absence is not proof the organism lacks the trait.</p></div>`;
+  }
+
+  $('#view').innerHTML = html;
+  $('#q').value = t.name;
+  highlightRow(slug);
+  $('#view').scrollIntoView({behavior: 'smooth', block: 'start'});
+}
+
+function stat(v, label, href) {
+  const val = typeof v === 'number' ? fmt(v) : esc(v ?? '–');
+  return `<div class="stat"><b>${href ? `<a href="${href}">${val}</a>` : val}</b><span>${esc(label)}</span></div>`;
+}
+
+function chip(gene) {
+  // dashed = strong match over part of the protein; weak family-level hits are shown as absent
+  const near = !gene.found && gene.identity >= NEAR_IDENTITY;
+  const shown = gene.found || near;
+  const title = shown ? `${gene.identity.toFixed(0)}% identity over ${gene.coverage}% of the reference protein` : 'not found';
+  return `<span class="chip ${gene.found ? 'yes' : near ? 'part' : ''}" title="${title}">${esc(gene.name)}` +
+    `${shown ? ` ${gene.identity.toFixed(0)}%` : ''}</span>`;
+}
+
+function metric(label, value, unit, key, entry, note) {
+  const vals = INDEX.map((r) => r[key]).filter((v) => v != null);
+  const lo = Math.min(...vals), hi = Math.max(...vals), span = hi - lo || 1;
+  const pos = (v) => (100 * (v - lo) / span).toFixed(2);
+  const rank = vals.filter((v) => v < value).length;
+  const dots = INDEX.filter((r) => r[key] != null).map((r) => `<span class="dot${r.name === entry.taxon.name ? ' me' : ''}"
+    style="left:${pos(r[key])}%" title="${esc(r.name)}: ${r[key]}${unit}"></span>`).join('');
+  return `<div class="metric"><h3>${label}<b>${value}${unit}</b></h3>
+    <div class="strip">${dots}</div><div class="axis"><span>${lo}${unit}</span><span>${hi}${unit}</span></div>
+    <p>Higher than ${rank} of ${vals.length} profiled species. ${note}</p></div>`;
+}
+
+function renderLibrary() {
+  const rows = [...INDEX].sort((a, b) => a.name.localeCompare(b.name));
+  $('#lib').innerHTML = `<tr><th>Species</th><th class="n" title="Estimated from amino-acid composition; can be off by about 30 °C">Est. OGT*</th><th class="n">Acidity</th>
+    ${Object.keys(PANELS).map((k) => `<th class="n">${esc(k)}</th>`).join('')}</tr>` +
+    rows.map((r) => `<tr class="row" data-slug="${esc(r.file.replace('.json', ''))}"><td><em>${esc(r.name)}</em></td>
+      <td class="n">${r.predicted_ogt_c ?? '–'}${r.predicted_ogt_c != null ? '°C' : ''}</td>
+      <td class="n">${r.acidic_excess ?? '–'}</td>
+      ${Object.keys(PANELS).map((k) => `<td class="n">${r.markers[k] ?? '–'}</td>`).join('')}</tr>`).join('');
+  document.querySelectorAll('tr.row').forEach((tr) => tr.addEventListener('click', () => { location.hash = tr.dataset.slug; }));
+}
+
+function highlightRow(slug) {
+  document.querySelectorAll('tr.row').forEach((tr) => tr.style.outline = tr.dataset.slug === slug ? '1px solid var(--accent)' : '');
+}
+
+load().catch((err) => { $('#view').innerHTML = `<div class="card status warn">Could not load the library: ${esc(err.message)}.
+  Serve this folder over HTTP (for example <code>python -m http.server</code>) rather than opening the file directly.</div>`; });
+</script>
+</body>
+</html>

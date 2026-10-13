@@ -1,5 +1,89 @@
 [
  {
+  "file": "acidithiobacillus-ferrooxidans.json",
+  "name": "Acidithiobacillus ferrooxidans",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 59,
+  "predicted_ogt_c": 39,
+  "acidic_excess": 0.0051,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "aquifex-aeolicus.json",
+  "name": "Aquifex aeolicus",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 43.5,
+  "predicted_ogt_c": 92,
+  "acidic_excess": -0.0034,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "1/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "bacillus-subtilis.json",
+  "name": "Bacillus subtilis",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 43.5,
+  "predicted_ogt_c": 37,
+  "acidic_excess": 0.0128,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "chromohalobacter-israelensis.json",
+  "name": "Chromohalobacter israelensis",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 64,
+  "predicted_ogt_c": 46,
+  "acidic_excess": 0.0238,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "3/3"
+  }
+ },
+ {
+  "file": "chroococcidiopsis-thermalis.json",
+  "name": "Chroococcidiopsis thermalis",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 44.5,
+  "predicted_ogt_c": 44,
+  "acidic_excess": 0.0081,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "colwellia-psychrerythraea.json",
+  "name": "Colwellia psychrerythraea",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 38,
+  "predicted_ogt_c": 21,
+  "acidic_excess": 0.0177,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3"
+  }
+ },
+ {
   "file": "deinococcus-aerophilus.json",
   "name": "Deinococcus aerophilus",
   "status": "ok",
@@ -8,7 +92,35 @@
   "predicted_ogt_c": 38,
   "acidic_excess": 0.0084,
   "markers": {
-   "radiation": "2/7",
+   "radiation": "6/6",
+   "heat": "0/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "deinococcus-deserti.json",
+  "name": "Deinococcus deserti",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 63,
+  "predicted_ogt_c": 38,
+  "acidic_excess": 0.0088,
+  "markers": {
+   "radiation": "5/6",
+   "heat": "0/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "deinococcus-geothermalis.json",
+  "name": "Deinococcus geothermalis",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 66.5,
+  "predicted_ogt_c": 47,
+  "acidic_excess": 0.0044,
+  "markers": {
+   "radiation": "6/6",
    "heat": "0/1",
    "salt": "0/3"
   }
@@ -22,7 +134,7 @@
   "predicted_ogt_c": 36,
   "acidic_excess": 0.0104,
   "markers": {
-   "radiation": "7/7",
+   "radiation": "6/6",
    "heat": "0/1",
    "salt": "0/3"
   }
@@ -36,7 +148,35 @@
   "predicted_ogt_c": 35,
   "acidic_excess": 0.0097,
   "markers": {
-   "radiation": "0/7",
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "geobacillus-stearothermophilus.json",
+  "name": "Geobacillus stearothermophilus",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 52.5,
+  "predicted_ogt_c": 61,
+  "acidic_excess": 0.0075,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "haloarcula-marismortui.json",
+  "name": "Haloarcula marismortui",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 61,
+  "predicted_ogt_c": 40,
+  "acidic_excess": 0.085,
+  "markers": {
+   "radiation": "0/6",
    "heat": "0/1",
    "salt": "0/3"
   }
@@ -50,7 +190,21 @@
   "predicted_ogt_c": 28,
   "acidic_excess": 0.0785,
   "markers": {
-   "radiation": "0/7",
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "haloferax-volcanii.json",
+  "name": "Haloferax volcanii",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 65.5,
+  "predicted_ogt_c": 45,
+  "acidic_excess": 0.0793,
+  "markers": {
+   "radiation": "0/6",
    "heat": "0/1",
    "salt": "0/3"
   }
@@ -64,9 +218,93 @@
   "predicted_ogt_c": 51,
   "acidic_excess": 0.028,
   "markers": {
-   "radiation": "0/7",
+   "radiation": "0/6",
    "heat": "0/1",
    "salt": "3/3"
+  }
+ },
+ {
+  "file": "kineococcus-radiotolerans.json",
+  "name": "Kineococcus radiotolerans",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 74,
+  "predicted_ogt_c": 42,
+  "acidic_excess": 0.0178,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "marinococcus-halophilus.json",
+  "name": "Marinococcus halophilus",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 47,
+  "predicted_ogt_c": 45,
+  "acidic_excess": 0.0329,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "3/3"
+  }
+ },
+ {
+  "file": "methanocaldococcus-jannaschii.json",
+  "name": "Methanocaldococcus jannaschii",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 31.5,
+  "predicted_ogt_c": 81,
+  "acidic_excess": -0.0003,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "1/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "picrophilus-oshimae.json",
+  "name": "Picrophilus oshimae",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 36,
+  "predicted_ogt_c": 56,
+  "acidic_excess": 0.0018,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "pseudoalteromonas-haloplanktis.json",
+  "name": "Pseudoalteromonas haloplanktis",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 40,
+  "predicted_ogt_c": 21,
+  "acidic_excess": 0.0157,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "pseudomonas-aeruginosa.json",
+  "name": "Pseudomonas aeruginosa",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 66.5,
+  "predicted_ogt_c": 52,
+  "acidic_excess": 0.0092,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3"
   }
  },
  {
@@ -78,7 +316,7 @@
   "predicted_ogt_c": 16,
   "acidic_excess": 0.0207,
   "markers": {
-   "radiation": "0/7",
+   "radiation": "0/6",
    "heat": "0/1",
    "salt": "0/3"
   }
@@ -92,7 +330,119 @@
   "predicted_ogt_c": 98,
   "acidic_excess": 0.0,
   "markers": {
-   "radiation": "0/7",
+   "radiation": "0/6",
+   "heat": "1/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "rubrobacter-xylanophilus.json",
+  "name": "Rubrobacter xylanophilus",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 68.5,
+  "predicted_ogt_c": 88,
+  "acidic_excess": 0.0142,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "salinibacter-ruber.json",
+  "name": "Salinibacter ruber",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 65.5,
+  "predicted_ogt_c": 42,
+  "acidic_excess": 0.0454,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "staphylococcus-aureus.json",
+  "name": "Staphylococcus aureus",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 33,
+  "predicted_ogt_c": 32,
+  "acidic_excess": 0.0134,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "streptomyces-coelicolor.json",
+  "name": "Streptomyces coelicolor",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 72,
+  "predicted_ogt_c": 34,
+  "acidic_excess": 0.0153,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "3/3"
+  }
+ },
+ {
+  "file": "sulfolobus-acidocaldarius.json",
+  "name": "Sulfolobus acidocaldarius",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 36.5,
+  "predicted_ogt_c": 79,
+  "acidic_excess": -0.0039,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "1/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "thermococcus-gammatolerans.json",
+  "name": "Thermococcus gammatolerans",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 53.5,
+  "predicted_ogt_c": 96,
+  "acidic_excess": 0.0055,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "1/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "thermococcus-kodakarensis.json",
+  "name": "Thermococcus kodakarensis",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 52,
+  "predicted_ogt_c": 92,
+  "acidic_excess": 0.0087,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "1/1",
+   "salt": "0/3"
+  }
+ },
+ {
+  "file": "thermotoga-maritima.json",
+  "name": "Thermotoga maritima",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 46,
+  "predicted_ogt_c": 87,
+  "acidic_excess": 0.0079,
+  "markers": {
+   "radiation": "0/6",
    "heat": "1/1",
    "salt": "0/3"
   }
@@ -106,9 +456,23 @@
   "predicted_ogt_c": 103,
   "acidic_excess": 0.0018,
   "markers": {
-   "radiation": "0/7",
+   "radiation": "0/6",
    "heat": "1/1",
    "salt": "0/3"
+  }
+ },
+ {
+  "file": "virgibacillus-pantothenticus.json",
+  "name": "Virgibacillus pantothenticus",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 37.5,
+  "predicted_ogt_c": 44,
+  "acidic_excess": 0.0149,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "3/3"
   }
  }
 ]

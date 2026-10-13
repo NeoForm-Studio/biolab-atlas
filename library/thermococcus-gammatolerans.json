@@ -1,0 +1,111 @@
+{
+ "query": "Thermococcus gammatolerans",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 187878,
+  "name": "Thermococcus gammatolerans",
+  "rank": "SPECIES",
+  "domain": "Archaea"
+ },
+ "inventory": {
+  "assemblies": 1,
+  "uniprot_proteins": 2157,
+  "uniprot_reviewed": 181,
+  "sequences_16s": 4,
+  "papers": 197
+ },
+ "genome": {
+  "accession": "GCF_000022365.1",
+  "organism": "Thermococcus gammatolerans EJ3",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 2045438,
+  "gc_percent": 53.5,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "Chromosome",
+    "type": "Chromosome",
+    "accession": "NC_012804.1",
+    "length": 2045438,
+    "gc_percent": 53.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2167,
+  "ivywrel": 0.4595,
+  "predicted_ogt_c": 96,
+  "acidic_excess": 0.0055
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 1,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": true,
+     "accession": "WP_015859292.1",
+     "identity": 72.236,
+     "coverage": 99
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_015857928.1",
+     "identity": 29.742,
+     "coverage": 96
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

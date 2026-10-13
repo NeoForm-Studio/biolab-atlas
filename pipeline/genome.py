@@ -1,5 +1,8 @@
-"""Pure functions: parse a proteome and measure it. No network access here, so it is easy to test."""
-import re
+"""Measure a proteome: amino-acid composition and trait marker proteins (via local NCBI BLAST+). No network."""
+import shutil
+import subprocess
+import tempfile
+from pathlib import Path
 
 IVYWREL = set("IVYWREL")
 AMINO_ACIDS = set("ACDEFGHIKLMNPQRSTVWY")
@@ -18,12 +21,6 @@ def parse_fasta(text):
     if header is not None:
         records.append((header, "".join(chunks)))
     return records
-
-
-def product(header):
-    """'WP_1.1 MULTISPECIES: recombinase RecA [Deinococcus]' -> 'recombinase RecA'."""
-    name = re.sub(r"^\S+\s+(MULTISPECIES:\s+)?", "", header)
-    return name.rsplit(" [", 1)[0].strip()
 
 
 def composition(records):
@@ -51,19 +48,45 @@ def composition(records):
     }
 
 
-def find_markers(records, panels):
-    """For each trait panel, list which marker proteins are annotated in this proteome."""
-    products = [(h.split()[0], product(h)) for h, _ in records]
+MIN_COVERAGE, MIN_IDENTITY, MAX_EVALUE = 70, 30, 1e-10
+
+
+def best_hits(tsv):
+    """blastp -outfmt '6 qseqid sseqid pident qcovs evalue bitscore' -> {query: best hit by bitscore}."""
+    best = {}
+    for line in tsv.splitlines():
+        q, s, pident, qcov, evalue, bits = line.split("\t")
+        hit = {"accession": s, "identity": float(pident), "coverage": int(qcov), "evalue": float(evalue),
+               "bits": float(bits)}
+        if q not in best or hit["bits"] > best[q]["bits"]:
+            best[q] = hit
+    return best
+
+
+def passes(hit, gene):
+    """A BLAST hit counts as the marker when it is significant, long enough and similar enough."""
+    return bool(hit) and (hit["evalue"] <= MAX_EVALUE and hit["coverage"] >= MIN_COVERAGE
+                          and hit["identity"] >= gene.get("min_identity", MIN_IDENTITY))
+
+
+def find_markers(records, panels, reference_faa):
+    """For each trait panel, BLAST the reference marker proteins against this proteome."""
+    if not shutil.which("blastp"):
+        raise RuntimeError("NCBI BLAST+ (blastp) is required; install it and make sure blastp is on PATH")
+    with tempfile.TemporaryDirectory() as tmp:
+        subject = Path(tmp) / "proteome.faa"
+        subject.write_text("".join(f">{h.split()[0]}\n{seq}\n" for h, seq in records))
+        run = subprocess.run(["blastp", "-query", str(reference_faa), "-subject", str(subject), "-evalue", "1e-5",
+                              "-max_hsps", "1", "-outfmt", "6 qseqid sseqid pident qcovs evalue bitscore"],
+                             capture_output=True, text=True, check=True)
+    best = best_hits(run.stdout)
     out = {}
     for trait, panel in panels.items():
         genes = []
         for gene in panel["genes"]:
-            pattern = re.compile(gene["match"], re.IGNORECASE)
-            hits = [acc for acc, name in products if pattern.fullmatch(name)]
-            genes.append({"name": gene["name"], "found": bool(hits), "accessions": hits[:5]})
-        out[trait] = {  # labels and notes live in markers.json
-            "found": sum(g["found"] for g in genes),
-            "of": len(genes),
-            "genes": genes,
-        }
+            hit = best.get(gene["ref"])
+            found = passes(hit, gene)
+            genes.append({"name": gene["name"], "found": found,
+                          **({k: hit[k] for k in ("accession", "identity", "coverage")} if hit else {})})
+        out[trait] = {"found": sum(g["found"] for g in genes), "of": len(genes), "genes": genes}
     return out

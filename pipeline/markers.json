@@ -1,31 +1,61 @@
 {
   "radiation": {
     "label": "Deinococcus-type radiation and desiccation resistance",
-    "note": "Deinococcus-specific DNA-damage-response proteins. Absence does not rule out resistance: other radiation-resistant lineages use different strategies.",
+    "note": "Deinococcus DNA-damage-response proteins. Absence does not rule out resistance: other radiation-resistant lineages use different strategies.",
     "genes": [
-      {"name": "PprA", "match": "DNA repair protein PprA"},
-      {"name": "DdrA", "match": "single-stranded DNA-binding protein DdrA"},
-      {"name": "DdrB", "match": "single-stranded DNA-binding protein DdrB"},
-      {"name": "DdrC", "match": "DNA damage response protein DdrC"},
-      {"name": "DdrD", "match": "DNA damage response protein DdrD"},
-      {"name": "IrrE", "match": "metallo-endopeptidase IrrE"},
-      {"name": "PprM", "match": "DNA damage response modulator PprM"}
+      {
+        "name": "PprA",
+        "ref": "WP_010889605.1"
+      },
+      {
+        "name": "DdrA",
+        "ref": "WP_010887068.1"
+      },
+      {
+        "name": "DdrB",
+        "ref": "WP_027480237.1"
+      },
+      {
+        "name": "DdrC",
+        "ref": "WP_027480257.1"
+      },
+      {
+        "name": "DdrD",
+        "ref": "WP_010886971.1"
+      },
+      {
+        "name": "IrrE",
+        "ref": "WP_010886813.1"
+      }
     ]
   },
   "heat": {
     "label": "Reverse gyrase (thermophily marker)",
     "note": "Reverse gyrase is present in all known hyperthermophiles (optimal growth at or above about 80 C) and in some thermophiles such as Thermus; rare in mesophiles (Forterre 2002, Trends Genet).",
     "genes": [
-      {"name": "Rgy", "match": "reverse gyrase"}
+      {
+        "name": "Rgy",
+        "ref": "WP_011011612.1"
+      }
     ]
   },
   "salt": {
     "label": "Ectoine osmoprotection (salt-out strategy)",
     "note": "Ectoine synthesis genes. Salt-in halophiles such as Halobacterium lack these and instead have a strongly acidic proteome (see acidic_excess).",
     "genes": [
-      {"name": "EctA", "match": "(L-2,4-)?diaminobutyr(ate|ic acid) acetyltransferase"},
-      {"name": "EctB", "match": "diaminobutyrate--2-oxoglutarate transaminase"},
-      {"name": "EctC", "match": "(L-)?ectoine synthase"}
+      {
+        "name": "EctA",
+        "ref": "WP_013332344.1"
+      },
+      {
+        "name": "EctB",
+        "ref": "WP_013332345.1",
+        "min_identity": 45
+      },
+      {
+        "name": "EctC",
+        "ref": "WP_013332346.1"
+      }
     ]
   }
 }

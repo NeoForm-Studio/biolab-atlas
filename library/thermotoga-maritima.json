@@ -1,0 +1,111 @@
+{
+ "query": "Thermotoga maritima",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 2336,
+  "name": "Thermotoga maritima",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 7,
+  "uniprot_proteins": 1902,
+  "uniprot_reviewed": 567,
+  "sequences_16s": 2,
+  "papers": 7451
+ },
+ "genome": {
+  "accession": "GCF_000230655.2",
+  "organism": "Thermotoga maritima MSB8",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 1869644,
+  "gc_percent": 46,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_023151.1",
+    "length": 1869644,
+    "gc_percent": 46
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 1856,
+  "ivywrel": 0.4502,
+  "predicted_ogt_c": 87,
+  "acidic_excess": 0.0079
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 1,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": true,
+     "accession": "WP_227738432.1",
+     "identity": 39.454,
+     "coverage": 99
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_004082331.1",
+     "identity": 30.479,
+     "coverage": 92
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

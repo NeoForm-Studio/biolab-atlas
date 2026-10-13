@@ -13,7 +13,7 @@
   "uniprot_proteins": 6146,
   "uniprot_reviewed": 6067,
   "sequences_16s": 103,
-  "papers": 28273
+  "papers": 28278
  },
  "genome": {
   "accession": "GCF_000005845.2",
@@ -43,42 +43,31 @@
  "markers": {
   "radiation": {
    "found": 0,
-   "of": 7,
+   "of": 6,
    "genes": [
     {
      "name": "PprA",
-     "found": false,
-     "accessions": []
+     "found": false
     },
     {
      "name": "DdrA",
-     "found": false,
-     "accessions": []
+     "found": false
     },
     {
      "name": "DdrB",
-     "found": false,
-     "accessions": []
+     "found": false
     },
     {
      "name": "DdrC",
-     "found": false,
-     "accessions": []
+     "found": false
     },
     {
      "name": "DdrD",
-     "found": false,
-     "accessions": []
+     "found": false
     },
     {
      "name": "IrrE",
-     "found": false,
-     "accessions": []
-    },
-    {
-     "name": "PprM",
-     "found": false,
-     "accessions": []
+     "found": false
     }
    ]
   },
@@ -89,7 +78,9 @@
     {
      "name": "Rgy",
      "found": false,
-     "accessions": []
+     "accession": "NP_415790.1",
+     "identity": 29.335,
+     "coverage": 47
     }
    ]
   },
@@ -100,17 +91,20 @@
     {
      "name": "EctA",
      "found": false,
-     "accessions": []
+     "accession": "NP_417625.1",
+     "identity": 33.333,
+     "coverage": 47
     },
     {
      "name": "EctB",
      "found": false,
-     "accessions": []
+     "accession": "NP_417148.1",
+     "identity": 30.751,
+     "coverage": 98
     },
     {
      "name": "EctC",
-     "found": false,
-     "accessions": []
+     "found": false
     }
    ]
   }

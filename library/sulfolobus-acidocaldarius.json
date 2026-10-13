@@ -1,0 +1,111 @@
+{
+ "query": "Sulfolobus acidocaldarius",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 2285,
+  "name": "Sulfolobus acidocaldarius",
+  "rank": "SPECIES",
+  "domain": "Archaea"
+ },
+ "inventory": {
+  "assemblies": 58,
+  "uniprot_proteins": 2267,
+  "uniprot_reviewed": 387,
+  "sequences_16s": 17,
+  "papers": 2872
+ },
+ "genome": {
+  "accession": "GCF_000012285.1",
+  "organism": "Sulfolobus acidocaldarius DSM 639",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 2225959,
+  "gc_percent": 36.5,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "Chromosome",
+    "type": "Chromosome",
+    "accession": "NC_007181.1",
+    "length": 2225959,
+    "gc_percent": 36.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2290,
+  "ivywrel": 0.4417,
+  "predicted_ogt_c": 79,
+  "acidic_excess": -0.0039
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 1,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": true,
+     "accession": "WP_015385600.1",
+     "identity": 35.812,
+     "coverage": 99
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_011277633.1",
+     "identity": 32.376,
+     "coverage": 90
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

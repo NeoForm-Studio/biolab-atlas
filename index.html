@@ -39,6 +39,7 @@
   .brand .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold);
     margin:0 9px 2px;box-shadow:0 0 12px var(--gold);vertical-align:middle;animation:beat 2.6s ease-in-out infinite}
   @keyframes beat{0%,100%{opacity:.55;transform:scale(.82)}50%{opacity:1;transform:scale(1.1)}}
+  @media (max-width:520px){ header{flex-wrap:wrap;padding:16px} }
   .tagchip{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#7f8c99;
     border:1px solid rgba(150,170,190,.18);border-radius:30px;padding:6px 13px;backdrop-filter:blur(6px)}
   .spacer{flex:1}
@@ -122,6 +123,7 @@
 <header>
   <div class="brand">BioLab <b>Atlas</b><span class="dot"></span></div>
   <div class="tagchip">Radiation-Repair Study</div>
+  <a class="tagchip" href="explorer.html" style="pointer-events:auto;text-decoration:none">Species explorer →</a>
   <div class="spacer"></div>
   <div class="credit"><b>Deinococcus radiodurans</b> R1<br>the genome that rebuilds itself</div>
 </header>

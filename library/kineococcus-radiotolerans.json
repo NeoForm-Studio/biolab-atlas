@@ -1,0 +1,125 @@
+{
+ "query": "Kineococcus radiotolerans",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 131568,
+  "name": "Kineococcus radiotolerans",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 3,
+  "uniprot_proteins": 4674,
+  "uniprot_reviewed": 199,
+  "sequences_16s": 19,
+  "papers": 195
+ },
+ "genome": {
+  "accession": "GCF_000017305.1",
+  "organism": "Kineococcus radiotolerans SRS30216 = ATCC BAA-149",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 4956672,
+  "gc_percent": 74,
+  "contigs": 3,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_009664.2",
+    "length": 4761183,
+    "gc_percent": 74.5
+   },
+   {
+    "name": "pKRAD01",
+    "type": "Plasmid",
+    "accession": "NC_009806.1",
+    "length": 182572,
+    "gc_percent": 69.5
+   },
+   {
+    "name": "pKRAD02",
+    "type": "Plasmid",
+    "accession": "NC_009660.1",
+    "length": 12917,
+    "gc_percent": 72.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 4659,
+  "ivywrel": 0.4022,
+  "predicted_ogt_c": 42,
+  "acidic_excess": 0.0178
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_012085191.1",
+     "identity": 28.654,
+     "coverage": 37
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_012087125.1",
+     "identity": 29.091,
+     "coverage": 90
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

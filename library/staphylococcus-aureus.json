@@ -1,0 +1,111 @@
+{
+ "query": "Staphylococcus aureus",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 1280,
+  "name": "Staphylococcus aureus",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 134469,
+  "uniprot_proteins": 18631,
+  "uniprot_reviewed": 10269,
+  "sequences_16s": 5387,
+  "papers": 410167
+ },
+ "genome": {
+  "accession": "GCF_000013425.1",
+  "organism": "Staphylococcus aureus subsp. aureus NCTC 8325",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 2821361,
+  "gc_percent": 33,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_007795.1",
+    "length": 2821361,
+    "gc_percent": 33
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2767,
+  "ivywrel": 0.3915,
+  "predicted_ogt_c": 32,
+  "acidic_excess": 0.0134
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "YP_499758.1",
+     "identity": 29.173,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "YP_501377.1",
+     "identity": 30.456,
+     "coverage": 94
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

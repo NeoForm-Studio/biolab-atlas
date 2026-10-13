@@ -1,0 +1,139 @@
+{
+ "query": "Haloferax volcanii",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 2246,
+  "name": "Haloferax volcanii",
+  "rank": "SPECIES",
+  "domain": "Archaea"
+ },
+ "inventory": {
+  "assemblies": 24,
+  "uniprot_proteins": 3982,
+  "uniprot_reviewed": 211,
+  "sequences_16s": 117,
+  "papers": 2647
+ },
+ "genome": {
+  "accession": "GCF_000025685.1",
+  "organism": "Haloferax volcanii DS2",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 4012900,
+  "gc_percent": 65.5,
+  "contigs": 5,
+  "replicons": [
+   {
+    "name": "Chromosome",
+    "type": "Chromosome",
+    "accession": "NC_013967.1",
+    "length": 2847757,
+    "gc_percent": 66.5
+   },
+   {
+    "name": "pHV1",
+    "type": "Plasmid",
+    "accession": "NC_013968.1",
+    "length": 85092,
+    "gc_percent": 55.5
+   },
+   {
+    "name": "pHV2",
+    "type": "Plasmid",
+    "accession": "NC_013965.1",
+    "length": 6359,
+    "gc_percent": 56
+   },
+   {
+    "name": "pHV3",
+    "type": "Plasmid",
+    "accession": "NC_013964.1",
+    "length": 437906,
+    "gc_percent": 65.5
+   },
+   {
+    "name": "pHV4",
+    "type": "Plasmid",
+    "accession": "NC_013966.1",
+    "length": 635786,
+    "gc_percent": 61.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 3868,
+  "ivywrel": 0.4057,
+  "predicted_ogt_c": 45,
+  "acidic_excess": 0.0793
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_004044253.1",
+     "identity": 25.1,
+     "coverage": 36
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_004041108.1",
+     "identity": 35.8,
+     "coverage": 94
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

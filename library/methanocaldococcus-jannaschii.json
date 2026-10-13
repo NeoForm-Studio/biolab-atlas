@@ -1,0 +1,125 @@
+{
+ "query": "Methanocaldococcus jannaschii",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 2190,
+  "name": "Methanocaldococcus jannaschii",
+  "rank": "SPECIES",
+  "domain": "Archaea"
+ },
+ "inventory": {
+  "assemblies": 2,
+  "uniprot_proteins": 1788,
+  "uniprot_reviewed": 1786,
+  "sequences_16s": 4,
+  "papers": 2469
+ },
+ "genome": {
+  "accession": "GCF_000091665.1",
+  "organism": "Methanocaldococcus jannaschii DSM 2661",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 1739927,
+  "gc_percent": 31.5,
+  "contigs": 3,
+  "replicons": [
+   {
+    "name": "Chromosome",
+    "type": "Chromosome",
+    "accession": "NC_000909.1",
+    "length": 1664970,
+    "gc_percent": 31.5
+   },
+   {
+    "name": "pDSM2661_1",
+    "type": "Plasmid",
+    "accession": "NC_001732.1",
+    "length": 58407,
+    "gc_percent": 28
+   },
+   {
+    "name": "pDSM2661_2",
+    "type": "Plasmid",
+    "accession": "NC_001733.1",
+    "length": 16550,
+    "gc_percent": 29
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 1811,
+  "ivywrel": 0.4441,
+  "predicted_ogt_c": 81,
+  "acidic_excess": -0.0003
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 1,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": true,
+     "accession": "WP_010871035.1",
+     "identity": 43.271,
+     "coverage": 78
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_010870226.1",
+     "identity": 31.132,
+     "coverage": 96
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

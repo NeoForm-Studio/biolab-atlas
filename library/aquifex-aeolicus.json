@@ -1,0 +1,118 @@
+{
+ "query": "Aquifex aeolicus",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 63363,
+  "name": "Aquifex aeolicus",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 16,
+  "uniprot_proteins": 1559,
+  "uniprot_reviewed": 788,
+  "sequences_16s": 2,
+  "papers": 3944
+ },
+ "genome": {
+  "accession": "GCF_000008625.1",
+  "organism": "Aquifex aeolicus VF5",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 1590791,
+  "gc_percent": 43.5,
+  "contigs": 2,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_000918.1",
+    "length": 1551335,
+    "gc_percent": 43.5
+   },
+   {
+    "name": "ece1",
+    "type": "Plasmid",
+    "accession": "NC_001880.1",
+    "length": 39456,
+    "gc_percent": 36.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 1738,
+  "ivywrel": 0.4557,
+  "predicted_ogt_c": 92,
+  "acidic_excess": -0.0034
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 1,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": true,
+     "accession": "WP_010880537.1",
+     "identity": 43.16,
+     "coverage": 100
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_010879939.1",
+     "identity": 31.873,
+     "coverage": 96
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}
