@@ -67,10 +67,13 @@ For each name it:
 5. **Saves** `library/<species>.json` and rebuilds `library/index.json`. A species with no genome is saved as
    `no_genome`, with relatives that do have one.
 
-6. **Scores** each species after every run (`pipeline/score.py`): heat, cold, salt and radiation scores from 0 to 100
-   give its position among all profiled species. Heat and cold are checked against BacDive lab temperatures and the
-   result is written to `library/_validation.json` (ROC AUC; 0.5 is chance). Salt and radiation are not validated:
-   BacDive has too few salt records and no radiation measurements.
+6. **Scores** each species 0-100 after every run (`pipeline/score.py`): heat is the position of its estimated growth
+   temperature among all profiled species; cold is 100 minus heat (so it separates cold- from heat-adapted genomes,
+   not cold specialists from ordinary bacteria); salt is the position of its proteome acidity, raised to 90 when the
+   full ectoine pathway is present; radiation is the share of the 6 Deinococcus markers found. Heat and cold are
+   checked against BacDive temperatures in `library/_validation.json` (ROC AUC; 0.5 is chance). Most labels are
+   culture temperatures and the species were picked by hand, so this mainly tests clear-cut cases. Salt and
+   radiation are not validated: BacDive has too few salt records and no radiation measurements.
 
 These are signals that a genome resembles known extremophiles, not a determination that an organism is one.
 

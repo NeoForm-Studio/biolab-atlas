@@ -27,7 +27,7 @@
    15.0,
    35.0
   ],
-  "max_nacl_percent": 37.0
+  "max_nacl_percent": null
  },
  "genome": {
   "accession": "GCF_000018465.1",

@@ -2,6 +2,7 @@
  {
   "file": "acidianus-hospitalis.json",
   "name": "Acidianus hospitalis",
+  "query": "Acidianus hospitalis",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 34,
@@ -57,6 +58,7 @@
  {
   "file": "acidiphilium-cryptum.json",
   "name": "Acidiphilium cryptum",
+  "query": "Acidiphilium cryptum",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 67,
@@ -115,6 +117,7 @@
  {
   "file": "acidithiobacillus-ferrooxidans.json",
   "name": "Acidithiobacillus ferrooxidans",
+  "query": "Acidithiobacillus ferrooxidans",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 59,
@@ -171,6 +174,7 @@
  {
   "file": "aeropyrum-pernix.json",
   "name": "Aeropyrum pernix",
+  "query": "Aeropyrum pernix",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 56.5,
@@ -230,6 +234,7 @@
  {
   "file": "aquifex-aeolicus.json",
   "name": "Aquifex aeolicus",
+  "query": "Aquifex aeolicus",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 43.5,
@@ -281,6 +286,7 @@
  {
   "file": "archaeoglobus-fulgidus.json",
   "name": "Archaeoglobus fulgidus",
+  "query": "Archaeoglobus fulgidus",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 48.5,
@@ -337,6 +343,7 @@
  {
   "file": "bacillus-subtilis.json",
   "name": "Bacillus subtilis",
+  "query": "Bacillus subtilis",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 43.5,
@@ -395,6 +402,7 @@
  {
   "file": "bacteroides-fragilis.json",
   "name": "Bacteroides fragilis",
+  "query": "Bacteroides fragilis",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 43,
@@ -448,6 +456,7 @@
  {
   "file": "caldicellulosiruptor-saccharolyticus.json",
   "name": "Caldicellulosiruptor saccharolyticus",
+  "query": "Caldicellulosiruptor saccharolyticus",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 35.5,
@@ -504,6 +513,7 @@
  {
   "file": "caulobacter-vibrioides.json",
   "name": "Caulobacter vibrioides",
+  "query": "Caulobacter vibrioides",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 67,
@@ -560,6 +570,7 @@
  {
   "file": "cereibacter-sphaeroides.json",
   "name": "Cereibacter sphaeroides",
+  "query": "Cereibacter sphaeroides",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 69,
@@ -614,6 +625,7 @@
  {
   "file": "chromohalobacter-israelensis.json",
   "name": "Chromohalobacter israelensis",
+  "query": "Chromohalobacter israelensis",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 64,
@@ -669,6 +681,7 @@
  {
   "file": "chroococcidiopsis-thermalis.json",
   "name": "Chroococcidiopsis thermalis",
+  "query": "Chroococcidiopsis thermalis",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 44.5,
@@ -719,6 +732,7 @@
  {
   "file": "clostridioides-difficile.json",
   "name": "Clostridioides difficile",
+  "query": "Clostridioides difficile",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 28.5,
@@ -774,6 +788,7 @@
  {
   "file": "colwellia-psychrerythraea.json",
   "name": "Colwellia psychrerythraea",
+  "query": "Colwellia psychrerythraea",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 38,
@@ -829,6 +844,7 @@
  {
   "file": "corynebacterium-glutamicum.json",
   "name": "Corynebacterium glutamicum",
+  "query": "Corynebacterium glutamicum",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 54,
@@ -888,6 +904,7 @@
  {
   "file": "deinococcus-aerophilus.json",
   "name": "Deinococcus aerophilus",
+  "query": "Deinococcus aerophilus",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 68,
@@ -945,6 +962,7 @@
  {
   "file": "deinococcus-deserti.json",
   "name": "Deinococcus deserti",
+  "query": "Deinococcus deserti",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 63,
@@ -1002,6 +1020,7 @@
  {
   "file": "deinococcus-geothermalis.json",
   "name": "Deinococcus geothermalis",
+  "query": "Deinococcus geothermalis",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 66.5,
@@ -1060,6 +1079,7 @@
  {
   "file": "deinococcus-gobiensis.json",
   "name": "Deinococcus gobiensis",
+  "query": "Deinococcus gobiensis",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 69,
@@ -1118,6 +1138,7 @@
  {
   "file": "deinococcus-maricopensis.json",
   "name": "Deinococcus maricopensis",
+  "query": "Deinococcus maricopensis",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 70,
@@ -1173,6 +1194,7 @@
  {
   "file": "deinococcus-proteolyticus.json",
   "name": "Deinococcus proteolyticus",
+  "query": "Deinococcus proteolyticus",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 65.5,
@@ -1226,6 +1248,7 @@
  {
   "file": "deinococcus-radiodurans.json",
   "name": "Deinococcus radiodurans",
+  "query": "Deinococcus radiodurans",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 66.5,
@@ -1279,6 +1302,7 @@
  {
   "file": "deinococcus-radiopugnans.json",
   "name": "Deinococcus radiopugnans",
+  "query": "Deinococcus swuensis",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 67.5,
@@ -1332,6 +1356,7 @@
  {
   "file": "deinococcus-wulumuqiensis.json",
   "name": "Deinococcus wulumuqiensis",
+  "query": "Deinococcus wulumuqiensis",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 66,
@@ -1388,6 +1413,7 @@
  {
   "file": "desulfotalea-psychrophila.json",
   "name": "Desulfotalea psychrophila",
+  "query": "Desulfotalea psychrophila",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 46.5,
@@ -1447,6 +1473,7 @@
  {
   "file": "escherichia-coli-k-12.json",
   "name": "Escherichia coli K-12",
+  "query": "Escherichia coli K-12",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 51,
@@ -1504,6 +1531,7 @@
  {
   "file": "exiguobacterium-artemiae.json",
   "name": "Exiguobacterium artemiae",
+  "query": "Exiguobacterium sibiricum",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 47.5,
@@ -1560,6 +1588,7 @@
  {
   "file": "ferroplasma-acidarmanus.json",
   "name": "Ferroplasma acidarmanus",
+  "query": "Ferroplasma acidarmanus",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 36.5,
@@ -1613,6 +1642,7 @@
  {
   "file": "geobacillus-stearothermophilus.json",
   "name": "Geobacillus stearothermophilus",
+  "query": "Geobacillus stearothermophilus",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 52.5,
@@ -1672,6 +1702,7 @@
  {
   "file": "geodermatophilus-obscurus.json",
   "name": "Geodermatophilus obscurus",
+  "query": "Geodermatophilus obscurus",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 74,
@@ -1730,6 +1761,7 @@
  {
   "file": "halalkalibacterium-halodurans.json",
   "name": "Halalkalibacterium halodurans",
+  "query": "Halalkalibacterium halodurans",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 43.5,
@@ -1785,6 +1817,7 @@
  {
   "file": "haloarcula-marismortui.json",
   "name": "Haloarcula marismortui",
+  "query": "Haloarcula marismortui",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 61,
@@ -1841,6 +1874,7 @@
  {
   "file": "halobacillus-halophilus.json",
   "name": "Halobacillus halophilus",
+  "query": "Halobacillus halophilus",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 42,
@@ -1896,6 +1930,7 @@
  {
   "file": "halobacterium-salinarum.json",
   "name": "Halobacterium salinarum",
+  "query": "Halobacterium salinarum",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 66.5,
@@ -1951,6 +1986,7 @@
  {
   "file": "halococcus-morrhuae.json",
   "name": "Halococcus morrhuae",
+  "query": "Halococcus morrhuae",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 64,
@@ -2006,6 +2042,7 @@
  {
   "file": "haloferax-mediterranei.json",
   "name": "Haloferax mediterranei",
+  "query": "Haloferax mediterranei",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 60.5,
@@ -2063,6 +2100,7 @@
  {
   "file": "haloferax-volcanii.json",
   "name": "Haloferax volcanii",
+  "query": "Haloferax volcanii",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 65.5,
@@ -2121,6 +2159,7 @@
  {
   "file": "halomonas-elongata.json",
   "name": "Halomonas elongata",
+  "query": "Halomonas elongata",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 63.5,
@@ -2177,6 +2216,7 @@
  {
   "file": "haloquadratum-walsbyi.json",
   "name": "Haloquadratum walsbyi",
+  "query": "Haloquadratum walsbyi",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 48,
@@ -2232,6 +2272,7 @@
  {
   "file": "halorhodospira-halophila.json",
   "name": "Halorhodospira halophila",
+  "query": "Halorhodospira halophila",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 68,
@@ -2286,6 +2327,7 @@
  {
   "file": "halorubrum-lacusprofundi.json",
   "name": "Halorubrum lacusprofundi",
+  "query": "Halorubrum lacusprofundi",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 64,
@@ -2343,6 +2385,7 @@
  {
   "file": "helicobacter-pylori.json",
   "name": "Helicobacter pylori",
+  "query": "Helicobacter pylori",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 38.5,
@@ -2399,6 +2442,7 @@
  {
   "file": "hydrogenobacter-thermophilus.json",
   "name": "Hydrogenobacter thermophilus",
+  "query": "Hydrogenobacter thermophilus",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 44,
@@ -2457,6 +2501,7 @@
  {
   "file": "hymenobacter-swuensis.json",
   "name": "Hymenobacter swuensis",
+  "query": "Hymenobacter swuensis",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 59.5,
@@ -2511,6 +2556,7 @@
  {
   "file": "hymenobacter-yonginensis.json",
   "name": "Hymenobacter yonginensis",
+  "query": "Hymenobacter yonginensis",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 62,
@@ -2564,6 +2610,7 @@
  {
   "file": "hyperthermus-butylicus.json",
   "name": "Hyperthermus butylicus",
+  "query": "Hyperthermus butylicus",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 53.5,
@@ -2620,6 +2667,7 @@
  {
   "file": "kineococcus-radiotolerans.json",
   "name": "Kineococcus radiotolerans",
+  "query": "Kineococcus radiotolerans",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 74,
@@ -2675,6 +2723,7 @@
  {
   "file": "klebsiella-pneumoniae.json",
   "name": "Klebsiella pneumoniae",
+  "query": "Klebsiella pneumoniae",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 57,
@@ -2731,6 +2780,7 @@
  {
   "file": "lactiplantibacillus-plantarum.json",
   "name": "Lactiplantibacillus plantarum",
+  "query": "Lactiplantibacillus plantarum",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 44.5,
@@ -2786,6 +2836,7 @@
  {
   "file": "leptospirillum-ferrooxidans.json",
   "name": "Leptospirillum ferrooxidans",
+  "query": "Leptospirillum ferrooxidans",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 50,
@@ -2843,6 +2894,7 @@
  {
   "file": "listeria-monocytogenes.json",
   "name": "Listeria monocytogenes",
+  "query": "Listeria monocytogenes",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 38,
@@ -2897,6 +2949,7 @@
  {
   "file": "marinococcus-halophilus.json",
   "name": "Marinococcus halophilus",
+  "query": "Marinococcus halophilus",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 47,
@@ -2951,6 +3004,7 @@
  {
   "file": "meiothermus-ruber.json",
   "name": "Meiothermus ruber",
+  "query": "Meiothermus ruber",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 63.5,
@@ -3007,6 +3061,7 @@
  {
   "file": "metallosphaera-sedula.json",
   "name": "Metallosphaera sedula",
+  "query": "Metallosphaera sedula",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 46,
@@ -3063,6 +3118,7 @@
  {
   "file": "methanocaldococcus-jannaschii.json",
   "name": "Methanocaldococcus jannaschii",
+  "query": "Methanocaldococcus jannaschii",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 31.5,
@@ -3121,6 +3177,7 @@
  {
   "file": "methanococcoides-burtonii.json",
   "name": "Methanococcoides burtonii",
+  "query": "Methanococcoides burtonii",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 41,
@@ -3176,6 +3233,7 @@
  {
   "file": "methanopyrus-kandleri.json",
   "name": "Methanopyrus kandleri",
+  "query": "Methanopyrus kandleri",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 61,
@@ -3232,6 +3290,7 @@
  {
   "file": "methanosarcina-mazei.json",
   "name": "Methanosarcina mazei",
+  "query": "Methanosarcina mazei",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 41.5,
@@ -3286,6 +3345,7 @@
  {
   "file": "methylobacterium-radiotolerans.json",
   "name": "Methylobacterium radiotolerans",
+  "query": "Methylobacterium radiotolerans",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 71,
@@ -3341,6 +3401,7 @@
  {
   "file": "moritella-marina.json",
   "name": "Moritella marina",
+  "query": "Moritella marina",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 40.5,
@@ -3397,6 +3458,7 @@
  {
   "file": "mycobacterium-tuberculosis.json",
   "name": "Mycobacterium tuberculosis",
+  "query": "Mycobacterium tuberculosis",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 65.5,
@@ -3450,6 +3512,7 @@
  {
   "file": "myxococcus-xanthus.json",
   "name": "Myxococcus xanthus",
+  "query": "Myxococcus xanthus",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 69,
@@ -3504,6 +3567,7 @@
  {
   "file": "natranaerobius-thermophilus.json",
   "name": "Natranaerobius thermophilus",
+  "query": "Natranaerobius thermophilus",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 36.5,
@@ -3560,6 +3624,7 @@
  {
   "file": "natrialba-magadii.json",
   "name": "Natrialba magadii",
+  "query": "Natrialba magadii",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 61,
@@ -3617,6 +3682,7 @@
  {
   "file": "natronomonas-pharaonis.json",
   "name": "Natronomonas pharaonis",
+  "query": "Natronomonas pharaonis",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 63,
@@ -3674,6 +3740,7 @@
  {
   "file": "nitrosopumilus-maritimus.json",
   "name": "Nitrosopumilus maritimus",
+  "query": "Nitrosopumilus maritimus",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 34,
@@ -3687,7 +3754,7 @@
    15.0,
    35.0
   ],
-  "max_nacl_percent": 37.0,
+  "max_nacl_percent": null,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -3731,6 +3798,7 @@
  {
   "file": "photobacterium-profundum.json",
   "name": "Photobacterium profundum",
+  "query": "Photobacterium profundum",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 41.5,
@@ -3785,6 +3853,7 @@
  {
   "file": "picrophilus-oshimae.json",
   "name": "Picrophilus oshimae",
+  "query": "Picrophilus oshimae",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 36,
@@ -3842,6 +3911,7 @@
  {
   "file": "planococcus-halocryophilus.json",
   "name": "Planococcus halocryophilus",
+  "query": "Planococcus halocryophilus",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 40,
@@ -3901,6 +3971,7 @@
  {
   "file": "polaromonas-naphthalenivorans.json",
   "name": "Polaromonas naphthalenivorans",
+  "query": "Polaromonas naphthalenivorans",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 61.5,
@@ -3959,6 +4030,7 @@
  {
   "file": "prochlorococcus-marinus.json",
   "name": "Prochlorococcus marinus",
+  "query": "Prochlorococcus marinus",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 31,
@@ -4013,6 +4085,7 @@
  {
   "file": "pseudoalteromonas-haloplanktis.json",
   "name": "Pseudoalteromonas haloplanktis",
+  "query": "Pseudoalteromonas haloplanktis",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 40,
@@ -4067,6 +4140,7 @@
  {
   "file": "pseudomonas-aeruginosa.json",
   "name": "Pseudomonas aeruginosa",
+  "query": "Pseudomonas aeruginosa",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 66.5,
@@ -4121,6 +4195,7 @@
  {
   "file": "psychrobacter-arcticus.json",
   "name": "Psychrobacter arcticus",
+  "query": "Psychrobacter arcticus",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 43,
@@ -4179,6 +4254,7 @@
  {
   "file": "psychroflexus-torquis.json",
   "name": "Psychroflexus torquis",
+  "query": "Psychroflexus torquis",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 34.5,
@@ -4232,6 +4308,7 @@
  {
   "file": "psychromonas-ingrahamii.json",
   "name": "Psychromonas ingrahamii",
+  "query": "Psychromonas ingrahamii",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 40,
@@ -4289,6 +4366,7 @@
  {
   "file": "pyrobaculum-aerophilum.json",
   "name": "Pyrobaculum aerophilum",
+  "query": "Pyrobaculum aerophilum",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 51.5,
@@ -4345,6 +4423,7 @@
  {
   "file": "pyrococcus-abyssi.json",
   "name": "Pyrococcus abyssi",
+  "query": "Pyrococcus abyssi",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 44.5,
@@ -4402,6 +4481,7 @@
  {
   "file": "pyrococcus-furiosus.json",
   "name": "Pyrococcus furiosus",
+  "query": "Pyrococcus furiosus",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 41,
@@ -4459,6 +4539,7 @@
  {
   "file": "pyrococcus-horikoshii.json",
   "name": "Pyrococcus horikoshii",
+  "query": "Pyrococcus horikoshii",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 42,
@@ -4516,6 +4597,7 @@
  {
   "file": "pyrolobus-fumarii.json",
   "name": "Pyrolobus fumarii",
+  "query": "Pyrolobus fumarii",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 55,
@@ -4572,6 +4654,7 @@
  {
   "file": "rubrobacter-radiotolerans.json",
   "name": "Rubrobacter radiotolerans",
+  "query": "Rubrobacter radiotolerans",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 66.5,
@@ -4630,6 +4713,7 @@
  {
   "file": "rubrobacter-xylanophilus.json",
   "name": "Rubrobacter xylanophilus",
+  "query": "Rubrobacter xylanophilus",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 68.5,
@@ -4688,6 +4772,7 @@
  {
   "file": "saccharolobus-solfataricus.json",
   "name": "Saccharolobus solfataricus",
+  "query": "Saccharolobus solfataricus",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 36,
@@ -4744,6 +4829,7 @@
  {
   "file": "salinibacter-ruber.json",
   "name": "Salinibacter ruber",
+  "query": "Salinibacter ruber",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 65.5,
@@ -4799,6 +4885,7 @@
  {
   "file": "salinicoccus-roseus.json",
   "name": "Salinicoccus roseus",
+  "query": "Salinicoccus roseus",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 50,
@@ -4854,6 +4941,7 @@
  {
   "file": "salmonella-enterica.json",
   "name": "Salmonella enterica",
+  "query": "Salmonella enterica",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 52,
@@ -4911,6 +4999,7 @@
  {
   "file": "shewanella-frigidimarina.json",
   "name": "Shewanella frigidimarina",
+  "query": "Shewanella frigidimarina",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 41.5,
@@ -4971,6 +5060,7 @@
  {
   "file": "shewanella-oneidensis.json",
   "name": "Shewanella oneidensis",
+  "query": "Shewanella oneidensis",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 46,
@@ -5027,6 +5117,7 @@
  {
   "file": "spiribacter-salinus.json",
   "name": "Spiribacter salinus",
+  "query": "Spiribacter salinus",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 62.5,
@@ -5078,6 +5169,7 @@
  {
   "file": "staphylococcus-aureus.json",
   "name": "Staphylococcus aureus",
+  "query": "Staphylococcus aureus",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 33,
@@ -5137,6 +5229,7 @@
  {
   "file": "streptomyces-coelicolor.json",
   "name": "Streptomyces coelicolor",
+  "query": "Streptomyces coelicolor",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 72,
@@ -5193,6 +5286,7 @@
  {
   "file": "sulfolobus-acidocaldarius.json",
   "name": "Sulfolobus acidocaldarius",
+  "query": "Sulfolobus acidocaldarius",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 36.5,
@@ -5249,6 +5343,7 @@
  {
   "file": "thermococcus-barophilus.json",
   "name": "Thermococcus barophilus",
+  "query": "Thermococcus barophilus",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 41.5,
@@ -5306,6 +5401,7 @@
  {
   "file": "thermococcus-gammatolerans.json",
   "name": "Thermococcus gammatolerans",
+  "query": "Thermococcus gammatolerans",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 53.5,
@@ -5364,6 +5460,7 @@
  {
   "file": "thermococcus-kodakarensis.json",
   "name": "Thermococcus kodakarensis",
+  "query": "Thermococcus kodakarensis",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 52,
@@ -5421,6 +5518,7 @@
  {
   "file": "thermodesulfovibrio-yellowstonii.json",
   "name": "Thermodesulfovibrio yellowstonii",
+  "query": "Thermodesulfovibrio yellowstonii",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 34,
@@ -5474,6 +5572,7 @@
  {
   "file": "thermomicrobium-roseum.json",
   "name": "Thermomicrobium roseum",
+  "query": "Thermomicrobium roseum",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 64.5,
@@ -5530,6 +5629,7 @@
  {
   "file": "thermoplasma-acidophilum.json",
   "name": "Thermoplasma acidophilum",
+  "query": "Thermoplasma acidophilum",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 46,
@@ -5588,6 +5688,7 @@
  {
   "file": "thermoproteus-tenax.json",
   "name": "Thermoproteus tenax",
+  "query": "Thermoproteus tenax",
   "status": "ok",
   "domain": "Archaea",
   "gc_percent": 55,
@@ -5646,6 +5747,7 @@
  {
   "file": "thermosipho-africanus.json",
   "name": "Thermosipho africanus",
+  "query": "Thermosipho africanus",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 31,
@@ -5702,6 +5804,7 @@
  {
   "file": "thermotoga-maritima.json",
   "name": "Thermotoga maritima",
+  "query": "Thermotoga maritima",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 46,
@@ -5756,6 +5859,7 @@
  {
   "file": "thermotoga-neapolitana.json",
   "name": "Thermotoga neapolitana",
+  "query": "Thermotoga neapolitana",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 47,
@@ -5809,6 +5913,7 @@
  {
   "file": "thermus-aquaticus.json",
   "name": "Thermus aquaticus",
+  "query": "Thermus aquaticus",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 68,
@@ -5864,6 +5969,7 @@
  {
   "file": "thermus-thermophilus.json",
   "name": "Thermus thermophilus",
+  "query": "Thermus thermophilus",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 69.5,
@@ -5918,6 +6024,7 @@
  {
   "file": "thioalkalivibrio-sulfidiphilus.json",
   "name": "Thioalkalivibrio sulfidiphilus",
+  "query": "Thioalkalivibrio sulfidiphilus",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 65,
@@ -5974,6 +6081,7 @@
  {
   "file": "truepera-radiovictrix.json",
   "name": "Truepera radiovictrix",
+  "query": "Truepera radiovictrix",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 68,
@@ -6027,6 +6135,7 @@
  {
   "file": "vibrio-cholerae.json",
   "name": "Vibrio cholerae",
+  "query": "Vibrio cholerae",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 47.5,
@@ -6081,6 +6190,7 @@
  {
   "file": "virgibacillus-pantothenticus.json",
   "name": "Virgibacillus pantothenticus",
+  "query": "Virgibacillus pantothenticus",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 37.5,
@@ -6138,6 +6248,7 @@
  {
   "file": "zymomonas-mobilis.json",
   "name": "Zymomonas mobilis",
+  "query": "Zymomonas mobilis",
   "status": "ok",
   "domain": "Bacteria",
   "gc_percent": 46,

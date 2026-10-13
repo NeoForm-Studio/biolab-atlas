@@ -178,6 +178,9 @@ async function showSpecies(slug) {
     <p class="meta">${esc(t.domain)} · ${esc(t.rank.toLowerCase())} ·
       <a href="https://www.ncbi.nlm.nih.gov/datasets/taxonomy/${t.tax_id}/">NCBI taxon ${t.tax_id}</a>
       · profiled ${esc(e.generated)}</p>
+    ${!t.name.toLowerCase().startsWith(e.query.toLowerCase()) && !e.query.toLowerCase().startsWith(t.name.toLowerCase())
+      ? `<p class="meta">Searched as <em>${esc(e.query)}</em>; NCBI now files it under this name, so its genome and lab
+        records may come from different strains of the renamed species.</p>` : ''}
     ${e.status === 'ok' ? '' : `<div class="status warn">${esc(e.message)}</div>`}
   </div>`;
 
@@ -221,15 +224,18 @@ async function showSpecies(slug) {
   if (sc) {
     const bar = (k, label) => {
       const v = VALID[k] || {};
-      const check = v.auc != null ? `Checked against lab data for ${v.positives + v.negatives} species: AUC ${v.auc} (0.5 = chance, 1 = perfect).`
+      const check = v.auc != null ? `Checked against BacDive temperatures: ${v.positives} labelled ${k === 'heat' ? 'heat-adapted (≥50 °C)' : 'cold-adapted (≤20 °C)'} vs ${v.negatives} others, AUC ${v.auc} (0.5 = chance, 1 = perfect). Most labels are culture temperatures and the species are hand-picked, so this mainly tests clear-cut cases.`
         : esc(v.note || 'Not validated.');
-      return `<div class="metric"><h3>${label}<b>${sc[k]}</b></h3>
+      const what = {heat: `Position of its estimated growth temperature among all ${INDEX.length} species.`,
+        cold: 'Defined as 100 minus heat: it separates cold- from heat-adapted genomes, not cold specialists from ordinary bacteria.',
+        salt: 'Position of its proteome acidity among all species, raised to 90 if it has the full ectoine pathway.',
+        radiation: 'Share of the 6 Deinococcus radiation-response markers found.'}[k];
+      return `<div class="metric"><h3>${label}<b>${sc[k]}</b></h3><p>${what}</p>
         <div class="rep"><div class="bar" style="width:${Math.max(2, sc[k])}%"></div></div><p>${check}</p></div>`;
     };
     html += `<div class="card"><h2>Extremophile profile</h2>
-      <p class="meta" style="margin-bottom:14px">Each score is this species' position among all ${INDEX.length} profiled
-      species (0–100): how heat-, cold-, salt- or radiation-adapted its genome looks <i>relative to the library</i>.
-      It is a signal from the genome, not a measurement.</p>
+      <p class="meta" style="margin-bottom:14px">Four 0–100 signals from the genome, each explained below. They are
+      not measurements of what the organism tolerates.</p>
       ${bar('heat', 'Heat')}${bar('cold', 'Cold')}${bar('salt', 'Salt')}${bar('radiation', 'Radiation (Deinococcus-type)')}</div>`;
   }
 
