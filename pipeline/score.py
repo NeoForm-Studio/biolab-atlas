@@ -34,6 +34,15 @@ def reference_temp(row):
     return None
 
 
+def upper_temp(row):
+    """Upper end of the BacDive optimum if known, otherwise of the cultured range."""
+    for key in ("measured_optimum_c", "measured_growth_c"):
+        r = row.get(key)
+        if r:
+            return r[1]
+    return None
+
+
 def found_fraction(text):
     """'5/6' -> 5/6; anything else -> None."""
     try:
@@ -63,13 +72,13 @@ def score_library(rows):
     labelled = [(r, reference_temp(r)) for r in rows if r.get("scores") and reference_temp(r) is not None]
     hot = [r["scores"]["heat"] for r, t in labelled if t >= THERMOPHILE_C]
     not_hot = [r["scores"]["heat"] for r, t in labelled if t < THERMOPHILE_C]
-    cold = [r["scores"]["cold"] for r, t in labelled if t <= PSYCHROPHILE_C]
-    not_cold = [r["scores"]["cold"] for r, t in labelled if t > PSYCHROPHILE_C]
+    cold = [r["scores"]["cold"] for r, _ in labelled if upper_temp(r) <= PSYCHROPHILE_C]
+    not_cold = [r["scores"]["cold"] for r, _ in labelled if upper_temp(r) > PSYCHROPHILE_C]
     return {
         "heat": {"auc": auc(hot, not_hot), "positives": len(hot), "negatives": len(not_hot),
                  "label": f"BacDive reference temperature >= {THERMOPHILE_C} C"},
         "cold": {"auc": auc(cold, not_cold), "positives": len(cold), "negatives": len(not_cold),
-                 "label": f"BacDive reference temperature <= {PSYCHROPHILE_C} C"},
+                 "label": f"upper end of BacDive temperature range <= {PSYCHROPHILE_C} C"},
         "salt": {"auc": None, "note": "not validated: BacDive salt records are too sparse and mix tolerance with need"},
         "radiation": {"auc": None, "note": "not validated: no lab radiation measurements in BacDive; "
                                            "markers only detect the Deinococcus strategy"},
