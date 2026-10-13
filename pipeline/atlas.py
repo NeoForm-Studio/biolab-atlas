@@ -107,11 +107,21 @@ def phenotype(name):
     words = name.split()
     if len(words) < 2:
         return None
-    ids = fetch(f"{BACDIVE}/taxon/{q(words[0])}/{q(words[1])}").get("results", [])
-    if not ids:
+    page = fetch(f"{BACDIVE}/taxon/{q(words[0])}/{q(words[1])}")
+    strains = []
+    for _ in range(3):  # big species have thousands of strains: look at up to 300 for the type strain
+        if not page.get("results"):
+            break
+        batch = list(fetch(f"{BACDIVE}/fetch/{';'.join(map(str, page['results']))}")["results"].values())
+        strains += batch
+        if any(s["Name and taxonomic classification"].get("type strain") == "yes" for s in batch) or not page.get("next"):
+            break
+        page = fetch(page["next"])
+    if not strains:
         return None
-    strains = list(fetch(f"{BACDIVE}/fetch/{';'.join(map(str, ids[:100]))}")["results"].values())
-    strain = next((s for s in strains if s["Name and taxonomic classification"].get("type strain") == "yes"), strains[0])
+    has_temp = lambda s: bool(s.get("Culture and growth conditions", {}).get("culture temp"))
+    strain = (next((s for s in strains if s["Name and taxonomic classification"].get("type strain") == "yes"), None)
+              or next((s for s in strains if has_temp(s)), strains[0]))
     listify = lambda x: x if isinstance(x, list) else [x] if x else []
     temps = [t for t in listify(strain.get("Culture and growth conditions", {}).get("culture temp"))
              if t.get("growth") == "positive"]
@@ -262,6 +272,8 @@ def rebuild_index():
             "markers": {k: f"{v['found']}/{v['of']}" for k, v in e.get("markers", {}).items()},
             "genes": {g["name"]: (round(g["identity"]) if g["found"] else None)
                       for v in e.get("markers", {}).values() for g in v["genes"]},
+            "weak": {g["name"]: round(g["identity"]) for v in e.get("markers", {}).values()
+                     for g in v["genes"] if not g["found"] and "identity" in g},
         })
     write_json(LIBRARY / "index.json", rows)
 

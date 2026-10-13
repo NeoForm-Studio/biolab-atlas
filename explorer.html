@@ -93,8 +93,8 @@
 
   <div class="card" id="compareCard">
     <h2>Compare genes across species</h2>
-    <p class="meta">Identity (%) of each species' best BLAST match to the reference protein. Blank: no match passing the
-      cutoffs. Click a gene to sort by it, a species to open it.</p>
+    <p class="meta">Identity (%) of each species' best BLAST match to the reference protein. Grey: a match below the
+      cutoffs (often a distant relative or a partial match). Blank: no match. Click a gene to sort by it, a species to open it.</p>
     <div class="chips" id="panelPick" style="margin:12px 0"></div>
     <div class="scroll"><table id="matrix"></table></div>
   </div>
@@ -114,7 +114,10 @@
 
 <script>
 const $ = (s) => document.querySelector(s);
-if (new URLSearchParams(location.search).has('embed')) document.body.classList.add('embed');
+if (new URLSearchParams(location.search).has('embed')) {
+  document.body.classList.add('embed');
+  document.head.appendChild(Object.assign(document.createElement('base'), {target: '_blank'})); // other sites refuse to load inside a frame
+}
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const fmt = (n) => (n ?? 0).toLocaleString('en-US');
 const MIN_COVERAGE = 70, NEAR_IDENTITY = 50; // coverage rule mirrors pipeline/genome.py
@@ -188,7 +191,7 @@ async function showSpecies(slug) {
   if (ph) {
     const range = (r) => r ? (r[0] === r[1] ? `${r[0]} °C` : `${r[0]}–${r[1]} °C`) : '–';
     html += `<div class="card"><h2>Measured in the lab (BacDive)</h2><div class="stats">
-      ${stat(range(ph.growth_temp_c), 'grown at')}
+      ${stat(range(ph.growth_temp_c), 'cultured at')}
       ${stat(range(ph.optimum_temp_c), 'optimum temperature')}
       ${stat(ph.max_nacl_percent != null ? `${ph.max_nacl_percent}%` : '–', 'highest NaCl with growth')}
     </div><p class="meta" style="margin-top:10px"><a href="${esc(ph.url)}">BacDive strain ${esc(ph.bacdive_id)}</a>
@@ -294,7 +297,8 @@ function renderMatrix() {
     ? (b.genes[MX.sortBy] ?? -1) - (a.genes[MX.sortBy] ?? -1) : a.name.localeCompare(b.name));
   $('#matrix').innerHTML = `<tr><th>Species</th>${genes.map((g) => `<th class="g${MX.sortBy === g ? ' on' : ''}" data-g="${esc(g)}">${esc(g)}</th>`).join('')}</tr>` +
     rows.map((r) => `<tr><td class="sp" data-slug="${esc(r.file.replace('.json', ''))}"><em>${esc(r.name)}</em></td>${genes.map((g) => {
-      const v = r.genes[g];
+      const v = r.genes[g], w = r.weak?.[g];
+      if (v == null && w != null) return `<td class="c" style="color:var(--ink-dim)" title="match below the cutoff">${w}</td>`;
       return v == null ? '<td class="c"></td>'
         : `<td class="c" style="background:rgba(70,198,221,${(0.08 + 0.6 * v / 100).toFixed(2)});color:var(--head)">${v}</td>`;
     }).join('')}</tr>`).join('');

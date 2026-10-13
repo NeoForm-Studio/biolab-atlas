@@ -132,7 +132,7 @@
   },
   "repair": {
    "found": 3,
-   "of": 11,
+   "of": 10,
    "genes": [
     {
      "name": "RecA",
@@ -187,10 +187,6 @@
     },
     {
      "name": "LexA",
-     "found": false
-    },
-    {
-     "name": "Tkt",
      "found": false
     }
    ]
