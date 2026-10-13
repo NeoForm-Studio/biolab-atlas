@@ -1,8 +1,9 @@
 import json
+import shutil
 import unittest
 from pathlib import Path
 
-from genome import composition, find_markers, parse_fasta, product
+from genome import best_hits, composition, find_markers, parse_fasta, passes
 
 PANELS = json.loads((Path(__file__).parent / "markers.json").read_text(encoding="utf-8"))
 
@@ -23,9 +24,6 @@ class GenomeTest(unittest.TestCase):
     def test_parse_joins_wrapped_lines(self):
         self.assertEqual([s for _, s in self.records], ["MDEK", "IVYWREL*", "KK"])
 
-    def test_product_strips_accession_multispecies_and_organism(self):
-        self.assertEqual(product(self.records[0][0]), "recombinase RecA")
-
     def test_composition(self):
         c = composition(self.records)
         # 13 residues (stop removed): IVYWREL letters = I,V,Y,W,R,E,L + E in MDEK = 8
@@ -38,12 +36,28 @@ class GenomeTest(unittest.TestCase):
     def test_empty_proteome(self):
         self.assertIsNone(composition([]))
 
-    def test_markers_exact_names_only(self):
-        m = find_markers(self.records, PANELS)
-        self.assertEqual(m["radiation"]["found"], 1)
-        self.assertEqual(m["radiation"]["genes"][0]["accessions"], ["WP_2.1"])
-        # a "... family protein" must not count as the real enzyme
-        self.assertEqual(m["salt"]["found"], 0)
+    def test_best_hits_keeps_highest_bitscore(self):
+        tsv = "q1\ts1\t40.0\t90\t1e-20\t100\nq1\ts2\t90.0\t95\t1e-50\t300\n"
+        self.assertEqual(best_hits(tsv)["q1"]["accession"], "s2")
+
+    def test_passes_applies_coverage_identity_and_per_gene_override(self):
+        hit = {"evalue": 1e-30, "coverage": 98, "identity": 39.0}
+        self.assertTrue(passes(hit, {}))
+        self.assertFalse(passes(hit, {"min_identity": 45}))  # look-alike aminotransferase vs EctB
+        self.assertFalse(passes({**hit, "coverage": 47}, {}))  # partial-length family hit
+        self.assertFalse(passes({**hit, "evalue": 1e-6}, {}))
+        self.assertFalse(passes(None, {}))
+
+    @unittest.skipUnless(shutil.which("blastp"), "BLAST+ not installed")
+    def test_markers_find_themselves(self):
+        faa = Path(__file__).parent / "markers.faa"
+        m = find_markers(parse_fasta(faa.read_text()), PANELS, faa)
+        self.assertEqual({t: v["found"] for t, v in m.items()}, {t: len(p["genes"]) for t, p in PANELS.items()})
+
+    @unittest.skipUnless(shutil.which("blastp"), "BLAST+ not installed")
+    def test_unrelated_proteome_finds_nothing(self):
+        m = find_markers(self.records, PANELS, Path(__file__).parent / "markers.faa")
+        self.assertEqual(sum(v["found"] for v in m.values()), 0)
 
 
 class NoGenomeTest(unittest.TestCase):

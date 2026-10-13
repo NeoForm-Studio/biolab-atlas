@@ -49,8 +49,10 @@ Opening `index.html` directly also works, though a local server is recommended s
 
 ## Species lookup pipeline
 
-`pipeline/` looks up any bacterium or archaeon in public databases and profiles its genome. It uses only the
-Python standard library (3.10+).
+`pipeline/` looks up any bacterium or archaeon in public databases and profiles its genome. It needs Python 3.10+
+(standard library only) and [NCBI BLAST+](https://www.ncbi.nlm.nih.gov/books/NBK569861/) (`blastp` on PATH).
+`explorer.html` shows the results: open it through a local server (`python -m http.server`), search a species, and
+see its public data, genome, marker genes and where it sits among every other profiled species.
 
 ```bash
 python pipeline/atlas.py "Thermus thermophilus" "Halomonas elongata"
@@ -73,9 +75,13 @@ For each name it:
    - `acidic_excess`: (D + E − K − R) per residue. Salt-in halophiles stand out (Halobacterium 0.079 against
      0.00–0.03 for the others tested).
    - Trait marker panels (`pipeline/markers.json`): Deinococcus-type DNA-damage-response proteins, reverse gyrase
-     (all known hyperthermophiles and some thermophiles), ectoine synthesis (salt-out osmoprotection). Markers are matched by RefSeq product name,
-     so genomes annotated with different names can be undercounted. A missing marker is not evidence the trait is
-     absent.
+     (all known hyperthermophiles and some thermophiles), ectoine synthesis (salt-out osmoprotection). Each
+     reference protein (`pipeline/markers.faa`, from NCBI RefSeq) is searched against the proteome with `blastp`.
+     It counts as present at e-value ≤ 1e-10, ≥ 70% coverage of the reference and ≥ 30% identity. EctB needs 45%,
+     because ordinary class III aminotransferases match it at 27–39% across nearly its full length, while
+     distant ectoine producers (Streptomyces, Virgibacillus, Marinococcus) sit at 50–54%. PprM was left
+     out: it is related to cold-shock proteins and matches mesophiles at 51–69% identity. A missing marker is not
+     evidence the trait is absent.
 5. **Saves** `library/<species>.json` and rebuilds `library/index.json`. A species with no genome is saved as
    `no_genome`, with relatives that do have one.
 

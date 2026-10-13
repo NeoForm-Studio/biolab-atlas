@@ -1,0 +1,111 @@
+{
+ "query": "Acidithiobacillus ferrooxidans",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 920,
+  "name": "Acidithiobacillus ferrooxidans",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 77,
+  "uniprot_proteins": 9295,
+  "uniprot_reviewed": 450,
+  "sequences_16s": 412,
+  "papers": 1956
+ },
+ "genome": {
+  "accession": "GCF_000021485.1",
+  "organism": "Acidithiobacillus ferrooxidans ATCC 23270",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 2982397,
+  "gc_percent": 59,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_011761.1",
+    "length": 2982397,
+    "gc_percent": 59
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2931,
+  "ivywrel": 0.3991,
+  "predicted_ogt_c": 39,
+  "acidic_excess": 0.0051
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_012535748.1",
+     "identity": 29.542,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_009562813.1",
+     "identity": 29.327,
+     "coverage": 96
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

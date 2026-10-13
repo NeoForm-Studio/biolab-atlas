@@ -1,0 +1,146 @@
+{
+ "query": "Deinococcus geothermalis",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 68909,
+  "name": "Deinococcus geothermalis",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 2,
+  "uniprot_proteins": 3007,
+  "uniprot_reviewed": 262,
+  "sequences_16s": 7,
+  "papers": 440
+ },
+ "genome": {
+  "accession": "GCF_000196275.1",
+  "organism": "Deinococcus geothermalis DSM 11300",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 3247018,
+  "gc_percent": 66.5,
+  "contigs": 3,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_008025.1",
+    "length": 2467205,
+    "gc_percent": 66.5
+   },
+   {
+    "name": "pDGEO01",
+    "type": "Plasmid",
+    "accession": "NC_008010.2",
+    "length": 574127,
+    "gc_percent": 65.5
+   },
+   {
+    "name": "pDGEO02",
+    "type": "Plasmid",
+    "accession": "NC_009939.1",
+    "length": 205686,
+    "gc_percent": 66.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 3006,
+  "ivywrel": 0.4079,
+  "predicted_ogt_c": 47,
+  "acidic_excess": 0.0044
+ },
+ "markers": {
+  "radiation": {
+   "found": 6,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": true,
+     "accession": "WP_011525938.1",
+     "identity": 54.874,
+     "coverage": 91
+    },
+    {
+     "name": "DdrA",
+     "found": true,
+     "accession": "WP_011530114.1",
+     "identity": 84.737,
+     "coverage": 91
+    },
+    {
+     "name": "DdrB",
+     "found": true,
+     "accession": "WP_011529443.1",
+     "identity": 72.872,
+     "coverage": 100
+    },
+    {
+     "name": "DdrC",
+     "found": true,
+     "accession": "WP_041220859.1",
+     "identity": 67.713,
+     "coverage": 96
+    },
+    {
+     "name": "DdrD",
+     "found": true,
+     "accession": "WP_011531305.1",
+     "identity": 57.143,
+     "coverage": 88
+    },
+    {
+     "name": "IrrE",
+     "found": true,
+     "accession": "WP_041220934.1",
+     "identity": 65.428,
+     "coverage": 82
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_011531122.1",
+     "identity": 29.549,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false,
+     "accession": "WP_041221370.1",
+     "identity": 28.571,
+     "coverage": 58
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_011530126.1",
+     "identity": 31.614,
+     "coverage": 97
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

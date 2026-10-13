@@ -1,0 +1,167 @@
+{
+ "query": "Haloarcula marismortui",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 2238,
+  "name": "Haloarcula marismortui",
+  "rank": "SPECIES",
+  "domain": "Archaea"
+ },
+ "inventory": {
+  "assemblies": 9,
+  "uniprot_proteins": 4275,
+  "uniprot_reviewed": 344,
+  "sequences_16s": 55,
+  "papers": 1661
+ },
+ "genome": {
+  "accession": "GCF_000011085.1",
+  "organism": "Haloarcula marismortui ATCC 43049",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 4274642,
+  "gc_percent": 61,
+  "contigs": 9,
+  "replicons": [
+   {
+    "name": "I",
+    "type": "Chromosome",
+    "accession": "NC_006396.1",
+    "length": 3131724,
+    "gc_percent": 62.5
+   },
+   {
+    "name": "II",
+    "type": "Chromosome",
+    "accession": "NC_006397.1",
+    "length": 288050,
+    "gc_percent": 57
+   },
+   {
+    "name": "pNG100",
+    "type": "Plasmid",
+    "accession": "NC_006389.1",
+    "length": 33303,
+    "gc_percent": 54.5
+   },
+   {
+    "name": "pNG200",
+    "type": "Plasmid",
+    "accession": "NC_006390.1",
+    "length": 33452,
+    "gc_percent": 55.5
+   },
+   {
+    "name": "pNG300",
+    "type": "Plasmid",
+    "accession": "NC_006391.1",
+    "length": 39521,
+    "gc_percent": 60
+   },
+   {
+    "name": "pNG400",
+    "type": "Plasmid",
+    "accession": "NC_006392.1",
+    "length": 50060,
+    "gc_percent": 57.5
+   },
+   {
+    "name": "pNG500",
+    "type": "Plasmid",
+    "accession": "NC_006393.1",
+    "length": 132678,
+    "gc_percent": 54.5
+   },
+   {
+    "name": "pNG600",
+    "type": "Plasmid",
+    "accession": "NC_006394.1",
+    "length": 155300,
+    "gc_percent": 58.5
+   },
+   {
+    "name": "pNG700",
+    "type": "Plasmid",
+    "accession": "NC_006395.1",
+    "length": 410554,
+    "gc_percent": 59
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 4237,
+  "ivywrel": 0.3998,
+  "predicted_ogt_c": 40,
+  "acidic_excess": 0.085
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_011223762.1",
+     "identity": 25.175,
+     "coverage": 31
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_004959876.1",
+     "identity": 28.831,
+     "coverage": 90
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

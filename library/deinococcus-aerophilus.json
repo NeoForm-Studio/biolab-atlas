@@ -34,47 +34,50 @@
  },
  "markers": {
   "radiation": {
-   "found": 2,
-   "of": 7,
+   "found": 6,
+   "of": 6,
    "genes": [
     {
      "name": "PprA",
-     "found": false,
-     "accessions": []
+     "found": true,
+     "accession": "WP_308424814.1",
+     "identity": 58.681,
+     "coverage": 94
     },
     {
      "name": "DdrA",
      "found": true,
-     "accessions": [
-      "WP_188903230.1"
-     ]
+     "accession": "WP_188903230.1",
+     "identity": 81.579,
+     "coverage": 91
     },
     {
      "name": "DdrB",
-     "found": false,
-     "accessions": []
+     "found": true,
+     "accession": "WP_188903632.1",
+     "identity": 76.389,
+     "coverage": 77
     },
     {
      "name": "DdrC",
      "found": true,
-     "accessions": [
-      "WP_188904895.1"
-     ]
+     "accession": "WP_188904895.1",
+     "identity": 72.321,
+     "coverage": 96
     },
     {
      "name": "DdrD",
-     "found": false,
-     "accessions": []
+     "found": true,
+     "accession": "WP_229752740.1",
+     "identity": 64.516,
+     "coverage": 77
     },
     {
      "name": "IrrE",
-     "found": false,
-     "accessions": []
-    },
-    {
-     "name": "PprM",
-     "found": false,
-     "accessions": []
+     "found": true,
+     "accession": "WP_188904909.1",
+     "identity": 64.0,
+     "coverage": 76
     }
    ]
   },
@@ -85,7 +88,9 @@
     {
      "name": "Rgy",
      "found": false,
-     "accessions": []
+     "accession": "WP_188904541.1",
+     "identity": 29.276,
+     "coverage": 47
     }
    ]
   },
@@ -95,18 +100,18 @@
    "genes": [
     {
      "name": "EctA",
-     "found": false,
-     "accessions": []
+     "found": false
     },
     {
      "name": "EctB",
      "found": false,
-     "accessions": []
+     "accession": "WP_188903313.1",
+     "identity": 30.679,
+     "coverage": 96
     },
     {
      "name": "EctC",
-     "found": false,
-     "accessions": []
+     "found": false
     }
    ]
   }

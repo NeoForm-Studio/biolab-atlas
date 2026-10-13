@@ -1,0 +1,150 @@
+{
+ "query": "Deinococcus deserti",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 310783,
+  "name": "Deinococcus deserti",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 2,
+  "uniprot_proteins": 3459,
+  "uniprot_reviewed": 169,
+  "sequences_16s": 5,
+  "papers": 157
+ },
+ "genome": {
+  "accession": "GCF_000020685.1",
+  "organism": "Deinococcus deserti VCD115",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 3855329,
+  "gc_percent": 63,
+  "contigs": 4,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_012526.1",
+    "length": 2819842,
+    "gc_percent": 63.5
+   },
+   {
+    "name": "1",
+    "type": "Plasmid",
+    "accession": "NC_012527.1",
+    "length": 324711,
+    "gc_percent": 60.5
+   },
+   {
+    "name": "2",
+    "type": "Plasmid",
+    "accession": "NC_012529.1",
+    "length": 314317,
+    "gc_percent": 63.5
+   },
+   {
+    "name": "3",
+    "type": "Plasmid",
+    "accession": "NC_012528.1",
+    "length": 396459,
+    "gc_percent": 61.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 3478,
+  "ivywrel": 0.3984,
+  "predicted_ogt_c": 38,
+  "acidic_excess": 0.0088
+ },
+ "markers": {
+  "radiation": {
+   "found": 5,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": true,
+     "accession": "WP_012695277.1",
+     "identity": 53.676,
+     "coverage": 89
+    },
+    {
+     "name": "DdrA",
+     "found": true,
+     "accession": "WP_012692915.1",
+     "identity": 78.974,
+     "coverage": 94
+    },
+    {
+     "name": "DdrB",
+     "found": true,
+     "accession": "WP_012692241.1",
+     "identity": 79.618,
+     "coverage": 84
+    },
+    {
+     "name": "DdrC",
+     "found": true,
+     "accession": "WP_012694483.1",
+     "identity": 69.643,
+     "coverage": 96
+    },
+    {
+     "name": "DdrD",
+     "found": false,
+     "accession": "WP_012692039.1",
+     "identity": 69.106,
+     "coverage": 62
+    },
+    {
+     "name": "IrrE",
+     "found": true,
+     "accession": "WP_049760425.1",
+     "identity": 64.945,
+     "coverage": 83
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_012692721.1",
+     "identity": 29.8,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_012692903.1",
+     "identity": 31.034,
+     "coverage": 97
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

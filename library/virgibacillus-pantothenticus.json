@@ -1,0 +1,117 @@
+{
+ "query": "Virgibacillus pantothenticus",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 1473,
+  "name": "Virgibacillus pantothenticus",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 29,
+  "uniprot_proteins": 3928,
+  "uniprot_reviewed": 4,
+  "sequences_16s": 77,
+  "papers": 84
+ },
+ "genome": {
+  "accession": "GCF_018075365.1",
+  "organism": "Virgibacillus pantothenticus",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 4761851,
+  "gc_percent": 37.5,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NZ_CP073011.1",
+    "length": 4761851,
+    "gc_percent": 37.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 4205,
+  "ivywrel": 0.4042,
+  "predicted_ogt_c": 44,
+  "acidic_excess": 0.0149
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_050352728.1",
+     "identity": 30.4,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 3,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": true,
+     "accession": "WP_050352488.1",
+     "identity": 37.013,
+     "coverage": 80
+    },
+    {
+     "name": "EctB",
+     "found": true,
+     "accession": "WP_050352489.1",
+     "identity": 50.358,
+     "coverage": 99
+    },
+    {
+     "name": "EctC",
+     "found": true,
+     "accession": "WP_050352490.1",
+     "identity": 44.8,
+     "coverage": 91
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}
