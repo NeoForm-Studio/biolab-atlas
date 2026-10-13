@@ -1,0 +1,201 @@
+{
+ "query": "Geodermatophilus obscurus",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 1861,
+  "name": "Geodermatophilus obscurus",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 5,
+  "uniprot_proteins": 9488,
+  "uniprot_reviewed": 10,
+  "sequences_16s": 12,
+  "papers": 116
+ },
+ "phenotype": {
+  "bacdive_id": 5815,
+  "url": "https://bacdive.dsmz.de/strain/5815",
+  "type_strain": true,
+  "optimum_temp_c": [
+   30.0,
+   30.0
+  ],
+  "growth_temp_c": [
+   28.0,
+   37.0
+  ],
+  "max_nacl_percent": 2.5
+ },
+ "genome": {
+  "accession": "GCF_000025345.1",
+  "organism": "Geodermatophilus obscurus DSM 43160",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 5322497,
+  "gc_percent": 74,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_013757.1",
+    "length": 5322497,
+    "gc_percent": 74
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 4969,
+  "ivywrel": 0.4057,
+  "predicted_ogt_c": 45,
+  "acidic_excess": 0.0209
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_012946826.1",
+     "identity": 28.79,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_012947877.1",
+     "identity": 29.398,
+     "coverage": 94
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 8,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_012949913.1",
+     "identity": 58.112,
+     "coverage": 93
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_012948162.1",
+     "identity": 57.669,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_012948095.1",
+     "identity": 56.287,
+     "coverage": 97
+    },
+    {
+     "name": "RecN",
+     "found": true,
+     "accession": "WP_012949050.1",
+     "identity": 36.426,
+     "coverage": 96
+    },
+    {
+     "name": "RecF",
+     "found": true,
+     "accession": "WP_012946257.1",
+     "identity": 35.593,
+     "coverage": 89
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_243697596.1",
+     "identity": 42.571,
+     "coverage": 42
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_049788321.1",
+     "identity": 53.395,
+     "coverage": 97
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_012946264.1",
+     "identity": 47.375,
+     "coverage": 97
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "WP_012949236.1",
+     "identity": 41.75,
+     "coverage": 43
+    },
+    {
+     "name": "LexA",
+     "found": true,
+     "accession": "WP_012949896.1",
+     "identity": 30.66,
+     "coverage": 90
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

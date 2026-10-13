@@ -1,0 +1,198 @@
+{
+ "query": "Mycobacterium tuberculosis",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 1773,
+  "name": "Mycobacterium tuberculosis",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 8869,
+  "uniprot_proteins": 18104,
+  "uniprot_reviewed": 6712,
+  "sequences_16s": 835,
+  "papers": 211483
+ },
+ "phenotype": {
+  "bacdive_id": 170314,
+  "url": "https://bacdive.dsmz.de/strain/170314",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": null,
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000195955.2",
+  "organism": "Mycobacterium tuberculosis H37Rv",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 4411532,
+  "gc_percent": 65.5,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_000962.3",
+    "length": 4411532,
+    "gc_percent": 65.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 3906,
+  "ivywrel": 0.3806,
+  "predicted_ogt_c": 22,
+  "acidic_excess": 0.0116
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false,
+     "accession": "NP_216533.1",
+     "identity": 37.5,
+     "coverage": 29
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "NP_218163.1",
+     "identity": 28.968,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "NP_216171.1",
+     "identity": 29.975,
+     "coverage": 91
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 8,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "NP_217253.1",
+     "identity": 66.535,
+     "coverage": 70
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "NP_216154.1",
+     "identity": 56.583,
+     "coverage": 98
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "NP_216149.3",
+     "identity": 54.745,
+     "coverage": 97
+    },
+    {
+     "name": "RecN",
+     "found": true,
+     "accession": "NP_216212.1",
+     "identity": 33.851,
+     "coverage": 94
+    },
+    {
+     "name": "RecF",
+     "found": true,
+     "accession": "NP_214517.1",
+     "identity": 33.908,
+     "coverage": 89
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "NP_217714.1",
+     "identity": 37.273,
+     "coverage": 11
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "NP_217108.1",
+     "identity": 53.797,
+     "coverage": 95
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "NP_214520.1",
+     "identity": 47.767,
+     "coverage": 98
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "NP_216145.1",
+     "identity": 40.0,
+     "coverage": 51
+    },
+    {
+     "name": "LexA",
+     "found": true,
+     "accession": "NP_217236.2",
+     "identity": 31.148,
+     "coverage": 80
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

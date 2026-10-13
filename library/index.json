@@ -1,5 +1,118 @@
 [
  {
+  "file": "acidianus-hospitalis.json",
+  "name": "Acidianus hospitalis",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 34,
+  "predicted_ogt_c": 76,
+  "acidic_excess": -0.0019,
+  "measured_optimum_c": null,
+  "measured_growth_c": null,
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "1/1",
+   "salt": "0/3",
+   "repair": "0/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 41,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": null,
+   "UvrB": null,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": null,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "EctB": 31,
+   "RecA": 27,
+   "UvrA": 30,
+   "UvrB": 28,
+   "RecF": 21,
+   "RecQ": 23,
+   "RuvB": 30
+  },
+  "scores": {
+   "heat": 77,
+   "cold": 23,
+   "salt": 13,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "acidiphilium-cryptum.json",
+  "name": "Acidiphilium cryptum",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 67,
+  "predicted_ogt_c": 31,
+  "acidic_excess": -0.0007,
+  "measured_optimum_c": [
+   35.0,
+   41.0
+  ],
+  "measured_growth_c": [
+   27.0,
+   41.0
+  ],
+  "max_nacl_percent": 3.0,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "3/3",
+   "repair": "7/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": 42,
+   "EctB": 57,
+   "EctC": 46,
+   "RecA": 60,
+   "UvrA": 56,
+   "UvrB": 56,
+   "RecN": 34,
+   "RecF": null,
+   "RecQ": 55,
+   "RuvB": 57,
+   "GyrA": 42,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 28,
+   "RecF": 27,
+   "PolA": 50,
+   "LexA": 40
+  },
+  "scores": {
+   "heat": 18,
+   "cold": 82,
+   "salt": 90,
+   "radiation": 0
+  }
+ },
+ {
   "file": "acidithiobacillus-ferrooxidans.json",
   "name": "Acidithiobacillus ferrooxidans",
   "status": "ok",
@@ -12,6 +125,7 @@
    25.0,
    25.0
   ],
+  "max_nacl_percent": null,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -46,6 +160,71 @@
    "RecF": 27,
    "PolA": 47,
    "LexA": 35
+  },
+  "scores": {
+   "heat": 38,
+   "cold": 62,
+   "salt": 31,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "aeropyrum-pernix.json",
+  "name": "Aeropyrum pernix",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 56.5,
+  "predicted_ogt_c": 100,
+  "acidic_excess": 0.0017,
+  "measured_optimum_c": [
+   90.0,
+   95.0
+  ],
+  "measured_growth_c": [
+   70.0,
+   100.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "1/1",
+   "salt": "0/3",
+   "repair": "0/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 43,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": null,
+   "UvrB": null,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": null,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "EctB": 29,
+   "RecA": 29,
+   "UvrA": 33,
+   "RecQ": 32,
+   "RuvB": 29
+  },
+  "scores": {
+   "heat": 95,
+   "cold": 5,
+   "salt": 23,
+   "radiation": 0
   }
  },
  {
@@ -58,6 +237,7 @@
   "acidic_excess": -0.0034,
   "measured_optimum_c": null,
   "measured_growth_c": null,
+  "max_nacl_percent": null,
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
@@ -90,6 +270,68 @@
    "EctB": 32,
    "RecN": 27,
    "PolA": 39
+  },
+  "scores": {
+   "heat": 90,
+   "cold": 10,
+   "salt": 10,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "archaeoglobus-fulgidus.json",
+  "name": "Archaeoglobus fulgidus",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 48.5,
+  "predicted_ogt_c": 85,
+  "acidic_excess": 0.0124,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   80.0,
+   85.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "1/1",
+   "salt": "0/3",
+   "repair": "1/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 41,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": null,
+   "UvrB": null,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": 46,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "EctB": 32,
+   "RecA": 28,
+   "UvrA": 32,
+   "RecQ": 26,
+   "RuvB": 36
+  },
+  "scores": {
+   "heat": 82,
+   "cold": 18,
+   "salt": 57,
+   "radiation": 0
   }
  },
  {
@@ -108,6 +350,7 @@
    22.0,
    55.0
   ],
+  "max_nacl_percent": 8.0,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -141,6 +384,231 @@
    "EctB": 32,
    "PolA": 42,
    "LexA": 31
+  },
+  "scores": {
+   "heat": 32,
+   "cold": 68,
+   "salt": 58,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "bacteroides-fragilis.json",
+  "name": "Bacteroides fragilis",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 43,
+  "predicted_ogt_c": 38,
+  "acidic_excess": 0.0062,
+  "measured_optimum_c": null,
+  "measured_growth_c": null,
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "7/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 59,
+   "UvrA": 53,
+   "UvrB": 51,
+   "RecN": 31,
+   "RecF": null,
+   "RecQ": 43,
+   "RuvB": 58,
+   "GyrA": 48,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 30,
+   "EctB": 30,
+   "RecF": 29,
+   "PolA": 47,
+   "LexA": 29
+  },
+  "scores": {
+   "heat": 35,
+   "cold": 65,
+   "salt": 33,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "caldicellulosiruptor-saccharolyticus.json",
+  "name": "Caldicellulosiruptor saccharolyticus",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 35.5,
+  "predicted_ogt_c": 64,
+  "acidic_excess": -0.0039,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   65.0,
+   65.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "1/1",
+   "salt": "0/3",
+   "repair": "5/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 38,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 60,
+   "UvrA": 56,
+   "UvrB": 57,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": 58,
+   "GyrA": 50,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "EctB": 30,
+   "RecN": 30,
+   "RecF": 30,
+   "PolA": 44,
+   "LexA": 34
+  },
+  "scores": {
+   "heat": 73,
+   "cold": 27,
+   "salt": 8,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "caulobacter-vibrioides.json",
+  "name": "Caulobacter vibrioides",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 67,
+  "predicted_ogt_c": 23,
+  "acidic_excess": 0.0048,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   25.0,
+   37.0
+  ],
+  "max_nacl_percent": 0.0,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "7/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 64,
+   "UvrA": 56,
+   "UvrB": 54,
+   "RecN": 35,
+   "RecF": null,
+   "RecQ": 45,
+   "RuvB": 59,
+   "GyrA": 41,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 28,
+   "EctB": 30,
+   "RecF": 28,
+   "PolA": 45,
+   "LexA": 44
+  },
+  "scores": {
+   "heat": 8,
+   "cold": 92,
+   "salt": 30,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "cereibacter-sphaeroides.json",
+  "name": "Cereibacter sphaeroides",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 69,
+  "predicted_ogt_c": 41,
+  "acidic_excess": 0.013,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   25.0,
+   30.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "9/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 62,
+   "UvrA": 58,
+   "UvrB": 55,
+   "RecN": 33,
+   "RecF": 32,
+   "RecQ": 43,
+   "RuvB": 56,
+   "GyrA": 42,
+   "PolA": 37,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 28,
+   "EctB": 30,
+   "LexA": 38
+  },
+  "scores": {
+   "heat": 41,
+   "cold": 59,
+   "salt": 60,
+   "radiation": 0
   }
  },
  {
@@ -156,6 +624,7 @@
    15.0,
    41.0
   ],
+  "max_nacl_percent": 10.0,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -189,6 +658,12 @@
    "RecF": 29,
    "RecQ": 41,
    "PolA": 47
+  },
+  "scores": {
+   "heat": 55,
+   "cold": 45,
+   "salt": 90,
+   "radiation": 0
   }
  },
  {
@@ -201,6 +676,7 @@
   "acidic_excess": 0.0081,
   "measured_optimum_c": null,
   "measured_growth_c": null,
+  "max_nacl_percent": null,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -232,6 +708,67 @@
   "weak": {
    "Rgy": 29,
    "EctB": 36
+  },
+  "scores": {
+   "heat": 46,
+   "cold": 54,
+   "salt": 45,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "clostridioides-difficile.json",
+  "name": "Clostridioides difficile",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 28.5,
+  "predicted_ogt_c": 49,
+  "acidic_excess": 0.008,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   37.0,
+   37.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "8/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 61,
+   "UvrA": 57,
+   "UvrB": 56,
+   "RecN": 33,
+   "RecF": null,
+   "RecQ": 33,
+   "RuvB": 60,
+   "GyrA": 49,
+   "PolA": null,
+   "LexA": 32
+  },
+  "weak": {
+   "Rgy": 30,
+   "EctB": 32,
+   "RecF": 27,
+   "PolA": 44
+  },
+  "scores": {
+   "heat": 60,
+   "cold": 40,
+   "salt": 44,
+   "radiation": 0
   }
  },
  {
@@ -247,6 +784,7 @@
    10.0,
    10.0
   ],
+  "max_nacl_percent": null,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -280,6 +818,71 @@
    "EctB": 33,
    "RecF": 28,
    "PolA": 46
+  },
+  "scores": {
+   "heat": 5,
+   "cold": 95,
+   "salt": 70,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "corynebacterium-glutamicum.json",
+  "name": "Corynebacterium glutamicum",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 54,
+  "predicted_ogt_c": 31,
+  "acidic_excess": 0.0341,
+  "measured_optimum_c": [
+   28.0,
+   28.0
+  ],
+  "measured_growth_c": [
+   15.0,
+   37.0
+  ],
+  "max_nacl_percent": 6.0,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "7/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 61,
+   "UvrA": 54,
+   "UvrB": 56,
+   "RecN": 35,
+   "RecF": 33,
+   "RecQ": null,
+   "RuvB": 55,
+   "GyrA": 47,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 31,
+   "EctB": 34,
+   "RecQ": 37,
+   "PolA": 41,
+   "LexA": 37
+  },
+  "scores": {
+   "heat": 18,
+   "cold": 82,
+   "salt": 88,
+   "radiation": 0
   }
  },
  {
@@ -298,6 +901,7 @@
    5.0,
    45.0
   ],
+  "max_nacl_percent": 1.0,
   "markers": {
    "radiation": "6/6",
    "heat": "0/1",
@@ -330,6 +934,12 @@
    "Rgy": 29,
    "EctB": 31,
    "LexA": 35
+  },
+  "scores": {
+   "heat": 35,
+   "cold": 65,
+   "salt": 46,
+   "radiation": 100
   }
  },
  {
@@ -348,6 +958,7 @@
    23.0,
    37.0
   ],
+  "max_nacl_percent": 0.25,
   "markers": {
    "radiation": "5/6",
    "heat": "0/1",
@@ -380,6 +991,12 @@
    "DdrD": 69,
    "Rgy": 30,
    "EctB": 31
+  },
+  "scores": {
+   "heat": 35,
+   "cold": 65,
+   "salt": 49,
+   "radiation": 83
   }
  },
  {
@@ -398,6 +1015,7 @@
    30.0,
    55.0
   ],
+  "max_nacl_percent": 2.0,
   "markers": {
    "radiation": "6/6",
    "heat": "0/1",
@@ -431,6 +1049,178 @@
    "EctA": 29,
    "EctB": 32,
    "RecQ": 25
+  },
+  "scores": {
+   "heat": 57,
+   "cold": 43,
+   "salt": 29,
+   "radiation": 100
+  }
+ },
+ {
+  "file": "deinococcus-gobiensis.json",
+  "name": "Deinococcus gobiensis",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 69,
+  "predicted_ogt_c": 36,
+  "acidic_excess": 0.0062,
+  "measured_optimum_c": [
+   30.0,
+   30.0
+  ],
+  "measured_growth_c": [
+   15.0,
+   35.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "5/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "9/10"
+  },
+  "genes": {
+   "PprA": 69,
+   "DdrA": 85,
+   "DdrB": 73,
+   "DdrC": 75,
+   "DdrD": null,
+   "IrrE": 65,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 93,
+   "UvrA": 87,
+   "UvrB": 91,
+   "RecN": 71,
+   "RecF": 85,
+   "RecQ": 73,
+   "RuvB": 93,
+   "GyrA": 88,
+   "PolA": 75,
+   "LexA": null
+  },
+  "weak": {
+   "DdrD": 69,
+   "Rgy": 29,
+   "EctB": 35,
+   "LexA": 43
+  },
+  "scores": {
+   "heat": 29,
+   "cold": 71,
+   "salt": 33,
+   "radiation": 83
+  }
+ },
+ {
+  "file": "deinococcus-maricopensis.json",
+  "name": "Deinococcus maricopensis",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 70,
+  "predicted_ogt_c": 33,
+  "acidic_excess": 0.0063,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   28.0,
+   28.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "5/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "8/10"
+  },
+  "genes": {
+   "PprA": 52,
+   "DdrA": 77,
+   "DdrB": 43,
+   "DdrC": 52,
+   "DdrD": null,
+   "IrrE": 57,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 93,
+   "UvrA": 82,
+   "UvrB": 82,
+   "RecN": 66,
+   "RecF": 71,
+   "RecQ": null,
+   "RuvB": 85,
+   "GyrA": 82,
+   "PolA": 65,
+   "LexA": null
+  },
+  "weak": {
+   "DdrD": 61,
+   "Rgy": 29,
+   "EctB": 32,
+   "RecQ": 45
+  },
+  "scores": {
+   "heat": 23,
+   "cold": 77,
+   "salt": 35,
+   "radiation": 83
+  }
+ },
+ {
+  "file": "deinococcus-proteolyticus.json",
+  "name": "Deinococcus proteolyticus",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 65.5,
+  "predicted_ogt_c": 37,
+  "acidic_excess": 0.0149,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   30.0,
+   30.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "4/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "10/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": 74,
+   "DdrC": 62,
+   "DdrD": 55,
+   "IrrE": 55,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 87,
+   "UvrA": 82,
+   "UvrB": 86,
+   "RecN": 63,
+   "RecF": 75,
+   "RecQ": 70,
+   "RuvB": 93,
+   "GyrA": 83,
+   "PolA": 68,
+   "LexA": 35
+  },
+  "weak": {
+   "Rgy": 29,
+   "EctB": 29
+  },
+  "scores": {
+   "heat": 32,
+   "cold": 68,
+   "salt": 64,
+   "radiation": 67
   }
  },
  {
@@ -446,6 +1236,7 @@
    15.0,
    30.0
   ],
+  "max_nacl_percent": 0.0,
   "markers": {
    "radiation": "6/6",
    "heat": "0/1",
@@ -477,6 +1268,180 @@
   "weak": {
    "Rgy": 30,
    "EctB": 32
+  },
+  "scores": {
+   "heat": 29,
+   "cold": 71,
+   "salt": 54,
+   "radiation": 100
+  }
+ },
+ {
+  "file": "deinococcus-radiopugnans.json",
+  "name": "Deinococcus radiopugnans",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 67.5,
+  "predicted_ogt_c": 35,
+  "acidic_excess": 0.0098,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   30.0,
+   30.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "5/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "10/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": 80,
+   "DdrB": 70,
+   "DdrC": 69,
+   "DdrD": 58,
+   "IrrE": 65,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 93,
+   "UvrA": 87,
+   "UvrB": 89,
+   "RecN": 69,
+   "RecF": 80,
+   "RecQ": 71,
+   "RuvB": 92,
+   "GyrA": 86,
+   "PolA": 73,
+   "LexA": 38
+  },
+  "weak": {
+   "Rgy": 29,
+   "EctB": 32
+  },
+  "scores": {
+   "heat": 27,
+   "cold": 73,
+   "salt": 53,
+   "radiation": 83
+  }
+ },
+ {
+  "file": "deinococcus-wulumuqiensis.json",
+  "name": "Deinococcus wulumuqiensis",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 66,
+  "predicted_ogt_c": 38,
+  "acidic_excess": 0.0069,
+  "measured_optimum_c": [
+   37.0,
+   37.0
+  ],
+  "measured_growth_c": [
+   10.0,
+   55.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "6/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "10/10"
+  },
+  "genes": {
+   "PprA": 97,
+   "DdrA": 94,
+   "DdrB": 92,
+   "DdrC": 95,
+   "DdrD": 75,
+   "IrrE": 80,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 97,
+   "UvrA": 92,
+   "UvrB": 94,
+   "RecN": 93,
+   "RecF": 97,
+   "RecQ": 88,
+   "RuvB": 96,
+   "GyrA": 98,
+   "PolA": 92,
+   "LexA": 94
+  },
+  "weak": {
+   "Rgy": 30,
+   "EctB": 32
+  },
+  "scores": {
+   "heat": 35,
+   "cold": 65,
+   "salt": 38,
+   "radiation": 100
+  }
+ },
+ {
+  "file": "desulfotalea-psychrophila.json",
+  "name": "Desulfotalea psychrophila",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 46.5,
+  "predicted_ogt_c": 36,
+  "acidic_excess": 0.0092,
+  "measured_optimum_c": [
+   10.0,
+   10.0
+  ],
+  "measured_growth_c": [
+   -1.8,
+   19.0
+  ],
+  "max_nacl_percent": 1.0,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "4/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 60,
+   "UvrA": 52,
+   "UvrB": 53,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": 48,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 25,
+   "EctB": 31,
+   "RecQ": 36,
+   "RuvB": 30,
+   "PolA": 45
+  },
+  "scores": {
+   "heat": 29,
+   "cold": 71,
+   "salt": 50,
+   "radiation": 0
   }
  },
  {
@@ -492,6 +1457,7 @@
    10.0,
    41.0
   ],
+  "max_nacl_percent": null,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -527,6 +1493,121 @@
    "RecF": 29,
    "PolA": 49,
    "LexA": 44
+  },
+  "scores": {
+   "heat": 27,
+   "cold": 73,
+   "salt": 52,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "exiguobacterium-artemiae.json",
+  "name": "Exiguobacterium artemiae",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 47.5,
+  "predicted_ogt_c": 51,
+  "acidic_excess": 0.0188,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   28.0,
+   30.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "7/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 62,
+   "UvrA": 57,
+   "UvrB": 58,
+   "RecN": 32,
+   "RecF": 32,
+   "RecQ": null,
+   "RuvB": 61,
+   "GyrA": 46,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 31,
+   "EctB": 28,
+   "RecQ": 34,
+   "PolA": 48,
+   "LexA": 32
+  },
+  "scores": {
+   "heat": 62,
+   "cold": 38,
+   "salt": 73,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "ferroplasma-acidarmanus.json",
+  "name": "Ferroplasma acidarmanus",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 36.5,
+  "predicted_ogt_c": 45,
+  "acidic_excess": 0.0023,
+  "measured_optimum_c": null,
+  "measured_growth_c": null,
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "1/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": null,
+   "UvrB": null,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": 41,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 27,
+   "EctB": 32,
+   "RecA": 28,
+   "UvrA": 32,
+   "RecQ": 23
+  },
+  "scores": {
+   "heat": 50,
+   "cold": 50,
+   "salt": 27,
+   "radiation": 0
   }
  },
  {
@@ -545,6 +1626,7 @@
    37.0,
    75.0
   ],
+  "max_nacl_percent": 2.0,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -579,6 +1661,125 @@
    "RecQ": 41,
    "PolA": 48,
    "LexA": 32
+  },
+  "scores": {
+   "heat": 70,
+   "cold": 30,
+   "salt": 41,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "geodermatophilus-obscurus.json",
+  "name": "Geodermatophilus obscurus",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 74,
+  "predicted_ogt_c": 45,
+  "acidic_excess": 0.0209,
+  "measured_optimum_c": [
+   30.0,
+   30.0
+  ],
+  "measured_growth_c": [
+   28.0,
+   37.0
+  ],
+  "max_nacl_percent": 2.5,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "8/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 58,
+   "UvrA": 58,
+   "UvrB": 56,
+   "RecN": 36,
+   "RecF": 36,
+   "RecQ": null,
+   "RuvB": 53,
+   "GyrA": 47,
+   "PolA": null,
+   "LexA": 31
+  },
+  "weak": {
+   "Rgy": 29,
+   "EctB": 29,
+   "RecQ": 43,
+   "PolA": 42
+  },
+  "scores": {
+   "heat": 50,
+   "cold": 50,
+   "salt": 78,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "halalkalibacterium-halodurans.json",
+  "name": "Halalkalibacterium halodurans",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 43.5,
+  "predicted_ogt_c": 54,
+  "acidic_excess": 0.0229,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   22.0,
+   55.0
+  ],
+  "max_nacl_percent": 10.0,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "3/3",
+   "repair": "7/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": 37,
+   "EctB": 55,
+   "EctC": 56,
+   "RecA": 60,
+   "UvrA": 56,
+   "UvrB": 57,
+   "RecN": 32,
+   "RecF": 33,
+   "RecQ": null,
+   "RuvB": 57,
+   "GyrA": 49,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 31,
+   "RecQ": 38,
+   "PolA": 51,
+   "LexA": 26
+  },
+  "scores": {
+   "heat": 66,
+   "cold": 34,
+   "salt": 90,
+   "radiation": 0
   }
  },
  {
@@ -594,6 +1795,7 @@
    37.0,
    37.0
   ],
+  "max_nacl_percent": null,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -628,6 +1830,67 @@
    "RecA": 28,
    "RecQ": 26,
    "RuvB": 39
+  },
+  "scores": {
+   "heat": 39,
+   "cold": 61,
+   "salt": 97,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "halobacillus-halophilus.json",
+  "name": "Halobacillus halophilus",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 42,
+  "predicted_ogt_c": 46,
+  "acidic_excess": 0.0279,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   30.0,
+   30.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "3/3",
+   "repair": "7/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": 39,
+   "EctB": 51,
+   "EctC": 51,
+   "RecA": 62,
+   "UvrA": 56,
+   "UvrB": 58,
+   "RecN": 30,
+   "RecF": null,
+   "RecQ": 39,
+   "RuvB": 58,
+   "GyrA": 49,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 31,
+   "RecF": 29,
+   "PolA": 42,
+   "LexA": 29
+  },
+  "scores": {
+   "heat": 55,
+   "cold": 45,
+   "salt": 90,
+   "radiation": 0
   }
  },
  {
@@ -643,6 +1906,7 @@
    37.0,
    37.0
   ],
+  "max_nacl_percent": null,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -676,6 +1940,124 @@
    "EctB": 37,
    "RecA": 31,
    "RecF": 41
+  },
+  "scores": {
+   "heat": 14,
+   "cold": 86,
+   "salt": 93,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "halococcus-morrhuae.json",
+  "name": "Halococcus morrhuae",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 64,
+  "predicted_ogt_c": 47,
+  "acidic_excess": 0.0813,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   37.0,
+   37.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "3/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": 53,
+   "UvrB": 54,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": 44,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 25,
+   "EctB": 30,
+   "RecA": 29,
+   "RuvB": 38
+  },
+  "scores": {
+   "heat": 57,
+   "cold": 43,
+   "salt": 96,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "haloferax-mediterranei.json",
+  "name": "Haloferax mediterranei",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 60.5,
+  "predicted_ogt_c": 45,
+  "acidic_excess": 0.0799,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   37.0,
+   37.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "3/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": 53,
+   "UvrB": 55,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": 44,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 26,
+   "EctB": 36,
+   "RecA": 31,
+   "RecF": 30,
+   "RecQ": 29,
+   "RuvB": 32
+  },
+  "scores": {
+   "heat": 50,
+   "cold": 50,
+   "salt": 95,
+   "radiation": 0
   }
  },
  {
@@ -691,6 +2073,7 @@
    37.0,
    37.0
   ],
+  "max_nacl_percent": null,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -727,6 +2110,12 @@
    "RecQ": 23,
    "RuvB": 34,
    "PolA": 41
+  },
+  "scores": {
+   "heat": 50,
+   "cold": 50,
+   "salt": 94,
+   "radiation": 0
   }
  },
  {
@@ -742,6 +2131,7 @@
    10.0,
    37.0
   ],
+  "max_nacl_percent": 10.0,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -776,6 +2166,455 @@
    "RecQ": 24,
    "PolA": 46,
    "LexA": 37
+  },
+  "scores": {
+   "heat": 62,
+   "cold": 38,
+   "salt": 90,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "haloquadratum-walsbyi.json",
+  "name": "Haloquadratum walsbyi",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 48,
+  "predicted_ogt_c": 32,
+  "acidic_excess": 0.071,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   37.0,
+   37.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "3/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": 51,
+   "UvrB": 54,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": 43,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 24,
+   "EctB": 31,
+   "RecA": 37,
+   "RecF": 27
+  },
+  "scores": {
+   "heat": 20,
+   "cold": 80,
+   "salt": 92,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "halorhodospira-halophila.json",
+  "name": "Halorhodospira halophila",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 68,
+  "predicted_ogt_c": 62,
+  "acidic_excess": 0.0313,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   25.0,
+   25.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "3/3",
+   "repair": "8/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": 41,
+   "EctB": 54,
+   "EctC": 47,
+   "RecA": 57,
+   "UvrA": 53,
+   "UvrB": 57,
+   "RecN": 35,
+   "RecF": 32,
+   "RecQ": null,
+   "RuvB": 60,
+   "GyrA": 45,
+   "PolA": null,
+   "LexA": 31
+  },
+  "weak": {
+   "Rgy": 29,
+   "RecQ": 23,
+   "PolA": 47
+  },
+  "scores": {
+   "heat": 72,
+   "cold": 28,
+   "salt": 90,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "halorubrum-lacusprofundi.json",
+  "name": "Halorubrum lacusprofundi",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 64,
+  "predicted_ogt_c": 46,
+  "acidic_excess": 0.0879,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   15.0,
+   45.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "3/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": 51,
+   "UvrB": 56,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": 45,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 26,
+   "EctB": 32,
+   "RecA": 28,
+   "RecF": 47,
+   "RecQ": 24,
+   "RuvB": 37
+  },
+  "scores": {
+   "heat": 55,
+   "cold": 45,
+   "salt": 98,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "helicobacter-pylori.json",
+  "name": "Helicobacter pylori",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 38.5,
+  "predicted_ogt_c": 28,
+  "acidic_excess": -0.0069,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   37.0,
+   37.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "5/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 55,
+   "UvrA": 47,
+   "UvrB": 49,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": 49,
+   "GyrA": 47,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 30,
+   "EctB": 26,
+   "RecN": 24,
+   "RecQ": 18,
+   "PolA": 39
+  },
+  "scores": {
+   "heat": 14,
+   "cold": 86,
+   "salt": 3,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "hydrogenobacter-thermophilus.json",
+  "name": "Hydrogenobacter thermophilus",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 44,
+  "predicted_ogt_c": 81,
+  "acidic_excess": -0.0038,
+  "measured_optimum_c": [
+   70.0,
+   75.0
+  ],
+  "measured_growth_c": [
+   70.0,
+   75.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "1/1",
+   "salt": "0/3",
+   "repair": "4/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 41,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 57,
+   "UvrA": 53,
+   "UvrB": 53,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": 39,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "EctB": 30,
+   "RecN": 27,
+   "RecQ": 22,
+   "PolA": 35
+  },
+  "scores": {
+   "heat": 80,
+   "cold": 20,
+   "salt": 9,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "hymenobacter-swuensis.json",
+  "name": "Hymenobacter swuensis",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 59.5,
+  "predicted_ogt_c": 30,
+  "acidic_excess": 0.0013,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   30.0,
+   30.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "8/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 56,
+   "UvrA": 51,
+   "UvrB": 51,
+   "RecN": 32,
+   "RecF": 31,
+   "RecQ": 45,
+   "RuvB": 55,
+   "GyrA": 49,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 29,
+   "EctB": 31,
+   "PolA": 42
+  },
+  "scores": {
+   "heat": 16,
+   "cold": 84,
+   "salt": 22,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "hymenobacter-yonginensis.json",
+  "name": "Hymenobacter yonginensis",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 62,
+  "predicted_ogt_c": 29,
+  "acidic_excess": 0.0004,
+  "measured_optimum_c": null,
+  "measured_growth_c": null,
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "7/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 57,
+   "UvrA": 51,
+   "UvrB": 52,
+   "RecN": 31,
+   "RecF": null,
+   "RecQ": 45,
+   "RuvB": 56,
+   "GyrA": 50,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 28,
+   "EctB": 31,
+   "RecF": 30,
+   "PolA": 42,
+   "LexA": 32
+  },
+  "scores": {
+   "heat": 15,
+   "cold": 85,
+   "salt": 19,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "hyperthermus-butylicus.json",
+  "name": "Hyperthermus butylicus",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 53.5,
+  "predicted_ogt_c": 107,
+  "acidic_excess": -0.005,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   95.0,
+   99.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "1/1",
+   "salt": "0/3",
+   "repair": "0/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 42,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": null,
+   "UvrB": null,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": null,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "EctB": 28,
+   "RecA": 28,
+   "UvrA": 34,
+   "RecQ": 23,
+   "RuvB": 31
+  },
+  "scores": {
+   "heat": 98,
+   "cold": 2,
+   "salt": 6,
+   "radiation": 0
   }
  },
  {
@@ -791,6 +2630,7 @@
    22.0,
    37.0
   ],
+  "max_nacl_percent": 0.0,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -824,6 +2664,234 @@
    "EctB": 29,
    "RecQ": 41,
    "PolA": 42
+  },
+  "scores": {
+   "heat": 43,
+   "cold": 57,
+   "salt": 71,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "klebsiella-pneumoniae.json",
+  "name": "Klebsiella pneumoniae",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 57,
+  "predicted_ogt_c": 35,
+  "acidic_excess": 0.0063,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   30.0,
+   37.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "7/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 61,
+   "UvrA": 55,
+   "UvrB": 56,
+   "RecN": 33,
+   "RecF": null,
+   "RecQ": 46,
+   "RuvB": 58,
+   "GyrA": 48,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 30,
+   "EctB": 39,
+   "RecF": 29,
+   "PolA": 47,
+   "LexA": 41
+  },
+  "scores": {
+   "heat": 27,
+   "cold": 73,
+   "salt": 35,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "lactiplantibacillus-plantarum.json",
+  "name": "Lactiplantibacillus plantarum",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 44.5,
+  "predicted_ogt_c": 16,
+  "acidic_excess": 0.0075,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   15.0,
+   37.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "8/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 61,
+   "UvrA": 55,
+   "UvrB": 55,
+   "RecN": 34,
+   "RecF": 31,
+   "RecQ": 40,
+   "RuvB": 55,
+   "GyrA": 47,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 30,
+   "EctB": 29,
+   "PolA": 42,
+   "LexA": 30
+  },
+  "scores": {
+   "heat": 1,
+   "cold": 99,
+   "salt": 41,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "leptospirillum-ferrooxidans.json",
+  "name": "Leptospirillum ferrooxidans",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 50,
+  "predicted_ogt_c": 42,
+  "acidic_excess": 0.0028,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   30.0,
+   30.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "6/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 58,
+   "UvrA": 51,
+   "UvrB": 53,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": 51,
+   "GyrA": 45,
+   "PolA": 37,
+   "LexA": null
+  },
+  "weak": {
+   "IrrE": 35,
+   "Rgy": 30,
+   "EctB": 29,
+   "RecN": 29,
+   "RecQ": 24,
+   "LexA": 27
+  },
+  "scores": {
+   "heat": 43,
+   "cold": 57,
+   "salt": 28,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "listeria-monocytogenes.json",
+  "name": "Listeria monocytogenes",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 38,
+  "predicted_ogt_c": 38,
+  "acidic_excess": 0.0206,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   30.0,
+   41.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "9/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 62,
+   "UvrA": 55,
+   "UvrB": 58,
+   "RecN": 31,
+   "RecF": 32,
+   "RecQ": 38,
+   "RuvB": 58,
+   "GyrA": 47,
+   "PolA": 38,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 29,
+   "EctB": 28,
+   "LexA": 31
+  },
+  "scores": {
+   "heat": 35,
+   "cold": 65,
+   "salt": 76,
+   "radiation": 0
   }
  },
  {
@@ -839,6 +2907,7 @@
    22.0,
    41.0
   ],
+  "max_nacl_percent": 10.0,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -871,6 +2940,124 @@
    "Rgy": 31,
    "RecQ": 38,
    "LexA": 30
+  },
+  "scores": {
+   "heat": 50,
+   "cold": 50,
+   "salt": 90,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "meiothermus-ruber.json",
+  "name": "Meiothermus ruber",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 63.5,
+  "predicted_ogt_c": 68,
+  "acidic_excess": 0.0019,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   50.0,
+   50.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "1/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "7/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": 32,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 67,
+   "UvrA": 69,
+   "UvrB": 66,
+   "RecN": 46,
+   "RecF": 40,
+   "RecQ": null,
+   "RuvB": 74,
+   "GyrA": 58,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "DdrA": 36,
+   "Rgy": 31,
+   "EctB": 31,
+   "RecQ": 41,
+   "PolA": 47
+  },
+  "scores": {
+   "heat": 75,
+   "cold": 25,
+   "salt": 26,
+   "radiation": 17
+  }
+ },
+ {
+  "file": "metallosphaera-sedula.json",
+  "name": "Metallosphaera sedula",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 46,
+  "predicted_ogt_c": 77,
+  "acidic_excess": -0.0004,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   75.0,
+   75.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "1/1",
+   "salt": "0/3",
+   "repair": "0/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 39,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": null,
+   "UvrB": null,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": null,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "EctB": 30,
+   "RecA": 28,
+   "UvrA": 27,
+   "RecQ": 26,
+   "RuvB": 27
+  },
+  "scores": {
+   "heat": 78,
+   "cold": 22,
+   "salt": 16,
+   "radiation": 0
   }
  },
  {
@@ -886,6 +3073,7 @@
    80.0,
    80.0
   ],
+  "max_nacl_percent": null,
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
@@ -922,6 +3110,676 @@
    "RecF": 30,
    "RecQ": 32,
    "RuvB": 42
+  },
+  "scores": {
+   "heat": 80,
+   "cold": 20,
+   "salt": 18,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "methanococcoides-burtonii.json",
+  "name": "Methanococcoides burtonii",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 41,
+  "predicted_ogt_c": 43,
+  "acidic_excess": 0.0313,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   21.0,
+   21.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "4/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": 55,
+   "UvrB": 56,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": 39,
+   "RuvB": null,
+   "GyrA": 47,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 24,
+   "EctB": 31,
+   "RecA": 27,
+   "RecF": 32
+  },
+  "scores": {
+   "heat": 45,
+   "cold": 55,
+   "salt": 86,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "methanopyrus-kandleri.json",
+  "name": "Methanopyrus kandleri",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 61,
+  "predicted_ogt_c": 113,
+  "acidic_excess": 0.0351,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   95.0,
+   98.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "1/1",
+   "salt": "0/3",
+   "repair": "0/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 38,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": null,
+   "UvrB": null,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": null,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "EctB": 32,
+   "RecA": 33,
+   "UvrA": 33,
+   "RecQ": 26,
+   "RuvB": 38
+  },
+  "scores": {
+   "heat": 99,
+   "cold": 1,
+   "salt": 89,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "methanosarcina-mazei.json",
+  "name": "Methanosarcina mazei",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 41.5,
+  "predicted_ogt_c": 52,
+  "acidic_excess": 0.0203,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   37.0,
+   37.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "4/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": 56,
+   "UvrB": 53,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": 43,
+   "RuvB": null,
+   "GyrA": 47,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 25,
+   "EctB": 31,
+   "RecA": 26
+  },
+  "scores": {
+   "heat": 64,
+   "cold": 36,
+   "salt": 75,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "methylobacterium-radiotolerans.json",
+  "name": "Methylobacterium radiotolerans",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 71,
+  "predicted_ogt_c": 33,
+  "acidic_excess": 0.0022,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   28.0,
+   30.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "8/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 64,
+   "UvrA": 57,
+   "UvrB": 55,
+   "RecN": 33,
+   "RecF": 31,
+   "RecQ": 46,
+   "RuvB": 58,
+   "GyrA": 41,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 29,
+   "EctB": 31,
+   "PolA": 43,
+   "LexA": 38
+  },
+  "scores": {
+   "heat": 23,
+   "cold": 77,
+   "salt": 27,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "moritella-marina.json",
+  "name": "Moritella marina",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 40.5,
+  "predicted_ogt_c": 24,
+  "acidic_excess": 0.0192,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   5.0,
+   22.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "7/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 60,
+   "UvrA": 54,
+   "UvrB": 54,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": 48,
+   "RuvB": 57,
+   "GyrA": 46,
+   "PolA": null,
+   "LexA": 34
+  },
+  "weak": {
+   "Rgy": 30,
+   "EctB": 35,
+   "RecN": 30,
+   "RecF": 28,
+   "PolA": 45
+  },
+  "scores": {
+   "heat": 10,
+   "cold": 90,
+   "salt": 73,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "mycobacterium-tuberculosis.json",
+  "name": "Mycobacterium tuberculosis",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 65.5,
+  "predicted_ogt_c": 22,
+  "acidic_excess": 0.0116,
+  "measured_optimum_c": null,
+  "measured_growth_c": null,
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "8/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 67,
+   "UvrA": 57,
+   "UvrB": 55,
+   "RecN": 34,
+   "RecF": 34,
+   "RecQ": null,
+   "RuvB": 54,
+   "GyrA": 48,
+   "PolA": null,
+   "LexA": 31
+  },
+  "weak": {
+   "IrrE": 38,
+   "Rgy": 29,
+   "EctB": 30,
+   "RecQ": 37,
+   "PolA": 40
+  },
+  "scores": {
+   "heat": 7,
+   "cold": 93,
+   "salt": 56,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "myxococcus-xanthus.json",
+  "name": "Myxococcus xanthus",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 69,
+  "predicted_ogt_c": 41,
+  "acidic_excess": 0.0071,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   25.0,
+   37.0
+  ],
+  "max_nacl_percent": 2.0,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "9/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 61,
+   "UvrA": 52,
+   "UvrB": 56,
+   "RecN": 36,
+   "RecF": 35,
+   "RecQ": null,
+   "RuvB": 59,
+   "GyrA": 47,
+   "PolA": 39,
+   "LexA": 34
+  },
+  "weak": {
+   "Rgy": 27,
+   "EctB": 31,
+   "RecQ": 44
+  },
+  "scores": {
+   "heat": 41,
+   "cold": 59,
+   "salt": 39,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "natranaerobius-thermophilus.json",
+  "name": "Natranaerobius thermophilus",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 36.5,
+  "predicted_ogt_c": 53,
+  "acidic_excess": 0.0361,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   50.0,
+   50.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "7/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 63,
+   "UvrA": 56,
+   "UvrB": 57,
+   "RecN": 31,
+   "RecF": 31,
+   "RecQ": null,
+   "RuvB": 58,
+   "GyrA": 49,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 32,
+   "EctB": 31,
+   "RecQ": 20,
+   "PolA": 45,
+   "LexA": 28
+  },
+  "scores": {
+   "heat": 65,
+   "cold": 35,
+   "salt": 90,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "natrialba-magadii.json",
+  "name": "Natrialba magadii",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 61,
+  "predicted_ogt_c": 44,
+  "acidic_excess": 0.1028,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   30.0,
+   45.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "3/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": 52,
+   "UvrB": 55,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": 45,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 26,
+   "EctB": 33,
+   "RecA": 45,
+   "RecF": 35,
+   "RecQ": 26,
+   "RuvB": 39
+  },
+  "scores": {
+   "heat": 46,
+   "cold": 54,
+   "salt": 100,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "natronomonas-pharaonis.json",
+  "name": "Natronomonas pharaonis",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 63,
+  "predicted_ogt_c": 47,
+  "acidic_excess": 0.0936,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   30.0,
+   37.0
+  ],
+  "max_nacl_percent": 6.0,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "3/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": 54,
+   "UvrB": 53,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": 44,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 24,
+   "EctB": 29,
+   "RecA": 27,
+   "RecN": 27,
+   "RecF": 28,
+   "RuvB": 41
+  },
+  "scores": {
+   "heat": 57,
+   "cold": 43,
+   "salt": 99,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "nitrosopumilus-maritimus.json",
+  "name": "Nitrosopumilus maritimus",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 34,
+  "predicted_ogt_c": 23,
+  "acidic_excess": 0.0164,
+  "measured_optimum_c": [
+   32.0,
+   32.0
+  ],
+  "measured_growth_c": [
+   15.0,
+   35.0
+  ],
+  "max_nacl_percent": 37.0,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "3/3",
+   "repair": "2/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": 41,
+   "EctB": 53,
+   "EctC": 52,
+   "RecA": null,
+   "UvrA": 52,
+   "UvrB": 51,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": null,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "RecA": 27,
+   "RecQ": 25,
+   "RuvB": 29
+  },
+  "scores": {
+   "heat": 8,
+   "cold": 92,
+   "salt": 90,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "photobacterium-profundum.json",
+  "name": "Photobacterium profundum",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 41.5,
+  "predicted_ogt_c": 26,
+  "acidic_excess": 0.0196,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   5.0,
+   15.0
+  ],
+  "max_nacl_percent": 4.0,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "3/3",
+   "repair": "8/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": 37,
+   "EctB": 55,
+   "EctC": 54,
+   "RecA": 59,
+   "UvrA": 54,
+   "UvrB": 54,
+   "RecN": 31,
+   "RecF": null,
+   "RecQ": 48,
+   "RuvB": 58,
+   "GyrA": 47,
+   "PolA": null,
+   "LexA": 32
+  },
+  "weak": {
+   "Rgy": 30,
+   "RecF": 29,
+   "PolA": 46
+  },
+  "scores": {
+   "heat": 11,
+   "cold": 89,
+   "salt": 90,
+   "radiation": 0
   }
  },
  {
@@ -937,6 +3795,7 @@
    55.0,
    55.0
   ],
+  "max_nacl_percent": null,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -972,6 +3831,183 @@
    "UvrA": 32,
    "RecF": 30,
    "RecQ": 23
+  },
+  "scores": {
+   "heat": 68,
+   "cold": 32,
+   "salt": 24,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "planococcus-halocryophilus.json",
+  "name": "Planococcus halocryophilus",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 40,
+  "predicted_ogt_c": 45,
+  "acidic_excess": 0.0268,
+  "measured_optimum_c": [
+   25.0,
+   25.0
+  ],
+  "measured_growth_c": [
+   -10.0,
+   37.0
+  ],
+  "max_nacl_percent": 19.0,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "7/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 61,
+   "UvrA": 56,
+   "UvrB": 59,
+   "RecN": 34,
+   "RecF": null,
+   "RecQ": 42,
+   "RuvB": 57,
+   "GyrA": 49,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 29,
+   "EctB": 28,
+   "RecF": 30,
+   "PolA": 43,
+   "LexA": 30
+  },
+  "scores": {
+   "heat": 50,
+   "cold": 50,
+   "salt": 82,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "polaromonas-naphthalenivorans.json",
+  "name": "Polaromonas naphthalenivorans",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 61.5,
+  "predicted_ogt_c": 21,
+  "acidic_excess": 0.0005,
+  "measured_optimum_c": [
+   20.0,
+   20.0
+  ],
+  "measured_growth_c": [
+   4.0,
+   25.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "8/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 58,
+   "UvrA": 53,
+   "UvrB": 54,
+   "RecN": 33,
+   "RecF": null,
+   "RecQ": 54,
+   "RuvB": 62,
+   "GyrA": 42,
+   "PolA": null,
+   "LexA": 31
+  },
+  "weak": {
+   "IrrE": 27,
+   "Rgy": 23,
+   "EctB": 35,
+   "PolA": 46
+  },
+  "scores": {
+   "heat": 5,
+   "cold": 95,
+   "salt": 20,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "prochlorococcus-marinus.json",
+  "name": "Prochlorococcus marinus",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 31,
+  "predicted_ogt_c": 39,
+  "acidic_excess": -0.0103,
+  "measured_optimum_c": null,
+  "measured_growth_c": null,
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "5/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 54,
+   "UvrA": 54,
+   "UvrB": 54,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": 47,
+   "GyrA": 42,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 29,
+   "EctB": 27,
+   "RecN": 26,
+   "RecF": 27,
+   "PolA": 43,
+   "LexA": 30
+  },
+  "scores": {
+   "heat": 38,
+   "cold": 62,
+   "salt": 0,
+   "radiation": 0
   }
  },
  {
@@ -987,6 +4023,7 @@
    22.0,
    25.0
   ],
+  "max_nacl_percent": null,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -1019,6 +4056,12 @@
    "Rgy": 30,
    "EctB": 28,
    "RecF": 28
+  },
+  "scores": {
+   "heat": 5,
+   "cold": 95,
+   "salt": 66,
+   "radiation": 0
   }
  },
  {
@@ -1034,6 +4077,7 @@
    7.0,
    45.0
   ],
+  "max_nacl_percent": 6.0,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -1066,6 +4110,12 @@
    "Rgy": 29,
    "EctB": 39,
    "PolA": 47
+  },
+  "scores": {
+   "heat": 64,
+   "cold": 36,
+   "salt": 50,
+   "radiation": 0
   }
  },
  {
@@ -1084,6 +4134,7 @@
    20.0,
    22.0
   ],
+  "max_nacl_percent": 7.25,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -1117,6 +4168,235 @@
    "EctB": 32,
    "RecF": 26,
    "RecQ": 22
+  },
+  "scores": {
+   "heat": 1,
+   "cold": 99,
+   "salt": 77,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "psychroflexus-torquis.json",
+  "name": "Psychroflexus torquis",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 34.5,
+  "predicted_ogt_c": 30,
+  "acidic_excess": 0.0129,
+  "measured_optimum_c": null,
+  "measured_growth_c": null,
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "7/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 55,
+   "UvrA": 51,
+   "UvrB": 52,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": 41,
+   "RuvB": 58,
+   "GyrA": 47,
+   "PolA": 35,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 30,
+   "EctB": 27,
+   "RecN": 30,
+   "RecF": 27,
+   "LexA": 31
+  },
+  "scores": {
+   "heat": 16,
+   "cold": 84,
+   "salt": 59,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "psychromonas-ingrahamii.json",
+  "name": "Psychromonas ingrahamii",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 40,
+  "predicted_ogt_c": 27,
+  "acidic_excess": 0.0109,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   10.0,
+   10.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "6/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 62,
+   "UvrA": 53,
+   "UvrB": 54,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": 47,
+   "RuvB": 58,
+   "GyrA": 44,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 30,
+   "EctB": 35,
+   "RecN": 30,
+   "RecF": 29,
+   "PolA": 46,
+   "LexA": 39
+  },
+  "scores": {
+   "heat": 12,
+   "cold": 88,
+   "salt": 55,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "pyrobaculum-aerophilum.json",
+  "name": "Pyrobaculum aerophilum",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 51.5,
+  "predicted_ogt_c": 92,
+  "acidic_excess": -0.0092,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   95.0,
+   98.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "1/1",
+   "salt": "0/3",
+   "repair": "0/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 44,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": null,
+   "UvrB": null,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": null,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "EctB": 32,
+   "RecA": 30,
+   "UvrA": 39,
+   "RecF": 41,
+   "RuvB": 29
+  },
+  "scores": {
+   "heat": 90,
+   "cold": 10,
+   "salt": 1,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "pyrococcus-abyssi.json",
+  "name": "Pyrococcus abyssi",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 44.5,
+  "predicted_ogt_c": 101,
+  "acidic_excess": -0.0004,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   95.0,
+   95.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "1/1",
+   "salt": "0/3",
+   "repair": "0/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 86,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": null,
+   "UvrB": null,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": null,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "EctB": 32,
+   "RecA": 30,
+   "UvrA": 39,
+   "UvrB": 36,
+   "RecQ": 25,
+   "LexA": 38
+  },
+  "scores": {
+   "heat": 96,
+   "cold": 4,
+   "salt": 16,
+   "radiation": 0
   }
  },
  {
@@ -1132,6 +4412,7 @@
    95.0,
    97.0
   ],
+  "max_nacl_percent": null,
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
@@ -1167,6 +4448,183 @@
    "UvrB": 26,
    "RecQ": 32,
    "LexA": 40
+  },
+  "scores": {
+   "heat": 92,
+   "cold": 8,
+   "salt": 18,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "pyrococcus-horikoshii.json",
+  "name": "Pyrococcus horikoshii",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 42,
+  "predicted_ogt_c": 100,
+  "acidic_excess": -0.0028,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   95.0,
+   95.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "1/1",
+   "salt": "0/3",
+   "repair": "0/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 85,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": null,
+   "UvrB": null,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": null,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "EctB": 30,
+   "RecA": 30,
+   "UvrA": 29,
+   "UvrB": 34,
+   "RecQ": 25,
+   "LexA": 42
+  },
+  "scores": {
+   "heat": 95,
+   "cold": 5,
+   "salt": 11,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "pyrolobus-fumarii.json",
+  "name": "Pyrolobus fumarii",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 55,
+  "predicted_ogt_c": 114,
+  "acidic_excess": -0.0043,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   103.0,
+   103.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "1/1",
+   "salt": "0/3",
+   "repair": "0/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 41,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": null,
+   "UvrB": null,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": null,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "EctB": 29,
+   "RecA": 27,
+   "UvrA": 31,
+   "RecQ": 26,
+   "RuvB": 29
+  },
+  "scores": {
+   "heat": 100,
+   "cold": 0,
+   "salt": 7,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "rubrobacter-radiotolerans.json",
+  "name": "Rubrobacter radiotolerans",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 66.5,
+  "predicted_ogt_c": 70,
+  "acidic_excess": 0.0259,
+  "measured_optimum_c": [
+   45.0,
+   50.0
+  ],
+  "measured_growth_c": [
+   25.0,
+   50.0
+  ],
+  "max_nacl_percent": 10.0,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "8/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 62,
+   "UvrA": 56,
+   "UvrB": 59,
+   "RecN": 34,
+   "RecF": 35,
+   "RecQ": null,
+   "RuvB": 58,
+   "GyrA": 50,
+   "PolA": null,
+   "LexA": 34
+  },
+  "weak": {
+   "Rgy": 27,
+   "EctB": 31,
+   "RecQ": 50,
+   "PolA": 44
+  },
+  "scores": {
+   "heat": 76,
+   "cold": 24,
+   "salt": 81,
+   "radiation": 0
   }
  },
  {
@@ -1185,6 +4643,7 @@
    40.0,
    70.0
   ],
+  "max_nacl_percent": 6.0,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -1218,6 +4677,68 @@
    "EctB": 38,
    "RecQ": 25,
    "PolA": 45
+  },
+  "scores": {
+   "heat": 85,
+   "cold": 15,
+   "salt": 62,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "saccharolobus-solfataricus.json",
+  "name": "Saccharolobus solfataricus",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 36,
+  "predicted_ogt_c": 84,
+  "acidic_excess": -0.0064,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   70.0,
+   80.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "1/1",
+   "salt": "0/3",
+   "repair": "0/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 40,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": null,
+   "UvrB": null,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": null,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "EctB": 30,
+   "RecA": 29,
+   "UvrA": 30,
+   "RecQ": 25,
+   "RuvB": 31
+  },
+  "scores": {
+   "heat": 82,
+   "cold": 18,
+   "salt": 4,
+   "radiation": 0
   }
  },
  {
@@ -1233,6 +4754,7 @@
    37.0,
    41.0
   ],
+  "max_nacl_percent": null,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -1266,6 +4788,291 @@
    "EctB": 27,
    "PolA": 45,
    "LexA": 26
+  },
+  "scores": {
+   "heat": 43,
+   "cold": 57,
+   "salt": 91,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "salinicoccus-roseus.json",
+  "name": "Salinicoccus roseus",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 50,
+  "predicted_ogt_c": 51,
+  "acidic_excess": 0.0408,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   10.0,
+   41.0
+  ],
+  "max_nacl_percent": 10.0,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "8/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 60,
+   "UvrA": 56,
+   "UvrB": 57,
+   "RecN": null,
+   "RecF": 31,
+   "RecQ": 36,
+   "RuvB": 58,
+   "GyrA": 46,
+   "PolA": null,
+   "LexA": 31
+  },
+  "weak": {
+   "Rgy": 28,
+   "EctB": 29,
+   "RecN": 29,
+   "PolA": 45
+  },
+  "scores": {
+   "heat": 62,
+   "cold": 38,
+   "salt": 91,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "salmonella-enterica.json",
+  "name": "Salmonella enterica",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 52,
+  "predicted_ogt_c": 33,
+  "acidic_excess": 0.0085,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   10.0,
+   41.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "7/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 61,
+   "UvrA": 55,
+   "UvrB": 56,
+   "RecN": 32,
+   "RecF": null,
+   "RecQ": 47,
+   "RuvB": 57,
+   "GyrA": 48,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 29,
+   "EctA": 34,
+   "EctB": 31,
+   "RecF": 29,
+   "PolA": 48,
+   "LexA": 35
+  },
+  "scores": {
+   "heat": 23,
+   "cold": 77,
+   "salt": 47,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "shewanella-frigidimarina.json",
+  "name": "Shewanella frigidimarina",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 41.5,
+  "predicted_ogt_c": 20,
+  "acidic_excess": 0.0187,
+  "measured_optimum_c": [
+   20.0,
+   20.0
+  ],
+  "measured_growth_c": [
+   4.0,
+   28.0
+  ],
+  "max_nacl_percent": 3.5,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "7/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 59,
+   "UvrA": 54,
+   "UvrB": 55,
+   "RecN": 31,
+   "RecF": null,
+   "RecQ": 48,
+   "RuvB": 60,
+   "GyrA": 46,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "IrrE": 34,
+   "Rgy": 29,
+   "EctB": 31,
+   "RecF": 28,
+   "PolA": 45,
+   "LexA": 30
+  },
+  "scores": {
+   "heat": 2,
+   "cold": 98,
+   "salt": 72,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "shewanella-oneidensis.json",
+  "name": "Shewanella oneidensis",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 46,
+  "predicted_ogt_c": 24,
+  "acidic_excess": 0.0146,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   5.0,
+   30.0
+  ],
+  "max_nacl_percent": 2.0,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "8/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 61,
+   "UvrA": 55,
+   "UvrB": 57,
+   "RecN": 33,
+   "RecF": null,
+   "RecQ": 48,
+   "RuvB": 59,
+   "GyrA": 46,
+   "PolA": null,
+   "LexA": 31
+  },
+  "weak": {
+   "Rgy": 29,
+   "EctA": 32,
+   "EctB": 32,
+   "RecF": 30,
+   "PolA": 46
+  },
+  "scores": {
+   "heat": 10,
+   "cold": 90,
+   "salt": 63,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "spiribacter-salinus.json",
+  "name": "Spiribacter salinus",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 62.5,
+  "predicted_ogt_c": 48,
+  "acidic_excess": 0.0281,
+  "measured_optimum_c": null,
+  "measured_growth_c": null,
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "2/3",
+   "repair": "9/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": 41,
+   "EctB": null,
+   "EctC": 45,
+   "RecA": 60,
+   "UvrA": 53,
+   "UvrB": 58,
+   "RecN": 35,
+   "RecF": 32,
+   "RecQ": 56,
+   "RuvB": 59,
+   "GyrA": 45,
+   "PolA": null,
+   "LexA": 31
+  },
+  "weak": {
+   "Rgy": 29,
+   "EctB": 33,
+   "PolA": 47
+  },
+  "scores": {
+   "heat": 59,
+   "cold": 41,
+   "salt": 84,
+   "radiation": 0
   }
  },
  {
@@ -1284,6 +5091,7 @@
    22.0,
    45.0
   ],
+  "max_nacl_percent": null,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -1318,6 +5126,12 @@
    "UvrB": 58,
    "PolA": 46,
    "LexA": 31
+  },
+  "scores": {
+   "heat": 20,
+   "cold": 80,
+   "salt": 61,
+   "radiation": 0
   }
  },
  {
@@ -1336,6 +5150,7 @@
    28.0,
    30.0
   ],
+  "max_nacl_percent": 7.5,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -1367,6 +5182,12 @@
   "weak": {
    "Rgy": 30,
    "LexA": 29
+  },
+  "scores": {
+   "heat": 25,
+   "cold": 75,
+   "salt": 90,
+   "radiation": 0
   }
  },
  {
@@ -1382,6 +5203,7 @@
    70.0,
    70.0
   ],
+  "max_nacl_percent": null,
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
@@ -1416,6 +5238,69 @@
    "UvrA": 28,
    "RecQ": 23,
    "RuvB": 32
+  },
+  "scores": {
+   "heat": 79,
+   "cold": 21,
+   "salt": 8,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "thermococcus-barophilus.json",
+  "name": "Thermococcus barophilus",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 41.5,
+  "predicted_ogt_c": 90,
+  "acidic_excess": -0.0019,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   85.0,
+   85.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "1/1",
+   "salt": "0/3",
+   "repair": "0/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 79,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": null,
+   "UvrB": null,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": null,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "EctB": 32,
+   "RecA": 32,
+   "UvrA": 28,
+   "UvrB": 29,
+   "RecF": 33,
+   "RecQ": 26
+  },
+  "scores": {
+   "heat": 88,
+   "cold": 12,
+   "salt": 13,
+   "radiation": 0
   }
  },
  {
@@ -1431,6 +5316,7 @@
    85.0,
    88.0
   ],
+  "max_nacl_percent": null,
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
@@ -1467,6 +5353,12 @@
    "RecQ": 25,
    "RuvB": 27,
    "LexA": 37
+  },
+  "scores": {
+   "heat": 91,
+   "cold": 9,
+   "salt": 32,
+   "radiation": 0
   }
  },
  {
@@ -1482,6 +5374,7 @@
    85.0,
    85.0
   ],
+  "max_nacl_percent": null,
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
@@ -1517,6 +5410,293 @@
    "UvrB": 26,
    "RecQ": 24,
    "LexA": 37
+  },
+  "scores": {
+   "heat": 90,
+   "cold": 10,
+   "salt": 48,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "thermodesulfovibrio-yellowstonii.json",
+  "name": "Thermodesulfovibrio yellowstonii",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 34,
+  "predicted_ogt_c": 63,
+  "acidic_excess": -0.0072,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   60.0,
+   60.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "6/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 59,
+   "UvrA": 38,
+   "UvrB": 51,
+   "RecN": 33,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": 58,
+   "GyrA": 49,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "EctB": 32,
+   "PolA": 39
+  },
+  "scores": {
+   "heat": 73,
+   "cold": 27,
+   "salt": 2,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "thermomicrobium-roseum.json",
+  "name": "Thermomicrobium roseum",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 64.5,
+  "predicted_ogt_c": 87,
+  "acidic_excess": 0.0081,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   70.0,
+   70.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "7/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 63,
+   "UvrA": 57,
+   "UvrB": 59,
+   "RecN": 37,
+   "RecF": 30,
+   "RecQ": null,
+   "RuvB": 58,
+   "GyrA": 50,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 32,
+   "EctB": 32,
+   "RecQ": 33,
+   "PolA": 49,
+   "LexA": 26
+  },
+  "scores": {
+   "heat": 84,
+   "cold": 16,
+   "salt": 45,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "thermoplasma-acidophilum.json",
+  "name": "Thermoplasma acidophilum",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 46,
+  "predicted_ogt_c": 55,
+  "acidic_excess": 0.0064,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   55.0,
+   55.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "1/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": null,
+   "UvrB": null,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": 41,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 24,
+   "EctB": 29,
+   "RecA": 28,
+   "UvrA": 32,
+   "RecF": 24,
+   "RecQ": 24,
+   "RuvB": 25
+  },
+  "scores": {
+   "heat": 67,
+   "cold": 33,
+   "salt": 37,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "thermoproteus-tenax.json",
+  "name": "Thermoproteus tenax",
+  "status": "ok",
+  "domain": "Archaea",
+  "gc_percent": 55,
+  "predicted_ogt_c": 89,
+  "acidic_excess": -0.0052,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   85.0,
+   85.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "1/1",
+   "salt": "0/3",
+   "repair": "0/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 42,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": null,
+   "UvrA": null,
+   "UvrB": null,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": null,
+   "GyrA": null,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "EctB": 31,
+   "RecA": 28,
+   "UvrA": 28,
+   "UvrB": 36,
+   "RecF": 38,
+   "RecQ": 24,
+   "RuvB": 41
+  },
+  "scores": {
+   "heat": 86,
+   "cold": 14,
+   "salt": 5,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "thermosipho-africanus.json",
+  "name": "Thermosipho africanus",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 31,
+  "predicted_ogt_c": 67,
+  "acidic_excess": -0.0015,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   75.0,
+   75.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "6/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 59,
+   "UvrA": 51,
+   "UvrB": 53,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": 53,
+   "GyrA": 43,
+   "PolA": 35,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 43,
+   "EctB": 26,
+   "RecN": 27,
+   "RecQ": 32,
+   "LexA": 28
+  },
+  "scores": {
+   "heat": 74,
+   "cold": 26,
+   "salt": 14,
+   "radiation": 0
   }
  },
  {
@@ -1532,6 +5712,7 @@
    80.0,
    80.0
   ],
+  "max_nacl_percent": null,
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
@@ -1564,6 +5745,120 @@
    "EctB": 30,
    "PolA": 42,
    "LexA": 28
+  },
+  "scores": {
+   "heat": 84,
+   "cold": 16,
+   "salt": 43,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "thermotoga-neapolitana.json",
+  "name": "Thermotoga neapolitana",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 47,
+  "predicted_ogt_c": 89,
+  "acidic_excess": 0.0073,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   85.0,
+   85.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "1/1",
+   "salt": "0/3",
+   "repair": "5/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": 39,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 56,
+   "UvrA": 53,
+   "UvrB": 53,
+   "RecN": null,
+   "RecF": null,
+   "RecQ": null,
+   "RuvB": 57,
+   "GyrA": 46,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "PolA": 42,
+   "LexA": 28
+  },
+  "scores": {
+   "heat": 86,
+   "cold": 14,
+   "salt": 40,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "thermus-aquaticus.json",
+  "name": "Thermus aquaticus",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 68,
+  "predicted_ogt_c": 99,
+  "acidic_excess": 0.0011,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   70.0,
+   70.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "1/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "8/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": 43,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 70,
+   "UvrA": 69,
+   "UvrB": 65,
+   "RecN": 47,
+   "RecF": 42,
+   "RecQ": null,
+   "RuvB": 75,
+   "GyrA": 58,
+   "PolA": 47,
+   "LexA": null
+  },
+  "weak": {
+   "IrrE": 33,
+   "Rgy": 32,
+   "EctB": 33,
+   "RecQ": 38
+  },
+  "scores": {
+   "heat": 93,
+   "cold": 7,
+   "salt": 21,
+   "radiation": 17
   }
  },
  {
@@ -1579,6 +5874,7 @@
    60.0,
    75.0
   ],
+  "max_nacl_percent": null,
   "markers": {
    "radiation": "0/6",
    "heat": "1/1",
@@ -1611,6 +5907,175 @@
    "DdrA": 46,
    "EctB": 34,
    "RecQ": 28
+  },
+  "scores": {
+   "heat": 97,
+   "cold": 3,
+   "salt": 24,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "thioalkalivibrio-sulfidiphilus.json",
+  "name": "Thioalkalivibrio sulfidiphilus",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 65,
+  "predicted_ogt_c": 58,
+  "acidic_excess": 0.0164,
+  "measured_optimum_c": [
+   35.0,
+   35.0
+  ],
+  "measured_growth_c": [
+   35.0,
+   35.0
+  ],
+  "max_nacl_percent": 8.7,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "10/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 59,
+   "UvrA": 56,
+   "UvrB": 57,
+   "RecN": 35,
+   "RecF": 33,
+   "RecQ": 59,
+   "RuvB": 59,
+   "GyrA": 46,
+   "PolA": 38,
+   "LexA": 38
+  },
+  "weak": {
+   "Rgy": 29,
+   "EctB": 30
+  },
+  "scores": {
+   "heat": 69,
+   "cold": 31,
+   "salt": 68,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "truepera-radiovictrix.json",
+  "name": "Truepera radiovictrix",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 68,
+  "predicted_ogt_c": 61,
+  "acidic_excess": 0.0105,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   25.0,
+   45.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "1/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "10/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": 34,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 66,
+   "UvrA": 67,
+   "UvrB": 69,
+   "RecN": 46,
+   "RecF": 50,
+   "RecQ": 62,
+   "RuvB": 77,
+   "GyrA": 62,
+   "PolA": 49,
+   "LexA": 32
+  },
+  "weak": {
+   "Rgy": 29,
+   "EctB": 30
+  },
+  "scores": {
+   "heat": 70,
+   "cold": 30,
+   "salt": 55,
+   "radiation": 17
+  }
+ },
+ {
+  "file": "vibrio-cholerae.json",
+  "name": "Vibrio cholerae",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 47.5,
+  "predicted_ogt_c": 33,
+  "acidic_excess": 0.0158,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   15.0,
+   41.0
+  ],
+  "max_nacl_percent": 8.0,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "3/3",
+   "repair": "8/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": 43,
+   "EctB": 54,
+   "EctC": 56,
+   "RecA": 60,
+   "UvrA": 55,
+   "UvrB": 55,
+   "RecN": 33,
+   "RecF": null,
+   "RecQ": 45,
+   "RuvB": 58,
+   "GyrA": 47,
+   "PolA": null,
+   "LexA": 32
+  },
+  "weak": {
+   "Rgy": 30,
+   "RecF": 28,
+   "PolA": 44
+  },
+  "scores": {
+   "heat": 23,
+   "cold": 77,
+   "salt": 90,
+   "radiation": 0
   }
  },
  {
@@ -1629,6 +6094,7 @@
    15.0,
    50.0
   ],
+  "max_nacl_percent": 10.0,
   "markers": {
    "radiation": "0/6",
    "heat": "0/1",
@@ -1661,6 +6127,68 @@
    "Rgy": 30,
    "PolA": 44,
    "LexA": 25
+  },
+  "scores": {
+   "heat": 46,
+   "cold": 54,
+   "salt": 90,
+   "radiation": 0
+  }
+ },
+ {
+  "file": "zymomonas-mobilis.json",
+  "name": "Zymomonas mobilis",
+  "status": "ok",
+  "domain": "Bacteria",
+  "gc_percent": 46,
+  "predicted_ogt_c": 21,
+  "acidic_excess": 0.0064,
+  "measured_optimum_c": null,
+  "measured_growth_c": [
+   28.0,
+   30.0
+  ],
+  "max_nacl_percent": null,
+  "markers": {
+   "radiation": "0/6",
+   "heat": "0/1",
+   "salt": "0/3",
+   "repair": "7/10"
+  },
+  "genes": {
+   "PprA": null,
+   "DdrA": null,
+   "DdrB": null,
+   "DdrC": null,
+   "DdrD": null,
+   "IrrE": null,
+   "Rgy": null,
+   "EctA": null,
+   "EctB": null,
+   "EctC": null,
+   "RecA": 61,
+   "UvrA": 57,
+   "UvrB": 54,
+   "RecN": 34,
+   "RecF": 31,
+   "RecQ": null,
+   "RuvB": 57,
+   "GyrA": 40,
+   "PolA": null,
+   "LexA": null
+  },
+  "weak": {
+   "Rgy": 30,
+   "EctB": 29,
+   "RecQ": 26,
+   "PolA": 45,
+   "LexA": 40
+  },
+  "scores": {
+   "heat": 5,
+   "cold": 95,
+   "salt": 37,
+   "radiation": 0
   }
  }
 ]

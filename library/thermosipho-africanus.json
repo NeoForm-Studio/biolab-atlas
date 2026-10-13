@@ -1,0 +1,195 @@
+{
+ "query": "Thermosipho africanus",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 2421,
+  "name": "Thermosipho africanus",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 7,
+  "uniprot_proteins": 1919,
+  "uniprot_reviewed": 186,
+  "sequences_16s": 4,
+  "papers": 140
+ },
+ "phenotype": {
+  "bacdive_id": 17052,
+  "url": "https://bacdive.dsmz.de/strain/17052",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   75.0,
+   75.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000021285.1",
+  "organism": "Thermosipho africanus TCF52B",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 2016657,
+  "gc_percent": 31,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_011653.1",
+    "length": 2016657,
+    "gc_percent": 31
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 1942,
+  "ivywrel": 0.4292,
+  "predicted_ogt_c": 67,
+  "acidic_excess": -0.0015
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_012579357.1",
+     "identity": 42.685,
+     "coverage": 55
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_012579391.1",
+     "identity": 26.225,
+     "coverage": 96
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 6,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_004101931.1",
+     "identity": 58.589,
+     "coverage": 88
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_012579551.1",
+     "identity": 51.227,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_012579372.1",
+     "identity": 53.404,
+     "coverage": 98
+    },
+    {
+     "name": "RecN",
+     "found": false,
+     "accession": "WP_004102681.1",
+     "identity": 26.953,
+     "coverage": 88
+    },
+    {
+     "name": "RecF",
+     "found": false
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_012580457.1",
+     "identity": 32.493,
+     "coverage": 40
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_193330478.1",
+     "identity": 53.481,
+     "coverage": 94
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_004102302.1",
+     "identity": 42.91,
+     "coverage": 99
+    },
+    {
+     "name": "PolA",
+     "found": true,
+     "accession": "WP_012579418.1",
+     "identity": 34.619,
+     "coverage": 98
+    },
+    {
+     "name": "LexA",
+     "found": false,
+     "accession": "WP_004102298.1",
+     "identity": 27.586,
+     "coverage": 93
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

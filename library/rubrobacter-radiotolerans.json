@@ -1,0 +1,193 @@
+{
+ "query": "Rubrobacter radiotolerans",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 42256,
+  "name": "Rubrobacter radiotolerans",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 4,
+  "uniprot_proteins": 3150,
+  "uniprot_reviewed": 1,
+  "sequences_16s": 4,
+  "papers": 132
+ },
+ "phenotype": {
+  "bacdive_id": 14035,
+  "url": "https://bacdive.dsmz.de/strain/14035",
+  "type_strain": true,
+  "optimum_temp_c": [
+   45.0,
+   50.0
+  ],
+  "growth_temp_c": [
+   25.0,
+   50.0
+  ],
+  "max_nacl_percent": 10.0
+ },
+ "genome": {
+  "accession": "GCF_900175965.1",
+  "organism": "Rubrobacter radiotolerans DSM 5868",
+  "level": "Contig",
+  "reference": true,
+  "size_bp": 3398074,
+  "gc_percent": 66.5,
+  "contigs": 4,
+  "replicons": [],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 3246,
+  "ivywrel": 0.4319,
+  "predicted_ogt_c": 70,
+  "acidic_excess": 0.0259
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_051589614.1",
+     "identity": 27.092,
+     "coverage": 38
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_038680278.1",
+     "identity": 30.843,
+     "coverage": 95
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 8,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_038681667.1",
+     "identity": 62.09,
+     "coverage": 92
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_232226522.1",
+     "identity": 55.925,
+     "coverage": 94
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_038682122.1",
+     "identity": 58.752,
+     "coverage": 97
+    },
+    {
+     "name": "RecN",
+     "found": true,
+     "accession": "WP_038681696.1",
+     "identity": 34.446,
+     "coverage": 94
+    },
+    {
+     "name": "RecF",
+     "found": true,
+     "accession": "WP_038679841.1",
+     "identity": 35.493,
+     "coverage": 95
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_051589435.1",
+     "identity": 50.282,
+     "coverage": 42
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_084264076.1",
+     "identity": 57.632,
+     "coverage": 96
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_084263559.1",
+     "identity": 49.564,
+     "coverage": 98
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "WP_038682134.1",
+     "identity": 44.282,
+     "coverage": 43
+    },
+    {
+     "name": "LexA",
+     "found": true,
+     "accession": "WP_143534048.1",
+     "identity": 34.286,
+     "coverage": 92
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

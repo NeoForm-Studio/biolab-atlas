@@ -1,0 +1,190 @@
+{
+ "query": "Thermococcus barophilus",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 55802,
+  "name": "Thermococcus barophilus",
+  "rank": "SPECIES",
+  "domain": "Archaea"
+ },
+ "inventory": {
+  "assemblies": 2,
+  "uniprot_proteins": 2268,
+  "uniprot_reviewed": 3,
+  "sequences_16s": 3,
+  "papers": 186
+ },
+ "phenotype": {
+  "bacdive_id": 16869,
+  "url": "https://bacdive.dsmz.de/strain/16869",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   85.0,
+   85.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000151105.2",
+  "organism": "Thermococcus barophilus MP",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 2064237,
+  "gc_percent": 41.5,
+  "contigs": 2,
+  "replicons": [
+   {
+    "name": "Chromosome",
+    "type": "Chromosome",
+    "accession": "NC_014804.1",
+    "length": 2010078,
+    "gc_percent": 42
+   },
+   {
+    "name": "pTBMP1",
+    "type": "Plasmid",
+    "accession": "NC_015471.1",
+    "length": 54159,
+    "gc_percent": 38.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2215,
+  "ivywrel": 0.4538,
+  "predicted_ogt_c": 90,
+  "acidic_excess": -0.0019
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 1,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": true,
+     "accession": "WP_013467038.1",
+     "identity": 78.501,
+     "coverage": 99
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_013467551.1",
+     "identity": 31.719,
+     "coverage": 94
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 0,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": false,
+     "accession": "WP_013468147.1",
+     "identity": 31.905,
+     "coverage": 52
+    },
+    {
+     "name": "UvrA",
+     "found": false,
+     "accession": "WP_013467786.1",
+     "identity": 28.261,
+     "coverage": 17
+    },
+    {
+     "name": "UvrB",
+     "found": false,
+     "accession": "WP_013466685.1",
+     "identity": 29.319,
+     "coverage": 25
+    },
+    {
+     "name": "RecN",
+     "found": false
+    },
+    {
+     "name": "RecF",
+     "found": false,
+     "accession": "WP_148221088.1",
+     "identity": 33.333,
+     "coverage": 21
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_013466905.1",
+     "identity": 26.154,
+     "coverage": 36
+    },
+    {
+     "name": "RuvB",
+     "found": false
+    },
+    {
+     "name": "GyrA",
+     "found": false
+    },
+    {
+     "name": "PolA",
+     "found": false
+    },
+    {
+     "name": "LexA",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

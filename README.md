@@ -67,6 +67,11 @@ For each name it:
 5. **Saves** `library/<species>.json` and rebuilds `library/index.json`. A species with no genome is saved as
    `no_genome`, with relatives that do have one.
 
+6. **Scores** each species after every run (`pipeline/score.py`): heat, cold, salt and radiation scores from 0 to 100
+   give its position among all profiled species. Heat and cold are checked against BacDive lab temperatures and the
+   result is written to `library/_validation.json` (ROC AUC; 0.5 is chance). Salt and radiation are not validated:
+   BacDive has too few salt records and no radiation measurements.
+
 These are signals that a genome resembles known extremophiles, not a determination that an organism is one.
 
 ## Sources and credits

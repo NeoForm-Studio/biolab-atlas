@@ -1,0 +1,180 @@
+{
+ "query": "Pyrolobus fumarii",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 54252,
+  "name": "Pyrolobus fumarii",
+  "rank": "SPECIES",
+  "domain": "Archaea"
+ },
+ "inventory": {
+  "assemblies": 1,
+  "uniprot_proteins": 1968,
+  "uniprot_reviewed": 0,
+  "sequences_16s": 3,
+  "papers": 135
+ },
+ "phenotype": {
+  "bacdive_id": 13523,
+  "url": "https://bacdive.dsmz.de/strain/13523",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   103.0,
+   103.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000223395.1",
+  "organism": "Pyrolobus fumarii 1A",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 1843267,
+  "gc_percent": 55,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "Chromosome",
+    "type": "Chromosome",
+    "accession": "NC_015931.1",
+    "length": 1843267,
+    "gc_percent": 55
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 1954,
+  "ivywrel": 0.4792,
+  "predicted_ogt_c": 114,
+  "acidic_excess": -0.0043
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 1,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": true,
+     "accession": "WP_014026200.1",
+     "identity": 40.683,
+     "coverage": 100
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_048192008.1",
+     "identity": 29.274,
+     "coverage": 99
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 0,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": false,
+     "accession": "WP_014026519.1",
+     "identity": 27.23,
+     "coverage": 54
+    },
+    {
+     "name": "UvrA",
+     "found": false,
+     "accession": "WP_014027111.1",
+     "identity": 30.921,
+     "coverage": 15
+    },
+    {
+     "name": "UvrB",
+     "found": false
+    },
+    {
+     "name": "RecN",
+     "found": false
+    },
+    {
+     "name": "RecF",
+     "found": false
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_014027171.1",
+     "identity": 26.301,
+     "coverage": 40
+    },
+    {
+     "name": "RuvB",
+     "found": false,
+     "accession": "WP_014027280.1",
+     "identity": 28.625,
+     "coverage": 76
+    },
+    {
+     "name": "GyrA",
+     "found": false
+    },
+    {
+     "name": "PolA",
+     "found": false
+    },
+    {
+     "name": "LexA",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

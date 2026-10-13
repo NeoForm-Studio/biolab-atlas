@@ -1,0 +1,210 @@
+{
+ "query": "Haloferax mediterranei",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 2252,
+  "name": "Haloferax mediterranei",
+  "rank": "SPECIES",
+  "domain": "Archaea"
+ },
+ "inventory": {
+  "assemblies": 5,
+  "uniprot_proteins": 7678,
+  "uniprot_reviewed": 52,
+  "sequences_16s": 21,
+  "papers": 944
+ },
+ "phenotype": {
+  "bacdive_id": 5932,
+  "url": "https://bacdive.dsmz.de/strain/5932",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   37.0,
+   37.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_005406325.1",
+  "organism": "Haloferax mediterranei ATCC 33500",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 3907473,
+  "gc_percent": 60.5,
+  "contigs": 4,
+  "replicons": [
+   {
+    "name": "Chromosome",
+    "type": "Chromosome",
+    "accession": "NZ_CP039139.1",
+    "length": 2948887,
+    "gc_percent": 61
+   },
+   {
+    "name": "pHME132",
+    "type": "Plasmid",
+    "accession": "NZ_CP039142.1",
+    "length": 131975,
+    "gc_percent": 57.5
+   },
+   {
+    "name": "pHME322",
+    "type": "Plasmid",
+    "accession": "NZ_CP039141.1",
+    "length": 321907,
+    "gc_percent": 58
+   },
+   {
+    "name": "pHME505",
+    "type": "Plasmid",
+    "accession": "NZ_CP039140.1",
+    "length": 504704,
+    "gc_percent": 57.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 3813,
+  "ivywrel": 0.4055,
+  "predicted_ogt_c": 45,
+  "acidic_excess": 0.0799
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_004057583.1",
+     "identity": 26.223,
+     "coverage": 37
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_004056400.1",
+     "identity": 35.561,
+     "coverage": 94
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 3,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": false,
+     "accession": "WP_049917493.1",
+     "identity": 30.622,
+     "coverage": 52
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_004058126.1",
+     "identity": 52.999,
+     "coverage": 98
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_004058788.1",
+     "identity": 54.799,
+     "coverage": 96
+    },
+    {
+     "name": "RecN",
+     "found": false
+    },
+    {
+     "name": "RecF",
+     "found": false,
+     "accession": "WP_004057407.1",
+     "identity": 29.808,
+     "coverage": 29
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_004572701.1",
+     "identity": 28.947,
+     "coverage": 18
+    },
+    {
+     "name": "RuvB",
+     "found": false,
+     "accession": "WP_004059863.1",
+     "identity": 32.432,
+     "coverage": 22
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_004056795.1",
+     "identity": 44.049,
+     "coverage": 98
+    },
+    {
+     "name": "PolA",
+     "found": false
+    },
+    {
+     "name": "LexA",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

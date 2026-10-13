@@ -1,0 +1,22 @@
+{
+ "heat": {
+  "auc": 0.99,
+  "positives": 32,
+  "negatives": 69,
+  "label": "BacDive reference temperature >= 50 C"
+ },
+ "cold": {
+  "auc": 0.93,
+  "positives": 8,
+  "negatives": 93,
+  "label": "BacDive reference temperature <= 20 C"
+ },
+ "salt": {
+  "auc": null,
+  "note": "not validated: BacDive salt records are too sparse and mix tolerance with need"
+ },
+ "radiation": {
+  "auc": null,
+  "note": "not validated: no lab radiation measurements in BacDive; markers only detect the Deinococcus strategy"
+ }
+}

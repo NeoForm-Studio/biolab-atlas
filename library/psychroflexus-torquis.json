@@ -1,0 +1,195 @@
+{
+ "query": "Psychroflexus torquis",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 57029,
+  "name": "Psychroflexus torquis",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 1,
+  "uniprot_proteins": 3457,
+  "uniprot_reviewed": 1,
+  "sequences_16s": 7,
+  "papers": 97
+ },
+ "phenotype": {
+  "bacdive_id": 168786,
+  "url": "https://bacdive.dsmz.de/strain/168786",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": null,
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000153485.2",
+  "organism": "Psychroflexus torquis ATCC 700755",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 4321832,
+  "gc_percent": 34.5,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_018721.1",
+    "length": 4321832,
+    "gc_percent": 34.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 3554,
+  "ivywrel": 0.3891,
+  "predicted_ogt_c": 30,
+  "acidic_excess": 0.0129
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_015023560.1",
+     "identity": 30.189,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_015023154.1",
+     "identity": 27.143,
+     "coverage": 97
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 7,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_015023881.1",
+     "identity": 55.255,
+     "coverage": 90
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_015026007.1",
+     "identity": 50.821,
+     "coverage": 95
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_015024862.1",
+     "identity": 52.273,
+     "coverage": 97
+    },
+    {
+     "name": "RecN",
+     "found": false,
+     "accession": "WP_015023203.1",
+     "identity": 29.799,
+     "coverage": 93
+    },
+    {
+     "name": "RecF",
+     "found": false,
+     "accession": "WP_015025612.1",
+     "identity": 26.765,
+     "coverage": 91
+    },
+    {
+     "name": "RecQ",
+     "found": true,
+     "accession": "WP_015023115.1",
+     "identity": 41.352,
+     "coverage": 77
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_015024538.1",
+     "identity": 58.333,
+     "coverage": 94
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_015025790.1",
+     "identity": 47.253,
+     "coverage": 99
+    },
+    {
+     "name": "PolA",
+     "found": true,
+     "accession": "WP_015024588.1",
+     "identity": 35.318,
+     "coverage": 98
+    },
+    {
+     "name": "LexA",
+     "found": false,
+     "accession": "WP_015025842.1",
+     "identity": 30.645,
+     "coverage": 59
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

@@ -1,0 +1,195 @@
+{
+ "query": "Caldicellulosiruptor saccharolyticus",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 44001,
+  "name": "Caldicellulosiruptor saccharolyticus",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 1,
+  "uniprot_proteins": 2653,
+  "uniprot_reviewed": 262,
+  "sequences_16s": 4,
+  "papers": 461
+ },
+ "phenotype": {
+  "bacdive_id": 18025,
+  "url": "https://bacdive.dsmz.de/strain/18025",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   65.0,
+   65.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000016545.1",
+  "organism": "Caldicellulosiruptor saccharolyticus DSM 8903",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 2970275,
+  "gc_percent": 35.5,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_009437.1",
+    "length": 2970275,
+    "gc_percent": 35.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2660,
+  "ivywrel": 0.426,
+  "predicted_ogt_c": 64,
+  "acidic_excess": -0.0039
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 1,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": true,
+     "accession": "WP_011917108.1",
+     "identity": 38.005,
+     "coverage": 99
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_011917883.1",
+     "identity": 29.71,
+     "coverage": 96
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 5,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_011917652.1",
+     "identity": 60.312,
+     "coverage": 88
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_011917504.1",
+     "identity": 55.578,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_011917505.1",
+     "identity": 57.447,
+     "coverage": 96
+    },
+    {
+     "name": "RecN",
+     "found": false,
+     "accession": "WP_011917419.1",
+     "identity": 29.783,
+     "coverage": 94
+    },
+    {
+     "name": "RecF",
+     "found": false,
+     "accession": "WP_011915635.1",
+     "identity": 29.755,
+     "coverage": 88
+    },
+    {
+     "name": "RecQ",
+     "found": false
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_011917093.1",
+     "identity": 58.199,
+     "coverage": 93
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_011915638.1",
+     "identity": 49.875,
+     "coverage": 98
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "WP_011917508.1",
+     "identity": 44.186,
+     "coverage": 50
+    },
+    {
+     "name": "LexA",
+     "found": false,
+     "accession": "WP_011917562.1",
+     "identity": 34.167,
+     "coverage": 57
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

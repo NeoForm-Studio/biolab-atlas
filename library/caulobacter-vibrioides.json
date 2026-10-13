@@ -1,0 +1,198 @@
+{
+ "query": "Caulobacter vibrioides",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 155892,
+  "name": "Caulobacter vibrioides",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 40,
+  "uniprot_proteins": 11757,
+  "uniprot_reviewed": 917,
+  "sequences_16s": 73,
+  "papers": 524
+ },
+ "phenotype": {
+  "bacdive_id": 2334,
+  "url": "https://bacdive.dsmz.de/strain/2334",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   25.0,
+   37.0
+  ],
+  "max_nacl_percent": 0.0
+ },
+ "genome": {
+  "accession": "GCF_000022005.1",
+  "organism": "Caulobacter vibrioides NA1000",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 4042929,
+  "gc_percent": 67,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_011916.1",
+    "length": 4042929,
+    "gc_percent": 67
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 3886,
+  "ivywrel": 0.3817,
+  "predicted_ogt_c": 23,
+  "acidic_excess": 0.0048
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "YP_002517908.1",
+     "identity": 27.955,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "YP_002515993.1",
+     "identity": 30.147,
+     "coverage": 95
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 7,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "YP_002516514.1",
+     "identity": 63.75,
+     "coverage": 88
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "YP_002518046.1",
+     "identity": 55.692,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "YP_002518449.1",
+     "identity": 54.118,
+     "coverage": 99
+    },
+    {
+     "name": "RecN",
+     "found": true,
+     "accession": "YP_002517435.1",
+     "identity": 35.209,
+     "coverage": 91
+    },
+    {
+     "name": "RecF",
+     "found": false,
+     "accession": "YP_002515533.1",
+     "identity": 28.022,
+     "coverage": 92
+    },
+    {
+     "name": "RecQ",
+     "found": true,
+     "accession": "YP_002518951.2",
+     "identity": 44.811,
+     "coverage": 73
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "YP_002518716.1",
+     "identity": 58.917,
+     "coverage": 94
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "YP_002517024.1",
+     "identity": 40.699,
+     "coverage": 98
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "YP_002518950.2",
+     "identity": 44.954,
+     "coverage": 47
+    },
+    {
+     "name": "LexA",
+     "found": false,
+     "accession": "YP_002517352.2",
+     "identity": 43.802,
+     "coverage": 57
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

@@ -1,0 +1,183 @@
+{
+ "query": "Archaeoglobus fulgidus",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 2234,
+  "name": "Archaeoglobus fulgidus",
+  "rank": "SPECIES",
+  "domain": "Archaea"
+ },
+ "inventory": {
+  "assemblies": 7,
+  "uniprot_proteins": 2411,
+  "uniprot_reviewed": 1038,
+  "sequences_16s": 13,
+  "papers": 3783
+ },
+ "phenotype": {
+  "bacdive_id": 18096,
+  "url": "https://bacdive.dsmz.de/strain/18096",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   80.0,
+   85.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000008665.1",
+  "organism": "Archaeoglobus fulgidus DSM 4304",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 2178400,
+  "gc_percent": 48.5,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "Chromosome",
+    "type": "Chromosome",
+    "accession": "NC_000917.1",
+    "length": 2178400,
+    "gc_percent": 48.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2461,
+  "ivywrel": 0.4481,
+  "predicted_ogt_c": 85,
+  "acidic_excess": 0.0124
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 1,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": true,
+     "accession": "WP_010878524.1",
+     "identity": 41.449,
+     "coverage": 94
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_010877594.1",
+     "identity": 32.346,
+     "coverage": 95
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 1,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": false,
+     "accession": "WP_010878493.1",
+     "identity": 27.982,
+     "coverage": 54
+    },
+    {
+     "name": "UvrA",
+     "found": false,
+     "accession": "WP_010878183.1",
+     "identity": 32.5,
+     "coverage": 12
+    },
+    {
+     "name": "UvrB",
+     "found": false
+    },
+    {
+     "name": "RecN",
+     "found": false
+    },
+    {
+     "name": "RecF",
+     "found": false
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_052270496.1",
+     "identity": 25.545,
+     "coverage": 37
+    },
+    {
+     "name": "RuvB",
+     "found": false,
+     "accession": "WP_165693599.1",
+     "identity": 36.0,
+     "coverage": 20
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_010877972.1",
+     "identity": 45.707,
+     "coverage": 97
+    },
+    {
+     "name": "PolA",
+     "found": false
+    },
+    {
+     "name": "LexA",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

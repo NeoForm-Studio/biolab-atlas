@@ -1,0 +1,202 @@
+{
+ "query": "Bacteroides fragilis",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 817,
+  "name": "Bacteroides fragilis",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 2574,
+  "uniprot_proteins": 9953,
+  "uniprot_reviewed": 667,
+  "sequences_16s": 452,
+  "papers": 26749
+ },
+ "phenotype": {
+  "bacdive_id": 170155,
+  "url": "https://bacdive.dsmz.de/strain/170155",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": null,
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000025985.1",
+  "organism": "Bacteroides fragilis NCTC 9343",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 5241700,
+  "gc_percent": 43,
+  "contigs": 2,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_003228.3",
+    "length": 5205140,
+    "gc_percent": 43
+   },
+   {
+    "name": "pBF9343",
+    "type": "Plasmid",
+    "accession": "NC_006873.1",
+    "length": 36560,
+    "gc_percent": 32
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 4160,
+  "ivywrel": 0.3976,
+  "predicted_ogt_c": 38,
+  "acidic_excess": 0.0062
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_010993765.1",
+     "identity": 29.584,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_010992062.1",
+     "identity": 30.203,
+     "coverage": 91
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 7,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_010992361.1",
+     "identity": 59.292,
+     "coverage": 92
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_005788190.1",
+     "identity": 52.729,
+     "coverage": 95
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_005788206.1",
+     "identity": 51.488,
+     "coverage": 97
+    },
+    {
+     "name": "RecN",
+     "found": true,
+     "accession": "WP_010993158.1",
+     "identity": 30.965,
+     "coverage": 94
+    },
+    {
+     "name": "RecF",
+     "found": false,
+     "accession": "WP_010992232.1",
+     "identity": 28.529,
+     "coverage": 90
+    },
+    {
+     "name": "RecQ",
+     "found": true,
+     "accession": "WP_041926332.1",
+     "identity": 42.954,
+     "coverage": 70
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_005783731.1",
+     "identity": 57.508,
+     "coverage": 94
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_005787886.1",
+     "identity": 47.81,
+     "coverage": 97
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "WP_005796991.1",
+     "identity": 46.535,
+     "coverage": 44
+    },
+    {
+     "name": "LexA",
+     "found": false,
+     "accession": "WP_005817184.1",
+     "identity": 28.926,
+     "coverage": 56
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

@@ -1,0 +1,198 @@
+{
+ "query": "Psychromonas ingrahamii",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 357794,
+  "name": "Psychromonas ingrahamii",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 1,
+  "uniprot_proteins": 3530,
+  "uniprot_reviewed": 412,
+  "sequences_16s": 3,
+  "papers": 190
+ },
+ "phenotype": {
+  "bacdive_id": 131084,
+  "url": "https://bacdive.dsmz.de/strain/131084",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   10.0,
+   10.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000015285.1",
+  "organism": "Psychromonas ingrahamii 37",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 4559598,
+  "gc_percent": 40,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_008709.1",
+    "length": 4559598,
+    "gc_percent": 40
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 3728,
+  "ivywrel": 0.3864,
+  "predicted_ogt_c": 27,
+  "acidic_excess": 0.0109
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_011770299.1",
+     "identity": 29.805,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_011770588.1",
+     "identity": 34.917,
+     "coverage": 95
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 6,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_011771619.1",
+     "identity": 61.774,
+     "coverage": 89
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_011768790.1",
+     "identity": 52.869,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_011769484.1",
+     "identity": 53.718,
+     "coverage": 96
+    },
+    {
+     "name": "RecN",
+     "found": false,
+     "accession": "WP_011769319.1",
+     "identity": 29.803,
+     "coverage": 94
+    },
+    {
+     "name": "RecF",
+     "found": false,
+     "accession": "WP_011771939.1",
+     "identity": 29.012,
+     "coverage": 86
+    },
+    {
+     "name": "RecQ",
+     "found": true,
+     "accession": "WP_011768626.1",
+     "identity": 47.282,
+     "coverage": 73
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_011769130.1",
+     "identity": 57.827,
+     "coverage": 94
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_011769515.1",
+     "identity": 44.268,
+     "coverage": 100
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "WP_011771427.1",
+     "identity": 45.545,
+     "coverage": 43
+    },
+    {
+     "name": "LexA",
+     "found": false,
+     "accession": "WP_011768541.1",
+     "identity": 38.71,
+     "coverage": 58
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

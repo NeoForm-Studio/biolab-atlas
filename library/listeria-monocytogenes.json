@@ -1,0 +1,198 @@
+{
+ "query": "Listeria monocytogenes",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 1639,
+  "name": "Listeria monocytogenes",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 79394,
+  "uniprot_proteins": 8405,
+  "uniprot_reviewed": 1919,
+  "sequences_16s": 733,
+  "papers": 75613
+ },
+ "phenotype": {
+  "bacdive_id": 6875,
+  "url": "https://bacdive.dsmz.de/strain/6875",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   30.0,
+   41.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000196035.1",
+  "organism": "Listeria monocytogenes EGD-e",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 2944528,
+  "gc_percent": 38,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_003210.1",
+    "length": 2944528,
+    "gc_percent": 38
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2867,
+  "ivywrel": 0.3986,
+  "predicted_ogt_c": 38,
+  "acidic_excess": 0.0206
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "NP_464800.1",
+     "identity": 28.734,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "NP_465113.1",
+     "identity": 27.913,
+     "coverage": 96
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 9,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "NP_464923.1",
+     "identity": 62.5,
+     "coverage": 88
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "NP_466011.1",
+     "identity": 54.592,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "NP_466012.1",
+     "identity": 57.822,
+     "coverage": 96
+    },
+    {
+     "name": "RecN",
+     "found": true,
+     "accession": "NP_464893.1",
+     "identity": 31.465,
+     "coverage": 94
+    },
+    {
+     "name": "RecF",
+     "found": true,
+     "accession": "NP_463538.1",
+     "identity": 32.425,
+     "coverage": 95
+    },
+    {
+     "name": "RecQ",
+     "found": true,
+     "accession": "NP_466279.1",
+     "identity": 38.206,
+     "coverage": 72
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "NP_465057.1",
+     "identity": 58.28,
+     "coverage": 94
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "NP_463540.1",
+     "identity": 47.316,
+     "coverage": 98
+    },
+    {
+     "name": "PolA",
+     "found": true,
+     "accession": "NP_465090.1",
+     "identity": 37.526,
+     "coverage": 99
+    },
+    {
+     "name": "LexA",
+     "found": false,
+     "accession": "NP_464827.1",
+     "identity": 31.343,
+     "coverage": 64
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

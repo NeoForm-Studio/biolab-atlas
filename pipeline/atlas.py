@@ -20,6 +20,7 @@ from datetime import date
 from pathlib import Path
 
 from genome import composition, find_markers, parse_fasta
+from score import score_library
 
 VERSION = "0.1"
 HERE = Path(__file__).resolve().parent
@@ -256,7 +257,7 @@ def slug(text):
 def rebuild_index():
     rows = []
     for path in sorted(LIBRARY.glob("*.json")):
-        if path.name == "index.json":
+        if path.name == "index.json" or path.name.startswith("_"):
             continue
         e = json.loads(path.read_text(encoding="utf-8"))
         rows.append({
@@ -269,12 +270,14 @@ def rebuild_index():
             "acidic_excess": (e.get("proteome") or {}).get("acidic_excess"),
             "measured_optimum_c": (e.get("phenotype") or {}).get("optimum_temp_c"),
             "measured_growth_c": (e.get("phenotype") or {}).get("growth_temp_c"),
+            "max_nacl_percent": (e.get("phenotype") or {}).get("max_nacl_percent"),
             "markers": {k: f"{v['found']}/{v['of']}" for k, v in e.get("markers", {}).items()},
             "genes": {g["name"]: (round(g["identity"]) if g["found"] else None)
                       for v in e.get("markers", {}).values() for g in v["genes"]},
             "weak": {g["name"]: round(g["identity"]) for v in e.get("markers", {}).values()
                      for g in v["genes"] if not g["found"] and "identity" in g},
         })
+    write_json(LIBRARY / "_validation.json", score_library(rows))
     write_json(LIBRARY / "index.json", rows)
 
 

@@ -1,0 +1,257 @@
+{
+ "query": "Polaromonas naphthalenivorans",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 216465,
+  "name": "Polaromonas naphthalenivorans",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 1,
+  "uniprot_proteins": 4888,
+  "uniprot_reviewed": 312,
+  "sequences_16s": 59,
+  "papers": 181
+ },
+ "phenotype": {
+  "bacdive_id": 2982,
+  "url": "https://bacdive.dsmz.de/strain/2982",
+  "type_strain": true,
+  "optimum_temp_c": [
+   20.0,
+   20.0
+  ],
+  "growth_temp_c": [
+   4.0,
+   25.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000015505.1",
+  "organism": "Polaromonas naphthalenivorans CJ2",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 5366143,
+  "gc_percent": 61.5,
+  "contigs": 9,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_008781.1",
+    "length": 4410291,
+    "gc_percent": 62.5
+   },
+   {
+    "name": "pPNAP01",
+    "type": "Plasmid",
+    "accession": "NC_008757.1",
+    "length": 353291,
+    "gc_percent": 57.5
+   },
+   {
+    "name": "pPNAP02",
+    "type": "Plasmid",
+    "accession": "NC_008758.1",
+    "length": 190172,
+    "gc_percent": 58
+   },
+   {
+    "name": "pPNAP03",
+    "type": "Plasmid",
+    "accession": "NC_008759.1",
+    "length": 171866,
+    "gc_percent": 57
+   },
+   {
+    "name": "pPNAP04",
+    "type": "Plasmid",
+    "accession": "NC_008760.1",
+    "length": 143747,
+    "gc_percent": 59
+   },
+   {
+    "name": "pPNAP05",
+    "type": "Plasmid",
+    "accession": "NC_008761.1",
+    "length": 58808,
+    "gc_percent": 59.5
+   },
+   {
+    "name": "pPNAP06",
+    "type": "Plasmid",
+    "accession": "NC_008762.1",
+    "length": 21611,
+    "gc_percent": 55.5
+   },
+   {
+    "name": "pPNAP07",
+    "type": "Plasmid",
+    "accession": "NC_008763.1",
+    "length": 9898,
+    "gc_percent": 57
+   },
+   {
+    "name": "pPNAP08",
+    "type": "Plasmid",
+    "accession": "NC_008764.1",
+    "length": 6459,
+    "gc_percent": 52
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 4953,
+  "ivywrel": 0.3801,
+  "predicted_ogt_c": 21,
+  "acidic_excess": 0.0005
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false,
+     "accession": "WP_011798566.1",
+     "identity": 26.95,
+     "coverage": 42
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_011803324.1",
+     "identity": 22.596,
+     "coverage": 30
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_011802009.1",
+     "identity": 34.762,
+     "coverage": 95
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 8,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_011803317.1",
+     "identity": 57.618,
+     "coverage": 98
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_011803189.1",
+     "identity": 52.717,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_011800964.1",
+     "identity": 53.985,
+     "coverage": 97
+    },
+    {
+     "name": "RecN",
+     "found": true,
+     "accession": "WP_011800318.1",
+     "identity": 32.844,
+     "coverage": 94
+    },
+    {
+     "name": "RecF",
+     "found": false
+    },
+    {
+     "name": "RecQ",
+     "found": true,
+     "accession": "WP_049763619.1",
+     "identity": 54.146,
+     "coverage": 72
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_011799933.1",
+     "identity": 61.83,
+     "coverage": 95
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_011802169.1",
+     "identity": 42.449,
+     "coverage": 97
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "WP_011800879.1",
+     "identity": 46.231,
+     "coverage": 43
+    },
+    {
+     "name": "LexA",
+     "found": true,
+     "accession": "WP_011801309.1",
+     "identity": 31.336,
+     "coverage": 93
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

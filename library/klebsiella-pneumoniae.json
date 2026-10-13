@@ -1,0 +1,240 @@
+{
+ "query": "Klebsiella pneumoniae",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 573,
+  "name": "Klebsiella pneumoniae",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 135233,
+  "uniprot_proteins": 33248,
+  "uniprot_reviewed": 963,
+  "sequences_16s": 7825,
+  "papers": 119364
+ },
+ "phenotype": {
+  "bacdive_id": 4970,
+  "url": "https://bacdive.dsmz.de/strain/4970",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   30.0,
+   37.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000240185.1",
+  "organism": "Klebsiella pneumoniae subsp. pneumoniae HS11286",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 5682322,
+  "gc_percent": 57,
+  "contigs": 7,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_016845.1",
+    "length": 5333942,
+    "gc_percent": 57.5
+   },
+   {
+    "name": "pKPHS1",
+    "type": "Plasmid",
+    "accession": "NC_016838.1",
+    "length": 122799,
+    "gc_percent": 49.5
+   },
+   {
+    "name": "pKPHS2",
+    "type": "Plasmid",
+    "accession": "NC_016846.1",
+    "length": 111195,
+    "gc_percent": 53.5
+   },
+   {
+    "name": "pKPHS3",
+    "type": "Plasmid",
+    "accession": "NC_016839.1",
+    "length": 105974,
+    "gc_percent": 52.5
+   },
+   {
+    "name": "pKPHS4",
+    "type": "Plasmid",
+    "accession": "NC_016840.1",
+    "length": 3751,
+    "gc_percent": 52
+   },
+   {
+    "name": "pKPHS5",
+    "type": "Plasmid",
+    "accession": "NC_016847.1",
+    "length": 3353,
+    "gc_percent": 43
+   },
+   {
+    "name": "pKPHS6",
+    "type": "Plasmid",
+    "accession": "NC_016841.1",
+    "length": 1308,
+    "gc_percent": 48
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 5779,
+  "ivywrel": 0.3945,
+  "predicted_ogt_c": 35,
+  "acidic_excess": 0.0063
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "YP_005226475.1",
+     "identity": 30.146,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "YP_005227056.1",
+     "identity": 39.07,
+     "coverage": 96
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 7,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "YP_005228402.1",
+     "identity": 61.059,
+     "coverage": 88
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "YP_005224582.1",
+     "identity": 55.271,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "YP_005225932.1",
+     "identity": 56.449,
+     "coverage": 96
+    },
+    {
+     "name": "RecN",
+     "found": true,
+     "accession": "YP_005228356.1",
+     "identity": 32.911,
+     "coverage": 94
+    },
+    {
+     "name": "RecF",
+     "found": false,
+     "accession": "YP_005229576.1",
+     "identity": 28.691,
+     "coverage": 95
+    },
+    {
+     "name": "RecQ",
+     "found": true,
+     "accession": "YP_005224463.1",
+     "identity": 46.423,
+     "coverage": 73
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "YP_005227696.1",
+     "identity": 57.729,
+     "coverage": 95
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "YP_005228006.1",
+     "identity": 47.962,
+     "coverage": 98
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "YP_005224321.1",
+     "identity": 47.015,
+     "coverage": 43
+    },
+    {
+     "name": "LexA",
+     "found": false,
+     "accession": "YP_005224566.1",
+     "identity": 40.594,
+     "coverage": 48
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

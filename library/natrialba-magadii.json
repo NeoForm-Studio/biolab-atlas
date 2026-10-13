@@ -1,0 +1,210 @@
+{
+ "query": "Natrialba magadii",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 13769,
+  "name": "Natrialba magadii",
+  "rank": "SPECIES",
+  "domain": "Archaea"
+ },
+ "inventory": {
+  "assemblies": 2,
+  "uniprot_proteins": 4208,
+  "uniprot_reviewed": 12,
+  "sequences_16s": 57,
+  "papers": 232
+ },
+ "phenotype": {
+  "bacdive_id": 5960,
+  "url": "https://bacdive.dsmz.de/strain/5960",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   30.0,
+   45.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000025625.1",
+  "organism": "Natrialba magadii ATCC 43099",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 4443643,
+  "gc_percent": 61,
+  "contigs": 4,
+  "replicons": [
+   {
+    "name": "Chromosome",
+    "type": "Chromosome",
+    "accession": "NC_013922.1",
+    "length": 3751858,
+    "gc_percent": 61.5
+   },
+   {
+    "name": "pNMAG01",
+    "type": "Plasmid",
+    "accession": "NC_013923.1",
+    "length": 378348,
+    "gc_percent": 60
+   },
+   {
+    "name": "pNMAG02",
+    "type": "Plasmid",
+    "accession": "NC_013924.1",
+    "length": 254950,
+    "gc_percent": 57
+   },
+   {
+    "name": "pNMAG03",
+    "type": "Plasmid",
+    "accession": "NC_013925.1",
+    "length": 58487,
+    "gc_percent": 62
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 4127,
+  "ivywrel": 0.405,
+  "predicted_ogt_c": 44,
+  "acidic_excess": 0.1028
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_004215386.1",
+     "identity": 25.843,
+     "coverage": 38
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_004214492.1",
+     "identity": 33.411,
+     "coverage": 98
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 3,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": false,
+     "accession": "WP_004267068.1",
+     "identity": 45.455,
+     "coverage": 15
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_004217178.1",
+     "identity": 52.324,
+     "coverage": 97
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_004267386.1",
+     "identity": 54.723,
+     "coverage": 98
+    },
+    {
+     "name": "RecN",
+     "found": false
+    },
+    {
+     "name": "RecF",
+     "found": false,
+     "accession": "WP_012996675.1",
+     "identity": 35.211,
+     "coverage": 19
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_004267876.1",
+     "identity": 25.904,
+     "coverage": 36
+    },
+    {
+     "name": "RuvB",
+     "found": false,
+     "accession": "WP_004216491.1",
+     "identity": 38.596,
+     "coverage": 17
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_012996337.1",
+     "identity": 45.117,
+     "coverage": 99
+    },
+    {
+     "name": "PolA",
+     "found": false
+    },
+    {
+     "name": "LexA",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

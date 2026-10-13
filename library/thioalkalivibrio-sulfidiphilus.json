@@ -1,0 +1,201 @@
+{
+ "query": "Thioalkalivibrio sulfidiphilus",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 1033854,
+  "name": "Thioalkalivibrio sulfidiphilus",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 5,
+  "uniprot_proteins": 3272,
+  "uniprot_reviewed": 257,
+  "sequences_16s": 5,
+  "papers": 54
+ },
+ "phenotype": {
+  "bacdive_id": 133741,
+  "url": "https://bacdive.dsmz.de/strain/133741",
+  "type_strain": true,
+  "optimum_temp_c": [
+   35.0,
+   35.0
+  ],
+  "growth_temp_c": [
+   35.0,
+   35.0
+  ],
+  "max_nacl_percent": 8.7
+ },
+ "genome": {
+  "accession": "GCF_000021985.1",
+  "organism": "Thioalkalivibrio sulfidiphilus HL-EbGr7",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 3464554,
+  "gc_percent": 65,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_011901.1",
+    "length": 3464554,
+    "gc_percent": 65
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 3287,
+  "ivywrel": 0.419,
+  "predicted_ogt_c": 58,
+  "acidic_excess": 0.0164
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_012636779.1",
+     "identity": 29.291,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_012639017.1",
+     "identity": 30.048,
+     "coverage": 97
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 10,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_012637856.1",
+     "identity": 58.529,
+     "coverage": 92
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_012638851.1",
+     "identity": 55.816,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_012638323.1",
+     "identity": 56.595,
+     "coverage": 95
+    },
+    {
+     "name": "RecN",
+     "found": true,
+     "accession": "WP_012637540.1",
+     "identity": 34.539,
+     "coverage": 94
+    },
+    {
+     "name": "RecF",
+     "found": true,
+     "accession": "WP_012636597.1",
+     "identity": 32.797,
+     "coverage": 84
+    },
+    {
+     "name": "RecQ",
+     "found": true,
+     "accession": "WP_012638491.1",
+     "identity": 59.076,
+     "coverage": 73
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_012638790.1",
+     "identity": 58.544,
+     "coverage": 95
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_012638102.1",
+     "identity": 46.034,
+     "coverage": 98
+    },
+    {
+     "name": "PolA",
+     "found": true,
+     "accession": "WP_012636680.1",
+     "identity": 37.866,
+     "coverage": 99
+    },
+    {
+     "name": "LexA",
+     "found": true,
+     "accession": "WP_012639605.1",
+     "identity": 37.5,
+     "coverage": 92
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

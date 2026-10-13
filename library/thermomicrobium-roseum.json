@@ -1,0 +1,205 @@
+{
+ "query": "Thermomicrobium roseum",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 500,
+  "name": "Thermomicrobium roseum",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 5,
+  "uniprot_proteins": 2858,
+  "uniprot_reviewed": 119,
+  "sequences_16s": 4,
+  "papers": 224
+ },
+ "phenotype": {
+  "bacdive_id": 16905,
+  "url": "https://bacdive.dsmz.de/strain/16905",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   70.0,
+   70.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000021685.1",
+  "organism": "Thermomicrobium roseum DSM 5159",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 2920744,
+  "gc_percent": 64.5,
+  "contigs": 2,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_011959.1",
+    "length": 2003006,
+    "gc_percent": 63.5
+   },
+   {
+    "name": "plasmid",
+    "type": "Plasmid",
+    "accession": "NC_011961.1",
+    "length": 917738,
+    "gc_percent": 65.5
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2556,
+  "ivywrel": 0.4502,
+  "predicted_ogt_c": 87,
+  "acidic_excess": 0.0081
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_015922548.1",
+     "identity": 31.522,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_015922405.1",
+     "identity": 31.713,
+     "coverage": 96
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 7,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_012641601.1",
+     "identity": 63.272,
+     "coverage": 89
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_015922682.1",
+     "identity": 57.462,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_015922496.1",
+     "identity": 58.769,
+     "coverage": 95
+    },
+    {
+     "name": "RecN",
+     "found": true,
+     "accession": "WP_226980708.1",
+     "identity": 36.563,
+     "coverage": 91
+    },
+    {
+     "name": "RecF",
+     "found": true,
+     "accession": "WP_012642104.1",
+     "identity": 30.387,
+     "coverage": 88
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_226980765.1",
+     "identity": 32.547,
+     "coverage": 41
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_012642109.1",
+     "identity": 57.862,
+     "coverage": 95
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_143714610.1",
+     "identity": 50.125,
+     "coverage": 98
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "WP_012642091.1",
+     "identity": 49.153,
+     "coverage": 44
+    },
+    {
+     "name": "LexA",
+     "found": false,
+     "accession": "WP_012642062.1",
+     "identity": 25.604,
+     "coverage": 92
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

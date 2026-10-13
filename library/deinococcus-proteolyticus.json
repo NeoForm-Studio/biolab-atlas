@@ -1,0 +1,238 @@
+{
+ "query": "Deinococcus proteolyticus",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 55148,
+  "name": "Deinococcus proteolyticus",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 1,
+  "uniprot_proteins": 2655,
+  "uniprot_reviewed": 2,
+  "sequences_16s": 6,
+  "papers": 62
+ },
+ "phenotype": {
+  "bacdive_id": 3851,
+  "url": "https://bacdive.dsmz.de/strain/3851",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   30.0,
+   30.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000190555.1",
+  "organism": "Deinococcus proteolyticus MRP",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 2886836,
+  "gc_percent": 65.5,
+  "contigs": 5,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_015161.1",
+    "length": 2147060,
+    "gc_percent": 66
+   },
+   {
+    "name": "pDEIPR01",
+    "type": "Plasmid",
+    "accession": "NC_015169.1",
+    "length": 314518,
+    "gc_percent": 66.5
+   },
+   {
+    "name": "pDEIPR02",
+    "type": "Plasmid",
+    "accession": "NC_015162.1",
+    "length": 195800,
+    "gc_percent": 61.5
+   },
+   {
+    "name": "pDEIPR03",
+    "type": "Plasmid",
+    "accession": "NC_015170.1",
+    "length": 132270,
+    "gc_percent": 66
+   },
+   {
+    "name": "pDEIPR04",
+    "type": "Plasmid",
+    "accession": "NC_015163.1",
+    "length": 97188,
+    "gc_percent": 59
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 2694,
+  "ivywrel": 0.397,
+  "predicted_ogt_c": 37,
+  "acidic_excess": 0.0149
+ },
+ "markers": {
+  "radiation": {
+   "found": 4,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": true,
+     "accession": "WP_013615349.1",
+     "identity": 73.718,
+     "coverage": 82
+    },
+    {
+     "name": "DdrC",
+     "found": true,
+     "accession": "WP_013615464.1",
+     "identity": 62.5,
+     "coverage": 100
+    },
+    {
+     "name": "DdrD",
+     "found": true,
+     "accession": "WP_013614056.1",
+     "identity": 55.479,
+     "coverage": 74
+    },
+    {
+     "name": "IrrE",
+     "found": true,
+     "accession": "WP_013615637.1",
+     "identity": 55.431,
+     "coverage": 80
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "WP_013615831.1",
+     "identity": 28.918,
+     "coverage": 45
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_013614910.1",
+     "identity": 28.744,
+     "coverage": 95
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 10,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_013614818.1",
+     "identity": 86.777,
+     "coverage": 99
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_245532731.1",
+     "identity": 81.566,
+     "coverage": 99
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_013614309.1",
+     "identity": 86.119,
+     "coverage": 99
+    },
+    {
+     "name": "RecN",
+     "found": true,
+     "accession": "WP_013614691.1",
+     "identity": 62.687,
+     "coverage": 95
+    },
+    {
+     "name": "RecF",
+     "found": true,
+     "accession": "WP_013614743.1",
+     "identity": 75.07,
+     "coverage": 99
+    },
+    {
+     "name": "RecQ",
+     "found": true,
+     "accession": "WP_013614863.1",
+     "identity": 70.401,
+     "coverage": 72
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "WP_013615505.1",
+     "identity": 92.857,
+     "coverage": 97
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_013614583.1",
+     "identity": 82.882,
+     "coverage": 100
+    },
+    {
+     "name": "PolA",
+     "found": true,
+     "accession": "WP_013614806.1",
+     "identity": 68.004,
+     "coverage": 99
+    },
+    {
+     "name": "LexA",
+     "found": true,
+     "accession": "WP_013615401.1",
+     "identity": 35.238,
+     "coverage": 97
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

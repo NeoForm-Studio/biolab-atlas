@@ -1,0 +1,208 @@
+{
+ "query": "Salmonella enterica",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 28901,
+  "name": "Salmonella enterica",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 632613,
+  "uniprot_proteins": 49389,
+  "uniprot_reviewed": 12883,
+  "sequences_16s": 3542,
+  "papers": 68486
+ },
+ "phenotype": {
+  "bacdive_id": 5129,
+  "url": "https://bacdive.dsmz.de/strain/5129",
+  "type_strain": true,
+  "optimum_temp_c": null,
+  "growth_temp_c": [
+   10.0,
+   41.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000006945.2",
+  "organism": "Salmonella enterica subsp. enterica serovar Typhimurium str. LT2",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 4951383,
+  "gc_percent": 52,
+  "contigs": 2,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_003197.2",
+    "length": 4857450,
+    "gc_percent": 52
+   },
+   {
+    "name": "pSLT",
+    "type": "Plasmid",
+    "accession": "NC_003277.2",
+    "length": 93933,
+    "gc_percent": 53
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 4554,
+  "ivywrel": 0.3926,
+  "predicted_ogt_c": 33,
+  "acidic_excess": 0.0085
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 0,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": false,
+     "accession": "NP_460673.1",
+     "identity": 29.011,
+     "coverage": 47
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false,
+     "accession": "NP_462185.1",
+     "identity": 34.409,
+     "coverage": 47
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "NP_461718.1",
+     "identity": 30.679,
+     "coverage": 99
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 7,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "NP_461750.1",
+     "identity": 61.371,
+     "coverage": 88
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "NP_463119.1",
+     "identity": 55.476,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "NP_459776.1",
+     "identity": 55.673,
+     "coverage": 96
+    },
+    {
+     "name": "RecN",
+     "found": true,
+     "accession": "NP_461614.1",
+     "identity": 32.13,
+     "coverage": 94
+    },
+    {
+     "name": "RecF",
+     "found": false,
+     "accession": "NP_462736.1",
+     "identity": 28.571,
+     "coverage": 90
+    },
+    {
+     "name": "RecQ",
+     "found": true,
+     "accession": "NP_462843.1",
+     "identity": 46.942,
+     "coverage": 73
+    },
+    {
+     "name": "RuvB",
+     "found": true,
+     "accession": "NP_460851.1",
+     "identity": 57.325,
+     "coverage": 94
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "NP_461214.1",
+     "identity": 47.962,
+     "coverage": 98
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "NP_462879.1",
+     "identity": 47.631,
+     "coverage": 43
+    },
+    {
+     "name": "LexA",
+     "found": false,
+     "accession": "NP_463102.1",
+     "identity": 35.417,
+     "coverage": 62
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}

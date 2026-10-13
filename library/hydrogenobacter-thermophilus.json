@@ -1,0 +1,192 @@
+{
+ "query": "Hydrogenobacter thermophilus",
+ "generated": "2026-10-13",
+ "pipeline_version": "0.1",
+ "taxon": {
+  "tax_id": 940,
+  "name": "Hydrogenobacter thermophilus",
+  "rank": "SPECIES",
+  "domain": "Bacteria"
+ },
+ "inventory": {
+  "assemblies": 16,
+  "uniprot_proteins": 1971,
+  "uniprot_reviewed": 11,
+  "sequences_16s": 5,
+  "papers": 353
+ },
+ "phenotype": {
+  "bacdive_id": 512,
+  "url": "https://bacdive.dsmz.de/strain/512",
+  "type_strain": true,
+  "optimum_temp_c": [
+   70.0,
+   75.0
+  ],
+  "growth_temp_c": [
+   70.0,
+   75.0
+  ],
+  "max_nacl_percent": null
+ },
+ "genome": {
+  "accession": "GCF_000164905.1",
+  "organism": "Hydrogenobacter thermophilus TK-6",
+  "level": "Complete Genome",
+  "reference": true,
+  "size_bp": 1742932,
+  "gc_percent": 44,
+  "contigs": 1,
+  "replicons": [
+   {
+    "name": "chromosome",
+    "type": "Chromosome",
+    "accession": "NC_017161.1",
+    "length": 1742932,
+    "gc_percent": 44
+   }
+  ],
+  "annotated": true
+ },
+ "proteome": {
+  "proteins": 1904,
+  "ivywrel": 0.444,
+  "predicted_ogt_c": 81,
+  "acidic_excess": -0.0038
+ },
+ "markers": {
+  "radiation": {
+   "found": 0,
+   "of": 6,
+   "genes": [
+    {
+     "name": "PprA",
+     "found": false
+    },
+    {
+     "name": "DdrA",
+     "found": false
+    },
+    {
+     "name": "DdrB",
+     "found": false
+    },
+    {
+     "name": "DdrC",
+     "found": false
+    },
+    {
+     "name": "DdrD",
+     "found": false
+    },
+    {
+     "name": "IrrE",
+     "found": false
+    }
+   ]
+  },
+  "heat": {
+   "found": 1,
+   "of": 1,
+   "genes": [
+    {
+     "name": "Rgy",
+     "found": true,
+     "accession": "WP_012963985.1",
+     "identity": 40.913,
+     "coverage": 99
+    }
+   ]
+  },
+  "salt": {
+   "found": 0,
+   "of": 3,
+   "genes": [
+    {
+     "name": "EctA",
+     "found": false
+    },
+    {
+     "name": "EctB",
+     "found": false,
+     "accession": "WP_012963071.1",
+     "identity": 29.762,
+     "coverage": 96
+    },
+    {
+     "name": "EctC",
+     "found": false
+    }
+   ]
+  },
+  "repair": {
+   "found": 4,
+   "of": 10,
+   "genes": [
+    {
+     "name": "RecA",
+     "found": true,
+     "accession": "WP_012963430.1",
+     "identity": 57.485,
+     "coverage": 92
+    },
+    {
+     "name": "UvrA",
+     "found": true,
+     "accession": "WP_014462634.1",
+     "identity": 53.17,
+     "coverage": 96
+    },
+    {
+     "name": "UvrB",
+     "found": true,
+     "accession": "WP_012963384.1",
+     "identity": 53.395,
+     "coverage": 96
+    },
+    {
+     "name": "RecN",
+     "found": false,
+     "accession": "WP_012962901.1",
+     "identity": 27.407,
+     "coverage": 94
+    },
+    {
+     "name": "RecF",
+     "found": false
+    },
+    {
+     "name": "RecQ",
+     "found": false,
+     "accession": "WP_012963446.1",
+     "identity": 22.157,
+     "coverage": 38
+    },
+    {
+     "name": "RuvB",
+     "found": false
+    },
+    {
+     "name": "GyrA",
+     "found": true,
+     "accession": "WP_012963473.1",
+     "identity": 38.608,
+     "coverage": 97
+    },
+    {
+     "name": "PolA",
+     "found": false,
+     "accession": "WP_012963026.1",
+     "identity": 34.949,
+     "coverage": 40
+    },
+    {
+     "name": "LexA",
+     "found": false
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "message": "Genome and proteome profiled."
+}
