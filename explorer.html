@@ -66,6 +66,10 @@
   td.n{font-family:var(--mono);text-align:right} th.n{text-align:right}
   tr.row{cursor:pointer} tr.row:hover td{background:var(--surf-2)}
   .scroll{overflow-x:auto}
+  #matrix td.c{font:11.5px var(--mono);text-align:center;padding:5px 4px;min-width:38px}
+  #matrix th.g{cursor:pointer;text-align:center;padding:6px 4px} #matrix th.g.on{color:var(--accent)}
+  #matrix td.sp{white-space:nowrap;cursor:pointer;font-size:13px}
+  .chip.pick{cursor:pointer}
   .legend{font-size:12.5px;color:var(--ink-dim);margin-top:10px}
   footer{font-size:12.5px;color:var(--ink-dim);margin-top:30px}
   body.embed{background:transparent} body.embed header{display:none} body.embed .wrap{padding-top:18px}
@@ -86,6 +90,14 @@
 
   <main id="view"></main>
   <noscript><p class="hint">The explorer needs JavaScript.</p></noscript>
+
+  <div class="card" id="compareCard">
+    <h2>Compare genes across species</h2>
+    <p class="meta">Identity (%) of each species' best BLAST match to the reference protein. Blank: no match passing the
+      cutoffs. Click a gene to sort by it, a species to open it.</p>
+    <div class="chips" id="panelPick" style="margin:12px 0"></div>
+    <div class="scroll"><table id="matrix"></table></div>
+  </div>
 
   <div class="card">
     <h2>Library</h2>
@@ -117,6 +129,7 @@ async function load() {
   $('#names').innerHTML = INDEX.map((e) => `<option value="${esc(e.name)}">`).join('');
   $('#hint').textContent = `${INDEX.length} species profiled so far. Search for one that is missing to request it.`;
   renderLibrary();
+  renderMatrix();
   route();
 }
 
@@ -268,6 +281,25 @@ function renderLibrary() {
       <td class="n">${r.acidic_excess ?? '–'}</td>
       ${Object.keys(PANELS).map((k) => `<td class="n">${r.markers[k] ?? '–'}</td>`).join('')}</tr>`).join('');
   document.querySelectorAll('tr.row').forEach((tr) => tr.addEventListener('click', () => { location.hash = tr.dataset.slug; }));
+}
+
+let MX = {panel: 'all', sortBy: null};
+function renderMatrix() {
+  const panels = Object.keys(PANELS);
+  $('#panelPick').innerHTML = ['all', ...panels].map((k) => `<span class="chip pick${MX.panel === k ? ' yes' : ''}"
+    data-k="${esc(k)}">${esc(k === 'all' ? 'all genes' : k)}</span>`).join('');
+  document.querySelectorAll('#panelPick .chip').forEach((c) => c.onclick = () => { MX.panel = c.dataset.k; MX.sortBy = null; renderMatrix(); });
+  const genes = (MX.panel === 'all' ? panels : [MX.panel]).flatMap((k) => PANELS[k].genes.map((g) => g.name));
+  const rows = INDEX.filter((r) => r.genes).sort((a, b) => MX.sortBy
+    ? (b.genes[MX.sortBy] ?? -1) - (a.genes[MX.sortBy] ?? -1) : a.name.localeCompare(b.name));
+  $('#matrix').innerHTML = `<tr><th>Species</th>${genes.map((g) => `<th class="g${MX.sortBy === g ? ' on' : ''}" data-g="${esc(g)}">${esc(g)}</th>`).join('')}</tr>` +
+    rows.map((r) => `<tr><td class="sp" data-slug="${esc(r.file.replace('.json', ''))}"><em>${esc(r.name)}</em></td>${genes.map((g) => {
+      const v = r.genes[g];
+      return v == null ? '<td class="c"></td>'
+        : `<td class="c" style="background:rgba(70,198,221,${(0.08 + 0.6 * v / 100).toFixed(2)});color:var(--head)">${v}</td>`;
+    }).join('')}</tr>`).join('');
+  document.querySelectorAll('#matrix th.g').forEach((th) => th.onclick = () => { MX.sortBy = th.dataset.g; renderMatrix(); });
+  document.querySelectorAll('#matrix td.sp').forEach((td) => td.onclick = () => { location.hash = td.dataset.slug; });
 }
 
 function highlightRow(slug) {

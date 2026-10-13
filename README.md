@@ -13,6 +13,7 @@ A static site with no build step. Serve the folder and open it:
 ```bash
 python -m http.server 8000
 # http://localhost:8000              the 3D D. radiodurans scene
+# http://localhost:8000/ui.html        the workspace
 # http://localhost:8000/explorer.html  the species explorer
 ```
 
@@ -20,8 +21,9 @@ python -m http.server 8000
 
 | Path | What it is |
 |------|-----------|
-| `index.html` | 3D introduction: D. radiodurans genome repair |
-| `explorer.html` | Species explorer: search the library, compare species |
+| `index.html` | 3D introduction to D. radiodurans genome repair; scrolls into the workspace |
+| `ui.html` | The workspace: Gene, Cross-species, Function, Expression, Species and Workspace tabs. Every species claim lists its sources |
+| `explorer.html` | Species explorer (also the workspace's Species tab): search the library, compare genes across species |
 | `library/` | One JSON profile per species, plus `index.json` |
 | `pipeline/` | The lookup pipeline that builds the library |
 | `assets/` | Background plates for the 3D scene, AI-generated with `tools/genplate.mjs` (needs your own `OPENAI_API_KEY`) |
