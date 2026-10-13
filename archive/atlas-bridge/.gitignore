@@ -1,9 +1,0 @@
-# Raw genome FASTAs are large and re-downloadable — never commit them
-build/cache/
-*.cds.fna
-*.fna.gz
-__pycache__/
-
-# pipeline bridge
-server/__pycache__/
-pipeline/output/
