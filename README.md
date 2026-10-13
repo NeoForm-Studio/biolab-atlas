@@ -84,6 +84,6 @@ These are signals that a genome resembles known extremophiles, not a determinati
 - Growth-temperature estimate: Zeldovich, Berezovsky & Shakhnovich 2007, PLoS Comput Biol 3:e5.
 - Reverse gyrase in hyperthermophiles: Forterre 2002, Trends Genet 18:236.
 - D. radiodurans claims on the 3D page: genome reassembly from hundreds of fragments, Zahradka et al. 2006,
-  Nature 443:569 (doi:10.1038/nature05160); γ-radiation resistance up to 10 kGy, Xie et al. 2026, Appl Environ
-  Microbiol (doi:10.1128/aem.02107-25).
+  Nature 443:569 (doi:10.1038/nature05160); no measurable lethality after 5 kGy, Cox, Keck & Battista 2010, PLoS
+  Genet 6:e1000815 (doi:10.1371/journal.pgen.1000815).
 - Rendering: [Three.js](https://threejs.org/).
