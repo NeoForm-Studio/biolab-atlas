@@ -197,6 +197,7 @@
   .cgene{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:13px;border:1px solid var(--line);background:rgba(26,37,50,.48);cursor:pointer;color:var(--ink-mid)}
   .cgene.both{border-color:var(--accent);color:var(--accent)}
   .cgene.one{opacity:.6}
+  .cgene.none{opacity:.3;border-style:dashed}
   .cgene.sel{background:var(--accent);color:#fff;border-color:rgba(196,224,255,.6);box-shadow:var(--sel-glow)}
 
   /* bottom comparison panel */
@@ -1150,12 +1151,12 @@ function renderCrossControl(){
   const spPills=SP_ORDER.map(s=>{const on=compareSel.includes(s);return `<button class="spbtn ${on?'on2':''}" data-csp="${s}">${SPECIES[s].n.replace('. ','.')}</button>`;}).join('');
   const genes=GENES.map(g=>{
     const inA=!!g.sp[compareSel[0]], inB=!!g.sp[compareSel[1]];
-    return `<span class="cgene ${(inA&&inB)?'both':'one'} ${selectedGene===g.g?'sel':''}" data-cg="${g.g}">${g.g}</span>`;
+    return `<span class="cgene ${(inA&&inB)?'both':(inA||inB)?'one':'none'} ${selectedGene===g.g?'sel':''}" data-cg="${g.g}">${g.g}</span>`;
   }).join('');
   const bothN=GENES.filter(g=>g.sp[compareSel[0]]&&g.sp[compareSel[1]]).length;
   z.innerHTML=`<div class="cb-lab">Pick exactly 2 organisms</div>
     <div class="spswitch" style="margin-top:7px">${spPills}</div>
-    <div class="legend" style="margin-top:13px"><b style="background:none;color:var(--accent)">${bothN}</b> of ${GENES.length} repair genes are shared between the two. <span style="color:var(--accent)">Solid</span> = in both · faded = in one only. Pick a gene to compare.</div>
+    <div class="legend" style="margin-top:13px"><b style="background:none;color:var(--accent)">${bothN}</b> of ${GENES.length} repair genes are shared between the two. <span style="color:var(--accent)">Solid</span> = in both · faded = in one only · dashed = in neither. Pick a gene to compare.</div>
     <div class="cb-lab" style="margin-top:13px">Genes</div>
     <div class="cb-genes" style="justify-content:flex-start;margin-top:7px">${genes}</div>`;
   z.querySelectorAll('[data-csp]').forEach(b=>b.addEventListener('click',()=>toggleCompare(b.dataset.csp)));
@@ -1194,6 +1195,13 @@ function spCardMini(g,sp){
 function comparisonInline(g,a,b){
   const inA=!!g.sp[a], inB=!!g.sp[b];
   const fmtU=l=>l.length?'<b>'+l.join(', ')+'</b>':'—';
+
+  // ---------- absent from both genomes ----------
+  if(!inA&&!inB){
+    return `<div class="cmpcard"><div class="cmp-hd">Comparison — absent from both</div>
+      <div class="xc-bottom"><b>${g.g}</b> is not annotated in <i>${SPECIES[a].n}</i> or <i>${SPECIES[b].n}</i> (by symbol), so there is nothing to compare for this gene.${(SPECIES[a].distant||SPECIES[b].distant)?' Archaea usually name repair genes differently, so this may be an annotation gap.':''}</div>
+      <div class="cmp-note">Presence by annotated symbol per RefSeq assembly${MATRIX_GENES.has(String(g.g).toLowerCase())?' · for a sequence-based check, see the BLAST gene matrix in the Species tab':''}.</div></div>`;
+  }
 
   // ---------- lineage-specific (present in only one genome) ----------
   if(!(inA&&inB)){
