@@ -68,6 +68,7 @@
   .scroll{overflow-x:auto}
   .legend{font-size:12.5px;color:var(--ink-dim);margin-top:10px}
   footer{font-size:12.5px;color:var(--ink-dim);margin-top:30px}
+  body.embed{background:transparent} body.embed header{display:none} body.embed .wrap{padding-top:18px}
 </style>
 </head>
 <body>
@@ -101,6 +102,7 @@
 
 <script>
 const $ = (s) => document.querySelector(s);
+if (new URLSearchParams(location.search).has('embed')) document.body.classList.add('embed');
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const fmt = (n) => (n ?? 0).toLocaleString('en-US');
 const MIN_COVERAGE = 70, NEAR_IDENTITY = 50; // coverage rule mirrors pipeline/genome.py

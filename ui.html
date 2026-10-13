@@ -45,34 +45,7 @@
     display:none;flex-direction:column;background:rgba(28,40,54,.52);backdrop-filter:blur(18px);border:1px solid var(--line);
     border-radius:13px;box-shadow:0 24px 70px rgba(20,28,38,.18);overflow:hidden;z-index:30}
   body[data-mode="compute"] #computePanel{display:flex}
-  .cp-head{padding:16px 20px 13px;border-bottom:1px solid var(--line)}
-  .cp-title{font-family:var(--display);font-weight:600;font-size:16px;color:#f2f7fc;display:flex;align-items:center;gap:9px}
-  .cp-dot{width:8px;height:8px;border-radius:50%;background:#c3c3cc;flex:none}
-  .cp-dot.on{background:#2f9e6f;box-shadow:0 0 9px rgba(47,158,111,.6)} .cp-dot.off{background:#c98a3a}
-  .cp-title #cpStatus{font-family:var(--mono);font-size:10.5px;font-weight:400;color:var(--ink-mid);letter-spacing:.02em}
-  .cp-title code{background:rgba(122,90,140,.12);padding:1px 5px;border-radius:4px;color:var(--accent)}
-  .cp-sub{font-size:11.5px;color:var(--ink-mid);margin-top:5px}
-  .cp-body{display:grid;grid-template-columns:300px 1fr;gap:0;min-height:0;flex:1}
-  .cp-controls{padding:15px;border-right:1px solid var(--line);overflow:auto;display:flex;flex-direction:column;gap:13px}
-  .cp-card{background:rgba(28,40,54,.52);border:1px solid var(--line-soft);border-radius:9px;padding:12px}
-  .cp-k{font-family:var(--display);font-weight:600;font-size:12px;color:var(--accent);margin-bottom:7px}
-  .cp-hint{font-size:10.5px;color:var(--ink-dim);line-height:1.5;margin-top:6px}
-  .cp-row{display:flex;gap:6px}
-  .cp-card input{flex:1;font-family:var(--mono);font-size:12px;padding:7px 9px;border:1px solid var(--line);border-radius:6px;background:rgba(30,43,58,.66);color:var(--ink)}
-  .cp-btn{font-family:var(--mono);font-size:11px;color:#fff;background:var(--accent);border:1px solid var(--accent);padding:7px 11px;border-radius:6px;cursor:pointer;transition:.15s;white-space:nowrap}
-  .cp-btn:hover{filter:brightness(1.08)} .cp-btn:disabled{opacity:.4;cursor:not-allowed}
-  .cp-btn.ghost{background:transparent;color:var(--accent)} .cp-btn.full{width:100%;margin-top:8px}
-  .cp-results{padding:17px 19px;overflow:auto;min-height:0}
-  .cp-empty{color:var(--ink-dim);font-size:12.5px;font-style:italic;margin-top:8px}
-  .cp-rh{font-family:var(--display);font-weight:600;font-size:13.5px;color:#f2f7fc;margin-bottom:10px}
-  .cp-tbl{width:100%;border-collapse:collapse;font-size:12px}
-  .cp-tbl th{text-align:left;font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-dim);padding:5px 8px;border-bottom:1px solid var(--line)}
-  .cp-tbl td{padding:6px 8px;border-bottom:1px solid var(--line-soft);color:var(--ink)}
-  .cp-tbl td:first-child{font-style:italic}
-  .cp-note{margin-top:11px;padding:10px 12px;background:rgba(122,90,140,.07);border:1px solid var(--line-soft);border-radius:7px;font-size:11.5px;color:var(--ink-mid);line-height:1.55}
-  .cp-warn{margin-top:6px;padding:11px 13px;background:rgba(201,138,58,.10);border:1px solid rgba(201,138,58,.3);border-radius:7px;font-size:12px;color:#e6bd66;line-height:1.55}
-  .cp-pill{display:inline-block;font-family:var(--mono);font-size:10px;padding:2px 7px;border:1px solid var(--line);border-radius:20px;margin:3px 4px 0 0;color:var(--ink-mid)}
-  @media (max-width:700px){.cp-body{grid-template-columns:1fr}.cp-controls{border-right:none;border-bottom:1px solid var(--line)}}
+  #speciesFrame{border:0;width:100%;height:calc(100vh - 96px);background:transparent}
   #scene{position:fixed;inset:0;z-index:0}
   #grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.06;mix-blend-mode:overlay;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
@@ -337,8 +310,8 @@
   .tab:hover::after,.tab.active::after{transform:scaleX(1)}
   .tab:hover{text-shadow:0 0 12px rgba(120,200,255,.4)}
   /* button + row micro-interactions */
-  .hbtn,.intro-enter,.cp-btn,.spbtn,.pill,.cgene{transition:transform .12s ease,filter .15s,border-color .2s,color .2s,background .2s}
-  .hbtn:active,.intro-enter:active,.cp-btn:active{transform:translateY(1px) scale(.985)}
+  .hbtn,.intro-enter,.spbtn,.pill,.cgene{transition:transform .12s ease,filter .15s,border-color .2s,color .2s,background .2s}
+  .hbtn:active,.intro-enter:active{transform:translateY(1px) scale(.985)}
   .ritem{transition:transform .14s ease,background .15s,border-color .15s}
   .ritem:hover{transform:translateY(-1px)}
   .intro-enter{animation:enterPulse 2.6s ease-in-out infinite}
@@ -388,7 +361,7 @@
     <button class="tab" data-mode="cross"><span class="k">02</span>Cross-species</button>
     <button class="tab" data-mode="func"><span class="k">03</span>Function</button>
     <button class="tab" data-mode="expr"><span class="k">04</span>Expression</button>
-    <button class="tab" data-mode="compute"><span class="k">05</span>Compute</button>
+    <button class="tab" data-mode="compute"><span class="k">05</span>Species</button>
     <button class="tab" data-mode="lab"><span class="k">06</span>Workspace</button>
   </nav>
   <div class="spacer"></div>
@@ -417,35 +390,7 @@
 <div id="repairMeta" aria-hidden="true"></div>
 
 <div id="computePanel">
-  <div class="cp-head">
-    <div class="cp-title">Pipeline compute <span class="cp-dot" id="cpDot"></span><span id="cpStatus">checking bridge…</span></div>
-    <div class="cp-sub">Live computation on the 12-genome set via the local bridge. Every result is really computed or honestly flagged — nothing is fabricated.</div>
-  </div>
-  <div class="cp-body">
-    <div class="cp-controls">
-      <div class="cp-card">
-        <div class="cp-k">Real homologs across every genome</div>
-        <div class="cp-row"><input id="cpGene" placeholder="recA, pprA, uvrA…" value="recA"><button class="cp-btn" id="cpRunOrtho">Search</button></div>
-        <div class="cp-hint">Reciprocal-best-hit homology — finds the archaeal radA/radB that symbol-matching shows as “absent.” A proxy; pipeline orthogroups are definitive.</div>
-      </div>
-      <div class="cp-card">
-        <div class="cp-k">Sift at scale: survivors vs sensitive</div>
-        <div class="cp-hint">Which repair genes are confidently present across the Deinococcus survivors yet absent in every sensitive control — candidate resistance genes.</div>
-        <button class="cp-btn full" id="cpRunDiff" data-present="DR1,DDES,DGOB,DGEO,DPRO" data-absent="EC,TTH,SHEW">Deinococcus present · sensitive absent</button>
-      </div>
-      <div class="cp-card">
-        <div class="cp-k">Convergence across lineages</div>
-        <div class="cp-hint">Across all genomes, which repair functions recur independently in survivors from different phyla — the discovery signal. (First run computes, then cached.)</div>
-        <button class="cp-btn full" id="cpConvPrev">Run convergence sift</button>
-      </div>
-      <div class="cp-card">
-        <div class="cp-k">Heavy pipeline · Tier B</div>
-        <div class="cp-hint">Real orthogroups, multi-lineage DE, and convergence scoring. Shows honestly when the pipeline output isn’t wired yet.</div>
-        <div class="cp-row" style="margin-top:8px"><button class="cp-btn ghost" id="cpOG">Orthogroups</button><button class="cp-btn ghost" id="cpConv">Convergence</button></div>
-      </div>
-    </div>
-    <div class="cp-results" id="cpResults"><div class="cp-empty">Run a query to see live results from the pipeline bridge.</div></div>
-  </div>
+  <iframe id="speciesFrame" title="Species explorer" src="about:blank" loading="lazy"></iframe>
 </div>
 
 <div class="status" id="status"></div>
@@ -972,10 +917,10 @@ const EXPLAIN={
     body:["See which repair genes D. radiodurans actually turns up after a radiation dose, ranked from real RNA-seq, with the experimental conditions and honest significance shown.",
       "This is the experimental evidence layer beneath the rest of the atlas — the measured response, not just annotation."],
     src:"DESeq2 on GEO GSE176207 — D. radiodurans, ionizing radiation ~10 kGy, 3 vs 3 replicates."},
-  compute:{ey:'Tool 05',h:'Pipeline compute',
-    body:["Ask the BioLab pipeline to compute on the genome set live — not a stored display. Find real homologs across all 12 genomes (the reciprocal-best-hit search that recovers the archaeal radA/radB symbol-matching can't see), or sift the set for genes present in the survivors but absent in the sensitive controls.",
-      "Heavy operations — true orthogroups, multi-lineage DESeq2, convergence scoring — run through the pipeline and appear here when its output is wired. When it isn't, the tool says so rather than guessing."],
-    src:"Local bridge (localhost only) → BioLab pipeline. Tier-A homology is a proxy; Tier-B orthogroups are definitive. Nothing fabricated."}
+  compute:{ey:'Tool 05',h:'Species',
+    body:["Look up any bacterium or archaeon: what public data exists for it, its genome, which extremophile marker genes it carries, and where it sits among every other species profiled so far.",
+      "Missing species can be requested; the pipeline checks NCBI, UniProt, BacDive and the literature and says so when there is no data."],
+    src:"NCBI Taxonomy, Datasets and Nucleotide · UniProt · BacDive · Europe PMC · markers found with NCBI BLAST+."}
 };
 
 function showIntro(){
@@ -1004,7 +949,7 @@ function enterMode(){
   // panels
   if(mode==='expr'){activeSp='DR1';buildExprHero('DR1');openP('left',false);openP('right',false);setTimeout(animateExpr,140);}
   else if(mode==='cross'){renderCrossControl();openP('left',true);openP('right',false);}
-  else if(mode==='compute'){openP('left',false);openP('right',false);cpHealth();}
+  else if(mode==='compute'){openP('left',false);openP('right',false);const f=document.getElementById('speciesFrame');if(f.src==='about:blank')f.src='explorer.html?embed';}
   else{openP('left',true);openP('right',false);}
   // crystallize the section's lead surfaces from the mote field
   if(typeof materializeEl==='function'){
@@ -1418,84 +1363,6 @@ document.querySelectorAll('[data-close]').forEach(x=>x.addEventListener('click',
 addEventListener('keydown',e=>{if(e.key==='Enter'&&introOpen)enterMode();});
 document.addEventListener('click',e=>{const h=e.target.closest('.d-sec.expandable');if(!h)return;const ex=h.nextElementSibling;if(ex&&ex.classList.contains('d-explain')){const open=ex.classList.toggle('open');const c=h.querySelector('.chev');if(c)c.textContent=open?'－':'＋';}});
 
-/* ---------- Compute mode: live pipeline bridge (localhost only) ---------- */
-const CP_BASE='http://localhost:8765';
-let cpOnline=false;
-function cpSetBusy(m){document.getElementById('cpResults').innerHTML=`<div class="cp-empty">${m}</div>`;}
-function cpErr(m){document.getElementById('cpResults').innerHTML=`<div class="cp-warn">${m}</div>`;}
-function cpConfCol(c){return c==='high'?'#74cfe6':c==='weak'?'#e6bd66':'#9a9aa2';}
-function cpBtns(d){document.querySelectorAll('#computePanel .cp-btn').forEach(b=>b.disabled=d);}
-async function cpHealth(){
-  const dot=document.getElementById('cpDot'),st=document.getElementById('cpStatus');
-  try{
-    const r=await fetch(CP_BASE+'/api/health',{cache:'no-store'}); const j=await r.json();
-    dot.className='cp-dot on'; cpOnline=true; cpBtns(false);
-    st.textContent=`bridge online · ${j.genomes.length} genomes · Tier B ${j.tier_b_orthogroups?'wired':'not wired yet'}`;
-    if(document.getElementById('cpResults').querySelector('.cp-warn')) cpSetBusy('Run a query to see live results from the pipeline bridge.');
-  }catch(e){
-    dot.className='cp-dot off'; cpOnline=false; cpBtns(true);
-    st.innerHTML='bridge offline — run <code>atlas_server.py</code>';
-    cpErr('The pipeline bridge isn’t running. Start it locally:<br><br><code>cd atlas/server</code> · <code>pip install -r requirements.txt</code> · <code>python atlas_server.py</code><br><br>The rest of the atlas works without it — Compute is the only part that needs the bridge.');
-  }
-}
-async function cpPost(path,body){
-  const r=await fetch(CP_BASE+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
-  const j=await r.json().catch(()=>({})); return {ok:r.ok,status:r.status,j};
-}
-async function cpOrtho(){
-  if(!cpOnline)return; const g=document.getElementById('cpGene').value.trim(); if(!g)return;
-  cpSetBusy(`Searching all 12 genomes for ${g} homologs (reciprocal best hits)…`);
-  try{
-    const {ok,j}=await cpPost('/api/ortholog',{gene:g});
-    if(!ok)return cpErr(j.detail||'Query failed.');
-    const rows=j.results.map(x=>`<tr><td>${SPECIES[x.sp]?SPECIES[x.sp].n:x.sp}</td><td>${x.hit||'—'}</td><td>${x.identity!=null?x.identity+'%':'—'}</td><td>${x.rbh?'✓':'·'}</td><td style="color:${cpConfCol(x.confidence)};font-weight:600">${x.confidence}</td></tr>`).join('');
-    document.getElementById('cpResults').innerHTML=`<div class="cp-rh">Homologs of <b>${j.gene}</b> across every genome</div>
-      <table class="cp-tbl"><tr><th>organism</th><th>best hit</th><th>identity</th><th>RBH</th><th>confidence</th></tr>${rows}</table>
-      <div class="cp-note">${j.note}</div>`;
-  }catch(e){cpErr('Bridge offline.');cpHealth();}
-}
-async function cpDiff(btn){
-  if(!cpOnline)return;
-  const present=btn.dataset.present.split(','), absent=btn.dataset.absent.split(',');
-  cpSetBusy('Sifting the anchor set for genes present in survivors and absent in sensitive controls…');
-  try{
-    const {ok,j}=await cpPost('/api/differential',{present_in:present,absent_in:absent});
-    if(!ok)return cpErr(j.detail||'Query failed.');
-    const cands=j.candidates.length? j.candidates.map(c=>`<tr><td>${c.gene}</td><td>${Object.entries(c.present).map(([s,v])=>`${s} ${v!=null?v+'%':'—'}`).join(', ')}</td></tr>`).join('')
-       : `<tr><td colspan="2" style="color:var(--ink-dim);font-style:italic">No anchor gene is confidently present across all survivors and absent across all controls by this proxy.</td></tr>`;
-    document.getElementById('cpResults').innerHTML=`<div class="cp-rh">Candidates — present in ${present.join(', ')} · absent in ${absent.join(', ')}</div>
-      <table class="cp-tbl"><tr><th>gene</th><th>identity in survivors</th></tr>${cands}</table>
-      <div class="cp-note">${j.method}. This sifts the 18-gene anchor set; genome-wide sifting over all orthogroups is a Tier-B pipeline job.</div>`;
-  }catch(e){cpErr('Bridge offline.');cpHealth();}
-}
-async function cpTierB(path,body,label){
-  if(!cpOnline)return; cpSetBusy(`Asking the pipeline for ${label}…`);
-  try{
-    const r=await fetch(CP_BASE+path,body?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}:undefined);
-    const j=await r.json().catch(()=>({}));
-    if(r.status===404)return cpErr(`<b>${label} isn’t wired yet.</b><br>${j.detail||''}<br><br>This is the honest state — the bridge won’t invent orthogroups or DE. Generate the pipeline output (or point <code>BIOLAB_OUT</code> at it) and this lights up.`);
-    if(!r.ok)return cpErr(j.detail||'Query failed.');
-    document.getElementById('cpResults').innerHTML=`<div class="cp-rh">${label} — from pipeline output</div><pre style="font-size:11px;white-space:pre-wrap;color:var(--ink-mid)">${JSON.stringify(j,null,2).slice(0,4000)}</pre>`;
-  }catch(e){cpErr('Bridge offline.');cpHealth();}
-}
-document.getElementById('cpRunOrtho').addEventListener('click',cpOrtho);
-document.getElementById('cpGene').addEventListener('keydown',e=>{if(e.key==='Enter')cpOrtho();});
-document.getElementById('cpRunDiff').addEventListener('click',e=>cpDiff(e.currentTarget));
-async function cpConvPrev(){
-  if(!cpOnline)return;
-  cpSetBusy('Sifting every anchor gene across all genomes for independent-lineage convergence… (first run computes, then cached)');
-  try{
-    const r=await fetch(CP_BASE+'/api/convergence_preview'); const j=await r.json();
-    const col={'convergent candidate':'#74cfe6','lineage-specific':'#7a5a8c','mixed':'#4f6c86','universal':'#5b6470','sparse':'#9a9aa2'};
-    const rows=j.results.map(x=>`<tr><td>${x.gene}</td><td style="color:${col[x.label]||'#000'};font-weight:600">${x.label}</td><td>${x.n_lineages}</td><td style="font-size:10.5px;color:var(--ink-mid)">${(x.lineages||[]).join(', ')||'—'}</td><td>${x.in_sensitive.length?x.in_sensitive.join(','):'—'}</td></tr>`).join('');
-    document.getElementById('cpResults').innerHTML=`<div class="cp-rh">Convergence across ${j.radioresistant_lineages.length} radioresistant lineages</div>
-      <table class="cp-tbl"><tr><th>gene</th><th>pattern</th><th>#lineages</th><th>radioresistant lineages</th><th>in sensitive</th></tr>${rows}</table>
-      <div class="cp-note">${j.note}</div>`;
-  }catch(e){cpErr('Bridge offline.');cpHealth();}
-}
-document.getElementById('cpConvPrev').addEventListener('click',cpConvPrev);
-document.getElementById('cpOG').addEventListener('click',()=>cpTierB('/api/orthogroups',{},'orthogroups'));
-document.getElementById('cpConv').addEventListener('click',()=>cpTierB('/api/convergence',null,'convergence candidates'));
 
 // frosty cursor aura + frost-wipe overlay (visual only)
 (function setupCursor(){
