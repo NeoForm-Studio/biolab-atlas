@@ -139,7 +139,7 @@ async function load() {
 
 function find(text) {
   const t = text.trim().toLowerCase();
-  return INDEX.find((e) => e.name.toLowerCase() === t) ||
+  return INDEX.find((e) => e.name.toLowerCase() === t || (e.query || '').toLowerCase() === t) ||
          INDEX.find((e) => e.name.toLowerCase().startsWith(t)) ||
          INDEX.find((e) => e.name.toLowerCase().includes(t));
 }
@@ -224,7 +224,7 @@ async function showSpecies(slug) {
   if (sc) {
     const bar = (k, label) => {
       const v = VALID[k] || {};
-      const check = v.auc != null ? `Checked against BacDive temperatures: ${v.positives} labelled ${k === 'heat' ? 'heat-adapted (≥50 °C)' : 'cold-adapted (≤20 °C)'} vs ${v.negatives} others, AUC ${v.auc} (0.5 = chance, 1 = perfect). Most labels are culture temperatures and the species are hand-picked, so this mainly tests clear-cut cases.`
+      const check = v.auc != null ? `Checked against BacDive temperatures: ${v.positives} labelled ${k === 'heat' ? 'heat-adapted (midpoint ≥50 °C)' : 'cold-adapted (whole range ≤20 °C)'} vs ${v.negatives} others, AUC ${v.auc} (0.5 = chance, 1 = perfect). Most labels are culture temperatures and the species are hand-picked, so this mainly tests clear-cut cases.`
         : esc(v.note || 'Not validated.');
       const what = {heat: `Position of its estimated growth temperature among all ${INDEX.length} species.`,
         cold: 'Defined as 100 minus heat: it separates cold- from heat-adapted genomes, not cold specialists from ordinary bacteria.',

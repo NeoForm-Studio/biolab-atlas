@@ -128,9 +128,10 @@ def phenotype(name):
              if t.get("growth") == "positive"]
     span = lambda rows: (lambda r: [min(r), max(r)] if r else None)(
         [v for t in rows for v in (temperature_range(t.get("temperature")) or ())])
-    salt = [v for h in listify(strain.get("Physiology and metabolism", {}).get("halophily"))
-            if h.get("growth") == "positive" and h.get("salt") == "NaCl" and "%" in h.get("concentration", "")
-            for v in (temperature_range(h["concentration"].replace("%", "")) or ()) if v <= 30]  # >30% is not NaCl %
+    salt_ranges = [temperature_range(h["concentration"].replace("%", ""))
+                   for h in listify(strain.get("Physiology and metabolism", {}).get("halophily"))
+                   if h.get("growth") == "positive" and h.get("salt") == "NaCl" and "%" in h.get("concentration", "")]
+    salt = [v for r in salt_ranges if r and r[1] <= 30 for v in r]  # above 30% is not a NaCl percentage
     bacdive_id = strain["General"]["BacDive-ID"]
     return {
         "bacdive_id": bacdive_id,
