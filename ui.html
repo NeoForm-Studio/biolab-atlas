@@ -1368,6 +1368,11 @@ function setMode(m){
   document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.mode===m));
   document.getElementById('cmpPanel').classList.remove('show');
   document.getElementById('rightTitle').textContent='Gene detail';
+  { // drop the previous mode's detail page; modes that show gene detail re-render it
+    document.getElementById('rightBody').innerHTML='';
+    const g=selectedGene&&GENES.find(x=>x.g===selectedGene);
+    if(g&&m!=='cross'&&m!=='compute') renderDetail(g);
+  }
   document.getElementById('leftTitle').textContent= m==='func'?'Function':'Search';
   layoutScene();
   if(m!=='cross' && typeof hideMeta==='function') hideMeta(); // tear down the repair metaphor when leaving cross
