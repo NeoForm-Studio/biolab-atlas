@@ -878,6 +878,7 @@ function updateRepairMetaphor(){
   showRepairBanner(d);
 }
 function tickMeta(t,dt){
+  t=t*MF;  // reduced motion: freeze drift, motes and bob too
   if(!metaActive) return;
   const R=metaRepaired;
   if(R){ R.asmT+=dt; const tt=R.asmT;
@@ -935,6 +936,7 @@ const EXPLAIN={
 function showIntro(){
   const e=EXPLAIN[mode]; introOpen=true;
   document.querySelectorAll('.panel').forEach(p=>p.inert=true); const capEl=document.getElementById('caption'); if(capEl) capEl.inert=true;
+  ['constellation','exprHero','computePanel','cmpPanel'].forEach(id=>{const el=document.getElementById(id); if(el) el.inert=true;});  // nothing behind the card is focusable
   setTimeout(()=>{const b=document.getElementById('introEnter'); if(b) b.focus({preventScroll:true});},0);
   document.getElementById('intro').innerHTML=`<div class="intro-card">
     <div class="ey">${e.ey}</div><h1>${e.h}</h1>
@@ -948,6 +950,7 @@ function showIntro(){
   document.getElementById('introEnter').addEventListener('click',e2=>{e2.stopPropagation();enterMode();});
 }
 function enterMode(){
+  ['constellation','exprHero','computePanel','cmpPanel'].forEach(id=>{const el=document.getElementById(id); if(el) el.inert=false;});
   document.querySelectorAll('.panel').forEach(p=>p.inert=p.classList.contains('hide')); { const capEl=document.getElementById('caption'); if(capEl) capEl.inert=false; }
   setTimeout(()=>{const t=document.querySelector('.tab.active'); if(t) t.focus({preventScroll:true});},0);
   introOpen=false;
@@ -1376,7 +1379,7 @@ function scrambleEl(el,final,dur){if(!el)return;const s=performance.now();
     el.textContent=o;if(p<1)requestAnimationFrame(tick);else el.textContent=final;})(s);}
 
 function openP(side,on){ const el=document.getElementById(side==='left'?'leftPanel':'rightPanel');
-  const was=!el.classList.contains('hide'); el.classList.toggle('hide',!on); el.inert=!on;
+  const was=!el.classList.contains('hide'); el.classList.toggle('hide',!on); el.inert=!on||introOpen;
   if(side==='right') document.body.classList.toggle('detail-open',on);
   if(typeof materializeEl==='function'){ if(on&&!was) requestAnimationFrame(()=>materializeEl(el)); else if(!on&&was) disperseEl(el); } }
 function setStatus(){document.getElementById('status').innerHTML=`<b>${GENES.length}</b> anchor genes · <b>${SP_ORDER.length}</b> genomes · <b>${GENES.filter(g=>g.expr).length}</b> with pyDESeq2 values · sequences from NCBI RefSeq`;}
