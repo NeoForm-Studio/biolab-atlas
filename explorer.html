@@ -150,20 +150,24 @@ $('#searchForm').addEventListener('submit', (ev) => {
   const q = $('#q').value;
   if (!q.trim()) return;
   const hit = find(q);
-  if (hit) location.hash = hit.file.replace('.json', '');
-  else showMissing(q);
+  if (!hit) return showMissing(q);
+  const target = hit.file.replace('.json', '');
+  if (location.hash.slice(1) === target) route(); else location.hash = target;  // same hash fires no hashchange
 });
 $('#q').addEventListener('change', () => { const hit = find($('#q').value); if (hit) location.hash = hit.file.replace('.json', ''); });
 window.addEventListener('hashchange', route);
+
+let loadSeq = 0;  // only the latest navigation may draw the view
 
 function route() {
   let slug = location.hash.slice(1);
   try { slug = decodeURIComponent(slug); } catch { /* malformed escape: treat the raw text as the name */ }
   if (slug) showSpecies(slug);
-  else $('#view').innerHTML = '';
+  else { ++loadSeq; $('#view').innerHTML = ''; }
 }
 
 function showMissing(q) {
+  ++loadSeq;
   $('#view').innerHTML = `<div class="card"><p class="title">${esc(q)}</p>
     <div class="status warn">Not in the library yet. The pipeline checks NCBI, UniProt, BacDive and the literature for
     any bacterium or archaeon, and says so if no public data exists.
@@ -172,8 +176,9 @@ function showMissing(q) {
 }
 
 async function showSpecies(slug) {
+  const my = ++loadSeq;
   const e = await fetch(`library/${encodeURIComponent(slug)}.json`).then((r) => r.ok ? r.json() : null).catch(() => null);
-  if (location.hash.slice(1) !== encodeURIComponent(slug) && location.hash.slice(1) !== slug) return; // a newer selection is loading
+  if (my !== loadSeq) return;  // a newer selection was made while this one loaded
   if (!e?.taxon) return showMissing(slug.replace(/-/g, ' '));
   const t = e.taxon, inv = e.inventory || {}, g = e.genome, p = e.proteome;
   let html = `<div class="card">
