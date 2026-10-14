@@ -1164,8 +1164,8 @@ function renderCrossControl(){
   if(typeof updateRepairMetaphor==='function') updateRepairMetaphor();
 }
 function toggleCompare(sp){
-  if(compareSel.includes(sp)){ if(compareSel.length>1) compareSel=compareSel.filter(x=>x!==sp); }
-  else { compareSel.push(sp); if(compareSel.length>2) compareSel.shift(); }
+  if(compareSel.includes(sp)) return;  // always keep exactly two selected; pick another species to swap one out
+  compareSel.push(sp); if(compareSel.length>2) compareSel.shift();
   updateLabels(); renderCrossControl();
   if(selectedGene) selectCrossGene(selectedGene);
 }
