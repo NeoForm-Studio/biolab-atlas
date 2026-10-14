@@ -289,7 +289,7 @@ async function showSpecies(slug) {
   $('#view').innerHTML = html;
   $('#q').value = t.name;
   highlightRow(slug);
-  $('#view').scrollIntoView({behavior: 'smooth', block: 'start'});
+  $('#view').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'});
 }
 
 function calibration() {
@@ -369,7 +369,7 @@ load().catch((err) => { $('#view').innerHTML = `<div class="card status warn">Co
 // Keyboard access for clickable non-button elements (rows, chips, nodes): focusable, named, Enter/Space activate.
 (function keyboardLayer(SEL){
   const prep=el=>{ if(el.dataset.kb) return; el.dataset.kb='1'; if(!el.hasAttribute('tabindex')) el.tabIndex=0;
-    if(!el.getAttribute('role')) el.setAttribute('role','button');
+    if(!el.getAttribute('role') && !/^(TR|TD|TH)$/.test(el.tagName)) el.setAttribute('role','button');
     if(el.classList.contains('x')) el.setAttribute('aria-label','Close'); };
   const scan=root=>{ if(root.querySelectorAll) root.querySelectorAll(SEL).forEach(prep); };
   scan(document); new MutationObserver(ms=>ms.forEach(m=>m.addedNodes.forEach(n=>{ if(n.nodeType===1){ if(n.matches&&n.matches(SEL)) prep(n); scan(n); } })))

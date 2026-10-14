@@ -256,6 +256,7 @@
   body[data-mode="expr"] #exprHero{display:block}
   @media (min-width:901px){body.detail-open[data-mode="expr"] #exprHero{left:calc((100vw - 410px)/2);width:min(660px,calc(100vw - 460px))}}
   body[data-mode="compute"] .caption{display:none}
+  body.detail-open[data-mode="expr"] .caption{display:none}
   .ex-env{background:var(--glass-deep);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:9px;padding:14px 18px;margin-bottom:18px;text-align:center}
   .ex-env .t{font-family:var(--display);font-weight:600;font-size:17px;color:#f2f7fc;margin-bottom:5px}
   .ex-env .c{font-family:var(--mono);font-size:11px;color:var(--ink-mid);line-height:1.6}
@@ -301,7 +302,7 @@
   @media (max-width:980px){#rightPanel{width:320px}#leftPanel{width:290px}.caption{max-width:260px}}
   @media (max-width:900px){
     .ph .x{min-width:40px;min-height:40px;display:inline-flex;align-items:center;justify-content:center}
-    .pill,.tab,.hbtn,.spbtn{min-height:40px}
+    .pill,.tab,.hbtn,.spbtn,.cgene,.node,.ex-row{min-height:40px}
     .pbody .spswitch{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}
     /* phones: tabs become a scrollable bar along the bottom instead of disappearing */
     nav{position:fixed;left:0;right:0;bottom:0;margin:0;z-index:25;overflow-x:auto;scrollbar-width:none;
@@ -374,12 +375,12 @@
 
 <header>
   <div class="brand">BioLab <b>Atlas</b></div>
-  <nav id="nav">
-    <button class="tab active" data-mode="lookup"><span class="k">01</span>Gene</button>
-    <button class="tab" data-mode="cross"><span class="k">02</span>Cross-species</button>
-    <button class="tab" data-mode="func"><span class="k">03</span>Function</button>
-    <button class="tab" data-mode="expr"><span class="k">04</span>Expression</button>
-    <button class="tab" data-mode="compute"><span class="k">05</span>Species</button>
+  <nav id="nav" role="tablist" aria-label="Atlas tools">
+    <button class="tab active" role="tab" aria-selected="true" data-mode="lookup"><span class="k">01</span>Gene</button>
+    <button class="tab" role="tab" aria-selected="false" data-mode="cross"><span class="k">02</span>Cross-species</button>
+    <button class="tab" role="tab" aria-selected="false" data-mode="func"><span class="k">03</span>Function</button>
+    <button class="tab" role="tab" aria-selected="false" data-mode="expr"><span class="k">04</span>Expression</button>
+    <button class="tab" role="tab" aria-selected="false" data-mode="compute"><span class="k">05</span>Species</button>
   </nav>
   <div class="spacer"></div>
   <button class="hbtn" id="toggleLeft">Search</button>
@@ -579,9 +580,9 @@ function animate(){
   const dt=clock?Math.min(clock.getDelta(),0.05):0;const t=clock?clock.elapsedTime:0;
   spinA.speed+=(0.0026-spinA.speed)*0.04; spinB.speed+=(0.0026-spinB.speed)*0.04;
   dimA+=(dimAtarget-dimA)*0.07; dimB+=(dimBtarget-dimB)*0.07;
-  if(helixA){helixA.rotation.y+=spinA.speed*MF;helixA.position.y=Math.sin(t*0.5)*0.25;helixA.scale.setScalar(dimA);}
-  if(helixB){helixB.rotation.y+=spinB.speed*MF;helixB.position.y=Math.sin(t*0.5+1)*0.25;helixB.scale.setScalar(dimB);}
-  if(gpuField){ fieldPosVar.material.uniforms.uTime.value=t; fieldPosVar.material.uniforms.uDelta.value=dt; gpuField.compute();
+  if(helixA){helixA.rotation.y+=spinA.speed*MF;helixA.position.y=Math.sin(t*0.5)*0.25*MF;helixA.scale.setScalar(dimA);}
+  if(helixB){helixB.rotation.y+=spinB.speed*MF;helixB.position.y=Math.sin(t*0.5+1)*0.25*MF;helixB.scale.setScalar(dimB);}
+  if(gpuField){ fieldPosVar.material.uniforms.uTime.value=t; fieldPosVar.material.uniforms.uDelta.value=dt*MF; gpuField.compute();
     fieldMat.uniforms.texturePosition.value=gpuField.getCurrentRenderTarget(fieldPosVar).texture; fieldMat.uniforms.uTime.value=t; }
   if(typeof tickMaterializers==='function') tickMaterializers(t,dt);
   if(typeof tickMeta==='function') tickMeta(t,dt);
@@ -589,7 +590,7 @@ function animate(){
   if(gradePass){ gradePass.uniforms.uTime.value=t; gradePass.uniforms.uAberr.value=0.0012+aberrPulse*0.006; }
   // mouse parallax — camera drifts a few units toward the cursor + gentle idle breathing, always framing the figure
   mCX+=(mTX-mCX)*0.05; mCY+=(mTY-mCY)*0.05;
-  if(camera){ camera.position.set(mCX*1.9, -mCY*1.25 + Math.sin(t*0.22)*0.2, camZ + Math.sin(t*0.3)*0.3); camera.lookAt(0,0,0); }
+  if(camera){ camera.position.set(mCX*1.9*MF, -mCY*1.25*MF + Math.sin(t*0.22)*0.2*MF, camZ + Math.sin(t*0.3)*0.3*MF); camera.lookAt(0,0,0); }
   // frosty cursor follow — halo trails loosely, dot tracks tight
   cFX+=(cTX-cFX)*0.12; cFY+=(cTY-cFY)*0.12; cDX+=(cTX-cDX)*0.34; cDY+=(cTY-cDY)*0.34;
   if(cFrostEl) cFrostEl.style.transform='translate('+cFX+'px,'+cFY+'px)';
@@ -1412,7 +1413,7 @@ document.getElementById('toggleRight').addEventListener('click',()=>{ const open
   openP('right',opening); });
 document.querySelectorAll('[data-close]').forEach(x=>x.addEventListener('click',()=>openP(x.dataset.close,false)));
 addEventListener('keydown',e=>{if(e.key==='Enter'&&introOpen)enterMode();});
-document.addEventListener('click',e=>{const h=e.target.closest('.d-sec.expandable');if(!h)return;const ex=h.nextElementSibling;if(ex&&ex.classList.contains('d-explain')){const open=ex.classList.toggle('open');const c=h.querySelector('.chev');if(c)c.textContent=open?'－':'＋';}});
+document.addEventListener('click',e=>{const h=e.target.closest('.d-sec.expandable');if(!h)return;const ex=h.nextElementSibling;if(ex&&ex.classList.contains('d-explain')){const open=ex.classList.toggle('open');h.setAttribute('aria-expanded',open);const c=h.querySelector('.chev');if(c)c.textContent=open?'－':'＋';}});
 
 
 // frosty cursor aura + frost-wipe overlay (visual only)
@@ -1443,7 +1444,13 @@ initThree();buildConstellation();buildExprHero();setMode('lookup');
   scan(document); new MutationObserver(ms=>ms.forEach(m=>m.addedNodes.forEach(n=>{ if(n.nodeType===1){ if(n.matches&&n.matches(SEL)) prep(n); scan(n); } })))
     .observe(document.body,{childList:true,subtree:true});
   document.addEventListener('keydown',e=>{ if((e.key==='Enter'||e.key===' ')&&e.target.dataset&&e.target.dataset.kb){ e.preventDefault(); e.target.click(); } });
-})('.ritem,.pill,.ph .x,.node,.ex-row,.cgene');
+})('.ritem,.pill,.ph .x,.node,.ex-row,.cgene,.d-sec.expandable,#caption');
+// After a keyboard activation re-renders a panel, put focus back on the same control (or the panel's toggle).
+document.addEventListener('click',e=>{ if(e.detail!==0) return; const t=e.target.closest('[data-g],[data-sp],[data-cg],[data-csp],[data-close]'); if(!t) return;
+  const key=['g','sp','cg','csp'].find(k=>t.dataset[k]!==undefined), val=key&&t.dataset[key], close=t.dataset.close;
+  setTimeout(()=>{ const a=document.activeElement; if(a&&a!==document.body&&a.isConnected&&!a.closest('[inert]')) return;
+    const back=close?document.getElementById(close==='left'?'toggleLeft':'toggleRight'):document.querySelector(`[data-${key}="${CSS.escape(val)}"]`);
+    if(back) back.focus({preventScroll:true}); },0); },true);
 </script>
 </body>
 </html>
