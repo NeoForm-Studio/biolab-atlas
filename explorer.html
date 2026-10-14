@@ -152,9 +152,11 @@ $('#searchForm').addEventListener('submit', (ev) => {
   const hit = find(q);
   if (!hit) return showMissing(q);
   const target = hit.file.replace('.json', '');
-  if (location.hash.slice(1) === target) route(); else location.hash = target;  // same hash fires no hashchange
+  go(target);
 });
-$('#q').addEventListener('change', () => { const hit = find($('#q').value); if (hit) location.hash = hit.file.replace('.json', ''); });
+$('#q').addEventListener('change', () => { const hit = find($('#q').value); if (hit) go(hit.file.replace('.json', '')); });
+// Open a species; setting the same hash fires no hashchange, so route directly in that case.
+function go(slug) { if (location.hash.slice(1) === slug) route(); else location.hash = slug; }
 window.addEventListener('hashchange', route);
 
 let loadSeq = 0;  // only the latest navigation may draw the view
@@ -314,7 +316,7 @@ function renderLibrary() {
       <td class="n">${r.predicted_ogt_c ?? '–'}${r.predicted_ogt_c != null ? '°C' : ''}</td>
       <td class="n">${r.acidic_excess ?? '–'}</td>
       ${Object.keys(PANELS).map((k) => `<td class="n">${r.markers[k] ?? '–'}</td>`).join('')}</tr>`).join('');
-  document.querySelectorAll('tr.row').forEach((tr) => tr.addEventListener('click', () => { location.hash = tr.dataset.slug; }));
+  document.querySelectorAll('tr.row').forEach((tr) => tr.addEventListener('click', () => go(tr.dataset.slug)));
 }
 
 let MX = {panel: 'all', sortBy: null};
@@ -334,7 +336,7 @@ function renderMatrix() {
         : `<td class="c" style="background:rgba(70,198,221,${(0.08 + 0.6 * v / 100).toFixed(2)});color:var(--head)">${v}</td>`;
     }).join('')}</tr>`).join('');
   document.querySelectorAll('#matrix th.g').forEach((th) => th.onclick = () => { MX.sortBy = th.dataset.g; renderMatrix(); });
-  document.querySelectorAll('#matrix td.sp').forEach((td) => td.onclick = () => { location.hash = td.dataset.slug; });
+  document.querySelectorAll('#matrix td.sp').forEach((td) => td.onclick = () => go(td.dataset.slug));
 }
 
 function highlightRow(slug) {
