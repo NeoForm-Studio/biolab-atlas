@@ -157,7 +157,8 @@ $('#q').addEventListener('change', () => { const hit = find($('#q').value); if (
 window.addEventListener('hashchange', route);
 
 function route() {
-  const slug = decodeURIComponent(location.hash.slice(1));
+  let slug = location.hash.slice(1);
+  try { slug = decodeURIComponent(slug); } catch { /* malformed escape: treat the raw text as the name */ }
   if (slug) showSpecies(slug);
   else $('#view').innerHTML = '';
 }
@@ -171,7 +172,8 @@ function showMissing(q) {
 }
 
 async function showSpecies(slug) {
-  const e = await fetch(`library/${encodeURIComponent(slug)}.json`).then((r) => r.ok ? r.json() : null);
+  const e = await fetch(`library/${encodeURIComponent(slug)}.json`).then((r) => r.ok ? r.json() : null).catch(() => null);
+  if (location.hash.slice(1) !== encodeURIComponent(slug) && location.hash.slice(1) !== slug) return; // a newer selection is loading
   if (!e?.taxon) return showMissing(slug.replace(/-/g, ' '));
   const t = e.taxon, inv = e.inventory || {}, g = e.genome, p = e.proteome;
   let html = `<div class="card">
