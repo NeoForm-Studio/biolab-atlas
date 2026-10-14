@@ -943,7 +943,7 @@ function enterMode(){
   spin('A'); if(mode==='cross') spin('B');
   updateLabels();
   // panels
-  if(mode==='expr'){activeSp='DR1';buildExprHero('DR1');openP('left',false);openP('right',false);setTimeout(animateExpr,140);}
+  if(mode==='expr'){setActiveSpecies('DR1');openP('left',false);openP('right',false);setTimeout(animateExpr,140);} // re-renders detail, helix and graph together
   else if(mode==='cross'){renderCrossControl();openP('left',true);openP('right',false);}
   else if(mode==='compute'){openP('left',false);openP('right',false);const f=document.getElementById('speciesFrame');if(f.src==='about:blank')f.src='explorer.html?embed';}
   else{openP('left',true);openP('right',false);}
