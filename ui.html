@@ -81,7 +81,7 @@
   .intro-enter:hover{filter:brightness(1.08)}
 
   .caption{position:fixed;top:74px;left:26px;z-index:10;max-width:355px;cursor:pointer;transition:opacity .4s}
-  .caption.hidden{opacity:0;pointer-events:none}
+  .caption.hidden{opacity:0;pointer-events:none;visibility:hidden}
   .caption .ey{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:9px}
   .caption h1{font-family:var(--display);font-weight:600;font-size:24px;line-height:1.05;letter-spacing:-.02em;margin-bottom:9px;color:#f2f7fc}
   .caption p{font-size:12.5px;color:var(--ink-mid);line-height:1.55}
@@ -375,12 +375,12 @@
 
 <header>
   <div class="brand">BioLab <b>Atlas</b></div>
-  <nav id="nav" role="tablist" aria-label="Atlas tools">
-    <button class="tab active" role="tab" aria-selected="true" data-mode="lookup"><span class="k">01</span>Gene</button>
-    <button class="tab" role="tab" aria-selected="false" data-mode="cross"><span class="k">02</span>Cross-species</button>
-    <button class="tab" role="tab" aria-selected="false" data-mode="func"><span class="k">03</span>Function</button>
-    <button class="tab" role="tab" aria-selected="false" data-mode="expr"><span class="k">04</span>Expression</button>
-    <button class="tab" role="tab" aria-selected="false" data-mode="compute"><span class="k">05</span>Species</button>
+  <nav id="nav" aria-label="Atlas tools">
+    <button class="tab active" aria-pressed="true" data-mode="lookup"><span class="k">01</span>Gene</button>
+    <button class="tab" aria-pressed="false" data-mode="cross"><span class="k">02</span>Cross-species</button>
+    <button class="tab" aria-pressed="false" data-mode="func"><span class="k">03</span>Function</button>
+    <button class="tab" aria-pressed="false" data-mode="expr"><span class="k">04</span>Expression</button>
+    <button class="tab" aria-pressed="false" data-mode="compute"><span class="k">05</span>Species</button>
   </nav>
   <div class="spacer"></div>
   <button class="hbtn" id="toggleLeft">Search</button>
@@ -582,12 +582,12 @@ function animate(){
   dimA+=(dimAtarget-dimA)*0.07; dimB+=(dimBtarget-dimB)*0.07;
   if(helixA){helixA.rotation.y+=spinA.speed*MF;helixA.position.y=Math.sin(t*0.5)*0.25*MF;helixA.scale.setScalar(dimA);}
   if(helixB){helixB.rotation.y+=spinB.speed*MF;helixB.position.y=Math.sin(t*0.5+1)*0.25*MF;helixB.scale.setScalar(dimB);}
-  if(gpuField){ fieldPosVar.material.uniforms.uTime.value=t; fieldPosVar.material.uniforms.uDelta.value=dt*MF; gpuField.compute();
-    fieldMat.uniforms.texturePosition.value=gpuField.getCurrentRenderTarget(fieldPosVar).texture; fieldMat.uniforms.uTime.value=t; }
+  if(gpuField){ fieldPosVar.material.uniforms.uTime.value=t*MF; fieldPosVar.material.uniforms.uDelta.value=dt*MF; gpuField.compute();
+    fieldMat.uniforms.texturePosition.value=gpuField.getCurrentRenderTarget(fieldPosVar).texture; fieldMat.uniforms.uTime.value=t*MF; }
   if(typeof tickMaterializers==='function') tickMaterializers(t,dt);
   if(typeof tickMeta==='function') tickMeta(t,dt);
   aberrPulse*=0.94;
-  if(gradePass){ gradePass.uniforms.uTime.value=t; gradePass.uniforms.uAberr.value=0.0012+aberrPulse*0.006; }
+  if(gradePass){ gradePass.uniforms.uTime.value=t*MF; gradePass.uniforms.uAberr.value=0.0012+aberrPulse*0.006; }
   // mouse parallax — camera drifts a few units toward the cursor + gentle idle breathing, always framing the figure
   mCX+=(mTX-mCX)*0.05; mCY+=(mTY-mCY)*0.05;
   if(camera){ camera.position.set(mCX*1.9*MF, -mCY*1.25*MF + Math.sin(t*0.22)*0.2*MF, camZ + Math.sin(t*0.3)*0.3*MF); camera.lookAt(0,0,0); }
@@ -886,7 +886,7 @@ function tickMeta(t,dt){
       const k=Math.max(0,Math.min(1,(tt-delay)/0.55)), e=k<1?(1-Math.pow(1-k,3)):1;
       if(o.kind==='node') o.mesh.scale.setScalar(0.01+e*0.99); else o.mesh.scale.set(0.01+e*0.99,1,0.01+e*0.99); });
     if(tt>1.4){ R.recaTube.visible=true; R.recaMotes.visible=true; }
-    R.backMat.uniforms.uTime.value=t; R.recaMat.uniforms.uTime.value=t; R.group.rotation.y+=dt*0.10*MF;
+    R.backMat.uniforms.uTime.value=t*MF; R.recaMat.uniforms.uTime.value=t*MF; R.group.rotation.y+=dt*0.10*MF;
     R.shards.forEach(s=>{ s.rotation.x+=s.userData.rot.x*MF; s.rotation.y+=s.userData.rot.y*MF;
       s.position.y=s.userData.home.y+Math.sin(t*0.6+s.userData.drift)*0.16;
       s.position.x=s.userData.home.x+Math.cos(t*0.4+s.userData.drift)*0.10;
@@ -895,7 +895,7 @@ function tickMeta(t,dt){
     R.crystals.forEach(c=>{ c.rotation.x+=c.userData.spin.x*MF; c.rotation.y+=c.userData.spin.y*MF; c.rotation.z+=c.userData.spin.z*MF;
       c.position.y=c.userData.home.y+Math.sin(t*0.5+c.userData.bob)*0.35; }); }
   const D=metaDamaged;
-  if(D){ D.backMat.uniforms.uTime.value=t; D.group.rotation.y+=dt*0.09*MF;
+  if(D){ D.backMat.uniforms.uTime.value=t*MF; D.group.rotation.y+=dt*0.09*MF;
     D.shards.forEach(s=>{ s.rotation.x+=s.userData.rot.x*MF; s.rotation.y+=s.userData.rot.y*MF;
       s.position.y=s.userData.home.y+Math.sin(t*0.6+s.userData.drift)*0.12; }); }
 }
@@ -934,6 +934,8 @@ const EXPLAIN={
 
 function showIntro(){
   const e=EXPLAIN[mode]; introOpen=true;
+  document.querySelectorAll('.panel').forEach(p=>p.inert=true); const capEl=document.getElementById('caption'); if(capEl) capEl.inert=true;
+  setTimeout(()=>{const b=document.getElementById('introEnter'); if(b) b.focus({preventScroll:true});},0);
   document.getElementById('intro').innerHTML=`<div class="intro-card">
     <div class="ey">${e.ey}</div><h1>${e.h}</h1>
     ${e.body.map(p=>`<p>${p}</p>`).join('')}
@@ -946,6 +948,7 @@ function showIntro(){
   document.getElementById('introEnter').addEventListener('click',e2=>{e2.stopPropagation();enterMode();});
 }
 function enterMode(){
+  document.querySelectorAll('.panel').forEach(p=>p.inert=p.classList.contains('hide')); { const capEl=document.getElementById('caption'); if(capEl) capEl.inert=false; }
   setTimeout(()=>{const t=document.querySelector('.tab.active'); if(t) t.focus({preventScroll:true});},0);
   introOpen=false;
   document.getElementById('intro').classList.add('gone');
@@ -1007,7 +1010,7 @@ const EXPL={
  scope:"'Conserved' = the gene appears across distantly related bacteria, an ancient tool from a shared ancestor. 'Deinococcus-lineage' = mostly unique to Deinococcus and relatives, a candidate for what makes these organisms special.",
  tells:"How comparing genomes actually works: (1) a shared gene = a shared capability — both can do that repair. (2) Sequence identity says how conserved it is, and whether a version may have drifted. (3) The most powerful move is the difference — a gene present in the organism measured to survive more, but absent in the sensitive one, is a candidate worth testing. (4) The honest limit: having a repair gene does not by itself explain resistance. D. radiodurans' edge is a combination — extra Deinococcus-specific genes, several genome copies, a master switch (IrrE), and especially manganese-antioxidant complexes that shield its proteins from radiation. So 'has the gene,' or even 'uses it more,' is never the whole answer — which is why this panel shows what it can and flags what it can't."
 };
-function xsec(title,key){ return `<div class="d-sec expandable">${title}<span class="chev">＋</span></div><div class="d-explain"><div class="inner">${EXPL[key]}</div></div>`; }
+function xsec(title,key){ return `<div class="d-sec expandable" aria-expanded="false">${title}<span class="chev">＋</span></div><div class="d-explain"><div class="inner">${EXPL[key]}</div></div>`; }
 
 /* ---------- LEFT panel (gene / func search) ---------- */
 function renderLeft(){
@@ -1380,7 +1383,7 @@ function setStatus(){document.getElementById('status').innerHTML=`<b>${GENES.len
 
 function setMode(m){
   mode=m; document.body.setAttribute('data-mode',m);
-  document.querySelectorAll('.tab').forEach(t=>{t.classList.toggle('active',t.dataset.mode===m);t.setAttribute('aria-selected',t.dataset.mode===m);});
+  document.querySelectorAll('.tab').forEach(t=>{t.classList.toggle('active',t.dataset.mode===m);t.setAttribute('aria-pressed',t.dataset.mode===m);});
   document.getElementById('cmpPanel').classList.remove('show');
   document.getElementById('rightTitle').textContent='Gene detail';
   { // drop the previous mode's detail page; modes that show gene detail re-render it
@@ -1412,7 +1415,7 @@ document.getElementById('toggleRight').addEventListener('click',()=>{ const open
   if(opening&&!document.getElementById('rightBody').innerHTML.trim()) document.getElementById('rightBody').innerHTML='<div class="d-text dim">Pick a gene to see its details.</div>';
   openP('right',opening); });
 document.querySelectorAll('[data-close]').forEach(x=>x.addEventListener('click',()=>openP(x.dataset.close,false)));
-addEventListener('keydown',e=>{if(e.key==='Enter'&&introOpen)enterMode();});
+addEventListener('keydown',e=>{if(e.key==='Enter'&&introOpen&&!e.defaultPrevented)enterMode();});
 document.addEventListener('click',e=>{const h=e.target.closest('.d-sec.expandable');if(!h)return;const ex=h.nextElementSibling;if(ex&&ex.classList.contains('d-explain')){const open=ex.classList.toggle('open');h.setAttribute('aria-expanded',open);const c=h.querySelector('.chev');if(c)c.textContent=open?'－':'＋';}});
 
 
