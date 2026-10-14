@@ -524,9 +524,9 @@ const clock=new THREE.Clock();
 function tick(){
   requestAnimationFrame(tick);
   const MF = matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 1;
-  const nm = now*MF;  // scene time: frozen under reduced motion
   const dt=Math.min(clock.getDelta(),0.05);
   const now=performance.now()/1000, T=now-t0;
+  const nm = now*MF;  // scene time: frozen under reduced motion
 
   // gpgpu step
   posVar.material.uniforms.uTime.value=nm;
