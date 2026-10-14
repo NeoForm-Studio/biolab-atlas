@@ -1374,7 +1374,7 @@ function setMode(m){
     if(g&&m!=='cross'&&m!=='compute'){
       if(m==='expr') activeSp='DR1';                                   // only D. radiodurans has expression data
       if(m==='func'&&!g.sp[activeSp]) activeSp=presentIn(g)[0]||'DR1'; // Function lists only species that carry the gene
-      renderDetail(g);
+      renderDetail(g); updateHelixForGene(g);
     }
   }
   document.getElementById('leftTitle').textContent= m==='func'?'Function':'Search';
